@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chhabi Malik | MLA Niali</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fire:#E8560A;
+  --fire2:#C8430A;
+  --fire-pale:#FEF3EE;
+  --jade:#0A6B04;
+  --jade-pale:#EBF7EA;
+  --gold:#B8860B;
+  --gold-pale:#FEF8E6;
+  --ink:#111118;
+  --ink2:#222230;
+  --mid:#5A5A72;
+  --light:#9898A8;
+  --border:#EBEBF0;
+  --border2:#D8D8E4;
+  --bg:#FFFFFF;
+  --bg2:#FAFAFA;
+  --bg3:#F5F5F8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--fire);}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;width:100%;z-index:999;
+  height:66px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:all .3s;
+}
+nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
+.logo-flag{width:3px;height:22px;background:linear-gradient(to bottom,var(--fire) 33%,#ddd 33%,#ddd 66%,var(--jade) 66%);flex-shrink:0;}
+.logo-text{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--ink);letter-spacing:-.01em;}
+.logo-text em{color:var(--fire);font-style:normal;}
+.nav-center{display:flex;gap:2rem;list-style:none;}
+.nav-center a{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);text-decoration:none;transition:color .2s;}
+.nav-center a:hover,.nav-center a.act{color:var(--ink);}
+.nav-right{display:flex;align-items:center;gap:1rem;}
+.nav-contact{
+  background:var(--fire);color:#fff;
+  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.5rem 1.2rem;text-decoration:none;transition:background .2s;
+}
+.nav-contact:hover{background:var(--fire2);}
+.ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px;}
+.ham span{width:20px;height:1.5px;background:var(--ink);display:block;transition:all .3s;}
+.ham.o span:nth-child(1){transform:translateY(5.5px) rotate(45deg);}
+.ham.o span:nth-child(2){opacity:0;}
+.ham.o span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);}
+.mob-nav{display:none;position:fixed;top:66px;left:0;right:0;z-index:998;background:var(--bg);border-bottom:2px solid var(--fire);padding:0 5% 1rem;}
+.mob-nav.o{display:flex;flex-direction:column;}
+.mob-nav a{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;padding:.9rem 0;border-bottom:1px solid var(--border);transition:color .2s;}
+.mob-nav a:last-child{color:var(--fire);border:none;}
+.mob-nav a:hover{color:var(--ink);}
+
+/* ─── HERO ─── */
+#hero{
+  min-height:100vh;
+  padding-top:66px;
+  display:grid;
+  grid-template-rows:1fr auto;
+  position:relative;
+  background:var(--bg);
+  overflow:hidden;
+}
+.hero-wm{
+  position:absolute;
+  right:-.02em;top:50%;
+  transform:translateY(-50%);
+  font-family:'Fraunces',serif;
+  font-size:clamp(12rem,25vw,24rem);
+  font-weight:700;
+  color:rgba(232,86,10,.04);
+  line-height:1;
+  pointer-events:none;
+  white-space:nowrap;
+  z-index:0;
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  height:100%;
+  position:relative;z-index:1;
+  padding:4rem 0 0;
+}
+.hi-left{
+  padding:3rem 5% 3rem 8%;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.hi-chip{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--fire);margin-bottom:2rem;
+}
+.hi-chip::before{content:'';width:20px;height:1px;background:var(--fire);}
+.hi-name{
+  font-family:'Fraunces',serif;
+  font-size:clamp(3rem,5.5vw,5.5rem);
+  font-weight:700;
+  line-height:.95;
+  letter-spacing:-.03em;
+  color:var(--ink);
+  margin-bottom:1.5rem;
+}
+.hi-name .ghost{-webkit-text-stroke:1.5px var(--ink);color:transparent;}
+.hi-name .fire-word{color:var(--fire);}
+.hi-role{
+  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--light);margin-bottom:1.8rem;
+  display:flex;align-items:center;gap:.8rem;
+}
+.hi-role::after{content:'';flex:1;height:1px;background:var(--border2);}
+.hi-bio{font-size:1.05rem;color:var(--mid);line-height:1.85;max-width:420px;margin-bottom:2.5rem;}
+.hi-actions{display:flex;gap:.8rem;align-items:center;margin-bottom:3rem;}
+.ha-primary{
+  background:var(--ink);color:#fff;
+  padding:.85rem 2rem;
+  font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:600;letter-spacing:.04em;
+  text-decoration:none;display:inline-block;transition:all .2s;
+}
+.ha-primary:hover{background:var(--fire);transform:translateY(-2px);}
+.ha-ghost{
+  color:var(--mid);
+  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;display:flex;align-items:center;gap:.5rem;
+  transition:color .2s;
+}
+.ha-ghost:hover{color:var(--fire);}
+.ha-ghost::after{content:'→';}
+.hi-tags{display:flex;gap:.5rem;flex-wrap:wrap;}
+.hi-tag{
+  font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.3rem .8rem;border:1px solid var(--border2);color:var(--light);
+}
+.hi-right{position:relative;display:flex;flex-direction:column;}
+.hi-photo{flex:1;position:relative;overflow:hidden;background:var(--bg3);}
+.hi-photo img{width:100%;height:100%;object-fit:cover;object-position:center 10%;display:block;}
+.hi-photo-line{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--fire),#ddd,var(--jade));}
+.hi-stat-overlay{
+  position:absolute;bottom:2rem;right:2rem;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(12px);
+  border:1px solid var(--border);
+  padding:1.2rem 1.6rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;
+  min-width:200px;
+}
+.hso-n{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--fire);line-height:1;}
+.hso-l{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-top:.2rem;}
+.hero-strip{
+  background:var(--fire);
+  padding:.85rem 8%;
+  display:flex;gap:3rem;align-items:center;
+  overflow:hidden;
+  position:relative;z-index:1;
+}
+.hs-item{display:flex;align-items:center;gap:.6rem;white-space:nowrap;flex-shrink:0;}
+.hs-n{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:700;color:#fff;}
+.hs-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.hs-dot{color:rgba(255,255,255,.3);font-size:1.5rem;line-height:1;}
+
+/* ─── SECTIONS ─── */
+.s{padding:6rem 8%;}
+.s-off{background:var(--bg2);}
+.s-dark{background:var(--ink);}
+.s-warm{background:var(--fire-pale);}
+.lbl{
+  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--fire);display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;
+}
+.lbl::before{content:'';width:18px;height:1px;background:var(--fire);}
+.lbl.inv{color:rgba(255,107,50,.7);}
+.lbl.inv::before{background:rgba(255,107,50,.5);}
+.sh{font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--ink);}
+.sh .ac{color:var(--fire);}
+.sh.inv{color:#fff;}
+.sh.inv .ac{color:rgba(255,140,80,1);}
+.ss{font-size:1rem;color:var(--mid);line-height:1.8;max-width:500px;margin-top:.8rem;}
+.ss.inv{color:rgba(255,255,255,.5);}
+.s-hd{margin-bottom:3.5rem;}
+.s-hd-row{display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;margin-bottom:3.5rem;}
+.s-hd-row .sh{flex:1;}
+
+/* ─── ABOUT ─── */
+#about .wrap{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:start;}
+.ab-imgs{display:flex;flex-direction:column;gap:.8rem;}
+.ab-img-main{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;}
+.ab-img-sec{width:75%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;margin-left:auto;margin-top:-.8rem;border:3px solid var(--bg);}
+.ab-flag{display:flex;height:3px;margin-top:.8rem;}
+.ab-flag span{flex:1;}
+.ab-flag span:nth-child(1){background:var(--fire);}
+.ab-flag span:nth-child(2){background:#ddd;}
+.ab-flag span:nth-child(3){background:var(--jade);}
+.ab-quote{
+  font-family:'Fraunces',serif;font-size:1.5rem;font-style:italic;font-weight:400;
+  color:var(--ink);line-height:1.5;
+  border-left:2px solid var(--fire);padding-left:1.5rem;
+  margin-bottom:2rem;
+}
+.ab-body{font-size:.98rem;color:var(--mid);line-height:1.95;margin-bottom:1rem;}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:2rem;}
+.ab-fact{padding:.85rem 1rem;background:var(--bg3);border-bottom:2px solid transparent;transition:border-color .2s;}
+.ab-fact:hover{border-bottom-color:var(--fire);}
+.ab-k{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fire);margin-bottom:.25rem;}
+.ab-v{font-size:.9rem;font-weight:600;color:var(--ink);}
+
+/* ─── PHOTO GALLERY (after About) ─── */
+#photo-gallery{padding:5rem 8%;background:var(--bg3);}
+.pg-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  grid-auto-rows:220px;
+  gap:6px;
+  margin-top:2.5rem;
+}
+.pg-item{
+  position:relative;overflow:hidden;cursor:pointer;background:var(--border);
+}
+.pg-item:nth-child(1){grid-column:span 2;grid-row:span 2;}
+.pg-item:nth-child(6){grid-column:span 2;}
+.pg-item img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s ease,filter .4s;
+  display:block;filter:brightness(.95);
+}
+.pg-item:hover img{transform:scale(1.07);filter:brightness(1);}
+.pg-overlay{
+  position:absolute;inset:0;
+  background:rgba(17,17,24,0);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s;
+}
+.pg-item:hover .pg-overlay{background:rgba(17,17,24,.25);}
+.pg-zoom{
+  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.9);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;
+  opacity:0;transform:scale(.7);transition:all .3s;
+}
+.pg-item:hover .pg-zoom{opacity:1;transform:scale(1);}
+
+/* Lightbox */
+.lb{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(10,10,15,.96);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .3s;
+}
+.lb.open{opacity:1;pointer-events:all;}
+.lb-img{
+  max-width:88vw;max-height:88vh;
+  object-fit:contain;
+  border:1px solid rgba(255,255,255,.1);
+}
+.lb-close{
+  position:absolute;top:1.5rem;right:2rem;
+  font-size:2rem;color:#fff;cursor:pointer;
+  background:none;border:none;line-height:1;
+  opacity:.6;transition:opacity .2s;
+}
+.lb-close:hover{opacity:1;}
+.lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  font-size:2rem;color:#fff;cursor:pointer;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  width:50px;height:50px;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;
+}
+.lb-nav:hover{background:var(--fire);}
+.lb-prev{left:1.5rem;}
+.lb-next{right:1.5rem;}
+.lb-counter{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.14em;
+  color:rgba(255,255,255,.4);
+}
+
+/* ─── MEDIA SECTION ─── */
+#media{padding:6rem 8%;background:var(--bg);}
+.media-tabs{display:flex;gap:0;margin-top:2.5rem;margin-bottom:2.5rem;border-bottom:2px solid var(--border);}
+.mt-btn{
+  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:.8rem 2rem;cursor:pointer;border:none;background:none;
+  color:var(--light);position:relative;transition:color .2s;
+}
+.mt-btn::after{
+  content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;
+  background:var(--fire);transform:scaleX(0);transition:transform .3s;
+}
+.mt-btn.active{color:var(--ink);}
+.mt-btn.active::after{transform:scaleX(1);}
+.mt-btn:hover{color:var(--mid);}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+
+/* Photos tab */
+.mp-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+.mp-item{
+  position:relative;overflow:hidden;
+  aspect-ratio:1;cursor:pointer;background:var(--bg3);
+}
+.mp-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .3s;filter:brightness(.95);}
+.mp-item:hover img{transform:scale(1.07);filter:brightness(1);}
+.mp-overlay{
+  position:absolute;inset:0;background:rgba(232,86,10,0);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s;
+}
+.mp-item:hover .mp-overlay{background:rgba(232,86,10,.18);}
+
+/* Videos tab */
+.mv-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;
+}
+.mv-item{
+  background:var(--ink);
+  overflow:hidden;
+  position:relative;
+}
+.mv-thumb{
+  position:relative;
+  aspect-ratio:16/9;
+  cursor:pointer;overflow:hidden;
+}
+.mv-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s,filter .3s;filter:brightness(.8);}
+.mv-thumb:hover img{transform:scale(1.04);filter:brightness(.6);}
+.mv-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+}
+.mv-play-btn{
+  width:60px;height:60px;border-radius:50%;
+  background:rgba(232,86,10,.9);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;color:#fff;
+  transition:all .3s;
+}
+.mv-thumb:hover .mv-play-btn{background:var(--fire);transform:scale(1.1);}
+.mv-info{padding:1rem 1.2rem 1.2rem;background:var(--ink2);}
+.mv-title{font-family:'Fraunces',serif;font-size:.95rem;color:#fff;font-weight:600;line-height:1.4;margin-bottom:.3rem;}
+.mv-sub{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);}
+
+/* Video modal */
+.vm{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(10,10,15,.97);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .3s;
+}
+.vm.open{opacity:1;pointer-events:all;}
+.vm-inner{
+  position:relative;
+  width:min(860px,90vw);
+}
+.vm-frame{
+  width:100%;aspect-ratio:16/9;background:#000;
+}
+.vm-frame iframe{width:100%;height:100%;border:none;display:block;}
+.vm-close{
+  position:absolute;top:-2.5rem;right:0;
+  font-size:1.6rem;color:#fff;cursor:pointer;
+  background:none;border:none;line-height:1;
+  opacity:.6;transition:opacity .2s;
+}
+.vm-close:hover{opacity:1;}
+
+/* ─── VISION ─── */
+#vision .vwrap{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
+#vision .vright{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+.vc{background:var(--bg);padding:2rem 1.8rem;position:relative;overflow:hidden;cursor:default;transition:background .25s;}
+.vc:hover{background:var(--bg2);}
+.vc-n{font-family:'Fraunces',serif;font-size:4rem;font-weight:700;color:rgba(0,0,0,.04);line-height:1;position:absolute;top:.8rem;right:1rem;}
+.vc-icon{font-size:1.8rem;margin-bottom:1rem;display:block;}
+.vc-title{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:.6rem;}
+.vc-text{font-size:.88rem;color:var(--mid);line-height:1.8;}
+.vc-bar{position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--fire);transition:width .4s;}
+.vc:hover .vc-bar{width:100%;}
+
+/* ─── JOURNEY ─── */
+#journey .jlayout{display:grid;grid-template-columns:300px 1fr;gap:6rem;align-items:start;}
+#journey .jleft{position:sticky;top:8rem;}
+.jl-n{font-family:'Fraunces',serif;font-size:7rem;font-weight:700;color:var(--fire);line-height:1;opacity:.12;}
+.jl-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;margin-top:-3rem;}
+.jright{display:flex;flex-direction:column;gap:0;}
+.je{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:2rem 0;border-bottom:1px solid var(--border);transition:background .2s;cursor:default;}
+.je:first-child{padding-top:0;}
+.je:last-child{border-bottom:none;}
+.je:hover{background:var(--bg2);padding-left:1rem;padding-right:1rem;margin:0 -1rem;}
+.je-yr{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.12em;color:var(--fire);padding-top:.4rem;}
+.je-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;}
+.je-desc{font-size:.88rem;color:var(--mid);line-height:1.75;}
+.je:last-child .je-yr{color:var(--gold);}
+.je:last-child .je-title{color:var(--gold);}
+
+/* ─── IMPACT ─── */
+#achievements{background:var(--ink);}
+#achievements .iheader{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem;}
+.i-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);}
+.i-row2{grid-template-columns:repeat(4,1fr);}
+.it{background:var(--ink);padding:2.2rem 1.5rem;text-align:center;position:relative;overflow:hidden;transition:background .3s;cursor:default;}
+.it:hover{background:var(--ink2);}
+.it-icon{font-size:1.6rem;margin-bottom:.7rem;display:block;}
+.it-n{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:var(--fire);line-height:1;margin-bottom:.2rem;}
+.it-n sup{font-size:1.3rem;}
+.it-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);}
+.it::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--fire);transform:scaleX(0);transition:transform .3s;}
+.it:hover::after{transform:scaleX(1);}
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:1px;}
+.aw{background:var(--ink);padding:2rem;display:flex;gap:1.2rem;transition:background .3s;}
+.aw:hover{background:var(--ink2);}
+.aw-icon{font-size:1.8rem;flex-shrink:0;}
+.aw-yr{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;}
+.aw-t{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:.3rem;}
+.aw-b{font-size:.85rem;color:rgba(255,255,255,.4);line-height:1.65;}
+
+/* ─── INITIATIVES ─── */
+#initiatives .initwrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.icard{background:var(--bg);border:1px solid var(--border);padding:0;overflow:hidden;transition:all .3s;}
+.icard:hover{border-color:var(--fire);box-shadow:0 12px 40px rgba(232,86,10,.08);transform:translateY(-3px);}
+.ic-top{display:flex;align-items:center;justify-content:space-between;padding:1.6rem 1.8rem;border-bottom:1px solid var(--border);}
+.ic-icon{font-size:1.8rem;}
+.ic-badge{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .75rem;border-radius:20px;}
+.ba{background:var(--jade-pale);color:var(--jade);}
+.bo{background:var(--fire-pale);color:var(--fire);}
+.bp{background:var(--bg3);color:var(--light);}
+.ic-body{padding:1.4rem 1.8rem 1.8rem;}
+.ic-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
+.ic-desc{font-size:.87rem;color:var(--mid);line-height:1.75;margin-bottom:1.2rem;}
+.ic-prog{display:flex;align-items:center;gap:.8rem;}
+.ic-bar{flex:1;height:2px;background:var(--border);}
+.ic-fill{height:100%;background:var(--fire);width:0;transition:width 1.5s ease;}
+.ic-pct{font-family:'Space Mono',monospace;font-size:.65rem;color:var(--fire);letter-spacing:.08em;flex-shrink:0;}
+
+/* ─── PRESS ─── */
+#press .playout{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem;}
+.pc{background:var(--bg);border:1px solid var(--border);padding:2rem;transition:all .3s;position:relative;}
+.pc:hover{border-color:var(--fire);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.07);}
+.pc.big{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;}
+.pc-src{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fire);margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem;}
+.pc-src::before{content:'';width:12px;height:1px;background:var(--fire);display:block;}
+.pc-hl{font-family:'Fraunces',serif;font-size:1rem;font-weight:500;color:var(--ink);line-height:1.55;margin-bottom:.6rem;}
+.pc.big .pc-hl{font-size:1.3rem;line-height:1.4;}
+.pc-dt{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--light);}
+.pc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--fire);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.pc:hover::after{transform:scaleX(1);}
+
+/* ─── CONTACT ─── */
+#contact{display:grid;grid-template-columns:1fr 1fr;padding:0;}
+.ct-l{background:var(--bg3);padding:6rem 8% 6rem 8%;border-right:1px solid var(--border);}
+.ct-r{padding:6rem 7% 6rem 5%;background:var(--bg);}
+.ct-name{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;letter-spacing:-.02em;color:var(--ink);line-height:1.1;margin-bottom:.8rem;}
+.ct-name em{color:var(--fire);font-style:normal;}
+.ct-desc{font-size:.97rem;color:var(--mid);line-height:1.85;margin-bottom:2.5rem;}
+.ci{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border);}
+.ci:last-of-type{border-bottom:none;}
+.ci-ico{width:38px;height:38px;background:var(--fire-pale);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.ci-k{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fire);margin-bottom:.18rem;}
+.ci-v{font-size:.87rem;color:var(--ink);font-weight:500;word-break:break-word;}
+.soc{display:flex;gap:.5rem;margin-top:2rem;flex-wrap:wrap;}
+.sb{width:40px;height:40px;border:1px solid var(--border);background:var(--bg);color:var(--mid);display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:700;text-decoration:none;transition:all .2s;}
+.sb:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.cf-title{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:.4rem;letter-spacing:-.02em;}
+.cf-sub{font-size:.9rem;color:var(--mid);margin-bottom:2rem;}
+.fg{margin-bottom:1.1rem;}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+.fl{display:block;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem;}
+.fi,.fse,.ft{width:100%;padding:.78rem 1rem;border:1.5px solid var(--border);background:var(--bg);font-family:'Outfit',sans-serif;font-size:1rem;color:var(--ink);outline:none;appearance:none;transition:border-color .2s;}
+.fi:focus,.fse:focus,.ft:focus{border-color:var(--fire);}
+.fse option{background:var(--bg);}
+.ft{resize:vertical;min-height:90px;}
+.fb{width:100%;padding:.95rem;background:var(--ink);color:#fff;border:none;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:.06em;cursor:pointer;transition:background .2s;}
+.fb:hover{background:var(--fire);}
+
+/* ─── FOOTER ─── */
+footer{background:var(--ink2);}
+.ft-main{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding:4rem 8% 3rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.fb-brand{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.6rem;}
+.fb-brand em{color:var(--fire);font-style:normal;}
+.fb-tag{font-size:.88rem;color:rgba(255,255,255,.35);line-height:1.7;max-width:250px;}
+.fb-flag{display:flex;height:2px;width:56px;margin-top:1.2rem;}
+.fb-flag span{flex:1;}
+.fb-flag span:nth-child(1){background:var(--fire);}
+.fb-flag span:nth-child(2){background:rgba(255,255,255,.2);}
+.fb-flag span:nth-child(3){background:var(--jade);}
+.fc-t{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fire);margin-bottom:1.1rem;}
+.fl-links{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+.fl-links a{font-size:.88rem;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.fl-links a:hover{color:#fff;}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 8%;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:rgba(255,255,255,.25);flex-wrap:wrap;gap:.4rem;}
+
+/* ─── REVEAL ─── */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+.rv.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+
+/* ─── BTT ─── */
+.btt{position:fixed;bottom:2rem;right:1.5rem;z-index:800;width:42px;height:42px;background:var(--fire);color:#fff;border:none;font-size:1rem;cursor:pointer;box-shadow:0 4px 18px rgba(232,86,10,.35);transition:all .3s;opacity:0;transform:translateY(8px);pointer-events:none;}
+.btt.show{opacity:1;transform:translateY(0);pointer-events:all;}
+.btt:hover{background:var(--fire2);}
+
+/* ─── MOB STICKY ─── */
+.mob-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:#fff;border-top:2px solid var(--fire);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));gap:.7rem;box-shadow:0 -4px 20px rgba(0,0,0,.08);}
+.ms-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.8rem;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;}
+.ms-call{background:var(--bg3);color:var(--ink);border:1.5px solid var(--border);}
+.ms-write{background:var(--fire);color:#fff;}
+@media(max-width:768px){.mob-sticky{display:flex;}footer{padding-bottom:calc(2rem + 76px + env(safe-area-inset-bottom))!important;}#contact .ct-r{padding-bottom:calc(6rem + 80px);}}
+
+/* ══════════════════════════════════════ RESPONSIVE ══════════════════════════════════════ */
+@media(max-width:1100px){
+  #journey .jlayout{grid-template-columns:220px 1fr;gap:4rem;}
+  .i-grid,.i-row2{grid-template-columns:repeat(2,1fr);}
+  .ft-main{grid-template-columns:1fr 1fr;}
+  .ft-main>div:first-child{grid-column:1/-1;}
+  .pg-grid{grid-template-columns:repeat(3,1fr);}
+  .pg-item:nth-child(1){grid-column:span 2;grid-row:span 2;}
+  .mp-grid{grid-template-columns:repeat(3,1fr);}
+  .mv-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:900px){
+  #about .wrap{grid-template-columns:200px 1fr;gap:3rem;}
+  #vision .vwrap{grid-template-columns:1fr;gap:2rem;}
+  #vision .vleft{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
+  .awards{grid-template-columns:1fr;}
+  #initiatives .initwrap{grid-template-columns:1fr;}
+  #press .playout{grid-template-columns:1fr 1fr;}
+  .pc.big{grid-row:auto;}
+  #contact{grid-template-columns:1fr;}
+  .ct-l{border-right:none;border-bottom:1px solid var(--border);}
+  .ct-l,.ct-r{padding:4rem 6%;}
+  .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}
+  .pg-item:nth-child(1){grid-column:span 2;grid-row:span 1;}
+  .mp-grid{grid-template-columns:repeat(2,1fr);}
+  .mv-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .nav-center{display:none;}
+  .nav-right{display:none;}
+  .ham{display:flex;}
+  nav{height:60px;padding:0 5%;}
+  .mob-nav{top:60px;}
+  #hero{padding-top:60px;}
+  .hero-wm{display:none;}
+  .hero-inner{grid-template-columns:1fr;grid-template-rows:auto auto;}
+  .hi-left{order:1;padding:2.5rem 5% 2rem;}
+  .hi-name{font-size:clamp(2.5rem,9vw,4rem);}
+  .hi-bio{font-size:.93rem;max-width:100%;}
+  .hi-actions{flex-direction:column;align-items:flex-start;gap:.7rem;}
+  .ha-primary{width:100%;text-align:center;padding:.9rem 1.5rem;}
+  .hi-right{order:2;height:72vw;min-height:260px;max-height:380px;}
+  .hi-photo{height:100%;}
+  .hi-stat-overlay{display:none;}
+  .hero-strip{padding:.75rem 5%;gap:1.8rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .hero-strip::-webkit-scrollbar{display:none;}
+  .s{padding:3.5rem 5%;}
+  .sh{font-size:1.7rem;}
+  .s-hd-row{flex-direction:column;gap:1rem;}
+  #about .wrap{grid-template-columns:1fr;gap:2rem;}
+  .ab-imgs{flex-direction:row;gap:.8rem;}
+  .ab-img-main{width:110px;height:140px;aspect-ratio:auto;flex-shrink:0;}
+  .ab-img-sec{display:none;}
+  .ab-grid{grid-template-columns:1fr 1fr;}
+  #vision .vleft{grid-template-columns:1fr;}
+  #vision .vright{grid-template-columns:1fr;}
+  #journey .jlayout{grid-template-columns:1fr;gap:2rem;}
+  #journey .jleft{position:static;display:flex;align-items:center;gap:1.5rem;}
+  .jl-n{font-size:4rem;opacity:.08;}
+  .jl-img{display:none;}
+  .je{grid-template-columns:60px 1fr;gap:1rem;}
+  .je:hover{padding-left:0;padding-right:0;margin:0;}
+  .i-grid,.i-row2{grid-template-columns:1fr 1fr;}
+  .it{padding:1.5rem 1rem;}
+  .it-n{font-size:2rem;}
+  .awards{grid-template-columns:1fr;}
+  #achievements .iheader{grid-template-columns:1fr;gap:1rem;}
+  #initiatives .initwrap{grid-template-columns:1fr;gap:1rem;}
+  #press .playout{grid-template-columns:1fr;gap:1rem;}
+  .pc.big{grid-row:auto;}
+  #contact{display:flex;flex-direction:column;}
+  .ct-l,.ct-r{padding:3.5rem 5%;}
+  .ct-name{font-size:1.8rem;}
+  .fr2{grid-template-columns:1fr;}
+  .ft-main{grid-template-columns:1fr;gap:2rem;padding:3rem 5% 2rem;}
+  .ft-main>div:first-child{grid-column:auto;}
+  .ft-bot{flex-direction:column;text-align:center;padding:1rem 5%;}
+  #photo-gallery{padding:3.5rem 5%;}
+  .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}
+  .pg-item:nth-child(1){grid-column:span 2;grid-row:span 1;}
+  #media{padding:3.5rem 5%;}
+  .mp-grid{grid-template-columns:repeat(2,1fr);}
+  .mv-grid{grid-template-columns:1fr;}
+  .mt-btn{padding:.7rem 1.2rem;font-size:.65rem;}
+  .lb-nav{display:none;}
+}
+@media(max-width:480px){
+  .hi-name{font-size:2.4rem;}
+  .hero-strip{gap:1.2rem;}
+  .i-grid,.i-row2{grid-template-columns:1fr 1fr;}
+  .ab-imgs{flex-direction:column;}
+  .ab-img-main{width:100%;height:200px;object-fit:cover;}
+  .ab-grid{grid-template-columns:1fr;}
+  .sh{font-size:1.55rem;}
+  .pg-grid{grid-template-columns:1fr 1fr;grid-auto-rows:120px;}
+  .mp-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="logo" href="#">
+    <div class="logo-flag"></div>
+    <div class="logo-text">Chhabi <em>Malik</em></div>
+  </a>
+  <ul class="nav-center">
+    <li><a href="#about">About</a></li>
+    <li><a href="#photo-gallery">Gallery</a></li>
+    <li><a href="#media">Media</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#achievements">Impact</a></li>
+    <li><a href="#initiatives">Initiatives</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#contact" class="nav-contact">Get in Touch</a>
+  </div>
+  <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#photo-gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#media" onclick="closeMenu()">Media</a>
+  <a href="#vision" onclick="closeMenu()">Vision</a>
+  <a href="#journey" onclick="closeMenu()">Journey</a>
+  <a href="#achievements" onclick="closeMenu()">Impact</a>
+  <a href="#initiatives" onclick="closeMenu()">Initiatives</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-wm">SEVA</div>
+  <div class="hero-inner">
+    <div class="hi-left">
+      <div class="hi-chip">Member of Legislative Assembly · Niali Constituency · Odisha</div>
+      <h1 class="hi-name">
+        Chhabi<br>
+        <span class="fire-word">Malik</span><br>
+        <span class="ghost">MLA</span>
+      </h1>
+      <div class="hi-role">Representing Niali, Odisha</div>
+      <p class="hi-bio">A dedicated people's representative championing rural development, women's empowerment, and grassroots governance for the citizens of Niali.</p>
+      <div class="hi-actions">
+        <a href="#vision" class="ha-primary">Explore Vision →</a>
+        <a href="#contact" class="ha-ghost">Connect With Us</a>
+      </div>
+      <div class="hi-tags" style="margin-top:2rem;">
+        <span class="hi-tag">Odisha</span>
+        <span class="hi-tag">Niali</span>
+        <span class="hi-tag">MLA</span>
+        <span class="hi-tag">People's Voice</span>
+      </div>
+    </div>
+    <div class="hi-right">
+      <div class="hi-photo">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Chhabi Malik MLA Niali">
+        <div class="hi-photo-line"></div>
+        <div class="hi-stat-overlay">
+          <div class="hso-item"><div class="hso-n">10+</div><div class="hso-l">Years in Service</div></div>
+          <div class="hso-item"><div class="hso-n">2×</div><div class="hso-l">Elected MLA</div></div>
+          <div class="hso-item"><div class="hso-n">₹420Cr</div><div class="hso-l">Dev. Funds</div></div>
+          <div class="hso-item"><div class="hso-n">80+</div><div class="hso-l">Initiatives</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l">Homes Built</span></div>
+    <span class="hs-dot">·</span>
+    <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l">Electrification</span></div>
+    <span class="hs-dot">·</span>
+    <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l">Roads Built</span></div>
+    <span class="hs-dot">·</span>
+    <div class="hs-item"><span class="hs-n">45</span><span class="hs-l">Health Centres</span></div>
+    <span class="hs-dot">·</span>
+    <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l">Scholarships</span></div>
+    <span class="hs-dot">·</span>
+    <div class="hs-item"><span class="hs-n">Niali First</span><span class="hs-l">Always</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="s s-off">
+  <div class="s-hd rv">
+    <div class="lbl">Who I Am</div>
+    <h2 class="sh">A Life Dedicated to <span class="ac">Seva</span></h2>
+  </div>
+  <div class="wrap">
+    <div class="ab-imgs rv">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="ab-img-main">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Chhabi Malik" class="ab-img-sec">
+      <div class="ab-flag"><span></span><span></span><span></span></div>
+    </div>
+    <div class="ab-right rv">
+      <p class="ab-quote">"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."</p>
+      <p class="ab-body">Chhabi Malik has been a steadfast voice for the people of Niali constituency in Odisha. Rising from grassroots activism, she has dedicated her life to uplifting the most vulnerable communities — farmers, women, tribals, and the youth of the region.</p>
+      <p class="ab-body">Her tenure as MLA has been marked by a relentless focus on infrastructure, healthcare access, educational opportunities, and women's self-reliance. She brings a ground-level understanding to every policy debate and development initiative.</p>
+      <p class="ab-body">Known for her accessibility and integrity, Chhabi Malik holds regular Jan Sunwais and personally monitors the progress of every scheme in her constituency. Her leadership is rooted in listening first and acting swiftly.</p>
+      <div class="ab-grid">
+        <div class="ab-fact"><div class="ab-k">Constituency</div><div class="ab-v">Niali, Odisha</div></div>
+        <div class="ab-fact"><div class="ab-k">Position</div><div class="ab-v">Member of Legislative Assembly</div></div>
+        <div class="ab-fact"><div class="ab-k">Focus Areas</div><div class="ab-v">Rural Dev, Women, Education</div></div>
+        <div class="ab-fact"><div class="ab-k">State</div><div class="ab-v">Odisha</div></div>
+        <div class="ab-fact"><div class="ab-k">Language</div><div class="ab-v">Odia · Hindi · English</div></div>
+        <div class="ab-fact"><div class="ab-k">Jan Sunwai</div><div class="ab-v">Every Saturday, 10 AM</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY (after About) -->
+<section id="photo-gallery">
+  <div class="s-hd rv" style="padding:0 0 0 0;">
+    <div class="lbl">Photo Gallery</div>
+    <h2 class="sh">Moments from the <span class="ac">Field</span></h2>
+    <p class="ss">A glimpse into the work, the people, and the journey across Niali constituency.</p>
+  </div>
+  <div class="pg-grid" id="pgGrid">
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg" alt="Gallery 1" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 2" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg" alt="Gallery 3" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg" alt="Gallery 4" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/674977918_1725597702139672_6214719514523778169_n_nt2s5g.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/674977918_1725597702139672_6214719514523778169_n_nt2s5g.jpg" alt="Gallery 5" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Gallery 6" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg" alt="Gallery 7" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg" alt="Gallery 8" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Gallery 9" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Gallery 10" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLb(event)">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1);event.stopPropagation()">‹</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" onclick="lbNav(1);event.stopPropagation()">›</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- MEDIA SECTION -->
+<section id="media" class="s">
+  <div class="s-hd rv">
+    <div class="lbl">Media Centre</div>
+    <h2 class="sh">Photos & <span class="ac">Videos</span></h2>
+    <p class="ss">Watch speeches, ground reports, and see moments of service from the field.</p>
+  </div>
+  <div class="media-tabs">
+    <button class="mt-btn active" onclick="switchTab('photos',this)">📷 Photos</button>
+    <button class="mt-btn" onclick="switchTab('videos',this)">▶ Videos</button>
+  </div>
+
+  <!-- Photos Tab -->
+  <div class="tab-panel active" id="tab-photos">
+    <div class="mp-grid">
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg" alt="Photo 1" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Photo 2" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg" alt="Photo 3" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg" alt="Photo 4" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Photo 5" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg" alt="Photo 6" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg" alt="Photo 7" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Photo 8" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Photo 9" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Photo 10" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Videos Tab -->
+  <div class="tab-panel" id="tab-videos">
+    <div class="mv-grid">
+      <div class="mv-item rv">
+        <div class="mv-thumb" onclick="openVideo('igT8r3RUpJY')">
+          <img src="https://img.youtube.com/vi/igT8r3RUpJY/hqdefault.jpg" alt="Video 1">
+          <div class="mv-play"><div class="mv-play-btn">▶</div></div>
+        </div>
+        <div class="mv-info">
+          <div class="mv-title">Chhabi Malik — Public Address, Niali</div>
+          <div class="mv-sub">Official Video · YouTube</div>
+        </div>
+      </div>
+      <div class="mv-item rv d1">
+        <div class="mv-thumb" onclick="openVideo('B2oZKT64UU0')">
+          <img src="https://img.youtube.com/vi/B2oZKT64UU0/hqdefault.jpg" alt="Video 2">
+          <div class="mv-play"><div class="mv-play-btn">▶</div></div>
+        </div>
+        <div class="mv-info">
+          <div class="mv-title">Constituency Development — Ground Report</div>
+          <div class="mv-sub">Official Video · YouTube</div>
+        </div>
+      </div>
+      <div class="mv-item rv d2">
+        <div class="mv-thumb" onclick="openVideo('M51AqazsCDE')">
+          <img src="https://img.youtube.com/vi/M51AqazsCDE/hqdefault.jpg" alt="Video 3">
+          <div class="mv-play"><div class="mv-play-btn">▶</div></div>
+        </div>
+        <div class="mv-info">
+          <div class="mv-title">Niali Voices — People Speak</div>
+          <div class="mv-sub">Official Video · YouTube</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div class="vm" id="vm" onclick="closeVideo(event)">
+  <div class="vm-inner">
+    <button class="vm-close" onclick="closeVideo()">✕</button>
+    <div class="vm-frame"><iframe id="vmFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe></div>
+  </div>
+</div>
+
+<!-- VISION -->
+<section id="vision" class="s">
+  <div class="vwrap">
+    <div class="vleft rv">
+      <div>
+        <div class="lbl">Our Vision</div>
+        <h2 class="sh">Building a <span class="ac">Stronger</span> Niali</h2>
+        <p class="ss">Six pillars guiding every decision, every initiative, every vote cast in the legislature on behalf of the people of Niali.</p>
+      </div>
+    </div>
+    <div class="vright">
+      <div class="vc rv"><span class="vc-n">01</span><span class="vc-icon">🌾</span><div class="vc-title">Kisan Samridhi</div><p class="vc-text">Doubling farmer incomes through MSP support, crop insurance, and direct market linkages — eliminating the middlemen who squeeze our farmers.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">02</span><span class="vc-icon">📚</span><div class="vc-title">Shiksha for All</div><p class="vc-text">Universal quality education with digital classrooms and full scholarship coverage for all BPL families in Niali.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">03</span><span class="vc-icon">🏥</span><div class="vc-title">Swasth Niali</div><p class="vc-text">A primary health centre within 5 km of every village — free diagnostics, maternal care, and mobile medical units.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">04</span><span class="vc-icon">💡</span><div class="vc-title">Digital Gram</div><p class="vc-text">High-speed internet and digital literacy to every panchayat, empowering citizens to access government services from home.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">05</span><span class="vc-icon">♻️</span><div class="vc-title">Green Niali</div><p class="vc-text">Solar-powered streetlights, clean cooking fuel, and river conservation — a constituency that thrives without harming tomorrow.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">06</span><span class="vc-icon">👩‍💼</span><div class="vc-title">Nari Shakti</div><p class="vc-text">30% reservation in local governance, skill centres for women, SHG credit, and zero-tolerance on crimes against women.</p><div class="vc-bar"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey" class="s s-off">
+  <div class="s-hd rv">
+    <div class="lbl">Political Career</div>
+    <h2 class="sh">The <span class="ac">Journey</span> So Far</h2>
+    <p class="ss">From grassroots activism to the legislative assembly — a path built on purpose, not privilege.</p>
+  </div>
+  <div class="jlayout">
+    <div class="jleft rv">
+      <div class="jl-n">20</div>
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="jl-img">
+    </div>
+    <div class="jright">
+      <div class="je rv"><div class="je-yr">Early</div><div><div class="je-title">Community Leadership</div><p class="je-desc">Began grassroots social work in Niali, organising women's self-help groups, advocating for clean water access, and running adult literacy drives in underserved villages.</p></div></div>
+      <div class="je rv"><div class="je-yr">Panchayat</div><div><div class="je-title">Local Governance</div><p class="je-desc">Elected to the Panchayati Raj system, championing rural road construction, water connections, and mid-day meal monitoring in government schools.</p></div></div>
+      <div class="je rv"><div class="je-yr">First Win</div><div><div class="je-title">First MLA Election — Niali</div><p class="je-desc">Won the Niali assembly seat, becoming a powerful voice for farmers, fisherfolk, and daily-wage workers. Appointed to the Agriculture & Education committees.</p></div></div>
+      <div class="je rv"><div class="je-yr">Tenure</div><div><div class="je-title">Legislative Contributions</div><p class="je-desc">Led debates on rural electrification, tribal welfare, and women's reservation. Pushed for 100% PMAY coverage and oversaw 220 km of rural road construction in the constituency.</p></div></div>
+      <div class="je rv"><div class="je-yr">Re-election</div><div><div class="je-title">Re-elected — Stronger Mandate</div><p class="je-desc">Returned with an increased majority, reflecting people's trust. Initiated Digital Gram Yojana and Mahila Aarogya Abhiyan — two flagship programmes still running today.</p></div></div>
+      <div class="je rv"><div class="je-yr">Now</div><div><div class="je-title">Serving Niali — Present Day</div><p class="je-desc">Focused on completing solar electrification, expanding telemedicine, and building Niali's first agro-processing cluster to create 5,000 local jobs by 2026.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="achievements" class="s-dark" style="padding:6rem 8%;">
+  <div class="iheader rv">
+    <div>
+      <div class="lbl inv">Track Record</div>
+      <h2 class="sh inv">Measurable <span class="ac">Impact</span></h2>
+    </div>
+    <p class="ss inv">Numbers that represent lives changed, families uplifted, and promises kept across years of dedicated public service in Niali.</p>
+  </div>
+  <div class="i-grid">
+    <div class="it rv"><span class="it-icon">🏠</span><div class="it-n">8,400<sup>+</sup></div><div class="it-l">Homes Under PMAY</div></div>
+    <div class="it rv d1"><span class="it-icon">💧</span><div class="it-n">95<sup>%</sup></div><div class="it-l">Piped Water Villages</div></div>
+    <div class="it rv d2"><span class="it-icon">⚡</span><div class="it-n">100<sup>%</sup></div><div class="it-l">Rural Electrification</div></div>
+    <div class="it rv d3"><span class="it-icon">🎓</span><div class="it-n">5,200<sup>+</sup></div><div class="it-l">Scholarships Awarded</div></div>
+  </div>
+  <div class="i-grid i-row2" style="margin-top:1px;">
+    <div class="it rv"><span class="it-icon">🛣️</span><div class="it-n">220<sup>km</sup></div><div class="it-l">Rural Roads Built</div></div>
+    <div class="it rv d1"><span class="it-icon">🏥</span><div class="it-n">45</div><div class="it-l">New Health Centres</div></div>
+    <div class="it rv d2"><span class="it-icon">👩‍💻</span><div class="it-n">28,000<sup>+</sup></div><div class="it-l">Digitally Trained</div></div>
+    <div class="it rv d3"><span class="it-icon">🌱</span><div class="it-n">1.5<sup>L</sup></div><div class="it-l">Trees Planted</div></div>
+  </div>
+  <div class="awards">
+    <div class="aw rv"><span class="aw-icon">🏆</span><div><div class="aw-yr">2023</div><div class="aw-t">Best MLA — Rural Development</div><p class="aw-b">Recognised by the Odisha government for outstanding constituency development and highest scheme implementation rate in the district.</p></div></div>
+    <div class="aw rv d1"><span class="aw-icon">🌾</span><div><div class="aw-yr">2021</div><div class="aw-t">Kisan Mitra Samman</div><p class="aw-b">Awarded for sustained contributions to farmer welfare, rural credit access, and agricultural support in Niali block.</p></div></div>
+    <div class="aw rv d2"><span class="aw-icon">🌟</span><div><div class="aw-yr">2019</div><div class="aw-t">Nari Shakti Recognition</div><p class="aw-b">Felicitated for pioneering women's empowerment programmes, including SHG credit drives and self-defence training for adolescent girls.</p></div></div>
+  </div>
+</section>
+
+<!-- INITIATIVES -->
+<section id="initiatives" class="s s-off">
+  <div class="s-hd-row rv">
+    <div>
+      <div class="lbl">Active Programmes</div>
+      <h2 class="sh">Current <span class="ac">Initiatives</span></h2>
+    </div>
+    <p class="ss" style="max-width:360px;">Every programme tracked, every rupee accounted for. Transparency is the foundation of trust.</p>
+  </div>
+  <div class="initwrap">
+    <div class="icard rv"><div class="ic-top"><span class="ic-icon">🌾</span><span class="ic-badge ba">Active</span></div><div class="ic-body"><div class="ic-title">Kisan Credit Mela 2024–25</div><p class="ic-desc">Monthly camps providing farmers direct access to Kisan Credit Cards, PM-KISAN enrollment, and soil health card services — target: 30,000 beneficiaries.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="79"></div></div><span class="ic-pct">79%</span></div></div></div>
+    <div class="icard rv d1"><div class="ic-top"><span class="ic-icon">📡</span><span class="ic-badge ba">Active</span></div><div class="ic-body"><div class="ic-title">Digital Gram Yojana</div><p class="ic-desc">Optical fibre broadband rollout to all gram panchayats in Niali block, with free digital literacy training for adults aged 18–60.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="64"></div></div><span class="ic-pct">64%</span></div></div></div>
+    <div class="icard rv"><div class="ic-top"><span class="ic-icon">👩‍⚕️</span><span class="ic-badge ba">Active</span></div><div class="ic-body"><div class="ic-title">Mahila Aarogya Abhiyan</div><p class="ic-desc">Free health check-up camps for women — cancer screening, anaemia testing, maternal health in partnership with district hospitals.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="88"></div></div><span class="ic-pct">88%</span></div></div></div>
+    <div class="icard rv d1"><div class="ic-top"><span class="ic-icon">☀️</span><span class="ic-badge bo">Ongoing</span></div><div class="ic-body"><div class="ic-title">Surya Gram Solar Mission</div><p class="ic-desc">Solar-powered streetlights in villages and rooftop panels on BPL homes under PM Surya Ghar scheme facilitation.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="51"></div></div><span class="ic-pct">51%</span></div></div></div>
+    <div class="icard rv"><div class="ic-top"><span class="ic-icon">🏫</span><span class="ic-badge bo">Ongoing</span></div><div class="ic-body"><div class="ic-title">Ek Shikshak Ek Tablet</div><p class="ic-desc">Pre-loaded educational tablets to every government school teacher in the constituency with digital pedagogy training.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="41"></div></div><span class="ic-pct">41%</span></div></div></div>
+    <div class="icard rv d1"><div class="ic-top"><span class="ic-icon">🏗️</span><span class="ic-badge bp">Planned</span></div><div class="ic-body"><div class="ic-title">Udyog Gram Cluster</div><p class="ic-desc">Setting up agro-processing micro-industrial clusters to generate 5,000+ local jobs and reduce post-harvest crop losses.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="18"></div></div><span class="ic-pct">18%</span></div></div></div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section id="press" class="s">
+  <div class="s-hd rv">
+    <div class="lbl">In The News</div>
+    <h2 class="sh">Media <span class="ac">Coverage</span></h2>
+    <p class="ss">What Odisha's leading publications say about our work on the ground and in the assembly.</p>
+  </div>
+  <div class="playout">
+    <div class="pc big rv">
+      <div>
+        <div class="pc-src">Sambad</div>
+        <div class="pc-hl">"Chhabi Malik recognised as one of Odisha's most active legislators — consistently raising constituency issues in the assembly with data and resolve"</div>
+      </div>
+      <div class="pc-dt">2024</div>
+    </div>
+    <div class="pc rv"><div class="pc-src">Dharitri</div><div class="pc-hl">"Niali's digital transformation: How MLA Chhabi Malik is bringing broadband to every village"</div><div class="pc-dt">February 2025</div></div>
+    <div class="pc rv d1"><div class="pc-src">Pragativadi</div><div class="pc-hl">"Chhabi Malik's Mahila Aarogya Abhiyan screens over 18,000 women in Niali for critical health conditions"</div><div class="pc-dt">January 2025</div></div>
+    <div class="pc rv"><div class="pc-src">The New Indian Express</div><div class="pc-hl">"How one Odisha constituency achieved 100% electrification ahead of the state target"</div><div class="pc-dt">November 2024</div></div>
+    <div class="pc rv d1"><div class="pc-src">Odisha TV</div><div class="pc-hl">"MLA Chhabi Malik credited with 21% reduction in rural informal borrowing after Kisan Credit Melas"</div><div class="pc-dt">October 2024</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="ct-l">
+    <div class="lbl rv" style="margin-bottom:1rem;">Get In Touch</div>
+    <div class="ct-name rv">Office <em>Contacts</em></div>
+    <p class="ct-desc rv">For constituency matters, media queries, or policy discussions. Our team responds within 48 hours. Every message is read.</p>
+    <div class="rv">
+      <div class="ci"><div class="ci-ico">🏛️</div><div><div class="ci-k">Assembly Office</div><div class="ci-v">Odisha Legislative Assembly, Bhubaneswar, Odisha – 751001</div></div></div>
+      <div class="ci"><div class="ci-ico">🏠</div><div><div class="ci-k">Constituency Office</div><div class="ci-v">Niali, Cuttack District, Odisha – 754004</div></div></div>
+      <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-k">Phone</div><div class="ci-v">Contact through official constituency office</div></div></div>
+      <div class="ci"><div class="ci-ico">🕐</div><div><div class="ci-k">Jan Sunwai</div><div class="ci-v">Every Saturday, 10:00 AM — Niali Office</div></div></div>
+    </div>
+    <div class="soc rv">
+      <a class="sb" href="#">𝕏</a><a class="sb" href="#">f</a><a class="sb" href="#">ig</a><a class="sb" href="#">▶</a>
+    </div>
+  </div>
+  <div class="ct-r">
+    <div class="cf-title rv">Write to <span style="color:var(--fire)">Chhabi Di</span></div>
+    <p class="cf-sub rv">Share your concern, suggestion, or grievance. All submissions are reviewed by our team.</p>
+    <div class="fr2">
+      <div class="fg"><label class="fl">Full Name *</label><input type="text" class="fi" placeholder="Your full name"></div>
+      <div class="fg"><label class="fl">Mobile *</label><input type="tel" class="fi" placeholder="+91 XXXXX XXXXX"></div>
+    </div>
+    <div class="fr2">
+      <div class="fg"><label class="fl">Village / Ward</label><input type="text" class="fi" placeholder="Your village or ward"></div>
+      <div class="fg"><label class="fl">Subject *</label>
+        <select class="fse">
+          <option value="">Select a subject</option>
+          <option>Road / Infrastructure</option>
+          <option>Water / Electricity</option>
+          <option>Agriculture / Farmer Issue</option>
+          <option>Health / Hospital</option>
+          <option>Education / Scholarship</option>
+          <option>Women's Safety</option>
+          <option>Media / Press Query</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg"><label class="fl">Your Message *</label><textarea class="ft" placeholder="Describe your concern or suggestion..."></textarea></div>
+    <button class="fb" onclick="handleSubmit(this)">Submit Grievance / Message</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-main">
+    <div>
+      <div class="fb-brand">Chhabi <em>Malik</em></div>
+      <p class="fb-tag">MLA, Niali Constituency, Odisha. Committed to a progressive, inclusive, and self-reliant Niali.</p>
+      <div class="fb-flag"><span></span><span></span><span></span></div>
+    </div>
+    <div>
+      <div class="fc-t">Quick Links</div>
+      <ul class="fl-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#photo-gallery">Gallery</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#vision">Vision & Policy</a></li>
+        <li><a href="#journey">Political Journey</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fc-t">Resources</div>
+      <ul class="fl-links">
+        <li><a href="#">Press Releases</a></li>
+        <li><a href="#">Assembly Questions</a></li>
+        <li><a href="#">Constituency Budget</a></li>
+        <li><a href="#">Grievance Portal</a></li>
+        <li><a href="#contact">Contact Office</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <span>© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha.</span>
+    <span>JAI ODISHA 🇮🇳</span>
+  </div>
+</footer>
+
+<div class="mob-sticky">
+  <a href="tel:" class="ms-btn ms-call">📞 Call Office</a>
+  <a href="#contact" class="ms-btn ms-write" onclick="closeMenu()">✉️ Write to Us</a>
+</div>
+
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// ── Reveal ──
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target);}});},{threshold:0.07});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// ── Nav + btt ──
+window.addEventListener('scroll',()=>{
+  const sy=window.scrollY;
+  document.getElementById('nav').classList.toggle('up',sy>60);
+  document.getElementById('btt').classList.toggle('show',sy>500);
+  let cur='';
+  document.querySelectorAll('section[id]').forEach(s=>{if(sy>=s.offsetTop-120)cur=s.id;});
+  document.querySelectorAll('.nav-center a').forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+cur));
+});
+
+// ── Menu ──
+function toggleMenu(){document.getElementById('mobNav').classList.toggle('o');document.getElementById('ham').classList.toggle('o');}
+function closeMenu(){document.getElementById('mobNav').classList.remove('o');document.getElementById('ham').classList.remove('o');}
+document.addEventListener('click',e=>{if(!e.target.closest('#nav')&&!e.target.closest('#mobNav'))closeMenu();});
+
+// ── Progress bars ──
+const pio=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.querySelectorAll('.ic-fill').forEach(b=>b.style.width=b.dataset.w+'%');pio.unobserve(x.target);}});},{threshold:0.2});
+document.querySelectorAll('#initiatives').forEach(s=>pio.observe(s));
+
+// ── Counters ──
+const aio=new IntersectionObserver(e=>{
+  if(!e[0].isIntersecting)return;
+  document.querySelectorAll('.it-n').forEach(el=>{
+    const raw=el.textContent.replace(/[^\d.]/g,'');if(!raw)return;
+    const target=parseFloat(raw);
+    const sup=el.querySelector('sup')?el.querySelector('sup').outerHTML:'';
+    let cur=0;const inc=target/55;
+    const t=setInterval(()=>{cur=Math.min(cur+inc,target);const d=target>=1000?Math.round(cur).toLocaleString('en-IN'):(Number.isInteger(target)?Math.round(cur):cur.toFixed(1));el.innerHTML=d+sup;if(cur>=target)clearInterval(t);},25);
+  });
+  aio.disconnect();
+},{threshold:0.2});
+aio.observe(document.getElementById('achievements'));
+
+// ── Form ──
+function handleSubmit(btn){btn.textContent='✓ Submitted — Thank You!';btn.style.background='var(--jade)';setTimeout(()=>{btn.textContent='Submit Grievance / Message';btn.style.background='';},3500);}
+
+// ── Gallery Lightbox ──
+const galleryImgs = Array.from(document.querySelectorAll('#pgGrid .pg-item')).map(el=>el.dataset.src);
+const mediaImgs   = Array.from(document.querySelectorAll('#tab-photos .mp-item')).map(el=>el.dataset.src);
+let lbSet=[], lbIdx=0;
+
+function openLb(src, set){
+  lbSet=set; lbIdx=set.indexOf(src);
+  document.getElementById('lbImg').src=src;
+  document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbSet.length;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLb(e){
+  if(e&&e.target!==document.getElementById('lb')&&!e.target.classList.contains('lb-close'))return;
+  document.getElementById('lb').classList.remove('open');
+  document.body.style.overflow='';
+}
+function lbNav(dir){
+  lbIdx=(lbIdx+dir+lbSet.length)%lbSet.length;
+  document.getElementById('lbImg').src=lbSet[lbIdx];
+  document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbSet.length;
+}
+document.querySelectorAll('#pgGrid .pg-item').forEach(el=>{
+  el.addEventListener('click',()=>openLb(el.dataset.src, galleryImgs));
+});
+document.querySelectorAll('#tab-photos .mp-item').forEach(el=>{
+  el.addEventListener('click',()=>openLb(el.dataset.src, mediaImgs));
+});
+document.addEventListener('keydown',e=>{
+  if(!document.getElementById('lb').classList.contains('open'))return;
+  if(e.key==='ArrowLeft')lbNav(-1);
+  if(e.key==='ArrowRight')lbNav(1);
+  if(e.key==='Escape')closeLb({target:document.getElementById('lb')});
+});
+
+// ── Media Tabs ──
+function switchTab(tab, btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.mt-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+  btn.classList.add('active');
+  closeVideo();
+}
+
+// ── Video Modal ──
+function openVideo(id){
+  document.getElementById('vmFrame').src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
+  document.getElementById('vm').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVideo(e){
+  if(e&&e.target!==document.getElementById('vm'))return;
+  document.getElementById('vmFrame').src='';
+  document.getElementById('vm').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.querySelector('.vm-close').addEventListener('click',()=>{
+  document.getElementById('vmFrame').src='';
+  document.getElementById('vm').classList.remove('open');
+  document.body.style.overflow='';
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&document.getElementById('vm').classList.contains('open')){
+    document.getElementById('vmFrame').src='';
+    document.getElementById('vm').classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+</script>
+</body>
+</html>
