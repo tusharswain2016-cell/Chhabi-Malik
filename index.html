@@ -206,14 +206,14 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
   color:var(--fire);display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;
 }
 .lbl::before{content:'';width:18px;height:1px;background:var(--fire);}
-.lbl.inv{color:rgba(255,107,50,.7);}
-.lbl.inv::before{background:rgba(255,107,50,.5);}
+.lbl.inv{color:rgba(255,255,255,.8);}
+.lbl.inv::before{background:rgba(255,255,255,.6);}
 .sh{font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--ink);}
 .sh .ac{color:var(--fire);}
 .sh.inv{color:#fff;}
-.sh.inv .ac{color:rgba(255,140,80,1);}
+.sh.inv .ac{color:rgba(255,255,255,1);}
 .ss{font-size:1rem;color:var(--mid);line-height:1.8;max-width:500px;margin-top:.8rem;}
-.ss.inv{color:rgba(255,255,255,.5);}
+.ss.inv{color:rgba(255,255,255,.75);}
 .s-hd{margin-bottom:3.5rem;}
 .s-hd-row{display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;margin-bottom:3.5rem;}
 .s-hd-row .sh{flex:1;}
@@ -433,26 +433,26 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .je:last-child .je-yr{color:var(--gold);}
 .je:last-child .je-title{color:var(--gold);}
 
-/* ─── IMPACT ─── */
-#achievements{background:var(--ink);}
+/* ─── IMPACT — orange background ─── */
+#achievements{background:var(--fire);}
 #achievements .iheader{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem;}
-.i-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);}
+.i-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.2);}
 .i-row2{grid-template-columns:repeat(4,1fr);}
-.it{background:var(--ink);padding:2.2rem 1.5rem;text-align:center;position:relative;overflow:hidden;transition:background .3s;cursor:default;}
-.it:hover{background:var(--ink2);}
+.it{background:var(--fire);padding:2.2rem 1.5rem;text-align:center;position:relative;overflow:hidden;transition:background .3s;cursor:default;}
+.it:hover{background:var(--fire2);}
 .it-icon{font-size:1.6rem;margin-bottom:.7rem;display:block;}
-.it-n{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:var(--fire);line-height:1;margin-bottom:.2rem;}
+.it-n{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:700;color:#fff;line-height:1;margin-bottom:.2rem;}
 .it-n sup{font-size:1.3rem;}
-.it-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);}
-.it::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--fire);transform:scaleX(0);transition:transform .3s;}
+.it-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);}
+.it::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:rgba(255,255,255,.4);transform:scaleX(0);transition:transform .3s;}
 .it:hover::after{transform:scaleX(1);}
-.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:1px;}
-.aw{background:var(--ink);padding:2rem;display:flex;gap:1.2rem;transition:background .3s;}
-.aw:hover{background:var(--ink2);}
+.awards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.2);margin-top:1px;}
+.aw{background:var(--fire2);padding:2rem;display:flex;gap:1.2rem;transition:background .3s;}
+.aw:hover{background:rgba(212,90,10,.9);}
 .aw-icon{font-size:1.8rem;flex-shrink:0;}
-.aw-yr{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem;}
+.aw-yr{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.25rem;}
 .aw-t{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:.3rem;}
-.aw-b{font-size:.85rem;color:rgba(255,255,255,.4);line-height:1.65;}
+.aw-b{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.65;}
 
 /* ─── INITIATIVES ─── */
 #initiatives .initwrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
@@ -487,19 +487,12 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 
 /* ─── CONTACT ─── */
 #contact{display:grid;grid-template-columns:260px 1fr 1fr;padding:0;min-height:640px;align-items:stretch;}
+/* Contact image panel — clean images only, no text overlay */
 .ct-imgs{background:var(--ink2);padding:0;display:flex;flex-direction:column;overflow:hidden;position:relative;align-self:stretch;}
 .ct-imgs-inner{display:flex;flex-direction:column;height:100%;gap:2px;flex:1;}
 .ct-img-item{flex:1;overflow:hidden;position:relative;min-height:0;}
 .ct-img-item img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .5s ease,filter .4s;}
 .ct-img-item:hover img{transform:scale(1.06);filter:brightness(1.08);}
-.ct-img-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,20,.75) 0%,rgba(10,10,20,.1) 55%,transparent 100%);pointer-events:none;}
-.ct-img-label{
-  position:absolute;bottom:1rem;left:1rem;right:1rem;z-index:2;
-  font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;
-  color:rgba(255,255,255,.9);
-  display:flex;align-items:center;gap:.4rem;
-}
-.ct-img-label::before{content:'';width:10px;height:1px;background:var(--fire);flex-shrink:0;}
 .ct-imgs-top-bar{
   position:absolute;top:0;left:0;right:0;height:3px;z-index:3;
   background:linear-gradient(to right,var(--fire),#ddd,var(--jade));
@@ -597,14 +590,28 @@ footer{background:var(--ink2);}
   .mob-nav{top:80px;}
   #hero{padding-top:80px;}
   .hero-wm{display:none;}
-  .hero-inner{grid-template-columns:1fr;grid-template-rows:auto auto;}
-  .hi-left{order:1;padding:2.5rem 5% 2rem;}
+
+  /* ── Mobile hero: image on top, text below ── */
+  .hero-inner{
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto;
+  }
+  .hi-left{
+    order:2;
+    padding:2.5rem 5% 2rem;
+  }
+  .hi-right{
+    order:1;
+    height:clamp(260px,72vw,420px);
+    max-height:none;
+    min-height:260px;
+  }
+  .hi-photo{height:100%;}
+
   .hi-name{font-size:clamp(2.5rem,9vw,4rem);}
   .hi-bio{font-size:.93rem;max-width:100%;}
   .hi-actions{flex-direction:column;align-items:flex-start;gap:.7rem;}
   .ha-primary{width:100%;text-align:center;padding:.9rem 1.5rem;}
-  .hi-right{order:2;height:60vw;min-height:220px;max-height:340px;}
-  .hi-photo{height:100%;}
   .hi-stat-overlay{display:none;}
   .hero-strip{padding:.75rem 0;}
   .s{padding:3.5rem 5%;}
@@ -837,10 +844,9 @@ footer{background:var(--ink2);}
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Gallery 9" loading="lazy">
       <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
     </div>
-        <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 10" loading="lazy">
       <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
     </div>
   </div>
 </section>
@@ -900,7 +906,6 @@ footer{background:var(--ink2);}
       <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg">
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Photo 8" loading="lazy">
         <div class="mp-overlay"></div>
-      </div>
       </div>
     </div>
   </div>
@@ -994,8 +999,8 @@ footer{background:var(--ink2);}
   </div>
 </section>
 
-<!-- IMPACT -->
-<section id="achievements" class="s-dark" style="padding:6rem 8%;">
+<!-- IMPACT — orange background -->
+<section id="achievements" style="padding:6rem 8%;">
   <div class="iheader rv">
     <div>
       <div class="lbl inv">Track Record</div>
@@ -1063,18 +1068,16 @@ footer{background:var(--ink2);}
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT — clean image panel, no text labels -->
 <section id="contact">
   <div class="ct-imgs">
     <div class="ct-imgs-top-bar"></div>
     <div class="ct-imgs-inner">
       <div class="ct-img-item">
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/cm-100_e76srf.png" alt="CM Odisha">
-        <span class="ct-img-label">Hon. Chief Minister, Odisha</span>
       </div>
       <div class="ct-img-item">
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/shri-narendra-modi_iysx0d.png" alt="PM Narendra Modi">
-        <span class="ct-img-label">Hon. Prime Minister of India</span>
       </div>
     </div>
   </div>
