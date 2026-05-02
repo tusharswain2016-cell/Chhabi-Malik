@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chabi Malik | MLA Niali</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<title>Chhabi Malik | MLA Niali</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --fire:#E8560A;
-  --fire2:#C8430A;
+  --fire:#EC6D16;
+  --fire2:#D45A0A;
   --fire-pale:#FEF3EE;
   --jade:#0A6B04;
   --jade-pale:#EBF7EA;
@@ -26,14 +26,14 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+body{font-family:'Plus Jakarta Sans','Outfit',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-thumb{background:var(--fire);}
 
 /* ─── NAV ─── */
 nav{
   position:fixed;top:0;width:100%;z-index:999;
-  height:66px;display:flex;align-items:center;justify-content:space-between;
+  height:96px;display:flex;align-items:center;justify-content:space-between;
   padding:0 5%;background:rgba(255,255,255,0.96);
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
@@ -41,13 +41,26 @@ nav{
 }
 nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
-.logo-flag{width:3px;height:22px;background:linear-gradient(to bottom,var(--fire) 33%,#ddd 33%,#ddd 66%,var(--jade) 66%);flex-shrink:0;}
+.logo-flag{display:none;}.logo-bjp{height:52px;width:auto;flex-shrink:0;}
 .logo-text{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--ink);letter-spacing:-.01em;}
 .logo-text em{color:var(--fire);font-style:normal;}
 .nav-center{display:flex;gap:2rem;list-style:none;}
 .nav-center a{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);text-decoration:none;transition:color .2s;}
 .nav-center a:hover,.nav-center a.act{color:var(--ink);}
 .nav-right{display:flex;align-items:center;gap:1rem;}
+.nav-leaders{display:flex;align-items:center;gap:.5rem;}
+.nav-leader{display:flex;align-items:center;text-decoration:none;}
+.nav-leader img{
+  width:56px;height:60px;
+  border-radius:6px;
+  object-fit:cover;object-position:top center;
+  border:none;
+  transition:transform .2s,opacity .2s;
+  display:block;
+}
+.nav-leader:hover img{transform:scale(1.06);opacity:.9;}
+.nav-leader-name{display:none;}
+.nav-sep{width:1px;height:32px;background:var(--border);margin:0 .3rem;}
 .nav-contact{
   background:var(--fire);color:#fff;
   font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
@@ -68,7 +81,7 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 /* ─── HERO ─── */
 #hero{
   min-height:100vh;
-  padding-top:0px;
+  padding-top:96px;
   display:grid;
   grid-template-rows:1fr auto;
   position:relative;
@@ -94,10 +107,10 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
   gap:0;
   height:100%;
   position:relative;z-index:1;
-  padding:4rem 0 0;
+  padding:2rem 0 0;
 }
 .hi-left{
-  padding:3rem 5% 3rem 8%;
+  padding:2rem 5% 2rem 8%;
   display:flex;flex-direction:column;justify-content:center;
 }
 .hi-chip{
@@ -145,7 +158,7 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
   font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
   padding:.3rem .8rem;border:1px solid var(--border2);color:var(--light);
 }
-.hi-right{position:relative;display:flex;flex-direction:column;}
+.hi-right{position:relative;display:flex;flex-direction:column;max-height:580px;}
 .hi-photo{flex:1;position:relative;overflow:hidden;background:var(--bg3);}
 .hi-photo img{width:100%;height:100%;object-fit:cover;object-position:center 10%;display:block;}
 .hi-photo-line{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--fire),#ddd,var(--jade));}
@@ -162,10 +175,21 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .hso-l{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-top:.2rem;}
 .hero-strip{
   background:var(--fire);
-  padding:.85rem 8%;
-  display:flex;gap:3rem;align-items:center;
+  padding:.85rem 0;
   overflow:hidden;
   position:relative;z-index:1;
+  display:flex;
+}
+.hs-track{
+  display:flex;gap:3rem;align-items:center;
+  animation:marquee 28s linear infinite;
+  flex-shrink:0;
+  white-space:nowrap;
+}
+.hero-strip:hover .hs-track{animation-play-state:paused;}
+@keyframes marquee{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
 }
 .hs-item{display:flex;align-items:center;gap:.6rem;white-space:nowrap;flex-shrink:0;}
 .hs-n{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:700;color:#fff;}
@@ -222,15 +246,14 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .pg-grid{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  grid-auto-rows:220px;
+  grid-auto-rows:200px;
   gap:6px;
   margin-top:2.5rem;
 }
 .pg-item{
   position:relative;overflow:hidden;cursor:pointer;background:var(--border);
+  grid-column:span 1;grid-row:span 1;
 }
-.pg-item:nth-child(1){grid-column:span 2;grid-row:span 2;}
-.pg-item:nth-child(6){grid-column:span 2;}
 .pg-item img{
   width:100%;height:100%;object-fit:cover;
   transition:transform .5s ease,filter .4s;
@@ -463,9 +486,26 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .pc:hover::after{transform:scaleX(1);}
 
 /* ─── CONTACT ─── */
-#contact{display:grid;grid-template-columns:1fr 1fr;padding:0;}
-.ct-l{background:var(--bg3);padding:6rem 8% 6rem 8%;border-right:1px solid var(--border);}
-.ct-r{padding:6rem 7% 6rem 5%;background:var(--bg);}
+#contact{display:grid;grid-template-columns:260px 1fr 1fr;padding:0;min-height:640px;align-items:stretch;}
+.ct-imgs{background:var(--ink2);padding:0;display:flex;flex-direction:column;overflow:hidden;position:relative;align-self:stretch;}
+.ct-imgs-inner{display:flex;flex-direction:column;height:100%;gap:2px;flex:1;}
+.ct-img-item{flex:1;overflow:hidden;position:relative;min-height:0;}
+.ct-img-item img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .5s ease,filter .4s;}
+.ct-img-item:hover img{transform:scale(1.06);filter:brightness(1.08);}
+.ct-img-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,20,.75) 0%,rgba(10,10,20,.1) 55%,transparent 100%);pointer-events:none;}
+.ct-img-label{
+  position:absolute;bottom:1rem;left:1rem;right:1rem;z-index:2;
+  font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.13em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);
+  display:flex;align-items:center;gap:.4rem;
+}
+.ct-img-label::before{content:'';width:10px;height:1px;background:var(--fire);flex-shrink:0;}
+.ct-imgs-top-bar{
+  position:absolute;top:0;left:0;right:0;height:3px;z-index:3;
+  background:linear-gradient(to right,var(--fire),#ddd,var(--jade));
+}
+.ct-l{background:var(--bg3);padding:5rem 6% 5rem 6%;border-right:1px solid var(--border);}
+.ct-r{padding:5rem 6% 5rem 5%;background:var(--bg);}
 .ct-name{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;letter-spacing:-.02em;color:var(--ink);line-height:1.1;margin-bottom:.8rem;}
 .ct-name em{color:var(--fire);font-style:normal;}
 .ct-desc{font-size:.97rem;color:var(--mid);line-height:1.85;margin-bottom:2.5rem;}
@@ -530,7 +570,6 @@ footer{background:var(--ink2);}
   .ft-main{grid-template-columns:1fr 1fr;}
   .ft-main>div:first-child{grid-column:1/-1;}
   .pg-grid{grid-template-columns:repeat(3,1fr);}
-  .pg-item:nth-child(1){grid-column:span 2;grid-row:span 2;}
   .mp-grid{grid-template-columns:repeat(3,1fr);}
   .mv-grid{grid-template-columns:repeat(2,1fr);}
 }
@@ -543,10 +582,10 @@ footer{background:var(--ink2);}
   #press .playout{grid-template-columns:1fr 1fr;}
   .pc.big{grid-row:auto;}
   #contact{grid-template-columns:1fr;}
+  .ct-imgs{display:none;}
   .ct-l{border-right:none;border-bottom:1px solid var(--border);}
   .ct-l,.ct-r{padding:4rem 6%;}
-  .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px;}
-  .pg-item:nth-child(1){grid-column:span 2;grid-row:span 1;}
+  .pg-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:160px;}
   .mp-grid{grid-template-columns:repeat(2,1fr);}
   .mv-grid{grid-template-columns:1fr 1fr;}
 }
@@ -554,9 +593,9 @@ footer{background:var(--ink2);}
   .nav-center{display:none;}
   .nav-right{display:none;}
   .ham{display:flex;}
-  nav{height:60px;padding:0 5%;}
-  .mob-nav{top:60px;}
-  #hero{padding-top:60px;}
+  nav{height:80px;padding:0 5%;}
+  .mob-nav{top:80px;}
+  #hero{padding-top:80px;}
   .hero-wm{display:none;}
   .hero-inner{grid-template-columns:1fr;grid-template-rows:auto auto;}
   .hi-left{order:1;padding:2.5rem 5% 2rem;}
@@ -564,11 +603,10 @@ footer{background:var(--ink2);}
   .hi-bio{font-size:.93rem;max-width:100%;}
   .hi-actions{flex-direction:column;align-items:flex-start;gap:.7rem;}
   .ha-primary{width:100%;text-align:center;padding:.9rem 1.5rem;}
-  .hi-right{order:2;height:72vw;min-height:260px;max-height:380px;}
+  .hi-right{order:2;height:60vw;min-height:220px;max-height:340px;}
   .hi-photo{height:100%;}
   .hi-stat-overlay{display:none;}
-  .hero-strip{padding:.75rem 5%;gap:1.8rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
-  .hero-strip::-webkit-scrollbar{display:none;}
+  .hero-strip{padding:.75rem 0;}
   .s{padding:3.5rem 5%;}
   .sh{font-size:1.7rem;}
   .s-hd-row{flex-direction:column;gap:1rem;}
@@ -594,6 +632,7 @@ footer{background:var(--ink2);}
   #press .playout{grid-template-columns:1fr;gap:1rem;}
   .pc.big{grid-row:auto;}
   #contact{display:flex;flex-direction:column;}
+  .ct-imgs{display:none;}
   .ct-l,.ct-r{padding:3.5rem 5%;}
   .ct-name{font-size:1.8rem;}
   .fr2{grid-template-columns:1fr;}
@@ -602,7 +641,6 @@ footer{background:var(--ink2);}
   .ft-bot{flex-direction:column;text-align:center;padding:1rem 5%;}
   #photo-gallery{padding:3.5rem 5%;}
   .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}
-  .pg-item:nth-child(1){grid-column:span 2;grid-row:span 1;}
   #media{padding:3.5rem 5%;}
   .mp-grid{grid-template-columns:repeat(2,1fr);}
   .mv-grid{grid-template-columns:1fr;}
@@ -617,7 +655,7 @@ footer{background:var(--ink2);}
   .ab-img-main{width:100%;height:200px;object-fit:cover;}
   .ab-grid{grid-template-columns:1fr;}
   .sh{font-size:1.55rem;}
-  .pg-grid{grid-template-columns:1fr 1fr;grid-auto-rows:120px;}
+  .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;}
   .mp-grid{grid-template-columns:1fr 1fr;}
 }
 </style>
@@ -627,8 +665,8 @@ footer{background:var(--ink2);}
 <!-- NAV -->
 <nav id="nav">
   <a class="logo" href="#">
-    <div class="logo-flag"></div>
-    <div class="logo-text">Chabi <em>Malik</em></div>
+    <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777706234/bjp-kamal-logo_lkqzcp.png" class="logo-bjp" alt="BJP Logo">
+    <div class="logo-text">Chhabi <em>Malik</em></div>
   </a>
   <ul class="nav-center">
     <li><a href="#about">About</a></li>
@@ -636,10 +674,19 @@ footer{background:var(--ink2);}
     <li><a href="#media">Media</a></li>
     <li><a href="#vision">Vision</a></li>
     <li><a href="#journey">Journey</a></li>
-    <li><a href="#achievements">Impact</a></li>
-    <li><a href="#initiatives">Initiatives</a></li>
   </ul>
   <div class="nav-right">
+    <div class="nav-leaders">
+      <a class="nav-leader" href="#contact">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/cm-100_e76srf.png" alt="CM Odisha">
+        <span class="nav-leader-name">Hon. CM</span>
+      </a>
+      <a class="nav-leader" href="#contact">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/shri-narendra-modi_iysx0d.png" alt="PM Modi">
+        <span class="nav-leader-name">Hon. PM</span>
+      </a>
+    </div>
+    <div class="nav-sep"></div>
     <a href="#contact" class="nav-contact">Get in Touch</a>
   </div>
   <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
@@ -650,8 +697,6 @@ footer{background:var(--ink2);}
   <a href="#media" onclick="closeMenu()">Media</a>
   <a href="#vision" onclick="closeMenu()">Vision</a>
   <a href="#journey" onclick="closeMenu()">Journey</a>
-  <a href="#achievements" onclick="closeMenu()">Impact</a>
-  <a href="#initiatives" onclick="closeMenu()">Initiatives</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
 </div>
 
@@ -662,7 +707,7 @@ footer{background:var(--ink2);}
     <div class="hi-left">
       <div class="hi-chip">Member of Legislative Assembly · Niali Constituency · Odisha</div>
       <h1 class="hi-name">
-        Chabi<br>
+        Chhabi<br>
         <span class="fire-word">Malik</span><br>
         <span class="ghost">MLA</span>
       </h1>
@@ -681,7 +726,7 @@ footer{background:var(--ink2);}
     </div>
     <div class="hi-right">
       <div class="hi-photo">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Chabi Malik MLA Niali">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Chhabi Malik MLA Niali">
         <div class="hi-photo-line"></div>
         <div class="hi-stat-overlay">
           <div class="hso-item"><div class="hso-n">10+</div><div class="hso-l">Years in Service</div></div>
@@ -693,17 +738,31 @@ footer{background:var(--ink2);}
     </div>
   </div>
   <div class="hero-strip">
-    <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l">Homes Built</span></div>
-    <span class="hs-dot">·</span>
-    <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l">Electrification</span></div>
-    <span class="hs-dot">·</span>
-    <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l">Roads Built</span></div>
-    <span class="hs-dot">·</span>
-    <div class="hs-item"><span class="hs-n">45</span><span class="hs-l">Health Centres</span></div>
-    <span class="hs-dot">·</span>
-    <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l">Scholarships</span></div>
-    <span class="hs-dot">·</span>
-    <div class="hs-item"><span class="hs-n">Niali First</span><span class="hs-l">Always</span></div>
+    <div class="hs-track">
+      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l">Homes Built</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l">Electrification</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l">Roads Built</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l">Health Centres</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l">Scholarships</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">Niali First</span><span class="hs-l">Always</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l">Homes Built</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l">Electrification</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l">Roads Built</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l">Health Centres</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l">Scholarships</span></div>
+      <span class="hs-dot">·</span>
+      <div class="hs-item"><span class="hs-n">Niali First</span><span class="hs-l">Always</span></div>
+    </div>
   </div>
 </section>
 
@@ -715,14 +774,15 @@ footer{background:var(--ink2);}
   </div>
   <div class="wrap">
     <div class="ab-imgs rv">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chabi Malik" class="ab-img-main">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="ab-img-main">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Chhabi Malik" class="ab-img-sec">
       <div class="ab-flag"><span></span><span></span><span></span></div>
     </div>
     <div class="ab-right rv">
       <p class="ab-quote">"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."</p>
-      <p class="ab-body">Chabi Malik has been a steadfast voice for the people of Niali constituency in Odisha. Rising from grassroots activism, she has dedicated her life to uplifting the most vulnerable communities — farmers, women, tribals, and the youth of the region.</p>
+      <p class="ab-body">Chhabi Malik has been a steadfast voice for the people of Niali constituency in Odisha. Rising from grassroots activism, she has dedicated her life to uplifting the most vulnerable communities — farmers, women, tribals, and the youth of the region.</p>
       <p class="ab-body">Her tenure as MLA has been marked by a relentless focus on infrastructure, healthcare access, educational opportunities, and women's self-reliance. She brings a ground-level understanding to every policy debate and development initiative.</p>
-      <p class="ab-body">Known for her accessibility and integrity, Chabi Malik holds regular Jan Sunwais and personally monitors the progress of every scheme in her constituency. Her leadership is rooted in listening first and acting swiftly.</p>
+      <p class="ab-body">Known for her accessibility and integrity, Chhabi Malik holds regular Jan Sunwais and personally monitors the progress of every scheme in her constituency. Her leadership is rooted in listening first and acting swiftly.</p>
       <div class="ab-grid">
         <div class="ab-fact"><div class="ab-k">Constituency</div><div class="ab-v">Niali, Odisha</div></div>
         <div class="ab-fact"><div class="ab-k">Position</div><div class="ab-v">Member of Legislative Assembly</div></div>
@@ -738,7 +798,7 @@ footer{background:var(--ink2);}
 <!-- PHOTO GALLERY (after About) -->
 <section id="photo-gallery">
   <div class="s-hd rv" style="padding:0 0 0 0;">
-    <div class="lbl">Photo Gallery</div>
+    <div class="lbl">Event Gallery</div>
     <h2 class="sh">Moments from the <span class="ac">Field</span></h2>
     <p class="ss">A glimpse into the work, the people, and the journey across Niali constituency.</p>
   </div>
@@ -760,10 +820,12 @@ footer{background:var(--ink2);}
       <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
     </div>
     <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/674977918_1725597702139672_6214719514523778169_n_nt2s5g.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Gallery 5" loading="lazy">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/674977918_1725597702139672_6214719514523778169_n_nt2s5g.jpg" alt="Gallery 5" loading="lazy">
       <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
     </div>
-
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Gallery 6" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
     </div>
     <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg">
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg" alt="Gallery 7" loading="lazy">
@@ -773,8 +835,13 @@ footer{background:var(--ink2);}
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg" alt="Gallery 8" loading="lazy">
       <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
     </div>
-
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Gallery 9" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
     </div>
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Gallery 10" loading="lazy">
+      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
     </div>
   </div>
 </section>
@@ -835,7 +902,14 @@ footer{background:var(--ink2);}
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Photo 8" loading="lazy">
         <div class="mp-overlay"></div>
       </div>
-
+      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Photo 9" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Photo 10" loading="lazy">
+        <div class="mp-overlay"></div>
+      </div>
     </div>
   </div>
 
@@ -848,7 +922,7 @@ footer{background:var(--ink2);}
           <div class="mv-play"><div class="mv-play-btn">▶</div></div>
         </div>
         <div class="mv-info">
-          <div class="mv-title">Chabi Malik — Public Address, Niali</div>
+          <div class="mv-title">Chhabi Malik — Public Address, Niali</div>
           <div class="mv-sub">Official Video · YouTube</div>
         </div>
       </div>
@@ -915,7 +989,7 @@ footer{background:var(--ink2);}
   <div class="jlayout">
     <div class="jleft rv">
       <div class="jl-n">20</div>
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chabi Malik" class="jl-img">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="jl-img">
     </div>
     <div class="jright">
       <div class="je rv"><div class="je-yr">Early</div><div><div class="je-title">Community Leadership</div><p class="je-desc">Began grassroots social work in Niali, organising women's self-help groups, advocating for clean water access, and running adult literacy drives in underserved villages.</p></div></div>
@@ -986,19 +1060,32 @@ footer{background:var(--ink2);}
     <div class="pc big rv">
       <div>
         <div class="pc-src">Sambad</div>
-        <div class="pc-hl">"Chabi Malik recognised as one of Odisha's most active legislators — consistently raising constituency issues in the assembly with data and resolve"</div>
+        <div class="pc-hl">"Chhabi Malik recognised as one of Odisha's most active legislators — consistently raising constituency issues in the assembly with data and resolve"</div>
       </div>
       <div class="pc-dt">2024</div>
     </div>
-    <div class="pc rv"><div class="pc-src">Dharitri</div><div class="pc-hl">"Niali's digital transformation: How MLA Chabi Malik is bringing broadband to every village"</div><div class="pc-dt">February 2025</div></div>
-    <div class="pc rv d1"><div class="pc-src">Pragativadi</div><div class="pc-hl">"Chabi Malik's Mahila Aarogya Abhiyan screens over 18,000 women in Niali for critical health conditions"</div><div class="pc-dt">January 2025</div></div>
+    <div class="pc rv"><div class="pc-src">Dharitri</div><div class="pc-hl">"Niali's digital transformation: How MLA Chhabi Malik is bringing broadband to every village"</div><div class="pc-dt">February 2025</div></div>
+    <div class="pc rv d1"><div class="pc-src">Pragativadi</div><div class="pc-hl">"Chhabi Malik's Mahila Aarogya Abhiyan screens over 18,000 women in Niali for critical health conditions"</div><div class="pc-dt">January 2025</div></div>
     <div class="pc rv"><div class="pc-src">The New Indian Express</div><div class="pc-hl">"How one Odisha constituency achieved 100% electrification ahead of the state target"</div><div class="pc-dt">November 2024</div></div>
-    <div class="pc rv d1"><div class="pc-src">Odisha TV</div><div class="pc-hl">"MLA Chabi Malik credited with 21% reduction in rural informal borrowing after Kisan Credit Melas"</div><div class="pc-dt">October 2024</div></div>
+    <div class="pc rv d1"><div class="pc-src">Odisha TV</div><div class="pc-hl">"MLA Chhabi Malik credited with 21% reduction in rural informal borrowing after Kisan Credit Melas"</div><div class="pc-dt">October 2024</div></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
+  <div class="ct-imgs">
+    <div class="ct-imgs-top-bar"></div>
+    <div class="ct-imgs-inner">
+      <div class="ct-img-item">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/cm-100_e76srf.png" alt="CM Odisha">
+        <span class="ct-img-label">Hon. Chief Minister, Odisha</span>
+      </div>
+      <div class="ct-img-item">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/shri-narendra-modi_iysx0d.png" alt="PM Narendra Modi">
+        <span class="ct-img-label">Hon. Prime Minister of India</span>
+      </div>
+    </div>
+  </div>
   <div class="ct-l">
     <div class="lbl rv" style="margin-bottom:1rem;">Get In Touch</div>
     <div class="ct-name rv">Office <em>Contacts</em></div>
@@ -1014,7 +1101,7 @@ footer{background:var(--ink2);}
     </div>
   </div>
   <div class="ct-r">
-    <div class="cf-title rv">Write to <span style="color:var(--fire)">Chabi Di</span></div>
+    <div class="cf-title rv">Write to <span style="color:var(--fire)">Chhabi Di</span></div>
     <p class="cf-sub rv">Share your concern, suggestion, or grievance. All submissions are reviewed by our team.</p>
     <div class="fr2">
       <div class="fg"><label class="fl">Full Name *</label><input type="text" class="fi" placeholder="Your full name"></div>
@@ -1045,7 +1132,7 @@ footer{background:var(--ink2);}
 <footer>
   <div class="ft-main">
     <div>
-      <div class="fb-brand">Chabi <em>Malik</em></div>
+      <div class="fb-brand">Chhabi <em>Malik</em></div>
       <p class="fb-tag">MLA, Niali Constituency, Odisha. Committed to a progressive, inclusive, and self-reliant Niali.</p>
       <div class="fb-flag"><span></span><span></span><span></span></div>
     </div>
@@ -1072,7 +1159,7 @@ footer{background:var(--ink2);}
     </div>
   </div>
   <div class="ft-bot">
-    <span>© 2025 Chabi Malik. Official Website. MLA — Niali, Odisha.</span>
+    <span>© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha.</span>
     <span>JAI ODISHA 🇮🇳</span>
   </div>
 </footer>
