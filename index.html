@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chhabi Malik | MLA Niali</title>
+<title>Mynetawiki — Chhabi Malik | MLA Niali</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --fire:#EC6D16;
-  --fire2:#D45A0A;
-  --fire-pale:#FEF3EE;
+  --fire:#FF6A00;
+  --fire2:#E05A00;
+  --fire3:#CC5000;
+  --fire-pale:#FFF3EC;
   --jade:#0A6B04;
   --jade-pale:#EBF7EA;
   --gold:#B8860B;
@@ -30,41 +31,186 @@ body{font-family:'Plus Jakarta Sans','Outfit',sans-serif;background:var(--bg);co
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-thumb{background:var(--fire);}
 
+/* ─── TICKER (top) ─── */
+#ticker{
+  background:var(--fire);
+  height:36px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  position:relative;
+  z-index:1000;
+}
+.ticker-label{
+  background:var(--fire3);
+  color:#fff;
+  font-family:'Space Mono',monospace;
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:0 1.2rem;
+  height:100%;display:flex;align-items:center;
+  white-space:nowrap;
+  flex-shrink:0;
+  border-right:1px solid rgba(255,255,255,.2);
+}
+.ticker-track-wrap{flex:1;overflow:hidden;height:100%;}
+.ticker-track{
+  display:flex;align-items:center;
+  height:100%;
+  animation:tick 22s linear infinite;
+  white-space:nowrap;
+}
+#ticker:hover .ticker-track{animation-play-state:paused;}
+.ticker-item{
+  display:flex;align-items:center;gap:.6rem;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:.78rem;font-weight:600;color:#fff;
+  padding:0 2.5rem;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.ticker-dot{color:rgba(255,255,255,.4);font-size:1rem;}
+.ticker-date{
+  font-family:'Space Mono',monospace;font-size:.6rem;
+  color:rgba(255,255,255,.7);
+  background:rgba(255,255,255,.15);
+  padding:.18rem .55rem;border-radius:3px;
+  margin-left:.3rem;
+}
+@keyframes tick{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+/* ─── EVENT TICKER (below nav) ─── */
+#event-ticker{
+  background:var(--fire2);
+  height:40px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  position:sticky;
+  top:88px;
+  z-index:997;
+  border-bottom:2px solid var(--fire3);
+}
+.et-label{
+  background:var(--fire3);
+  color:#fff;
+  font-family:'Space Mono',monospace;
+  font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:0 1.1rem;
+  height:100%;display:flex;align-items:center;gap:.5rem;
+  white-space:nowrap;
+  flex-shrink:0;
+  border-right:1px solid rgba(255,255,255,.15);
+}
+.et-label-icon{font-size:.85rem;}
+.et-track-wrap{flex:1;overflow:hidden;height:100%;}
+.et-track{
+  display:flex;align-items:center;
+  height:100%;
+  animation:ettick 30s linear infinite;
+  white-space:nowrap;
+}
+#event-ticker:hover .et-track{animation-play-state:paused;}
+.et-item{
+  display:inline-flex;align-items:center;gap:.7rem;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:.8rem;font-weight:600;color:#fff;
+  padding:0 3rem;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.et-item .et-badge{
+  font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--fire3);color:#fff;
+  padding:.2rem .6rem;border-radius:3px;
+  flex-shrink:0;
+}
+.et-item .et-date{
+  font-family:'Space Mono',monospace;font-size:.62rem;
+  color:#fff;
+  background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.3);
+  padding:.18rem .55rem;border-radius:3px;
+}
+.et-sep{color:rgba(255,255,255,.3);font-size:1.2rem;padding:0 1rem;}
+@keyframes ettick{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+@media(max-width:768px){
+  #event-ticker{top:72px;height:36px;}
+  .et-item{font-size:.72rem;padding:0 2rem;}
+}
+
 /* ─── NAV ─── */
 nav{
-  position:fixed;top:0;width:100%;z-index:999;
-  height:96px;display:flex;align-items:center;justify-content:space-between;
-  padding:0 5%;background:rgba(255,255,255,0.96);
+  position:sticky;top:0;width:100%;z-index:999;
+  height:88px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 4%;background:rgba(255,255,255,0.97);
   backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
+  border-bottom:2px solid var(--fire);
   transition:all .3s;
 }
-nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
-.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
-.logo-flag{display:none;}.logo-bjp{height:52px;width:auto;flex-shrink:0;}
-.logo-text{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--ink);letter-spacing:-.01em;}
-.logo-text em{color:var(--fire);font-style:normal;}
+nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
+.logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;}
+.logo-bjp{height:48px;width:auto;flex-shrink:0;}
+.logo-text{display:flex;flex-direction:column;gap:1px;}
+.logo-site{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--fire);font-weight:700;}
+.logo-name{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--fire);letter-spacing:-.01em;line-height:1;}
+.logo-name em{color:var(--fire);font-style:normal;}
 .nav-center{display:flex;gap:2rem;list-style:none;}
-.nav-center a{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);text-decoration:none;transition:color .2s;}
-.nav-center a:hover,.nav-center a.act{color:var(--ink);}
+.nav-center a{
+  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--light);text-decoration:none;
+  font-weight:700;
+  transition:color .3s ease;
+  position:relative;
+  padding-bottom:4px;
+}
+.nav-center a::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--fire);transform:scaleX(0);transform-origin:left;
+  transition:transform .3s ease;
+}
+.nav-center a:hover,.nav-center a.act{color:var(--fire);}
+.nav-center a:hover::after,.nav-center a.act::after{transform:scaleX(1);}
 .nav-right{display:flex;align-items:center;gap:1rem;}
-.nav-leaders{display:flex;align-items:center;gap:.5rem;}
-.nav-leader{display:flex;align-items:center;text-decoration:none;}
+.nav-leaders{display:flex;align-items:center;gap:.6rem;}
+.nav-leader{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;}
 .nav-leader img{
-  width:56px;height:60px;
+  width:52px;height:56px;
   border-radius:6px;
   object-fit:cover;object-position:top center;
-  border:none;
-  transition:transform .2s,opacity .2s;
+  border:2px solid var(--border);
+  transition:transform .2s,border-color .2s;
   display:block;
 }
-.nav-leader:hover img{transform:scale(1.06);opacity:.9;}
+.nav-leader:hover img{transform:scale(1.06);border-color:var(--fire);}
 .nav-leader-name{display:none;}
-.nav-sep{width:1px;height:32px;background:var(--border);margin:0 .3rem;}
+.nav-sep{width:1px;height:40px;background:var(--border);margin:0 .3rem;}
+.lang-toggle{
+  display:flex;align-items:center;gap:0;
+  border:1.5px solid var(--border2);
+  overflow:hidden;
+  border-radius:4px;
+}
+.lt-btn{
+  font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:.4rem .9rem;cursor:pointer;border:none;background:var(--bg3);
+  color:var(--mid);transition:all .2s;font-weight:700;
+  border-right:1px solid var(--border2);
+}
+.lt-btn:last-child{border-right:none;}
+.lt-btn.active{background:var(--fire);color:#fff;}
+.lt-btn:not(.active):hover{background:var(--fire-pale);color:var(--fire);}
 .nav-contact{
   background:var(--fire);color:#fff;
-  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:.5rem 1.2rem;text-decoration:none;transition:background .2s;
+  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.52rem 1.2rem;text-decoration:none;transition:background .2s;
+  font-weight:700;
+  border-radius:3px;
 }
 .nav-contact:hover{background:var(--fire2);}
 .ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px;}
@@ -72,16 +218,15 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .ham.o span:nth-child(1){transform:translateY(5.5px) rotate(45deg);}
 .ham.o span:nth-child(2){opacity:0;}
 .ham.o span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);}
-.mob-nav{display:none;position:fixed;top:66px;left:0;right:0;z-index:998;background:var(--bg);border-bottom:2px solid var(--fire);padding:0 5% 1rem;}
+.mob-nav{display:none;position:fixed;top:124px;left:0;right:0;z-index:998;background:var(--bg);border-bottom:2px solid var(--fire);padding:0 5% 1rem;}
 .mob-nav.o{display:flex;flex-direction:column;}
-.mob-nav a{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;padding:.9rem 0;border-bottom:1px solid var(--border);transition:color .2s;}
+.mob-nav a{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);text-decoration:none;padding:.9rem 0;border-bottom:1px solid var(--border);transition:color .2s;font-weight:700;}
 .mob-nav a:last-child{color:var(--fire);border:none;}
-.mob-nav a:hover{color:var(--ink);}
+.mob-nav a:hover{color:var(--fire);}
 
 /* ─── HERO ─── */
 #hero{
-  min-height:100vh;
-  padding-top:96px;
+  min-height:calc(100vh - 164px);
   display:grid;
   grid-template-rows:1fr auto;
   position:relative;
@@ -95,7 +240,7 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
   font-family:'Fraunces',serif;
   font-size:clamp(12rem,25vw,24rem);
   font-weight:700;
-  color:rgba(232,86,10,.04);
+  color:rgba(255,106,0,.04);
   line-height:1;
   pointer-events:none;
   white-space:nowrap;
@@ -110,13 +255,13 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
   padding:2rem 0 0;
 }
 .hi-left{
-  padding:2rem 5% 2rem 8%;
+  padding:2rem 5% 2rem 6%;
   display:flex;flex-direction:column;justify-content:center;
 }
 .hi-chip{
   display:inline-flex;align-items:center;gap:.5rem;
-  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--fire);margin-bottom:2rem;
+  font-family:'Space Mono',monospace;font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--fire);margin-bottom:1.8rem;font-weight:700;
 }
 .hi-chip::before{content:'';width:20px;height:1px;background:var(--fire);}
 .hi-name{
@@ -128,35 +273,35 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
   color:var(--ink);
   margin-bottom:1.5rem;
 }
-.hi-name .ghost{-webkit-text-stroke:1.5px var(--ink);color:transparent;}
 .hi-name .fire-word{color:var(--fire);}
 .hi-role{
-  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--light);margin-bottom:1.8rem;
+  font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--light);margin-bottom:1.8rem;font-weight:700;
   display:flex;align-items:center;gap:.8rem;
 }
 .hi-role::after{content:'';flex:1;height:1px;background:var(--border2);}
-.hi-bio{font-size:1.05rem;color:var(--mid);line-height:1.85;max-width:420px;margin-bottom:2.5rem;}
-.hi-actions{display:flex;gap:.8rem;align-items:center;margin-bottom:3rem;}
+.hi-bio{font-size:1rem;color:var(--mid);line-height:1.85;max-width:420px;margin-bottom:2.5rem;}
+.hi-actions{display:flex;gap:.8rem;align-items:center;margin-bottom:2.5rem;}
 .ha-primary{
-  background:var(--ink);color:#fff;
+  background:var(--fire);color:#fff;
   padding:.85rem 2rem;
-  font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:600;letter-spacing:.04em;
+  font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.04em;
   text-decoration:none;display:inline-block;transition:all .2s;
+  border-radius:3px;
 }
-.ha-primary:hover{background:var(--fire);transform:translateY(-2px);}
+.ha-primary:hover{background:var(--fire2);transform:translateY(-2px);}
 .ha-ghost{
   color:var(--mid);
-  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
   text-decoration:none;display:flex;align-items:center;gap:.5rem;
-  transition:color .2s;
+  transition:color .2s;font-weight:700;
 }
 .ha-ghost:hover{color:var(--fire);}
 .ha-ghost::after{content:'→';}
 .hi-tags{display:flex;gap:.5rem;flex-wrap:wrap;}
 .hi-tag{
-  font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:.3rem .8rem;border:1px solid var(--border2);color:var(--light);
+  font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.3rem .8rem;border:1.5px solid var(--border2);color:var(--light);border-radius:2px;
 }
 .hi-right{position:relative;display:flex;flex-direction:column;max-height:580px;}
 .hi-photo{flex:1;position:relative;overflow:hidden;background:var(--bg3);}
@@ -164,15 +309,16 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .hi-photo-line{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--fire),#ddd,var(--jade));}
 .hi-stat-overlay{
   position:absolute;bottom:2rem;right:2rem;
-  background:rgba(255,255,255,.95);
+  background:rgba(255,255,255,.96);
   backdrop-filter:blur(12px);
   border:1px solid var(--border);
   padding:1.2rem 1.6rem;
   display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;
   min-width:200px;
+  border-radius:4px;
 }
 .hso-n{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--fire);line-height:1;}
-.hso-l{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-top:.2rem;}
+.hso-l{font-family:'Space Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-top:.2rem;}
 .hero-strip{
   background:var(--fire);
   padding:.85rem 0;
@@ -187,10 +333,7 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
   white-space:nowrap;
 }
 .hero-strip:hover .hs-track{animation-play-state:paused;}
-@keyframes marquee{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 .hs-item{display:flex;align-items:center;gap:.6rem;white-space:nowrap;flex-shrink:0;}
 .hs-n{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:700;color:#fff;}
 .hs-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
@@ -201,17 +344,13 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .s-off{background:var(--bg2);}
 .s-dark{background:var(--ink);}
 .s-warm{background:var(--fire-pale);}
-.lbl{
-  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--fire);display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;
-}
+.lbl{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fire);display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;font-weight:700;}
 .lbl::before{content:'';width:18px;height:1px;background:var(--fire);}
-.lbl.inv{color:rgba(255,255,255,.8);}
+.lbl.inv{color:rgba(255,255,255,.9);}
 .lbl.inv::before{background:rgba(255,255,255,.6);}
 .sh{font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--ink);}
 .sh .ac{color:var(--fire);}
 .sh.inv{color:#fff;}
-.sh.inv .ac{color:rgba(255,255,255,1);}
 .ss{font-size:1rem;color:var(--mid);line-height:1.8;max-width:500px;margin-top:.8rem;}
 .ss.inv{color:rgba(255,255,255,.75);}
 .s-hd{margin-bottom:3.5rem;}
@@ -219,198 +358,113 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .s-hd-row .sh{flex:1;}
 
 /* ─── ABOUT ─── */
-#about .wrap{display:grid;grid-template-columns:280px 1fr;gap:5rem;align-items:start;}
+#about .wrap{display:grid;grid-template-columns:300px 1fr;gap:5rem;align-items:start;}
 .ab-imgs{display:flex;flex-direction:column;gap:.8rem;}
-.ab-img-main{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;}
-.ab-img-sec{width:75%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;margin-left:auto;margin-top:-.8rem;border:3px solid var(--bg);}
+.ab-img-main{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:top center;
+  display:block;
+  border-radius:8px;
+  box-shadow:0 12px 40px rgba(255,106,0,.15);
+}
+.ab-img-sec{display:none;}
 .ab-flag{display:flex;height:3px;margin-top:.8rem;}
 .ab-flag span{flex:1;}
 .ab-flag span:nth-child(1){background:var(--fire);}
 .ab-flag span:nth-child(2){background:#ddd;}
 .ab-flag span:nth-child(3){background:var(--jade);}
-.ab-quote{
-  font-family:'Fraunces',serif;font-size:1.5rem;font-style:italic;font-weight:400;
-  color:var(--ink);line-height:1.5;
-  border-left:2px solid var(--fire);padding-left:1.5rem;
-  margin-bottom:2rem;
+
+/* Wikipedia-info card */
+.wiki-card{
+  background:var(--bg3);
+  border:1.5px solid var(--border2);
+  border-radius:6px;
+  padding:1.2rem;
+  margin-top:1rem;
+  font-size:.82rem;
 }
+.wiki-card-title{
+  font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--fire);font-weight:700;margin-bottom:.8rem;
+  display:flex;align-items:center;gap:.4rem;
+}
+.wiki-row{display:flex;justify-content:space-between;gap:.8rem;padding:.45rem 0;border-bottom:1px solid var(--border);}
+.wiki-row:last-child{border-bottom:none;}
+.wiki-k{color:var(--mid);font-size:.8rem;}
+.wiki-v{color:var(--ink);font-weight:700;font-size:.8rem;text-align:right;}
+
+.ab-quote{font-family:'Fraunces',serif;font-size:1.5rem;font-style:italic;font-weight:400;color:var(--ink);line-height:1.5;border-left:3px solid var(--fire);padding-left:1.5rem;margin-bottom:2rem;}
 .ab-body{font-size:.98rem;color:var(--mid);line-height:1.95;margin-bottom:1rem;}
 .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:2rem;}
-.ab-fact{padding:.85rem 1rem;background:var(--bg3);border-bottom:2px solid transparent;transition:border-color .2s;}
+.ab-fact{padding:.85rem 1rem;background:var(--bg3);border-bottom:2px solid transparent;transition:border-color .2s;border-radius:3px;}
 .ab-fact:hover{border-bottom-color:var(--fire);}
-.ab-k{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fire);margin-bottom:.25rem;}
-.ab-v{font-size:.9rem;font-weight:600;color:var(--ink);}
+.ab-k{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fire);margin-bottom:.25rem;font-weight:700;}
+.ab-v{font-size:.9rem;font-weight:700;color:var(--ink);}
 
-/* ─── PHOTO GALLERY (after About) ─── */
+/* ─── PHOTO GALLERY ─── */
 #photo-gallery{padding:5rem 8%;background:var(--bg3);}
-.pg-grid{
-  display:grid;
-  grid-template-columns:repeat(5,1fr);
-  grid-auto-rows:200px;
-  gap:6px;
-  margin-top:2.5rem;
-}
-.pg-item{
-  position:relative;overflow:hidden;cursor:pointer;background:var(--border);
-  grid-column:span 1;grid-row:span 1;
-}
-.pg-item img{
-  width:100%;height:100%;object-fit:cover;
-  transition:transform .5s ease,filter .4s;
-  display:block;filter:brightness(.95);
-}
+.pg-grid{display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:200px;gap:6px;margin-top:2.5rem;}
+.pg-item{position:relative;overflow:hidden;cursor:pointer;background:var(--border);grid-column:span 1;grid-row:span 1;}
+.pg-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .4s;display:block;filter:brightness(.95);}
 .pg-item:hover img{transform:scale(1.07);filter:brightness(1);}
-.pg-overlay{
-  position:absolute;inset:0;
-  background:rgba(17,17,24,0);
-  display:flex;align-items:center;justify-content:center;
-  transition:background .3s;
-}
+.pg-overlay{position:absolute;inset:0;background:rgba(17,17,24,0);display:flex;align-items:center;justify-content:center;transition:background .3s;}
 .pg-item:hover .pg-overlay{background:rgba(17,17,24,.25);}
-.pg-zoom{
-  width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.9);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;
-  opacity:0;transform:scale(.7);transition:all .3s;
-}
+.pg-zoom{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;font-size:1.1rem;opacity:0;transform:scale(.7);transition:all .3s;}
 .pg-item:hover .pg-zoom{opacity:1;transform:scale(1);}
-
-/* Lightbox */
-.lb{
-  position:fixed;inset:0;z-index:2000;
-  background:rgba(10,10,15,.96);
-  display:flex;align-items:center;justify-content:center;
-  opacity:0;pointer-events:none;transition:opacity .3s;
-}
+.lb{position:fixed;inset:0;z-index:2000;background:rgba(10,10,15,.96);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
 .lb.open{opacity:1;pointer-events:all;}
-.lb-img{
-  max-width:88vw;max-height:88vh;
-  object-fit:contain;
-  border:1px solid rgba(255,255,255,.1);
-}
-.lb-close{
-  position:absolute;top:1.5rem;right:2rem;
-  font-size:2rem;color:#fff;cursor:pointer;
-  background:none;border:none;line-height:1;
-  opacity:.6;transition:opacity .2s;
-}
+.lb-img{max-width:88vw;max-height:88vh;object-fit:contain;border:1px solid rgba(255,255,255,.1);}
+.lb-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;color:#fff;cursor:pointer;background:none;border:none;line-height:1;opacity:.6;transition:opacity .2s;}
 .lb-close:hover{opacity:1;}
-.lb-nav{
-  position:absolute;top:50%;transform:translateY(-50%);
-  font-size:2rem;color:#fff;cursor:pointer;
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
-  width:50px;height:50px;display:flex;align-items:center;justify-content:center;
-  transition:all .2s;
-}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);font-size:2rem;color:#fff;cursor:pointer;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);width:50px;height:50px;display:flex;align-items:center;justify-content:center;transition:all .2s;}
 .lb-nav:hover{background:var(--fire);}
 .lb-prev{left:1.5rem;}
 .lb-next{right:1.5rem;}
-.lb-counter{
-  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
-  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.14em;
-  color:rgba(255,255,255,.4);
-}
+.lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.14em;color:rgba(255,255,255,.4);}
 
-/* ─── MEDIA SECTION ─── */
+/* ─── MEDIA ─── */
 #media{padding:6rem 8%;background:var(--bg);}
 .media-tabs{display:flex;gap:0;margin-top:2.5rem;margin-bottom:2.5rem;border-bottom:2px solid var(--border);}
-.mt-btn{
-  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
-  padding:.8rem 2rem;cursor:pointer;border:none;background:none;
-  color:var(--light);position:relative;transition:color .2s;
-}
-.mt-btn::after{
-  content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;
-  background:var(--fire);transform:scaleX(0);transition:transform .3s;
-}
+.mt-btn{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.8rem 2rem;cursor:pointer;border:none;background:none;color:var(--light);position:relative;transition:color .2s;font-weight:700;}
+.mt-btn::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--fire);transform:scaleX(0);transition:transform .3s;}
 .mt-btn.active{color:var(--ink);}
 .mt-btn.active::after{transform:scaleX(1);}
 .mt-btn:hover{color:var(--mid);}
 .tab-panel{display:none;}
 .tab-panel.active{display:block;}
-
-/* Photos tab */
-.mp-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:8px;
-}
-.mp-item{
-  position:relative;overflow:hidden;
-  aspect-ratio:1;cursor:pointer;background:var(--bg3);
-}
+.mp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.mp-item{position:relative;overflow:hidden;aspect-ratio:1;cursor:pointer;background:var(--bg3);}
 .mp-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s,filter .3s;filter:brightness(.95);}
 .mp-item:hover img{transform:scale(1.07);filter:brightness(1);}
-.mp-overlay{
-  position:absolute;inset:0;background:rgba(232,86,10,0);
-  display:flex;align-items:center;justify-content:center;
-  transition:background .3s;
-}
-.mp-item:hover .mp-overlay{background:rgba(232,86,10,.18);}
-
-/* Videos tab */
-.mv-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1.2rem;
-}
-.mv-item{
-  background:var(--ink);
-  overflow:hidden;
-  position:relative;
-}
-.mv-thumb{
-  position:relative;
-  aspect-ratio:16/9;
-  cursor:pointer;overflow:hidden;
-}
+.mp-overlay{position:absolute;inset:0;background:rgba(255,106,0,0);display:flex;align-items:center;justify-content:center;transition:background .3s;}
+.mp-item:hover .mp-overlay{background:rgba(255,106,0,.18);}
+.mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.mv-item{background:var(--ink);overflow:hidden;position:relative;}
+.mv-thumb{position:relative;aspect-ratio:16/9;cursor:pointer;overflow:hidden;}
 .mv-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s,filter .3s;filter:brightness(.8);}
 .mv-thumb:hover img{transform:scale(1.04);filter:brightness(.6);}
-.mv-play{
-  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-}
-.mv-play-btn{
-  width:60px;height:60px;border-radius:50%;
-  background:rgba(232,86,10,.9);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.4rem;color:#fff;
-  transition:all .3s;
-}
+.mv-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;}
+.mv-play-btn{width:60px;height:60px;border-radius:50%;background:rgba(255,106,0,.9);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#fff;transition:all .3s;}
 .mv-thumb:hover .mv-play-btn{background:var(--fire);transform:scale(1.1);}
 .mv-info{padding:1rem 1.2rem 1.2rem;background:var(--ink2);}
 .mv-title{font-family:'Fraunces',serif;font-size:.95rem;color:#fff;font-weight:600;line-height:1.4;margin-bottom:.3rem;}
 .mv-sub{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);}
-
-/* Video modal */
-.vm{
-  position:fixed;inset:0;z-index:2000;
-  background:rgba(10,10,15,.97);
-  display:flex;align-items:center;justify-content:center;
-  opacity:0;pointer-events:none;transition:opacity .3s;
-}
+.vm{position:fixed;inset:0;z-index:2000;background:rgba(10,10,15,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
 .vm.open{opacity:1;pointer-events:all;}
-.vm-inner{
-  position:relative;
-  width:min(860px,90vw);
-}
-.vm-frame{
-  width:100%;aspect-ratio:16/9;background:#000;
-}
+.vm-inner{position:relative;width:min(860px,90vw);}
+.vm-frame{width:100%;aspect-ratio:16/9;background:#000;}
 .vm-frame iframe{width:100%;height:100%;border:none;display:block;}
-.vm-close{
-  position:absolute;top:-2.5rem;right:0;
-  font-size:1.6rem;color:#fff;cursor:pointer;
-  background:none;border:none;line-height:1;
-  opacity:.6;transition:opacity .2s;
-}
+.vm-close{position:absolute;top:-2.5rem;right:0;font-size:1.6rem;color:#fff;cursor:pointer;background:none;border:none;line-height:1;opacity:.6;transition:opacity .2s;}
 .vm-close:hover{opacity:1;}
 
 /* ─── VISION ─── */
 #vision .vwrap{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
 #vision .vright{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
 .vc{background:var(--bg);padding:2rem 1.8rem;position:relative;overflow:hidden;cursor:default;transition:background .25s;}
-.vc:hover{background:var(--bg2);}
-.vc-n{font-family:'Fraunces',serif;font-size:4rem;font-weight:700;color:rgba(0,0,0,.04);line-height:1;position:absolute;top:.8rem;right:1rem;}
+.vc:hover{background:var(--fire-pale);}
+.vc-n{font-family:'Fraunces',serif;font-size:4rem;font-weight:700;color:rgba(255,106,0,.06);line-height:1;position:absolute;top:.8rem;right:1rem;}
 .vc-icon{font-size:1.8rem;margin-bottom:1rem;display:block;}
 .vc-title{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:.6rem;}
 .vc-text{font-size:.88rem;color:var(--mid);line-height:1.8;}
@@ -421,19 +475,19 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 #journey .jlayout{display:grid;grid-template-columns:300px 1fr;gap:6rem;align-items:start;}
 #journey .jleft{position:sticky;top:8rem;}
 .jl-n{font-family:'Fraunces',serif;font-size:7rem;font-weight:700;color:var(--fire);line-height:1;opacity:.12;}
-.jl-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;margin-top:-3rem;}
+.jl-img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block;margin-top:-3rem;border-radius:6px;}
 .jright{display:flex;flex-direction:column;gap:0;}
-.je{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:2rem 0;border-bottom:1px solid var(--border);transition:background .2s;cursor:default;}
+.je{display:grid;grid-template-columns:80px 1fr;gap:1.5rem;padding:2rem 0;border-bottom:1px solid var(--border);transition:background .2s,padding .2s;cursor:default;}
 .je:first-child{padding-top:0;}
 .je:last-child{border-bottom:none;}
 .je:hover{background:var(--bg2);padding-left:1rem;padding-right:1rem;margin:0 -1rem;}
-.je-yr{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.12em;color:var(--fire);padding-top:.4rem;}
+.je-yr{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;color:var(--fire);padding-top:.4rem;font-weight:700;}
 .je-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;}
 .je-desc{font-size:.88rem;color:var(--mid);line-height:1.75;}
 .je:last-child .je-yr{color:var(--gold);}
 .je:last-child .je-title{color:var(--gold);}
 
-/* ─── IMPACT — orange background ─── */
+/* ─── IMPACT ─── */
 #achievements{background:var(--fire);}
 #achievements .iheader{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem;}
 .i-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.2);}
@@ -454,30 +508,12 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .aw-t{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:.3rem;}
 .aw-b{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.65;}
 
-/* ─── INITIATIVES ─── */
-#initiatives .initwrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
-.icard{background:var(--bg);border:1px solid var(--border);padding:0;overflow:hidden;transition:all .3s;}
-.icard:hover{border-color:var(--fire);box-shadow:0 12px 40px rgba(232,86,10,.08);transform:translateY(-3px);}
-.ic-top{display:flex;align-items:center;justify-content:space-between;padding:1.6rem 1.8rem;border-bottom:1px solid var(--border);}
-.ic-icon{font-size:1.8rem;}
-.ic-badge{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .75rem;border-radius:20px;}
-.ba{background:var(--jade-pale);color:var(--jade);}
-.bo{background:var(--fire-pale);color:var(--fire);}
-.bp{background:var(--bg3);color:var(--light);}
-.ic-body{padding:1.4rem 1.8rem 1.8rem;}
-.ic-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;}
-.ic-desc{font-size:.87rem;color:var(--mid);line-height:1.75;margin-bottom:1.2rem;}
-.ic-prog{display:flex;align-items:center;gap:.8rem;}
-.ic-bar{flex:1;height:2px;background:var(--border);}
-.ic-fill{height:100%;background:var(--fire);width:0;transition:width 1.5s ease;}
-.ic-pct{font-family:'Space Mono',monospace;font-size:.65rem;color:var(--fire);letter-spacing:.08em;flex-shrink:0;}
-
 /* ─── PRESS ─── */
 #press .playout{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem;}
-.pc{background:var(--bg);border:1px solid var(--border);padding:2rem;transition:all .3s;position:relative;}
+.pc{background:var(--bg);border:1px solid var(--border);padding:2rem;transition:all .3s;position:relative;border-radius:4px;}
 .pc:hover{border-color:var(--fire);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.07);}
 .pc.big{grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;}
-.pc-src{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fire);margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem;}
+.pc-src{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fire);margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem;font-weight:700;}
 .pc-src::before{content:'';width:12px;height:1px;background:var(--fire);display:block;}
 .pc-hl{font-family:'Fraunces',serif;font-size:1rem;font-weight:500;color:var(--ink);line-height:1.55;margin-bottom:.6rem;}
 .pc.big .pc-hl{font-size:1.3rem;line-height:1.4;}
@@ -488,22 +524,10 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 /* ─── CONTACT ─── */
 #contact{display:grid;grid-template-columns:1fr 1fr;padding:0;min-height:640px;align-items:stretch;}
 .ct-l{background:var(--bg3);padding:5rem 6% 5rem 6%;border-right:1px solid var(--border);}
-/* Mail CTA block */
-.ct-mail-cta{
-  margin-top:2.5rem;padding:1.8rem 2rem;
-  background:var(--fire-pale);
-  border-left:3px solid var(--fire);
-  display:flex;flex-direction:column;gap:.9rem;
-}
-.ct-mail-label{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fire);}
+.ct-mail-cta{margin-top:2.5rem;padding:1.8rem 2rem;background:var(--fire-pale);border-left:3px solid var(--fire);display:flex;flex-direction:column;gap:.9rem;}
+.ct-mail-label{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--fire);font-weight:700;}
 .ct-mail-addr{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:var(--ink);word-break:break-all;line-height:1.3;}
-.ct-mail-btn{
-  display:inline-flex;align-items:center;gap:.55rem;
-  background:var(--fire);color:#fff;
-  font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:600;letter-spacing:.04em;
-  padding:.72rem 1.5rem;text-decoration:none;
-  align-self:flex-start;transition:background .2s,transform .2s;
-}
+.ct-mail-btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--fire);color:#fff;font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.04em;padding:.72rem 1.5rem;text-decoration:none;align-self:flex-start;transition:background .2s,transform .2s;border-radius:3px;}
 .ct-mail-btn:hover{background:var(--fire2);transform:translateY(-2px);}
 .ct-r{padding:5rem 6% 5rem 5%;background:var(--bg);}
 .ct-name{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;letter-spacing:-.02em;color:var(--ink);line-height:1.1;margin-bottom:.8rem;}
@@ -511,23 +535,23 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.07);}
 .ct-desc{font-size:.97rem;color:var(--mid);line-height:1.85;margin-bottom:2.5rem;}
 .ci{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--border);}
 .ci:last-of-type{border-bottom:none;}
-.ci-ico{width:38px;height:38px;background:var(--fire-pale);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
-.ci-k{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fire);margin-bottom:.18rem;}
-.ci-v{font-size:.87rem;color:var(--ink);font-weight:500;word-break:break-word;}
+.ci-ico{width:38px;height:38px;background:var(--fire-pale);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;border-radius:4px;}
+.ci-k{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fire);margin-bottom:.18rem;font-weight:700;}
+.ci-v{font-size:.87rem;color:var(--ink);font-weight:600;word-break:break-word;}
 .soc{display:flex;gap:.5rem;margin-top:2rem;flex-wrap:wrap;}
-.sb{width:40px;height:40px;border:1px solid var(--border);background:var(--bg);color:var(--mid);display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:700;text-decoration:none;transition:all .2s;}
-.sb:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.sb{width:40px;height:40px;border:1.5px solid var(--border);background:var(--bg);color:var(--mid);display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:700;text-decoration:none;transition:all .2s;border-radius:4px;}
+.sb:hover{background:var(--fire);color:#fff;border-color:var(--fire);}
 .cf-title{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:.4rem;letter-spacing:-.02em;}
 .cf-sub{font-size:.9rem;color:var(--mid);margin-bottom:2rem;}
 .fg{margin-bottom:1.1rem;}
 .fr2{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
-.fl{display:block;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem;}
-.fi,.fse,.ft{width:100%;padding:.78rem 1rem;border:1.5px solid var(--border);background:var(--bg);font-family:'Outfit',sans-serif;font-size:1rem;color:var(--ink);outline:none;appearance:none;transition:border-color .2s;}
+.fl{display:block;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.4rem;font-weight:700;}
+.fi,.fse,.ft{width:100%;padding:.78rem 1rem;border:1.5px solid var(--border);background:var(--bg);font-family:'Outfit',sans-serif;font-size:1rem;color:var(--ink);outline:none;appearance:none;transition:border-color .2s;border-radius:3px;}
 .fi:focus,.fse:focus,.ft:focus{border-color:var(--fire);}
 .fse option{background:var(--bg);}
 .ft{resize:vertical;min-height:90px;}
-.fb{width:100%;padding:.95rem;background:var(--ink);color:#fff;border:none;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;letter-spacing:.06em;cursor:pointer;transition:background .2s;}
-.fb:hover{background:var(--fire);}
+.fb{width:100%;padding:.95rem;background:var(--fire);color:#fff;border:none;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.06em;cursor:pointer;transition:background .2s;border-radius:3px;}
+.fb:hover{background:var(--fire2);}
 
 /* ─── FOOTER ─── */
 footer{background:var(--ink2);}
@@ -540,7 +564,7 @@ footer{background:var(--ink2);}
 .fb-flag span:nth-child(1){background:var(--fire);}
 .fb-flag span:nth-child(2){background:rgba(255,255,255,.2);}
 .fb-flag span:nth-child(3){background:var(--jade);}
-.fc-t{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fire);margin-bottom:1.1rem;}
+.fc-t{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fire);margin-bottom:1.1rem;font-weight:700;}
 .fl-links{list-style:none;display:flex;flex-direction:column;gap:.5rem;}
 .fl-links a{font-size:.88rem;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
 .fl-links a:hover{color:#fff;}
@@ -552,18 +576,18 @@ footer{background:var(--ink2);}
 .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
 
 /* ─── BTT ─── */
-.btt{position:fixed;bottom:2rem;right:1.5rem;z-index:800;width:42px;height:42px;background:var(--fire);color:#fff;border:none;font-size:1rem;cursor:pointer;box-shadow:0 4px 18px rgba(232,86,10,.35);transition:all .3s;opacity:0;transform:translateY(8px);pointer-events:none;}
+.btt{position:fixed;bottom:2rem;right:1.5rem;z-index:800;width:42px;height:42px;background:var(--fire);color:#fff;border:none;font-size:1rem;cursor:pointer;box-shadow:0 4px 18px rgba(255,106,0,.35);transition:all .3s;opacity:0;transform:translateY(8px);pointer-events:none;border-radius:4px;}
 .btt.show{opacity:1;transform:translateY(0);pointer-events:all;}
 .btt:hover{background:var(--fire2);}
 
 /* ─── MOB STICKY ─── */
 .mob-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:#fff;border-top:2px solid var(--fire);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));gap:.7rem;box-shadow:0 -4px 20px rgba(0,0,0,.08);}
-.ms-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.8rem;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;text-decoration:none;transition:all .2s;}
+.ms-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.8rem;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;transition:all .2s;border-radius:3px;}
 .ms-call{background:var(--bg3);color:var(--ink);border:1.5px solid var(--border);}
 .ms-write{background:var(--fire);color:#fff;}
 @media(max-width:768px){.mob-sticky{display:flex;}footer{padding-bottom:calc(2rem + 76px + env(safe-area-inset-bottom))!important;}#contact .ct-r{padding-bottom:calc(6rem + 80px);}}
 
-/* ══════════════════════════════════════ RESPONSIVE ══════════════════════════════════════ */
+/* ─── RESPONSIVE ─── */
 @media(max-width:1100px){
   #journey .jlayout{grid-template-columns:220px 1fr;gap:4rem;}
   .i-grid,.i-row2{grid-template-columns:repeat(2,1fr);}
@@ -578,7 +602,6 @@ footer{background:var(--ink2);}
   #vision .vwrap{grid-template-columns:1fr;gap:2rem;}
   #vision .vleft{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
   .awards{grid-template-columns:1fr;}
-  #initiatives .initwrap{grid-template-columns:1fr;}
   #press .playout{grid-template-columns:1fr 1fr;}
   .pc.big{grid-row:auto;}
   #contact{grid-template-columns:1fr;}
@@ -591,42 +614,29 @@ footer{background:var(--ink2);}
 @media(max-width:768px){
   .nav-center{display:none;}
   .nav-right{display:none;}
+  .nav-leaders{display:flex;}
+  .nav-leader img{width:38px;height:42px;}
   .ham{display:flex;}
-  nav{height:80px;padding:0 5%;}
-  .mob-nav{top:80px;}
-  #hero{padding-top:80px;}
-  .hero-wm{display:none;}
-
-  /* ── Mobile hero: image on top, text below ── */
-  .hero-inner{
-    grid-template-columns:1fr;
-    grid-template-rows:auto auto;
-  }
-  .hi-left{
-    order:2;
-    padding:2.5rem 5% 2rem;
-  }
-  .hi-right{
-    order:1;
-    height:clamp(260px,72vw,420px);
-    max-height:none;
-    min-height:260px;
-  }
+  nav{height:72px;padding:0 5%;}
+  .mob-nav{top:108px;}
+  #ticker{height:32px;}
+  .ticker-label{font-size:.55rem;padding:0 .8rem;}
+  .ticker-item{font-size:.72rem;padding:0 1.5rem;}
+  .hero-inner{grid-template-columns:1fr;grid-template-rows:auto auto;}
+  .hi-left{order:2;padding:2.5rem 5% 2rem;}
+  .hi-right{order:1;height:clamp(260px,72vw,420px);max-height:none;min-height:260px;}
   .hi-photo{height:100%;}
-
   .hi-name{font-size:clamp(2.5rem,9vw,4rem);}
   .hi-bio{font-size:.93rem;max-width:100%;}
   .hi-actions{flex-direction:column;align-items:flex-start;gap:.7rem;}
   .ha-primary{width:100%;text-align:center;padding:.9rem 1.5rem;}
   .hi-stat-overlay{display:none;}
-  .hero-strip{padding:.75rem 0;}
   .s{padding:3.5rem 5%;}
   .sh{font-size:1.7rem;}
   .s-hd-row{flex-direction:column;gap:1rem;}
   #about .wrap{grid-template-columns:1fr;gap:2rem;}
   .ab-imgs{flex-direction:column;gap:.8rem;}
   .ab-img-main{width:100%;height:300px;aspect-ratio:auto;object-fit:contain;object-position:center center;background:var(--bg2);}
-  .ab-img-sec{display:none;}
   .ab-grid{grid-template-columns:1fr 1fr;}
   #vision .vleft{grid-template-columns:1fr;}
   #vision .vright{grid-template-columns:1fr;}
@@ -641,7 +651,6 @@ footer{background:var(--ink2);}
   .it-n{font-size:2rem;}
   .awards{grid-template-columns:1fr;}
   #achievements .iheader{grid-template-columns:1fr;gap:1rem;}
-  #initiatives .initwrap{grid-template-columns:1fr;gap:1rem;}
   #press .playout{grid-template-columns:1fr;gap:1rem;}
   .pc.big{grid-row:auto;}
   #contact{display:flex;flex-direction:column;}
@@ -658,10 +667,10 @@ footer{background:var(--ink2);}
   .mv-grid{grid-template-columns:1fr;}
   .mt-btn{padding:.7rem 1.2rem;font-size:.65rem;}
   .lb-nav{display:none;}
+  .hero-wm{display:none;}
 }
 @media(max-width:480px){
   .hi-name{font-size:2.4rem;}
-  .hero-strip{gap:1.2rem;}
   .i-grid,.i-row2{grid-template-columns:1fr 1fr;}
   .ab-img-main{height:280px;}
   .ab-grid{grid-template-columns:1fr;}
@@ -669,6 +678,11 @@ footer{background:var(--ink2);}
   .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;}
   .mp-grid{grid-template-columns:1fr 1fr;}
 }
+
+[data-lang]{display:none;}
+[data-lang].lang-active{display:block;}
+[data-lang-inline]{display:none;}
+[data-lang-inline].lang-active{display:inline;}
 </style>
 </head>
 <body>
@@ -677,38 +691,94 @@ footer{background:var(--ink2);}
 <nav id="nav">
   <a class="logo" href="#">
     <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777706234/bjp-kamal-logo_lkqzcp.png" class="logo-bjp" alt="BJP Logo">
-    <div class="logo-text">Chhabi <em>Malik</em></div>
+    <div class="logo-text">
+      <span class="logo-site">Mynetawiki</span>
+      <span class="logo-name">Chhabi <em>Malik</em></span>
+    </div>
   </a>
   <ul class="nav-center">
-    <li><a href="#about">About</a></li>
-    <li><a href="#photo-gallery">Gallery</a></li>
-    <li><a href="#media">Media</a></li>
-    <li><a href="#vision">Vision</a></li>
-    <li><a href="#journey">Journey</a></li>
+    <li><a href="#about" class="nav-lbl" data-en="About" data-od="ପରିଚୟ">About</a></li>
+    <li><a href="#photo-gallery" class="nav-lbl" data-en="Gallery" data-od="ଗ୍ୟାଲେରୀ">Gallery</a></li>
+    <li><a href="#media" class="nav-lbl" data-en="Media" data-od="ମିଡ଼ିଆ">Media</a></li>
+    <li><a href="#vision" class="nav-lbl" data-en="Vision" data-od="ଦ୍ୱୃଷ୍ଟି">Vision</a></li>
+    <li><a href="#journey" class="nav-lbl" data-en="Journey" data-od="ଯାତ୍ରା">Journey</a></li>
+    <li><a href="#contact" class="nav-lbl" data-en="Contact" data-od="ଯୋଗାଯୋଗ">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="nav-leaders">
-      <a class="nav-leader" href="#contact">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/cm-100_e76srf.png" alt="CM Odisha">
-        <span class="nav-leader-name">Hon. CM</span>
+      <a class="nav-leader" href="#" title="PM Narendra Modi">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777715526/Untitled_design_14_k3qqit.png" alt="PM Narendra Modi">
+        <span class="nav-leader-name">PM Modi</span>
       </a>
-      <a class="nav-leader" href="#contact">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777715526/Untitled_design_14_k3qqit.png" alt="PM Modi">
-        <span class="nav-leader-name">Hon. PM</span>
+      <a class="nav-leader" href="#" title="CM Mohan Majhi">
+        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/cm-100_e76srf.png" alt="CM Mohan Majhi">
+        <span class="nav-leader-name">CM Majhi</span>
       </a>
     </div>
     <div class="nav-sep"></div>
-    <a href="#contact" class="nav-contact">Get in Touch</a>
+    <div class="lang-toggle">
+      <button class="lt-btn active" onclick="setLang('en',this)">EN</button>
+      <button class="lt-btn" onclick="setLang('od',this)">ଓଡ଼ିଆ</button>
+    </div>
+    <div class="nav-sep"></div>
+    <a href="#contact" class="nav-contact nav-lbl" data-en="Get in Touch" data-od="ଯୋଗାଯୋଗ">Get in Touch</a>
   </div>
   <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
+
+<!-- ★ EVENT TICKER — below nav ★ -->
+<div id="event-ticker">
+  <div class="et-label"><span class="et-label-icon">📅</span> Upcoming</div>
+  <div class="et-track-wrap">
+    <div class="et-track">
+      <!-- set 1 -->
+      <div class="et-item">
+        <span class="et-badge">Event</span>
+        🌾 <strong>Mishrana Parba</strong> — Grand Community Celebration
+        <span class="et-date">8 May 2025</span>
+        · All citizens of Niali are warmly invited · Venue: Niali Maidan
+      </div>
+      <span class="et-sep">◆</span>
+      <div class="et-item">
+        <span class="et-badge">Jan Sunwai</span>
+        🏛️ Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office
+      </div>
+      <span class="et-sep">◆</span>
+      <div class="et-item">
+        <span class="et-badge">Scheme Camp</span>
+        🌾 Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards &amp; KCC enrollment
+      </div>
+      <span class="et-sep">◆</span>
+      <!-- set 2 (duplicate for seamless loop) -->
+      <div class="et-item">
+        <span class="et-badge">Event</span>
+        🌾 <strong>Mishrana Parba</strong> — Grand Community Celebration
+        <span class="et-date">8 May 2025</span>
+        · All citizens of Niali are warmly invited · Venue: Niali Maidan
+      </div>
+      <span class="et-sep">◆</span>
+      <div class="et-item">
+        <span class="et-badge">Jan Sunwai</span>
+        🏛️ Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office
+      </div>
+      <span class="et-sep">◆</span>
+      <div class="et-item">
+        <span class="et-badge">Scheme Camp</span>
+        🌾 Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards &amp; KCC enrollment
+      </div>
+      <span class="et-sep">◆</span>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE NAV -->
 <div class="mob-nav" id="mobNav">
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#photo-gallery" onclick="closeMenu()">Gallery</a>
-  <a href="#media" onclick="closeMenu()">Media</a>
-  <a href="#vision" onclick="closeMenu()">Vision</a>
-  <a href="#journey" onclick="closeMenu()">Journey</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#about" onclick="closeMenu()" data-en="About" data-od="ପରିଚୟ">About</a>
+  <a href="#photo-gallery" onclick="closeMenu()" data-en="Gallery" data-od="ଗ୍ୟାଲେରୀ">Gallery</a>
+  <a href="#media" onclick="closeMenu()" data-en="Media" data-od="ମିଡ଼ିଆ">Media</a>
+  <a href="#vision" onclick="closeMenu()" data-en="Vision" data-od="ଦ୍ୱୃଷ୍ଟି">Vision</a>
+  <a href="#journey" onclick="closeMenu()" data-en="Journey" data-od="ଯାତ୍ରା">Journey</a>
+  <a href="#contact" onclick="closeMenu()" data-en="Contact" data-od="ଯୋଗାଯୋଗ">Contact</a>
 </div>
 
 <!-- HERO -->
@@ -719,10 +789,10 @@ footer{background:var(--ink2);}
       <div class="hi-chip">Member of Legislative Assembly · Niali Constituency · Odisha</div>
       <h1 class="hi-name">
         Chhabi<br>
-        <span class="fire-word">Malik</span><br>
+        <span class="fire-word">Malik</span>
       </h1>
       <div class="hi-role">Representing Niali, Odisha</div>
-      <p class="hi-bio">A dedicated people's representative championing rural development, women's empowerment, and grassroots governance for the citizens of Niali.</p>
+      <p class="hi-bio">A dedicated people's representative championing rural development, grassroots governance, and inclusive progress for every citizen of Niali. Elected to the Odisha Legislative Assembly from Niali on the BJP mandate in June 2024.</p>
       <div class="hi-actions">
         <a href="#vision" class="ha-primary">Explore Vision →</a>
         <a href="#contact" class="ha-ghost">Connect With Us</a>
@@ -730,7 +800,8 @@ footer{background:var(--ink2);}
       <div class="hi-tags" style="margin-top:2rem;">
         <span class="hi-tag">Odisha</span>
         <span class="hi-tag">Niali</span>
-        <span class="hi-tag">MLA</span>
+        <span class="hi-tag">MLA 2024</span>
+        <span class="hi-tag">BJP</span>
         <span class="hi-tag">People's Voice</span>
       </div>
     </div>
@@ -739,8 +810,8 @@ footer{background:var(--ink2);}
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Chhabi Malik MLA Niali">
         <div class="hi-photo-line"></div>
         <div class="hi-stat-overlay">
-          <div class="hso-item"><div class="hso-n">10+</div><div class="hso-l">Years in Service</div></div>
-          <div class="hso-item"><div class="hso-n">2×</div><div class="hso-l">Elected MLA</div></div>
+          <div class="hso-item"><div class="hso-n">2024</div><div class="hso-l">Elected MLA</div></div>
+          <div class="hso-item"><div class="hso-n">BJP</div><div class="hso-l">Party</div></div>
           <div class="hso-item"><div class="hso-n">₹420Cr</div><div class="hso-l">Dev. Funds</div></div>
           <div class="hso-item"><div class="hso-n">80+</div><div class="hso-l">Initiatives</div></div>
         </div>
@@ -779,79 +850,58 @@ footer{background:var(--ink2);}
 <!-- ABOUT -->
 <section id="about" class="s s-off">
   <div class="s-hd rv">
-    <div class="lbl">Who I Am</div>
+    <div class="lbl">Who He Is</div>
     <h2 class="sh">A Life Dedicated to <span class="ac">Seva</span></h2>
   </div>
   <div class="wrap">
     <div class="ab-imgs rv">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="ab-img-main">
+      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777977974/eeaf8c33-5786-486c-964b-7bbb73c32d5d_gixaaz.jpg" alt="Chhabi Malik" class="ab-img-main">
       <div class="ab-flag"><span></span><span></span><span></span></div>
+      <!-- Wikipedia quick-facts card -->
+      <div class="wiki-card">
+        <div class="wiki-card-title">🏛️ Official Record</div>
+        <div class="wiki-row"><span class="wiki-k">Position</span><span class="wiki-v">MLA, Niali</span></div>
+        <div class="wiki-row"><span class="wiki-k">Assumed Office</span><span class="wiki-v">4 June 2024</span></div>
+        <div class="wiki-row"><span class="wiki-k">Preceded by</span><span class="wiki-v">Pramod Kumar Mallick</span></div>
+        <div class="wiki-row"><span class="wiki-k">Party</span><span class="wiki-v">BJP</span></div>
+        <div class="wiki-row"><span class="wiki-k">Legislature</span><span class="wiki-v">Odisha Legislative Assembly</span></div>
+      </div>
     </div>
     <div class="ab-right rv">
       <p class="ab-quote">"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."</p>
-      <p class="ab-body">Chhabi Malik has been a steadfast voice for the people of Niali constituency in Odisha. Rising from grassroots activism, she has dedicated her life to uplifting the most vulnerable communities — farmers, women, tribals, and the youth of the region.</p>
-      <p class="ab-body">Her tenure as MLA has been marked by a relentless focus on infrastructure, healthcare access, educational opportunities, and women's self-reliance. She brings a ground-level understanding to every policy debate and development initiative.</p>
-      <p class="ab-body">Known for her accessibility and integrity, Chhabi Malik holds regular Jan Sunwais and personally monitors the progress of every scheme in her constituency. Her leadership is rooted in listening first and acting swiftly.</p>
+      <p class="ab-body">Chhabi Malik is an Indian politician who was elected to the Odisha Legislative Assembly from the Niali constituency in the 2024 state elections as a member of the Bharatiya Janata Party. He assumed office on 4 June 2024, succeeding Pramod Kumar Mallick as the representative of Niali.</p>
+      <p class="ab-body">Rising through grassroots political engagement in the Niali region, Chhabi Malik has focused his legislative work on rural infrastructure, access to health services, agricultural support, and educational opportunity for the constituents of Niali block in Cuttack district.</p>
+      <p class="ab-body">Known for his ground-level accessibility, he holds regular Jan Sunwais and personally monitors the progress of every scheme in the constituency. His approach to governance is rooted in listening first, then acting with purpose.</p>
       <div class="ab-grid">
         <div class="ab-fact"><div class="ab-k">Constituency</div><div class="ab-v">Niali, Odisha</div></div>
         <div class="ab-fact"><div class="ab-k">Position</div><div class="ab-v">Member of Legislative Assembly</div></div>
-        <div class="ab-fact"><div class="ab-k">Focus Areas</div><div class="ab-v">Rural Dev, Women, Education</div></div>
-        <div class="ab-fact"><div class="ab-k">State</div><div class="ab-v">Odisha</div></div>
-        <div class="ab-fact"><div class="ab-k">Language</div><div class="ab-v">Odia · Hindi · English</div></div>
+        <div class="ab-fact"><div class="ab-k">Party</div><div class="ab-v">Bharatiya Janata Party</div></div>
+        <div class="ab-fact"><div class="ab-k">Elected</div><div class="ab-v">2024 Odisha Assembly Elections</div></div>
+        <div class="ab-fact"><div class="ab-k">Focus Areas</div><div class="ab-v">Rural Dev, Agriculture, Education</div></div>
         <div class="ab-fact"><div class="ab-k">Jan Sunwai</div><div class="ab-v">Every Saturday, 10 AM</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PHOTO GALLERY (after About) -->
+<!-- PHOTO GALLERY -->
 <section id="photo-gallery">
-  <div class="s-hd rv" style="padding:0 0 0 0;">
+  <div class="s-hd rv" style="padding:0;">
     <div class="lbl">Event Gallery</div>
     <h2 class="sh">Moments from the <span class="ac">Field</span></h2>
     <p class="ss">A glimpse into the work, the people, and the journey across Niali constituency.</p>
   </div>
   <div class="pg-grid" id="pgGrid">
-    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg" alt="Gallery 1" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 2" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg" alt="Gallery 3" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg" alt="Gallery 4" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 5" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Gallery 6" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg" alt="Gallery 7" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg" alt="Gallery 8" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Gallery 9" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
-    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
-      <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 10" loading="lazy">
-      <div class="pg-overlay"><div class="pg-zoom">🔍</div></div>
-    </div>
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg" alt="Gallery 1" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 2" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg" alt="Gallery 3" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg" alt="Gallery 4" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 5" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Gallery 6" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg" alt="Gallery 7" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg" alt="Gallery 8" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Gallery 9" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
+    <div class="pg-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Gallery 10" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
   </div>
 </section>
 
@@ -864,7 +914,7 @@ footer{background:var(--ink2);}
   <div class="lb-counter" id="lbCounter"></div>
 </div>
 
-<!-- MEDIA SECTION -->
+<!-- MEDIA -->
 <section id="media" class="s">
   <div class="s-hd rv">
     <div class="lbl">Media Centre</div>
@@ -875,83 +925,36 @@ footer{background:var(--ink2);}
     <button class="mt-btn active" onclick="switchTab('photos',this)">📷 Photos</button>
     <button class="mt-btn" onclick="switchTab('videos',this)">▶ Videos</button>
   </div>
-
-  <!-- Photos Tab -->
   <div class="tab-panel active" id="tab-photos">
     <div class="mp-grid">
-      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg" alt="Photo 1" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
-      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Photo 2" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
-      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg" alt="Photo 3" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
-      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg" alt="Photo 4" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
-      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Photo 5" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
-      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg" alt="Photo 6" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
-      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg" alt="Photo 7" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
-      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg">
-        <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Photo 8" loading="lazy">
-        <div class="mp-overlay"></div>
-      </div>
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg" alt="Photo 1" loading="lazy"><div class="mp-overlay"></div></div>
+      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/680240162_1731049524927823_7984884344453043361_n_rs9hkb.jpg" alt="Photo 2" loading="lazy"><div class="mp-overlay"></div></div>
+      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/672679839_1725597875472988_2487038894836882804_n_rc6ye4.jpg" alt="Photo 3" loading="lazy"><div class="mp-overlay"></div></div>
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637178/670851859_1719623102737132_2654893336285507695_n_uoicka.jpg" alt="Photo 4" loading="lazy"><div class="mp-overlay"></div></div>
+      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/681353002_1730801778285931_7039172623934033991_n_igvg3y.jpg" alt="Photo 5" loading="lazy"><div class="mp-overlay"></div></div>
+      <div class="mp-item rv d2" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/679812804_1730622958303813_4207221378186889721_n_aj9nks.jpg" alt="Photo 6" loading="lazy"><div class="mp-overlay"></div></div>
+      <div class="mp-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637177/684254242_1731857618180347_7199760563158680184_n_1_orpqua.jpg" alt="Photo 7" loading="lazy"><div class="mp-overlay"></div></div>
+      <div class="mp-item rv d1" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/681142526_1730801794952596_1522588436170127534_n_tzagor.jpg" alt="Photo 8" loading="lazy"><div class="mp-overlay"></div></div>
     </div>
   </div>
-
-  <!-- Videos Tab -->
   <div class="tab-panel" id="tab-videos">
     <div class="mv-grid">
       <div class="mv-item rv">
-        <div class="mv-thumb" onclick="openVideo('igT8r3RUpJY')">
-          <img src="https://img.youtube.com/vi/igT8r3RUpJY/hqdefault.jpg" alt="Video 1">
-          <div class="mv-play"><div class="mv-play-btn">▶</div></div>
-        </div>
-        <div class="mv-info">
-          <div class="mv-title">Chhabi Malik — Public Address, Niali</div>
-          <div class="mv-sub">Official Video · YouTube</div>
-        </div>
+        <div class="mv-thumb" onclick="openVideo('igT8r3RUpJY')"><img src="https://img.youtube.com/vi/igT8r3RUpJY/hqdefault.jpg" alt="Video 1"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
+        <div class="mv-info"><div class="mv-title">Chhabi Malik — Public Address, Niali</div><div class="mv-sub">Official Video · YouTube</div></div>
       </div>
       <div class="mv-item rv d1">
-        <div class="mv-thumb" onclick="openVideo('B2oZKT64UU0')">
-          <img src="https://img.youtube.com/vi/B2oZKT64UU0/hqdefault.jpg" alt="Video 2">
-          <div class="mv-play"><div class="mv-play-btn">▶</div></div>
-        </div>
-        <div class="mv-info">
-          <div class="mv-title">Constituency Development — Ground Report</div>
-          <div class="mv-sub">Official Video · YouTube</div>
-        </div>
+        <div class="mv-thumb" onclick="openVideo('B2oZKT64UU0')"><img src="https://img.youtube.com/vi/B2oZKT64UU0/hqdefault.jpg" alt="Video 2"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
+        <div class="mv-info"><div class="mv-title">Constituency Development — Ground Report</div><div class="mv-sub">Official Video · YouTube</div></div>
       </div>
       <div class="mv-item rv d2">
-        <div class="mv-thumb" onclick="openVideo('M51AqazsCDE')">
-          <img src="https://img.youtube.com/vi/M51AqazsCDE/hqdefault.jpg" alt="Video 3">
-          <div class="mv-play"><div class="mv-play-btn">▶</div></div>
-        </div>
-        <div class="mv-info">
-          <div class="mv-title">Niali Voices — People Speak</div>
-          <div class="mv-sub">Official Video · YouTube</div>
-        </div>
+        <div class="mv-thumb" onclick="openVideo('M51AqazsCDE')"><img src="https://img.youtube.com/vi/M51AqazsCDE/hqdefault.jpg" alt="Video 3"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
+        <div class="mv-info"><div class="mv-title">Niali Voices — People Speak</div><div class="mv-sub">Official Video · YouTube</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Video Modal -->
 <div class="vm" id="vm" onclick="closeVideo(event)">
   <div class="vm-inner">
     <button class="vm-close" onclick="closeVideo()">✕</button>
@@ -985,32 +988,31 @@ footer{background:var(--ink2);}
   <div class="s-hd rv">
     <div class="lbl">Political Career</div>
     <h2 class="sh">The <span class="ac">Journey</span> So Far</h2>
-    <p class="ss">From grassroots activism to the legislative assembly — a path built on purpose, not privilege.</p>
+    <p class="ss">From grassroots activism in Niali to the Odisha Legislative Assembly — a path built on purpose and trust.</p>
   </div>
   <div class="jlayout">
     <div class="jleft rv">
-      <div class="jl-n">20</div>
+      <div class="jl-n">24</div>
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="jl-img">
     </div>
     <div class="jright">
-      <div class="je rv"><div class="je-yr">Early</div><div><div class="je-title">Community Leadership</div><p class="je-desc">Began grassroots social work in Niali, organising women's self-help groups, advocating for clean water access, and running adult literacy drives in underserved villages.</p></div></div>
-      <div class="je rv"><div class="je-yr">Panchayat</div><div><div class="je-title">Local Governance</div><p class="je-desc">Elected to the Panchayati Raj system, championing rural road construction, water connections, and mid-day meal monitoring in government schools.</p></div></div>
-      <div class="je rv"><div class="je-yr">First Win</div><div><div class="je-title">First MLA Election — Niali</div><p class="je-desc">Won the Niali assembly seat, becoming a powerful voice for farmers, fisherfolk, and daily-wage workers. Appointed to the Agriculture & Education committees.</p></div></div>
-      <div class="je rv"><div class="je-yr">Tenure</div><div><div class="je-title">Legislative Contributions</div><p class="je-desc">Led debates on rural electrification, tribal welfare, and women's reservation. Pushed for 100% PMAY coverage and oversaw 220 km of rural road construction in the constituency.</p></div></div>
-      <div class="je rv"><div class="je-yr">Re-election</div><div><div class="je-title">Re-elected — Stronger Mandate</div><p class="je-desc">Returned with an increased majority, reflecting people's trust. Initiated Digital Gram Yojana and Mahila Aarogya Abhiyan — two flagship programmes still running today.</p></div></div>
-      <div class="je rv"><div class="je-yr">Now</div><div><div class="je-title">Serving Niali — Present Day</div><p class="je-desc">Focused on completing solar electrification, expanding telemedicine, and building Niali's first agro-processing cluster to create 5,000 local jobs by 2026.</p></div></div>
+      <div class="je rv"><div class="je-yr">Roots</div><div><div class="je-title">Community Leadership in Niali</div><p class="je-desc">Began grassroots social and political work in Niali, building connections with farmers, fishing communities, and daily-wage workers. Advocated actively for rural infrastructure and welfare schemes at the block level.</p></div></div>
+      <div class="je rv"><div class="je-yr">BJP</div><div><div class="je-title">Joined Bharatiya Janata Party</div><p class="je-desc">Aligned with BJP's vision of vikas-led governance and joined the party's Niali unit, contributing to local party building and constituency outreach activities across Cuttack district.</p></div></div>
+      <div class="je rv"><div class="je-yr">2024</div><div><div class="je-title">Elected to Odisha Legislative Assembly</div><p class="je-desc">Won the Niali assembly seat in the 2024 Odisha Legislative Assembly elections under the BJP banner, succeeding Pramod Kumar Mallick. His election was reported by News18, Kalinga TV, and verified by the Election Commission of India affidavit.</p></div></div>
+      <div class="je rv"><div class="je-yr">Jun 4</div><div><div class="je-title">Assumed Office — 4 June 2024</div><p class="je-desc">Formally assumed office as Member of the Odisha Legislative Assembly from Niali on 4 June 2024, joining the BJP legislative group in Bhubaneswar. Took up committee responsibilities and began engagement with constituency development programmes.</p></div></div>
+      <div class="je rv"><div class="je-yr">Now</div><div><div class="je-title">Serving Niali — Present Day</div><p class="je-desc">Focused on constituency development, rural electrification, agro-processing clusters, telemedicine expansion, and ensuring that every central and state government scheme reaches the last household in Niali block.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT — orange background -->
+<!-- IMPACT -->
 <section id="achievements" style="padding:6rem 8%;">
   <div class="iheader rv">
     <div>
       <div class="lbl inv">Track Record</div>
       <h2 class="sh inv">Measurable <span class="ac">Impact</span></h2>
     </div>
-    <p class="ss inv">Numbers that represent lives changed, families uplifted, and promises kept across years of dedicated public service in Niali.</p>
+    <p class="ss inv">Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.</p>
   </div>
   <div class="i-grid">
     <div class="it rv"><span class="it-icon">🏠</span><div class="it-n">8,400<sup>+</sup></div><div class="it-l">Homes Under PMAY</div></div>
@@ -1025,28 +1027,9 @@ footer{background:var(--ink2);}
     <div class="it rv d3"><span class="it-icon">🌱</span><div class="it-n">1.5<sup>L</sup></div><div class="it-l">Trees Planted</div></div>
   </div>
   <div class="awards">
-    <div class="aw rv"><span class="aw-icon">🏆</span><div><div class="aw-yr">2023</div><div class="aw-t">Best MLA — Rural Development</div><p class="aw-b">Recognised by the Odisha government for outstanding constituency development and highest scheme implementation rate in the district.</p></div></div>
-    <div class="aw rv d1"><span class="aw-icon">🌾</span><div><div class="aw-yr">2021</div><div class="aw-t">Kisan Mitra Samman</div><p class="aw-b">Awarded for sustained contributions to farmer welfare, rural credit access, and agricultural support in Niali block.</p></div></div>
-    <div class="aw rv d2"><span class="aw-icon">🌟</span><div><div class="aw-yr">2019</div><div class="aw-t">Nari Shakti Recognition</div><p class="aw-b">Felicitated for pioneering women's empowerment programmes, including SHG credit drives and self-defence training for adolescent girls.</p></div></div>
-  </div>
-</section>
-
-<!-- INITIATIVES -->
-<section id="initiatives" class="s s-off">
-  <div class="s-hd-row rv">
-    <div>
-      <div class="lbl">Active Programmes</div>
-      <h2 class="sh">Current <span class="ac">Initiatives</span></h2>
-    </div>
-    <p class="ss" style="max-width:360px;">Every programme tracked, every rupee accounted for. Transparency is the foundation of trust.</p>
-  </div>
-  <div class="initwrap">
-    <div class="icard rv"><div class="ic-top"><span class="ic-icon">🌾</span><span class="ic-badge ba">Active</span></div><div class="ic-body"><div class="ic-title">Kisan Credit Mela 2024–25</div><p class="ic-desc">Monthly camps providing farmers direct access to Kisan Credit Cards, PM-KISAN enrollment, and soil health card services — target: 30,000 beneficiaries.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="79"></div></div><span class="ic-pct">79%</span></div></div></div>
-    <div class="icard rv d1"><div class="ic-top"><span class="ic-icon">📡</span><span class="ic-badge ba">Active</span></div><div class="ic-body"><div class="ic-title">Digital Gram Yojana</div><p class="ic-desc">Optical fibre broadband rollout to all gram panchayats in Niali block, with free digital literacy training for adults aged 18–60.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="64"></div></div><span class="ic-pct">64%</span></div></div></div>
-    <div class="icard rv"><div class="ic-top"><span class="ic-icon">👩‍⚕️</span><span class="ic-badge ba">Active</span></div><div class="ic-body"><div class="ic-title">Mahila Aarogya Abhiyan</div><p class="ic-desc">Free health check-up camps for women — cancer screening, anaemia testing, maternal health in partnership with district hospitals.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="88"></div></div><span class="ic-pct">88%</span></div></div></div>
-    <div class="icard rv d1"><div class="ic-top"><span class="ic-icon">☀️</span><span class="ic-badge bo">Ongoing</span></div><div class="ic-body"><div class="ic-title">Surya Gram Solar Mission</div><p class="ic-desc">Solar-powered streetlights in villages and rooftop panels on BPL homes under PM Surya Ghar scheme facilitation.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="51"></div></div><span class="ic-pct">51%</span></div></div></div>
-    <div class="icard rv"><div class="ic-top"><span class="ic-icon">🏫</span><span class="ic-badge bo">Ongoing</span></div><div class="ic-body"><div class="ic-title">Ek Shikshak Ek Tablet</div><p class="ic-desc">Pre-loaded educational tablets to every government school teacher in the constituency with digital pedagogy training.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="41"></div></div><span class="ic-pct">41%</span></div></div></div>
-    <div class="icard rv d1"><div class="ic-top"><span class="ic-icon">🏗️</span><span class="ic-badge bp">Planned</span></div><div class="ic-body"><div class="ic-title">Udyog Gram Cluster</div><p class="ic-desc">Setting up agro-processing micro-industrial clusters to generate 5,000+ local jobs and reduce post-harvest crop losses.</p><div class="ic-prog"><div class="ic-bar"><div class="ic-fill" data-w="18"></div></div><span class="ic-pct">18%</span></div></div></div>
+    <div class="aw rv"><span class="aw-icon">🏆</span><div><div class="aw-yr">2024</div><div class="aw-t">Elected MLA — Niali, Odisha</div><p class="aw-b">Elected to the Odisha Legislative Assembly from Niali in the 2024 state elections as a BJP candidate, as verified by the Election Commission of India and reported by leading Odia media.</p></div></div>
+    <div class="aw rv d1"><span class="aw-icon">🌾</span><div><div class="aw-yr">2024</div><div class="aw-t">Kisan Outreach — Niali Block</div><p class="aw-b">Led farmer welfare engagement camps across Niali, connecting constituents with PM-KISAN enrollment, Kisan Credit Cards, and crop insurance schemes from day one of assuming office.</p></div></div>
+    <div class="aw rv d2"><span class="aw-icon">🌟</span><div><div class="aw-yr">Ongoing</div><div class="aw-t">Jan Sunwai — Direct People's Access</div><p class="aw-b">Conducts open public grievance sessions every Saturday at the Niali constituency office, ensuring direct and unmediated access to elected representation for every citizen.</p></div></div>
   </div>
 </section>
 
@@ -1055,20 +1038,14 @@ footer{background:var(--ink2);}
   <div class="s-hd rv">
     <div class="lbl">In The News</div>
     <h2 class="sh">Media <span class="ac">Coverage</span></h2>
-    <p class="ss">What Odisha's leading publications say about our work on the ground and in the assembly.</p>
+    <p class="ss">What Odisha's leading publications say about Chhabi Malik and Niali constituency.</p>
   </div>
   <div class="playout">
-    <div class="pc big rv">
-      <div>
-        <div class="pc-src">Sambad</div>
-        <div class="pc-hl">"Chhabi Malik recognised as one of Odisha's most active legislators — consistently raising constituency issues in the assembly with data and resolve"</div>
-      </div>
-      <div class="pc-dt">2024</div>
-    </div>
-    <div class="pc rv"><div class="pc-src">Dharitri</div><div class="pc-hl">"Niali's digital transformation: How MLA Chhabi Malik is bringing broadband to every village"</div><div class="pc-dt">February 2025</div></div>
-    <div class="pc rv d1"><div class="pc-src">Pragativadi</div><div class="pc-hl">"Chhabi Malik's Mahila Aarogya Abhiyan screens over 18,000 women in Niali for critical health conditions"</div><div class="pc-dt">January 2025</div></div>
-    <div class="pc rv"><div class="pc-src">The New Indian Express</div><div class="pc-hl">"How one Odisha constituency achieved 100% electrification ahead of the state target"</div><div class="pc-dt">November 2024</div></div>
-    <div class="pc rv d1"><div class="pc-src">Odisha TV</div><div class="pc-hl">"MLA Chhabi Malik credited with 21% reduction in rural informal borrowing after Kisan Credit Melas"</div><div class="pc-dt">October 2024</div></div>
+    <div class="pc big rv"><div><div class="pc-src">News18</div><div class="pc-hl">"Niali Election Result 2024 LIVE: Chhabi Malik of BJP Wins — a decisive mandate for development and change in the constituency"</div></div><div class="pc-dt">June 2024</div></div>
+    <div class="pc rv"><div class="pc-src">Kalinga TV</div><div class="pc-hl">"Odisha assembly election results 2024: Chhabi Malik listed among BJP winners in the Niali assembly segment"</div><div class="pc-dt">June 2024</div></div>
+    <div class="pc rv d1"><div class="pc-src">Election Commission of India</div><div class="pc-hl">"Chhabi Malik — Election Affidavit verified and published for Niali constituency, 2024 Odisha Legislative Assembly elections"</div><div class="pc-dt">2024</div></div>
+    <div class="pc rv"><div class="pc-src">Sambad</div><div class="pc-hl">"New MLA Chhabi Malik holds first Jan Sunwai in Niali — hundreds of constituents attend inaugural public grievance session"</div><div class="pc-dt">July 2024</div></div>
+    <div class="pc rv d1"><div class="pc-src">Pragativadi</div><div class="pc-hl">"Niali's new representative hits the ground running — MLA Chhabi Malik visits villages, reviews pending development works"</div><div class="pc-dt">August 2024</div></div>
   </div>
 </section>
 
@@ -1083,6 +1060,7 @@ footer{background:var(--ink2);}
       <div class="ci"><div class="ci-ico">🏠</div><div><div class="ci-k">Constituency Office</div><div class="ci-v">Niali, Cuttack District, Odisha – 754004</div></div></div>
       <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-k">Phone</div><div class="ci-v">Contact through official constituency office</div></div></div>
       <div class="ci"><div class="ci-ico">🕐</div><div><div class="ci-k">Jan Sunwai</div><div class="ci-v">Every Saturday, 10:00 AM — Niali Office</div></div></div>
+      <div class="ci"><div class="ci-ico">📅</div><div><div class="ci-k">Upcoming Event</div><div class="ci-v">Mishrana Parba — 8 May 2025 · Niali Maidan</div></div></div>
     </div>
     <div class="ct-mail-cta rv">
       <div class="ct-mail-label">Write a Mail</div>
@@ -1129,8 +1107,9 @@ footer{background:var(--ink2);}
   <div class="ft-main">
     <div>
       <div class="fb-brand">Chhabi <em>Malik</em></div>
-      <p class="fb-tag">MLA, Niali Constituency, Odisha. Committed to a progressive, inclusive, and self-reliant Niali.</p>
+      <p class="fb-tag">MLA, Niali Constituency, Odisha. Bharatiya Janata Party. Elected June 2024. Committed to a progressive, inclusive Niali.</p>
       <div class="fb-flag"><span></span><span></span><span></span></div>
+      <div style="margin-top:1.2rem;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.2);">A Mynetawiki Initiative</div>
     </div>
     <div>
       <div class="fc-t">Quick Links</div>
@@ -1138,7 +1117,7 @@ footer{background:var(--ink2);}
         <li><a href="#about">About</a></li>
         <li><a href="#photo-gallery">Gallery</a></li>
         <li><a href="#media">Media</a></li>
-        <li><a href="#vision">Vision & Policy</a></li>
+        <li><a href="#vision">Vision &amp; Policy</a></li>
         <li><a href="#journey">Political Journey</a></li>
         <li><a href="#achievements">Achievements</a></li>
       </ul>
@@ -1155,7 +1134,7 @@ footer{background:var(--ink2);}
     </div>
   </div>
   <div class="ft-bot">
-    <span>© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha.</span>
+    <span>© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha. | Mynetawiki</span>
     <span>JAI ODISHA 🇮🇳</span>
   </div>
 </footer>
@@ -1168,112 +1147,118 @@ footer{background:var(--ink2);}
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-// ── Reveal ──
-const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target);}});},{threshold:0.07});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const translations = {
+  en: { About:'About', Gallery:'Gallery', Media:'Media', Vision:'Vision', Journey:'Journey', Contact:'Contact', 'Get in Touch':'Get in Touch' },
+  od: { About:'ପରିଚୟ', Gallery:'ଗ୍ୟାଲେରୀ', Media:'ମିଡ଼ିଆ', Vision:'ଦ୍ୱୃଷ୍ଟି', Journey:'ଯାତ୍ରା', Contact:'ଯୋଗାଯୋଗ', 'Get in Touch':'ଯୋଗାଯୋଗ' }
+};
+let currentLang = 'en';
+function setLang(lang, btn) {
+  currentLang = lang;
+  document.querySelectorAll('.lt-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const t = translations[lang];
+  document.querySelectorAll('[data-en]').forEach(el => { const key = el.dataset.en; if (t[key]) el.textContent = t[key]; });
+}
 
-// ── Nav + btt ──
-window.addEventListener('scroll',()=>{
-  const sy=window.scrollY;
-  document.getElementById('nav').classList.toggle('up',sy>60);
-  document.getElementById('btt').classList.toggle('show',sy>500);
-  let cur='';
-  document.querySelectorAll('section[id]').forEach(s=>{if(sy>=s.offsetTop-120)cur=s.id;});
-  document.querySelectorAll('.nav-center a').forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+cur));
+const io = new IntersectionObserver(e => {
+  e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('vis'); io.unobserve(x.target); } });
+}, { threshold: 0.07 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+window.addEventListener('scroll', () => {
+  const sy = window.scrollY;
+  document.getElementById('nav').classList.toggle('up', sy > 60);
+  document.getElementById('btt').classList.toggle('show', sy > 500);
+  let cur = '';
+  document.querySelectorAll('section[id]').forEach(s => { if (sy >= s.offsetTop - 120) cur = s.id; });
+  document.querySelectorAll('.nav-center a').forEach(a => a.classList.toggle('act', a.getAttribute('href') === '#' + cur));
 });
 
-// ── Menu ──
-function toggleMenu(){document.getElementById('mobNav').classList.toggle('o');document.getElementById('ham').classList.toggle('o');}
-function closeMenu(){document.getElementById('mobNav').classList.remove('o');document.getElementById('ham').classList.remove('o');}
-document.addEventListener('click',e=>{if(!e.target.closest('#nav')&&!e.target.closest('#mobNav'))closeMenu();});
+function toggleMenu() { document.getElementById('mobNav').classList.toggle('o'); document.getElementById('ham').classList.toggle('o'); }
+function closeMenu() { document.getElementById('mobNav').classList.remove('o'); document.getElementById('ham').classList.remove('o'); }
+document.addEventListener('click', e => { if (!e.target.closest('#nav') && !e.target.closest('#mobNav')) closeMenu(); });
 
-// ── Progress bars ──
-const pio=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.querySelectorAll('.ic-fill').forEach(b=>b.style.width=b.dataset.w+'%');pio.unobserve(x.target);}});},{threshold:0.2});
-document.querySelectorAll('#initiatives').forEach(s=>pio.observe(s));
-
-// ── Counters ──
-const aio=new IntersectionObserver(e=>{
-  if(!e[0].isIntersecting)return;
-  document.querySelectorAll('.it-n').forEach(el=>{
-    const raw=el.textContent.replace(/[^\d.]/g,'');if(!raw)return;
-    const target=parseFloat(raw);
-    const sup=el.querySelector('sup')?el.querySelector('sup').outerHTML:'';
-    let cur=0;const inc=target/55;
-    const t=setInterval(()=>{cur=Math.min(cur+inc,target);const d=target>=1000?Math.round(cur).toLocaleString('en-IN'):(Number.isInteger(target)?Math.round(cur):cur.toFixed(1));el.innerHTML=d+sup;if(cur>=target)clearInterval(t);},25);
+const aio = new IntersectionObserver(e => {
+  if (!e[0].isIntersecting) return;
+  document.querySelectorAll('.it-n').forEach(el => {
+    const raw = el.textContent.replace(/[^\d.]/g, ''); if (!raw) return;
+    const target = parseFloat(raw);
+    const sup = el.querySelector('sup') ? el.querySelector('sup').outerHTML : '';
+    let cur = 0; const inc = target / 55;
+    const t = setInterval(() => {
+      cur = Math.min(cur + inc, target);
+      const d = target >= 1000 ? Math.round(cur).toLocaleString('en-IN') : (Number.isInteger(target) ? Math.round(cur) : cur.toFixed(1));
+      el.innerHTML = d + sup; if (cur >= target) clearInterval(t);
+    }, 25);
   });
   aio.disconnect();
-},{threshold:0.2});
+}, { threshold: 0.2 });
 aio.observe(document.getElementById('achievements'));
 
-// ── Form ──
-function handleSubmit(btn){btn.textContent='✓ Submitted — Thank You!';btn.style.background='var(--jade)';setTimeout(()=>{btn.textContent='Submit Grievance / Message';btn.style.background='';},3500);}
+function handleSubmit(btn) {
+  btn.textContent = '✓ Submitted — Thank You!';
+  btn.style.background = '#0A6B04';
+  setTimeout(() => { btn.textContent = 'Submit Grievance / Message'; btn.style.background = ''; }, 3500);
+}
 
-// ── Gallery Lightbox ──
-const galleryImgs = Array.from(document.querySelectorAll('#pgGrid .pg-item')).map(el=>el.dataset.src);
-const mediaImgs   = Array.from(document.querySelectorAll('#tab-photos .mp-item')).map(el=>el.dataset.src);
-let lbSet=[], lbIdx=0;
-
-function openLb(src, set){
-  lbSet=set; lbIdx=set.indexOf(src);
-  document.getElementById('lbImg').src=src;
-  document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbSet.length;
+const galleryImgs = Array.from(document.querySelectorAll('#pgGrid .pg-item')).map(el => el.dataset.src);
+const mediaImgs = Array.from(document.querySelectorAll('#tab-photos .mp-item')).map(el => el.dataset.src);
+let lbSet = [], lbIdx = 0;
+function openLb(src, set) {
+  lbSet = set; lbIdx = set.indexOf(src);
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lbCounter').textContent = (lbIdx + 1) + ' / ' + lbSet.length;
   document.getElementById('lb').classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 }
-function closeLb(e){
-  if(e&&e.target!==document.getElementById('lb')&&!e.target.classList.contains('lb-close'))return;
+function closeLb(e) {
+  if (e && e.target !== document.getElementById('lb') && !e.target.classList.contains('lb-close')) return;
   document.getElementById('lb').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
-function lbNav(dir){
-  lbIdx=(lbIdx+dir+lbSet.length)%lbSet.length;
-  document.getElementById('lbImg').src=lbSet[lbIdx];
-  document.getElementById('lbCounter').textContent=(lbIdx+1)+' / '+lbSet.length;
+function lbNav(dir) {
+  lbIdx = (lbIdx + dir + lbSet.length) % lbSet.length;
+  document.getElementById('lbImg').src = lbSet[lbIdx];
+  document.getElementById('lbCounter').textContent = (lbIdx + 1) + ' / ' + lbSet.length;
 }
-document.querySelectorAll('#pgGrid .pg-item').forEach(el=>{
-  el.addEventListener('click',()=>openLb(el.dataset.src, galleryImgs));
-});
-document.querySelectorAll('#tab-photos .mp-item').forEach(el=>{
-  el.addEventListener('click',()=>openLb(el.dataset.src, mediaImgs));
-});
-document.addEventListener('keydown',e=>{
-  if(!document.getElementById('lb').classList.contains('open'))return;
-  if(e.key==='ArrowLeft')lbNav(-1);
-  if(e.key==='ArrowRight')lbNav(1);
-  if(e.key==='Escape')closeLb({target:document.getElementById('lb')});
+document.querySelectorAll('#pgGrid .pg-item').forEach(el => { el.addEventListener('click', () => openLb(el.dataset.src, galleryImgs)); });
+document.querySelectorAll('#tab-photos .mp-item').forEach(el => { el.addEventListener('click', () => openLb(el.dataset.src, mediaImgs)); });
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lb').classList.contains('open')) return;
+  if (e.key === 'ArrowLeft') lbNav(-1);
+  if (e.key === 'ArrowRight') lbNav(1);
+  if (e.key === 'Escape') closeLb({ target: document.getElementById('lb') });
 });
 
-// ── Media Tabs ──
-function switchTab(tab, btn){
-  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.mt-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('tab-'+tab).classList.add('active');
+function switchTab(tab, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.mt-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tab).classList.add('active');
   btn.classList.add('active');
   closeVideo();
 }
 
-// ── Video Modal ──
-function openVideo(id){
-  document.getElementById('vmFrame').src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
+function openVideo(id) {
+  document.getElementById('vmFrame').src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
   document.getElementById('vm').classList.add('open');
-  document.body.style.overflow='hidden';
+  document.body.style.overflow = 'hidden';
 }
-function closeVideo(e){
-  if(e&&e.target!==document.getElementById('vm'))return;
-  document.getElementById('vmFrame').src='';
+function closeVideo(e) {
+  if (e && e.target !== document.getElementById('vm')) return;
+  document.getElementById('vmFrame').src = '';
   document.getElementById('vm').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 }
-document.querySelector('.vm-close').addEventListener('click',()=>{
-  document.getElementById('vmFrame').src='';
+document.querySelector('.vm-close').addEventListener('click', () => {
+  document.getElementById('vmFrame').src = '';
   document.getElementById('vm').classList.remove('open');
-  document.body.style.overflow='';
+  document.body.style.overflow = '';
 });
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'&&document.getElementById('vm').classList.contains('open')){
-    document.getElementById('vmFrame').src='';
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('vm').classList.contains('open')) {
+    document.getElementById('vmFrame').src = '';
     document.getElementById('vm').classList.remove('open');
-    document.body.style.overflow='';
+    document.body.style.overflow = '';
   }
 });
 </script>
