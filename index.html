@@ -31,128 +31,30 @@ body{font-family:'Plus Jakarta Sans','Outfit',sans-serif;background:var(--bg);co
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-thumb{background:var(--fire);}
 
-/* ─── TICKER (top) ─── */
-#ticker{
-  background:var(--fire);
-  height:36px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  position:relative;
-  z-index:1000;
-}
-.ticker-label{
-  background:var(--fire3);
-  color:#fff;
-  font-family:'Space Mono',monospace;
-  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
-  padding:0 1.2rem;
-  height:100%;display:flex;align-items:center;
-  white-space:nowrap;
-  flex-shrink:0;
-  border-right:1px solid rgba(255,255,255,.2);
-}
+#ticker{background:var(--fire);height:36px;display:flex;align-items:center;overflow:hidden;position:relative;z-index:1000;}
+.ticker-label{background:var(--fire3);color:#fff;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;padding:0 1.2rem;height:100%;display:flex;align-items:center;white-space:nowrap;flex-shrink:0;border-right:1px solid rgba(255,255,255,.2);}
 .ticker-track-wrap{flex:1;overflow:hidden;height:100%;}
-.ticker-track{
-  display:flex;align-items:center;
-  height:100%;
-  animation:tick 22s linear infinite;
-  white-space:nowrap;
-}
+.ticker-track{display:flex;align-items:center;height:100%;animation:tick 22s linear infinite;white-space:nowrap;}
 #ticker:hover .ticker-track{animation-play-state:paused;}
-.ticker-item{
-  display:flex;align-items:center;gap:.6rem;
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:.78rem;font-weight:600;color:#fff;
-  padding:0 2.5rem;
-  white-space:nowrap;
-  flex-shrink:0;
-}
+.ticker-item{display:flex;align-items:center;gap:.6rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.78rem;font-weight:600;color:#fff;padding:0 2.5rem;white-space:nowrap;flex-shrink:0;}
 .ticker-dot{color:rgba(255,255,255,.4);font-size:1rem;}
-.ticker-date{
-  font-family:'Space Mono',monospace;font-size:.6rem;
-  color:rgba(255,255,255,.7);
-  background:rgba(255,255,255,.15);
-  padding:.18rem .55rem;border-radius:3px;
-  margin-left:.3rem;
-}
-@keyframes tick{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
+.ticker-date{font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.7);background:rgba(255,255,255,.15);padding:.18rem .55rem;border-radius:3px;margin-left:.3rem;}
+@keyframes tick{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
-/* ─── EVENT TICKER (below nav) ─── */
-#event-ticker{
-  background:var(--fire2);
-  height:40px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  position:sticky;
-  top:88px;
-  z-index:997;
-  border-bottom:2px solid var(--fire3);
-}
-.et-label{
-  background:var(--fire3);
-  color:#fff;
-  font-family:'Space Mono',monospace;
-  font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
-  padding:0 1.1rem;
-  height:100%;display:flex;align-items:center;gap:.5rem;
-  white-space:nowrap;
-  flex-shrink:0;
-  border-right:1px solid rgba(255,255,255,.15);
-}
+#event-ticker{background:var(--fire2);height:40px;display:flex;align-items:center;overflow:hidden;position:sticky;top:88px;z-index:997;border-bottom:2px solid var(--fire3);}
+.et-label{background:var(--fire3);color:#fff;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:0 1.1rem;height:100%;display:flex;align-items:center;gap:.5rem;white-space:nowrap;flex-shrink:0;border-right:1px solid rgba(255,255,255,.15);}
 .et-label-icon{font-size:.85rem;}
 .et-track-wrap{flex:1;overflow:hidden;height:100%;}
-.et-track{
-  display:flex;align-items:center;
-  height:100%;
-  animation:ettick 30s linear infinite;
-  white-space:nowrap;
-}
+.et-track{display:flex;align-items:center;height:100%;animation:ettick 30s linear infinite;white-space:nowrap;}
 #event-ticker:hover .et-track{animation-play-state:paused;}
-.et-item{
-  display:inline-flex;align-items:center;gap:.7rem;
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:.8rem;font-weight:600;color:#fff;
-  padding:0 3rem;
-  white-space:nowrap;
-  flex-shrink:0;
-}
-.et-item .et-badge{
-  font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;
-  background:var(--fire3);color:#fff;
-  padding:.2rem .6rem;border-radius:3px;
-  flex-shrink:0;
-}
-.et-item .et-date{
-  font-family:'Space Mono',monospace;font-size:.62rem;
-  color:#fff;
-  background:rgba(255,255,255,.2);
-  border:1px solid rgba(255,255,255,.3);
-  padding:.18rem .55rem;border-radius:3px;
-}
+.et-item{display:inline-flex;align-items:center;gap:.7rem;font-family:'Plus Jakarta Sans',sans-serif;font-size:.8rem;font-weight:600;color:#fff;padding:0 3rem;white-space:nowrap;flex-shrink:0;}
+.et-item .et-badge{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;background:var(--fire3);color:#fff;padding:.2rem .6rem;border-radius:3px;flex-shrink:0;}
+.et-item .et-date{font-family:'Space Mono',monospace;font-size:.62rem;color:#fff;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);padding:.18rem .55rem;border-radius:3px;}
 .et-sep{color:rgba(255,255,255,.3);font-size:1.2rem;padding:0 1rem;}
-@keyframes ettick{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
-@media(max-width:768px){
-  #event-ticker{top:72px;height:36px;}
-  .et-item{font-size:.72rem;padding:0 2rem;}
-}
+@keyframes ettick{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media(max-width:768px){#event-ticker{top:72px;height:36px;}.et-item{font-size:.72rem;padding:0 2rem;}}
 
-/* ─── NAV ─── */
-nav{
-  position:sticky;top:0;width:100%;z-index:999;
-  height:88px;display:flex;align-items:center;justify-content:space-between;
-  padding:0 4%;background:rgba(255,255,255,0.97);
-  backdrop-filter:blur(20px);
-  border-bottom:2px solid var(--fire);
-  transition:all .3s;
-}
+nav{position:sticky;top:0;width:100%;z-index:999;height:88px;display:flex;align-items:center;justify-content:space-between;padding:0 4%;background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:2px solid var(--fire);transition:all .3s;}
 nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;}
 .logo-bjp{height:48px;width:auto;flex-shrink:0;}
@@ -161,57 +63,23 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .logo-name{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--fire);letter-spacing:-.01em;line-height:1;}
 .logo-name em{color:var(--fire);font-style:normal;}
 .nav-center{display:flex;gap:2rem;list-style:none;}
-.nav-center a{
-  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--light);text-decoration:none;
-  font-weight:700;
-  transition:color .3s ease;
-  position:relative;
-  padding-bottom:4px;
-}
-.nav-center a::after{
-  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
-  background:var(--fire);transform:scaleX(0);transform-origin:left;
-  transition:transform .3s ease;
-}
+.nav-center a{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);text-decoration:none;font-weight:700;transition:color .3s ease;position:relative;padding-bottom:4px;}
+.nav-center a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--fire);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;}
 .nav-center a:hover,.nav-center a.act{color:var(--fire);}
 .nav-center a:hover::after,.nav-center a.act::after{transform:scaleX(1);}
 .nav-right{display:flex;align-items:center;gap:1rem;}
 .nav-leaders{display:flex;align-items:center;gap:.6rem;}
 .nav-leader{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;}
-.nav-leader img{
-  width:52px;height:56px;
-  border-radius:6px;
-  object-fit:cover;object-position:top center;
-  border:2px solid var(--border);
-  transition:transform .2s,border-color .2s;
-  display:block;
-}
+.nav-leader img{width:52px;height:56px;border-radius:6px;object-fit:cover;object-position:top center;border:2px solid var(--border);transition:transform .2s,border-color .2s;display:block;}
 .nav-leader:hover img{transform:scale(1.06);border-color:var(--fire);}
 .nav-leader-name{display:none;}
 .nav-sep{width:1px;height:40px;background:var(--border);margin:0 .3rem;}
-.lang-toggle{
-  display:flex;align-items:center;gap:0;
-  border:1.5px solid var(--border2);
-  overflow:hidden;
-  border-radius:4px;
-}
-.lt-btn{
-  font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;
-  padding:.4rem .9rem;cursor:pointer;border:none;background:var(--bg3);
-  color:var(--mid);transition:all .2s;font-weight:700;
-  border-right:1px solid var(--border2);
-}
+.lang-toggle{display:flex;align-items:center;gap:0;border:1.5px solid var(--border2);overflow:hidden;border-radius:4px;}
+.lt-btn{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:.4rem .9rem;cursor:pointer;border:none;background:var(--bg3);color:var(--mid);transition:all .2s;font-weight:700;border-right:1px solid var(--border2);}
 .lt-btn:last-child{border-right:none;}
 .lt-btn.active{background:var(--fire);color:#fff;}
 .lt-btn:not(.active):hover{background:var(--fire-pale);color:var(--fire);}
-.nav-contact{
-  background:var(--fire);color:#fff;
-  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:.52rem 1.2rem;text-decoration:none;transition:background .2s;
-  font-weight:700;
-  border-radius:3px;
-}
+.nav-contact{background:var(--fire);color:#fff;font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.52rem 1.2rem;text-decoration:none;transition:background .2s;font-weight:700;border-radius:3px;}
 .nav-contact:hover{background:var(--fire2);}
 .ham{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px;}
 .ham span{width:20px;height:1.5px;background:var(--ink);display:block;transition:all .3s;}
@@ -224,114 +92,34 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .mob-nav a:last-child{color:var(--fire);border:none;}
 .mob-nav a:hover{color:var(--fire);}
 
-/* ─── HERO ─── */
-#hero{
-  min-height:calc(100vh - 164px);
-  display:grid;
-  grid-template-rows:1fr auto;
-  position:relative;
-  background:var(--bg);
-  overflow:hidden;
-}
-.hero-wm{
-  position:absolute;
-  right:-.02em;top:50%;
-  transform:translateY(-50%);
-  font-family:'Fraunces',serif;
-  font-size:clamp(12rem,25vw,24rem);
-  font-weight:700;
-  color:rgba(255,106,0,.04);
-  line-height:1;
-  pointer-events:none;
-  white-space:nowrap;
-  z-index:0;
-}
-.hero-inner{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0;
-  height:100%;
-  position:relative;z-index:1;
-  padding:2rem 0 0;
-}
-.hi-left{
-  padding:2rem 5% 2rem 6%;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.hi-chip{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-family:'Space Mono',monospace;font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--fire);margin-bottom:1.8rem;font-weight:700;
-}
+#hero{min-height:calc(100vh - 164px);display:grid;grid-template-rows:1fr auto;position:relative;background:var(--bg);overflow:hidden;}
+.hero-wm{position:absolute;right:-.02em;top:50%;transform:translateY(-50%);font-family:'Fraunces',serif;font-size:clamp(12rem,25vw,24rem);font-weight:700;color:rgba(255,106,0,.04);line-height:1;pointer-events:none;white-space:nowrap;z-index:0;}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;height:100%;position:relative;z-index:1;padding:2rem 0 0;}
+.hi-left{padding:2rem 5% 2rem 6%;display:flex;flex-direction:column;justify-content:center;}
+.hi-chip{display:inline-flex;align-items:center;gap:.5rem;font-family:'Space Mono',monospace;font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fire);margin-bottom:1.8rem;font-weight:700;}
 .hi-chip::before{content:'';width:20px;height:1px;background:var(--fire);}
-.hi-name{
-  font-family:'Fraunces',serif;
-  font-size:clamp(3rem,5.5vw,5.5rem);
-  font-weight:700;
-  line-height:.95;
-  letter-spacing:-.03em;
-  color:var(--ink);
-  margin-bottom:1.5rem;
-}
+.hi-name{font-family:'Fraunces',serif;font-size:clamp(3rem,5.5vw,5.5rem);font-weight:700;line-height:.95;letter-spacing:-.03em;color:var(--ink);margin-bottom:1.5rem;}
 .hi-name .fire-word{color:var(--fire);}
-.hi-role{
-  font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--light);margin-bottom:1.8rem;font-weight:700;
-  display:flex;align-items:center;gap:.8rem;
-}
+.hi-role{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--light);margin-bottom:1.8rem;font-weight:700;display:flex;align-items:center;gap:.8rem;}
 .hi-role::after{content:'';flex:1;height:1px;background:var(--border2);}
 .hi-bio{font-size:1rem;color:var(--mid);line-height:1.85;max-width:420px;margin-bottom:2.5rem;}
 .hi-actions{display:flex;gap:.8rem;align-items:center;margin-bottom:2.5rem;}
-.ha-primary{
-  background:var(--fire);color:#fff;
-  padding:.85rem 2rem;
-  font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.04em;
-  text-decoration:none;display:inline-block;transition:all .2s;
-  border-radius:3px;
-}
+.ha-primary{background:var(--fire);color:#fff;padding:.85rem 2rem;font-family:'Outfit',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.04em;text-decoration:none;display:inline-block;transition:all .2s;border-radius:3px;}
 .ha-primary:hover{background:var(--fire2);transform:translateY(-2px);}
-.ha-ghost{
-  color:var(--mid);
-  font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
-  text-decoration:none;display:flex;align-items:center;gap:.5rem;
-  transition:color .2s;font-weight:700;
-}
+.ha-ghost{color:var(--mid);font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:.5rem;transition:color .2s;font-weight:700;}
 .ha-ghost:hover{color:var(--fire);}
 .ha-ghost::after{content:'→';}
 .hi-tags{display:flex;gap:.5rem;flex-wrap:wrap;}
-.hi-tag{
-  font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
-  padding:.3rem .8rem;border:1.5px solid var(--border2);color:var(--light);border-radius:2px;
-}
+.hi-tag{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .8rem;border:1.5px solid var(--border2);color:var(--light);border-radius:2px;}
 .hi-right{position:relative;display:flex;flex-direction:column;max-height:580px;}
 .hi-photo{flex:1;position:relative;overflow:hidden;background:var(--bg3);}
 .hi-photo img{width:100%;height:100%;object-fit:cover;object-position:center 10%;display:block;}
 .hi-photo-line{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--fire),#ddd,var(--jade));}
-.hi-stat-overlay{
-  position:absolute;bottom:2rem;right:2rem;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(12px);
-  border:1px solid var(--border);
-  padding:1.2rem 1.6rem;
-  display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;
-  min-width:200px;
-  border-radius:4px;
-}
+.hi-stat-overlay{position:absolute;bottom:2rem;right:2rem;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border:1px solid var(--border);padding:1.2rem 1.6rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.5rem;min-width:200px;border-radius:4px;}
 .hso-n{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:700;color:var(--fire);line-height:1;}
 .hso-l{font-family:'Space Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-top:.2rem;}
-.hero-strip{
-  background:var(--fire);
-  padding:.85rem 0;
-  overflow:hidden;
-  position:relative;z-index:1;
-  display:flex;
-}
-.hs-track{
-  display:flex;gap:3rem;align-items:center;
-  animation:marquee 28s linear infinite;
-  flex-shrink:0;
-  white-space:nowrap;
-}
+.hero-strip{background:var(--fire);padding:.85rem 0;overflow:hidden;position:relative;z-index:1;display:flex;}
+.hs-track{display:flex;gap:3rem;align-items:center;animation:marquee 28s linear infinite;flex-shrink:0;white-space:nowrap;}
 .hero-strip:hover .hs-track{animation-play-state:paused;}
 @keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 .hs-item{display:flex;align-items:center;gap:.6rem;white-space:nowrap;flex-shrink:0;}
@@ -339,7 +127,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .hs-l{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);}
 .hs-dot{color:rgba(255,255,255,.3);font-size:1.5rem;line-height:1;}
 
-/* ─── SECTIONS ─── */
 .s{padding:6rem 8%;}
 .s-off{background:var(--bg2);}
 .s-dark{background:var(--ink);}
@@ -357,44 +144,20 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .s-hd-row{display:flex;align-items:flex-end;justify-content:space-between;gap:3rem;margin-bottom:3.5rem;}
 .s-hd-row .sh{flex:1;}
 
-/* ─── ABOUT ─── */
 #about .wrap{display:grid;grid-template-columns:300px 1fr;gap:5rem;align-items:start;}
 .ab-imgs{display:flex;flex-direction:column;gap:.8rem;}
-.ab-img-main{
-  width:100%;
-  aspect-ratio:3/4;
-  object-fit:cover;
-  object-position:top center;
-  display:block;
-  border-radius:8px;
-  box-shadow:0 12px 40px rgba(255,106,0,.15);
-}
-.ab-img-sec{display:none;}
+.ab-img-main{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block;border-radius:8px;box-shadow:0 12px 40px rgba(255,106,0,.15);}
 .ab-flag{display:flex;height:3px;margin-top:.8rem;}
 .ab-flag span{flex:1;}
 .ab-flag span:nth-child(1){background:var(--fire);}
 .ab-flag span:nth-child(2){background:#ddd;}
 .ab-flag span:nth-child(3){background:var(--jade);}
-
-/* Wikipedia-info card */
-.wiki-card{
-  background:var(--bg3);
-  border:1.5px solid var(--border2);
-  border-radius:6px;
-  padding:1.2rem;
-  margin-top:1rem;
-  font-size:.82rem;
-}
-.wiki-card-title{
-  font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--fire);font-weight:700;margin-bottom:.8rem;
-  display:flex;align-items:center;gap:.4rem;
-}
+.wiki-card{background:var(--bg3);border:1.5px solid var(--border2);border-radius:6px;padding:1.2rem;margin-top:1rem;font-size:.82rem;}
+.wiki-card-title{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--fire);font-weight:700;margin-bottom:.8rem;display:flex;align-items:center;gap:.4rem;}
 .wiki-row{display:flex;justify-content:space-between;gap:.8rem;padding:.45rem 0;border-bottom:1px solid var(--border);}
 .wiki-row:last-child{border-bottom:none;}
 .wiki-k{color:var(--mid);font-size:.8rem;}
 .wiki-v{color:var(--ink);font-weight:700;font-size:.8rem;text-align:right;}
-
 .ab-quote{font-family:'Fraunces',serif;font-size:1.5rem;font-style:italic;font-weight:400;color:var(--ink);line-height:1.5;border-left:3px solid var(--fire);padding-left:1.5rem;margin-bottom:2rem;}
 .ab-body{font-size:.98rem;color:var(--mid);line-height:1.95;margin-bottom:1rem;}
 .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:2rem;}
@@ -403,7 +166,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .ab-k{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fire);margin-bottom:.25rem;font-weight:700;}
 .ab-v{font-size:.9rem;font-weight:700;color:var(--ink);}
 
-/* ─── PHOTO GALLERY ─── */
 #photo-gallery{padding:5rem 8%;background:var(--bg3);}
 .pg-grid{display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:200px;gap:6px;margin-top:2.5rem;}
 .pg-item{position:relative;overflow:hidden;cursor:pointer;background:var(--border);grid-column:span 1;grid-row:span 1;}
@@ -424,7 +186,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .lb-next{right:1.5rem;}
 .lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.14em;color:rgba(255,255,255,.4);}
 
-/* ─── MEDIA ─── */
 #media{padding:6rem 8%;background:var(--bg);}
 .media-tabs{display:flex;gap:0;margin-top:2.5rem;margin-bottom:2.5rem;border-bottom:2px solid var(--border);}
 .mt-btn{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.8rem 2rem;cursor:pointer;border:none;background:none;color:var(--light);position:relative;transition:color .2s;font-weight:700;}
@@ -459,7 +220,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .vm-close{position:absolute;top:-2.5rem;right:0;font-size:1.6rem;color:#fff;cursor:pointer;background:none;border:none;line-height:1;opacity:.6;transition:opacity .2s;}
 .vm-close:hover{opacity:1;}
 
-/* ─── VISION ─── */
 #vision .vwrap{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;}
 #vision .vright{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
 .vc{background:var(--bg);padding:2rem 1.8rem;position:relative;overflow:hidden;cursor:default;transition:background .25s;}
@@ -471,7 +231,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .vc-bar{position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--fire);transition:width .4s;}
 .vc:hover .vc-bar{width:100%;}
 
-/* ─── JOURNEY ─── */
 #journey .jlayout{display:grid;grid-template-columns:300px 1fr;gap:6rem;align-items:start;}
 #journey .jleft{position:sticky;top:8rem;}
 .jl-n{font-family:'Fraunces',serif;font-size:7rem;font-weight:700;color:var(--fire);line-height:1;opacity:.12;}
@@ -487,7 +246,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .je:last-child .je-yr{color:var(--gold);}
 .je:last-child .je-title{color:var(--gold);}
 
-/* ─── IMPACT ─── */
 #achievements{background:var(--fire);}
 #achievements .iheader{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem;}
 .i-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.2);}
@@ -508,7 +266,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .aw-t{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:#fff;margin-bottom:.3rem;}
 .aw-b{font-size:.85rem;color:rgba(255,255,255,.65);line-height:1.65;}
 
-/* ─── PRESS ─── */
 #press .playout{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:1.5rem;}
 .pc{background:var(--bg);border:1px solid var(--border);padding:2rem;transition:all .3s;position:relative;border-radius:4px;}
 .pc:hover{border-color:var(--fire);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.07);}
@@ -521,7 +278,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .pc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--fire);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
 .pc:hover::after{transform:scaleX(1);}
 
-/* ─── CONTACT ─── */
 #contact{display:grid;grid-template-columns:1fr 1fr;padding:0;min-height:640px;align-items:stretch;}
 .ct-l{background:var(--bg3);padding:5rem 6% 5rem 6%;border-right:1px solid var(--border);}
 .ct-mail-cta{margin-top:2.5rem;padding:1.8rem 2rem;background:var(--fire-pale);border-left:3px solid var(--fire);display:flex;flex-direction:column;gap:.9rem;}
@@ -553,7 +309,6 @@ nav.up{box-shadow:0 2px 24px rgba(0,0,0,0.08);}
 .fb{width:100%;padding:.95rem;background:var(--fire);color:#fff;border:none;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.06em;cursor:pointer;transition:background .2s;border-radius:3px;}
 .fb:hover{background:var(--fire2);}
 
-/* ─── FOOTER ─── */
 footer{background:var(--ink2);}
 .ft-main{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding:4rem 8% 3rem;border-bottom:1px solid rgba(255,255,255,.07);}
 .fb-brand{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.6rem;}
@@ -570,119 +325,24 @@ footer{background:var(--ink2);}
 .fl-links a:hover{color:#fff;}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 8%;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:rgba(255,255,255,.25);flex-wrap:wrap;gap:.4rem;}
 
-/* ─── REVEAL ─── */
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
 .rv.vis{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
 
-/* ─── BTT ─── */
 .btt{position:fixed;bottom:2rem;right:1.5rem;z-index:800;width:42px;height:42px;background:var(--fire);color:#fff;border:none;font-size:1rem;cursor:pointer;box-shadow:0 4px 18px rgba(255,106,0,.35);transition:all .3s;opacity:0;transform:translateY(8px);pointer-events:none;border-radius:4px;}
 .btt.show{opacity:1;transform:translateY(0);pointer-events:all;}
 .btt:hover{background:var(--fire2);}
 
-/* ─── MOB STICKY ─── */
 .mob-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:900;background:#fff;border-top:2px solid var(--fire);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));gap:.7rem;box-shadow:0 -4px 20px rgba(0,0,0,.08);}
 .ms-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.8rem;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;text-decoration:none;transition:all .2s;border-radius:3px;}
 .ms-call{background:var(--bg3);color:var(--ink);border:1.5px solid var(--border);}
 .ms-write{background:var(--fire);color:#fff;}
 @media(max-width:768px){.mob-sticky{display:flex;}footer{padding-bottom:calc(2rem + 76px + env(safe-area-inset-bottom))!important;}#contact .ct-r{padding-bottom:calc(6rem + 80px);}}
 
-/* ─── RESPONSIVE ─── */
-@media(max-width:1100px){
-  #journey .jlayout{grid-template-columns:220px 1fr;gap:4rem;}
-  .i-grid,.i-row2{grid-template-columns:repeat(2,1fr);}
-  .ft-main{grid-template-columns:1fr 1fr;}
-  .ft-main>div:first-child{grid-column:1/-1;}
-  .pg-grid{grid-template-columns:repeat(3,1fr);}
-  .mp-grid{grid-template-columns:repeat(3,1fr);}
-  .mv-grid{grid-template-columns:repeat(2,1fr);}
-}
-@media(max-width:900px){
-  #about .wrap{grid-template-columns:200px 1fr;gap:3rem;}
-  #vision .vwrap{grid-template-columns:1fr;gap:2rem;}
-  #vision .vleft{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
-  .awards{grid-template-columns:1fr;}
-  #press .playout{grid-template-columns:1fr 1fr;}
-  .pc.big{grid-row:auto;}
-  #contact{grid-template-columns:1fr;}
-  .ct-l{border-right:none;border-bottom:1px solid var(--border);}
-  .ct-l,.ct-r{padding:4rem 6%;}
-  .pg-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:160px;}
-  .mp-grid{grid-template-columns:repeat(2,1fr);}
-  .mv-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:768px){
-  .nav-center{display:none;}
-  .nav-right{display:none;}
-  .nav-leaders{display:flex;}
-  .nav-leader img{width:38px;height:42px;}
-  .ham{display:flex;}
-  nav{height:72px;padding:0 5%;}
-  .mob-nav{top:108px;}
-  #ticker{height:32px;}
-  .ticker-label{font-size:.55rem;padding:0 .8rem;}
-  .ticker-item{font-size:.72rem;padding:0 1.5rem;}
-  .hero-inner{grid-template-columns:1fr;grid-template-rows:auto auto;}
-  .hi-left{order:2;padding:2.5rem 5% 2rem;}
-  .hi-right{order:1;height:clamp(260px,72vw,420px);max-height:none;min-height:260px;}
-  .hi-photo{height:100%;}
-  .hi-name{font-size:clamp(2.5rem,9vw,4rem);}
-  .hi-bio{font-size:.93rem;max-width:100%;}
-  .hi-actions{flex-direction:column;align-items:flex-start;gap:.7rem;}
-  .ha-primary{width:100%;text-align:center;padding:.9rem 1.5rem;}
-  .hi-stat-overlay{display:none;}
-  .s{padding:3.5rem 5%;}
-  .sh{font-size:1.7rem;}
-  .s-hd-row{flex-direction:column;gap:1rem;}
-  #about .wrap{grid-template-columns:1fr;gap:2rem;}
-  .ab-imgs{flex-direction:column;gap:.8rem;}
-  .ab-img-main{width:100%;height:300px;aspect-ratio:auto;object-fit:contain;object-position:center center;background:var(--bg2);}
-  .ab-grid{grid-template-columns:1fr 1fr;}
-  #vision .vleft{grid-template-columns:1fr;}
-  #vision .vright{grid-template-columns:1fr;}
-  #journey .jlayout{grid-template-columns:1fr;gap:2rem;}
-  #journey .jleft{position:static;display:flex;align-items:center;gap:1.5rem;}
-  .jl-n{font-size:4rem;opacity:.08;}
-  .jl-img{display:none;}
-  .je{grid-template-columns:60px 1fr;gap:1rem;}
-  .je:hover{padding-left:0;padding-right:0;margin:0;}
-  .i-grid,.i-row2{grid-template-columns:1fr 1fr;}
-  .it{padding:1.5rem 1rem;}
-  .it-n{font-size:2rem;}
-  .awards{grid-template-columns:1fr;}
-  #achievements .iheader{grid-template-columns:1fr;gap:1rem;}
-  #press .playout{grid-template-columns:1fr;gap:1rem;}
-  .pc.big{grid-row:auto;}
-  #contact{display:flex;flex-direction:column;}
-  .ct-l,.ct-r{padding:3.5rem 5%;}
-  .ct-name{font-size:1.8rem;}
-  .fr2{grid-template-columns:1fr;}
-  .ft-main{grid-template-columns:1fr;gap:2rem;padding:3rem 5% 2rem;}
-  .ft-main>div:first-child{grid-column:auto;}
-  .ft-bot{flex-direction:column;text-align:center;padding:1rem 5%;}
-  #photo-gallery{padding:3.5rem 5%;}
-  .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}
-  #media{padding:3.5rem 5%;}
-  .mp-grid{grid-template-columns:repeat(2,1fr);}
-  .mv-grid{grid-template-columns:1fr;}
-  .mt-btn{padding:.7rem 1.2rem;font-size:.65rem;}
-  .lb-nav{display:none;}
-  .hero-wm{display:none;}
-}
-@media(max-width:480px){
-  .hi-name{font-size:2.4rem;}
-  .i-grid,.i-row2{grid-template-columns:1fr 1fr;}
-  .ab-img-main{height:280px;}
-  .ab-grid{grid-template-columns:1fr;}
-  .sh{font-size:1.55rem;}
-  .pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;}
-  .mp-grid{grid-template-columns:1fr 1fr;}
-}
-
-[data-lang]{display:none;}
-[data-lang].lang-active{display:block;}
-[data-lang-inline]{display:none;}
-[data-lang-inline].lang-active{display:inline;}
+@media(max-width:1100px){#journey .jlayout{grid-template-columns:220px 1fr;gap:4rem;}.i-grid,.i-row2{grid-template-columns:repeat(2,1fr);}.ft-main{grid-template-columns:1fr 1fr;}.ft-main>div:first-child{grid-column:1/-1;}.pg-grid{grid-template-columns:repeat(3,1fr);}.mp-grid{grid-template-columns:repeat(3,1fr);}.mv-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:900px){#about .wrap{grid-template-columns:200px 1fr;gap:3rem;}#vision .vwrap{grid-template-columns:1fr;gap:2rem;}#vision .vleft{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}.awards{grid-template-columns:1fr;}#press .playout{grid-template-columns:1fr 1fr;}.pc.big{grid-row:auto;}#contact{grid-template-columns:1fr;}.ct-l{border-right:none;border-bottom:1px solid var(--border);}.ct-l,.ct-r{padding:4rem 6%;}.pg-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:160px;}.mp-grid{grid-template-columns:repeat(2,1fr);}.mv-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.nav-center{display:none;}.nav-right{display:none;}.nav-leaders{display:flex;}.nav-leader img{width:38px;height:42px;}.ham{display:flex;}nav{height:72px;padding:0 5%;}.mob-nav{top:108px;}#ticker{height:32px;}.ticker-label{font-size:.55rem;padding:0 .8rem;}.ticker-item{font-size:.72rem;padding:0 1.5rem;}.hero-inner{grid-template-columns:1fr;grid-template-rows:auto auto;}.hi-left{order:2;padding:2.5rem 5% 2rem;}.hi-right{order:1;height:clamp(260px,72vw,420px);max-height:none;min-height:260px;}.hi-photo{height:100%;}.hi-name{font-size:clamp(2.5rem,9vw,4rem);}.hi-bio{font-size:.93rem;max-width:100%;}.hi-actions{flex-direction:column;align-items:flex-start;gap:.7rem;}.ha-primary{width:100%;text-align:center;padding:.9rem 1.5rem;}.hi-stat-overlay{display:none;}.s{padding:3.5rem 5%;}.sh{font-size:1.7rem;}.s-hd-row{flex-direction:column;gap:1rem;}#about .wrap{grid-template-columns:1fr;gap:2rem;}.ab-imgs{flex-direction:column;gap:.8rem;}.ab-img-main{width:100%;height:300px;aspect-ratio:auto;object-fit:contain;object-position:center center;background:var(--bg2);}.ab-grid{grid-template-columns:1fr 1fr;}#vision .vleft{grid-template-columns:1fr;}#vision .vright{grid-template-columns:1fr;}#journey .jlayout{grid-template-columns:1fr;gap:2rem;}#journey .jleft{position:static;display:flex;align-items:center;gap:1.5rem;}.jl-n{font-size:4rem;opacity:.08;}.jl-img{display:none;}.je{grid-template-columns:60px 1fr;gap:1rem;}.je:hover{padding-left:0;padding-right:0;margin:0;}.i-grid,.i-row2{grid-template-columns:1fr 1fr;}.it{padding:1.5rem 1rem;}.it-n{font-size:2rem;}.awards{grid-template-columns:1fr;}#achievements .iheader{grid-template-columns:1fr;gap:1rem;}#press .playout{grid-template-columns:1fr;gap:1rem;}.pc.big{grid-row:auto;}#contact{display:flex;flex-direction:column;}.ct-l,.ct-r{padding:3.5rem 5%;}.ct-name{font-size:1.8rem;}.fr2{grid-template-columns:1fr;}.ft-main{grid-template-columns:1fr;gap:2rem;padding:3rem 5% 2rem;}.ft-main>div:first-child{grid-column:auto;}.ft-bot{flex-direction:column;text-align:center;padding:1rem 5%;}#photo-gallery{padding:3.5rem 5%;}.pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}#media{padding:3.5rem 5%;}.mp-grid{grid-template-columns:repeat(2,1fr);}.mv-grid{grid-template-columns:1fr;}.mt-btn{padding:.7rem 1.2rem;font-size:.65rem;}.lb-nav{display:none;}.hero-wm{display:none;}}
+@media(max-width:480px){.hi-name{font-size:2.4rem;}.i-grid,.i-row2{grid-template-columns:1fr 1fr;}.ab-img-main{height:280px;}.ab-grid{grid-template-columns:1fr;}.sh{font-size:1.55rem;}.pg-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px;}.mp-grid{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
@@ -697,22 +357,20 @@ footer{background:var(--ink2);}
     </div>
   </a>
   <ul class="nav-center">
-    <li><a href="#about" class="nav-lbl" data-en="About" data-od="ପରିଚୟ">About</a></li>
-    <li><a href="#photo-gallery" class="nav-lbl" data-en="Gallery" data-od="ଗ୍ୟାଲେରୀ">Gallery</a></li>
-    <li><a href="#media" class="nav-lbl" data-en="Media" data-od="ମିଡ଼ିଆ">Media</a></li>
-    <li><a href="#vision" class="nav-lbl" data-en="Vision" data-od="ଦ୍ୱୃଷ୍ଟି">Vision</a></li>
-    <li><a href="#journey" class="nav-lbl" data-en="Journey" data-od="ଯାତ୍ରା">Journey</a></li>
-    <li><a href="#contact" class="nav-lbl" data-en="Contact" data-od="ଯୋଗାଯୋଗ">Contact</a></li>
+    <li><a href="#about" class="t" data-key="nav_about">About</a></li>
+    <li><a href="#photo-gallery" class="t" data-key="nav_gallery">Gallery</a></li>
+    <li><a href="#media" class="t" data-key="nav_media">Media</a></li>
+    <li><a href="#vision" class="t" data-key="nav_vision">Vision</a></li>
+    <li><a href="#journey" class="t" data-key="nav_journey">Journey</a></li>
+    <li><a href="#contact" class="t" data-key="nav_contact">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="nav-leaders">
       <a class="nav-leader" href="#" title="PM Narendra Modi">
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777715526/Untitled_design_14_k3qqit.png" alt="PM Narendra Modi">
-        <span class="nav-leader-name">PM Modi</span>
       </a>
       <a class="nav-leader" href="#" title="CM Mohan Majhi">
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777705113/cm-100_e76srf.png" alt="CM Mohan Majhi">
-        <span class="nav-leader-name">CM Majhi</span>
       </a>
     </div>
     <div class="nav-sep"></div>
@@ -721,51 +379,27 @@ footer{background:var(--ink2);}
       <button class="lt-btn" onclick="setLang('od',this)">ଓଡ଼ିଆ</button>
     </div>
     <div class="nav-sep"></div>
-    <a href="#contact" class="nav-contact nav-lbl" data-en="Get in Touch" data-od="ଯୋଗାଯୋଗ">Get in Touch</a>
+    <a href="#contact" class="nav-contact t" data-key="nav_touch">Get in Touch</a>
   </div>
   <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- ★ EVENT TICKER — below nav ★ -->
+<!-- EVENT TICKER -->
 <div id="event-ticker">
-  <div class="et-label"><span class="et-label-icon">📅</span> Upcoming</div>
+  <div class="et-label"><span class="et-label-icon">📅</span> <span class="t" data-key="ticker_label">Upcoming</span></div>
   <div class="et-track-wrap">
-    <div class="et-track">
-      <!-- set 1 -->
-      <div class="et-item">
-        <span class="et-badge">Event</span>
-        🌾 <strong>Mishrana Parba</strong> — Grand Community Celebration
-        <span class="et-date">8 May 2025</span>
-        · All citizens of Niali are warmly invited · Venue: Niali Maidan
-      </div>
+    <div class="et-track" id="etTrack">
+      <div class="et-item"><span class="et-badge t" data-key="et_badge1">Event</span>🌾 <strong class="t" data-key="et_event1">Mishrana Parba</strong> — <span class="t" data-key="et_event1_sub">Grand Community Celebration</span><span class="et-date">8 May 2025</span>· <span class="t" data-key="et_event1_note">All citizens of Niali are warmly invited · Venue: Niali Maidan</span></div>
       <span class="et-sep">◆</span>
-      <div class="et-item">
-        <span class="et-badge">Jan Sunwai</span>
-        🏛️ Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office
-      </div>
+      <div class="et-item"><span class="et-badge t" data-key="et_badge2">Jan Sunwai</span>🏛️ <span class="t" data-key="et_event2">Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office</span></div>
       <span class="et-sep">◆</span>
-      <div class="et-item">
-        <span class="et-badge">Scheme Camp</span>
-        🌾 Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards &amp; KCC enrollment
-      </div>
+      <div class="et-item"><span class="et-badge t" data-key="et_badge3">Scheme Camp</span>🌾 <span class="t" data-key="et_event3">Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards &amp; KCC enrollment</span></div>
       <span class="et-sep">◆</span>
-      <!-- set 2 (duplicate for seamless loop) -->
-      <div class="et-item">
-        <span class="et-badge">Event</span>
-        🌾 <strong>Mishrana Parba</strong> — Grand Community Celebration
-        <span class="et-date">8 May 2025</span>
-        · All citizens of Niali are warmly invited · Venue: Niali Maidan
-      </div>
+      <div class="et-item"><span class="et-badge t" data-key="et_badge1">Event</span>🌾 <strong class="t" data-key="et_event1">Mishrana Parba</strong> — <span class="t" data-key="et_event1_sub">Grand Community Celebration</span><span class="et-date">8 May 2025</span>· <span class="t" data-key="et_event1_note">All citizens of Niali are warmly invited · Venue: Niali Maidan</span></div>
       <span class="et-sep">◆</span>
-      <div class="et-item">
-        <span class="et-badge">Jan Sunwai</span>
-        🏛️ Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office
-      </div>
+      <div class="et-item"><span class="et-badge t" data-key="et_badge2">Jan Sunwai</span>🏛️ <span class="t" data-key="et_event2">Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office</span></div>
       <span class="et-sep">◆</span>
-      <div class="et-item">
-        <span class="et-badge">Scheme Camp</span>
-        🌾 Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards &amp; KCC enrollment
-      </div>
+      <div class="et-item"><span class="et-badge t" data-key="et_badge3">Scheme Camp</span>🌾 <span class="t" data-key="et_event3">Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards &amp; KCC enrollment</span></div>
       <span class="et-sep">◆</span>
     </div>
   </div>
@@ -773,36 +407,36 @@ footer{background:var(--ink2);}
 
 <!-- MOBILE NAV -->
 <div class="mob-nav" id="mobNav">
-  <a href="#about" onclick="closeMenu()" data-en="About" data-od="ପରିଚୟ">About</a>
-  <a href="#photo-gallery" onclick="closeMenu()" data-en="Gallery" data-od="ଗ୍ୟାଲେରୀ">Gallery</a>
-  <a href="#media" onclick="closeMenu()" data-en="Media" data-od="ମିଡ଼ିଆ">Media</a>
-  <a href="#vision" onclick="closeMenu()" data-en="Vision" data-od="ଦ୍ୱୃଷ୍ଟି">Vision</a>
-  <a href="#journey" onclick="closeMenu()" data-en="Journey" data-od="ଯାତ୍ରା">Journey</a>
-  <a href="#contact" onclick="closeMenu()" data-en="Contact" data-od="ଯୋଗାଯୋଗ">Contact</a>
+  <a href="#about" onclick="closeMenu()" class="t" data-key="nav_about">About</a>
+  <a href="#photo-gallery" onclick="closeMenu()" class="t" data-key="nav_gallery">Gallery</a>
+  <a href="#media" onclick="closeMenu()" class="t" data-key="nav_media">Media</a>
+  <a href="#vision" onclick="closeMenu()" class="t" data-key="nav_vision">Vision</a>
+  <a href="#journey" onclick="closeMenu()" class="t" data-key="nav_journey">Journey</a>
+  <a href="#contact" onclick="closeMenu()" class="t" data-key="nav_contact">Contact</a>
 </div>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-wm">SEVA</div>
+  <div class="hero-wm t" data-key="hero_wm">SEVA</div>
   <div class="hero-inner">
     <div class="hi-left">
-      <div class="hi-chip">Member of Legislative Assembly · Niali Constituency · Odisha</div>
+      <div class="hi-chip t" data-key="hero_chip">Member of Legislative Assembly · Niali Constituency · Odisha</div>
       <h1 class="hi-name">
         Chhabi<br>
         <span class="fire-word">Malik</span>
       </h1>
-      <div class="hi-role">Representing Niali, Odisha</div>
-      <p class="hi-bio">A dedicated people's representative championing rural development, grassroots governance, and inclusive progress for every citizen of Niali. Elected to the Odisha Legislative Assembly from Niali on the BJP mandate in June 2024.</p>
+      <div class="hi-role t" data-key="hero_role">Representing Niali, Odisha</div>
+      <p class="hi-bio t" data-key="hero_bio">A dedicated people's representative championing rural development, grassroots governance, and inclusive progress for every citizen of Niali. Elected to the Odisha Legislative Assembly from Niali on the BJP mandate in June 2024.</p>
       <div class="hi-actions">
-        <a href="#vision" class="ha-primary">Explore Vision →</a>
-        <a href="#contact" class="ha-ghost">Connect With Us</a>
+        <a href="#vision" class="ha-primary t" data-key="hero_cta1">Explore Vision →</a>
+        <a href="#contact" class="ha-ghost t" data-key="hero_cta2">Connect With Us</a>
       </div>
       <div class="hi-tags" style="margin-top:2rem;">
-        <span class="hi-tag">Odisha</span>
-        <span class="hi-tag">Niali</span>
+        <span class="hi-tag">ଓଡ଼ିଶା</span>
+        <span class="hi-tag">ନିଆଳି</span>
         <span class="hi-tag">MLA 2024</span>
         <span class="hi-tag">BJP</span>
-        <span class="hi-tag">People's Voice</span>
+        <span class="hi-tag t" data-key="tag_voice">People's Voice</span>
       </div>
     </div>
     <div class="hi-right">
@@ -810,39 +444,39 @@ footer{background:var(--ink2);}
         <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637133/1_ajmwel.png" alt="Chhabi Malik MLA Niali">
         <div class="hi-photo-line"></div>
         <div class="hi-stat-overlay">
-          <div class="hso-item"><div class="hso-n">2024</div><div class="hso-l">Elected MLA</div></div>
-          <div class="hso-item"><div class="hso-n">BJP</div><div class="hso-l">Party</div></div>
-          <div class="hso-item"><div class="hso-n">₹420Cr</div><div class="hso-l">Dev. Funds</div></div>
-          <div class="hso-item"><div class="hso-n">80+</div><div class="hso-l">Initiatives</div></div>
+          <div class="hso-item"><div class="hso-n">2024</div><div class="hso-l t" data-key="stat_elected">Elected MLA</div></div>
+          <div class="hso-item"><div class="hso-n">BJP</div><div class="hso-l t" data-key="stat_party">Party</div></div>
+          <div class="hso-item"><div class="hso-n">&#x20B9;420Cr</div><div class="hso-l t" data-key="stat_dev">Dev. Funds</div></div>
+          <div class="hso-item"><div class="hso-n">80+</div><div class="hso-l t" data-key="stat_init">Initiatives</div></div>
         </div>
       </div>
     </div>
   </div>
   <div class="hero-strip">
     <div class="hs-track">
-      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l">Homes Built</span></div>
+      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l t" data-key="strip_homes">Homes Built</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l">Electrification</span></div>
+      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l t" data-key="strip_elec">Electrification</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l">Roads Built</span></div>
+      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l t" data-key="strip_roads">Roads Built</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l">Health Centres</span></div>
+      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l t" data-key="strip_health">Health Centres</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l">Scholarships</span></div>
+      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l t" data-key="strip_scholar">Scholarships</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">Niali First</span><span class="hs-l">Always</span></div>
+      <div class="hs-item"><span class="hs-n t" data-key="strip_niali">Niali First</span><span class="hs-l t" data-key="strip_always">Always</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l">Homes Built</span></div>
+      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l t" data-key="strip_homes">Homes Built</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l">Electrification</span></div>
+      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l t" data-key="strip_elec">Electrification</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l">Roads Built</span></div>
+      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l t" data-key="strip_roads">Roads Built</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l">Health Centres</span></div>
+      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l t" data-key="strip_health">Health Centres</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l">Scholarships</span></div>
+      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l t" data-key="strip_scholar">Scholarships</span></div>
       <span class="hs-dot">·</span>
-      <div class="hs-item"><span class="hs-n">Niali First</span><span class="hs-l">Always</span></div>
+      <div class="hs-item"><span class="hs-n t" data-key="strip_niali">Niali First</span><span class="hs-l t" data-key="strip_always">Always</span></div>
     </div>
   </div>
 </section>
@@ -850,35 +484,34 @@ footer{background:var(--ink2);}
 <!-- ABOUT -->
 <section id="about" class="s s-off">
   <div class="s-hd rv">
-    <div class="lbl">Who He Is</div>
-    <h2 class="sh">A Life Dedicated to <span class="ac">Seva</span></h2>
+    <div class="lbl t" data-key="about_lbl">Who He Is</div>
+    <h2 class="sh"><span class="t" data-key="about_h">A Life Dedicated to</span> <span class="ac t" data-key="about_seva">Seva</span></h2>
   </div>
   <div class="wrap">
     <div class="ab-imgs rv">
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777977974/eeaf8c33-5786-486c-964b-7bbb73c32d5d_gixaaz.jpg" alt="Chhabi Malik" class="ab-img-main">
       <div class="ab-flag"><span></span><span></span><span></span></div>
-      <!-- Wikipedia quick-facts card -->
       <div class="wiki-card">
-        <div class="wiki-card-title">🏛️ Official Record</div>
-        <div class="wiki-row"><span class="wiki-k">Position</span><span class="wiki-v">MLA, Niali</span></div>
-        <div class="wiki-row"><span class="wiki-k">Assumed Office</span><span class="wiki-v">4 June 2024</span></div>
-        <div class="wiki-row"><span class="wiki-k">Preceded by</span><span class="wiki-v">Pramod Kumar Mallick</span></div>
-        <div class="wiki-row"><span class="wiki-k">Party</span><span class="wiki-v">BJP</span></div>
-        <div class="wiki-row"><span class="wiki-k">Legislature</span><span class="wiki-v">Odisha Legislative Assembly</span></div>
+        <div class="wiki-card-title">🏛️ <span class="t" data-key="wiki_title">Official Record</span></div>
+        <div class="wiki-row"><span class="wiki-k t" data-key="wiki_pos">Position</span><span class="wiki-v t" data-key="wiki_pos_v">MLA, Niali</span></div>
+        <div class="wiki-row"><span class="wiki-k t" data-key="wiki_off">Assumed Office</span><span class="wiki-v">4 June 2024</span></div>
+        <div class="wiki-row"><span class="wiki-k t" data-key="wiki_pre">Preceded by</span><span class="wiki-v">Pramod Kumar Mallick</span></div>
+        <div class="wiki-row"><span class="wiki-k t" data-key="wiki_party">Party</span><span class="wiki-v">BJP</span></div>
+        <div class="wiki-row"><span class="wiki-k t" data-key="wiki_leg">Legislature</span><span class="wiki-v t" data-key="wiki_leg_v">Odisha Legislative Assembly</span></div>
       </div>
     </div>
     <div class="ab-right rv">
-      <p class="ab-quote">"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."</p>
-      <p class="ab-body">Chhabi Malik is an Indian politician who was elected to the Odisha Legislative Assembly from the Niali constituency in the 2024 state elections as a member of the Bharatiya Janata Party. He assumed office on 4 June 2024, succeeding Pramod Kumar Mallick as the representative of Niali.</p>
-      <p class="ab-body">Rising through grassroots political engagement in the Niali region, Chhabi Malik has focused his legislative work on rural infrastructure, access to health services, agricultural support, and educational opportunity for the constituents of Niali block in Cuttack district.</p>
-      <p class="ab-body">Known for his ground-level accessibility, he holds regular Jan Sunwais and personally monitors the progress of every scheme in the constituency. His approach to governance is rooted in listening first, then acting with purpose.</p>
+      <p class="ab-quote t" data-key="about_quote">"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."</p>
+      <p class="ab-body t" data-key="about_p1">Chhabi Malik is an Indian politician who was elected to the Odisha Legislative Assembly from the Niali constituency in the 2024 state elections as a member of the Bharatiya Janata Party. He assumed office on 4 June 2024, succeeding Pramod Kumar Mallick as the representative of Niali.</p>
+      <p class="ab-body t" data-key="about_p2">Rising through grassroots political engagement in the Niali region, Chhabi Malik has focused his legislative work on rural infrastructure, access to health services, agricultural support, and educational opportunity for the constituents of Niali block in Cuttack district.</p>
+      <p class="ab-body t" data-key="about_p3">Known for his ground-level accessibility, he holds regular Jan Sunwais and personally monitors the progress of every scheme in the constituency. His approach to governance is rooted in listening first, then acting with purpose.</p>
       <div class="ab-grid">
-        <div class="ab-fact"><div class="ab-k">Constituency</div><div class="ab-v">Niali, Odisha</div></div>
-        <div class="ab-fact"><div class="ab-k">Position</div><div class="ab-v">Member of Legislative Assembly</div></div>
-        <div class="ab-fact"><div class="ab-k">Party</div><div class="ab-v">Bharatiya Janata Party</div></div>
-        <div class="ab-fact"><div class="ab-k">Elected</div><div class="ab-v">2024 Odisha Assembly Elections</div></div>
-        <div class="ab-fact"><div class="ab-k">Focus Areas</div><div class="ab-v">Rural Dev, Agriculture, Education</div></div>
-        <div class="ab-fact"><div class="ab-k">Jan Sunwai</div><div class="ab-v">Every Saturday, 10 AM</div></div>
+        <div class="ab-fact"><div class="ab-k t" data-key="fact_const">Constituency</div><div class="ab-v t" data-key="fact_const_v">Niali, Odisha</div></div>
+        <div class="ab-fact"><div class="ab-k t" data-key="fact_pos">Position</div><div class="ab-v t" data-key="fact_pos_v">Member of Legislative Assembly</div></div>
+        <div class="ab-fact"><div class="ab-k t" data-key="fact_party">Party</div><div class="ab-v t" data-key="fact_party_v">Bharatiya Janata Party</div></div>
+        <div class="ab-fact"><div class="ab-k t" data-key="fact_elected">Elected</div><div class="ab-v t" data-key="fact_elected_v">2024 Odisha Assembly Elections</div></div>
+        <div class="ab-fact"><div class="ab-k t" data-key="fact_focus">Focus Areas</div><div class="ab-v t" data-key="fact_focus_v">Rural Dev, Agriculture, Education</div></div>
+        <div class="ab-fact"><div class="ab-k t" data-key="fact_sunwai">Jan Sunwai</div><div class="ab-v t" data-key="fact_sunwai_v">Every Saturday, 10 AM</div></div>
       </div>
     </div>
   </div>
@@ -887,9 +520,9 @@ footer{background:var(--ink2);}
 <!-- PHOTO GALLERY -->
 <section id="photo-gallery">
   <div class="s-hd rv" style="padding:0;">
-    <div class="lbl">Event Gallery</div>
-    <h2 class="sh">Moments from the <span class="ac">Field</span></h2>
-    <p class="ss">A glimpse into the work, the people, and the journey across Niali constituency.</p>
+    <div class="lbl t" data-key="gallery_lbl">Event Gallery</div>
+    <h2 class="sh"><span class="t" data-key="gallery_h">Moments from the</span> <span class="ac t" data-key="gallery_field">Field</span></h2>
+    <p class="ss t" data-key="gallery_sub">A glimpse into the work, the people, and the journey across Niali constituency.</p>
   </div>
   <div class="pg-grid" id="pgGrid">
     <div class="pg-item rv" data-src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg"><img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637179/670629084_1719622462737196_8269905763340145280_n_vhnedw.jpg" alt="Gallery 1" loading="lazy"><div class="pg-overlay"><div class="pg-zoom">🔍</div></div></div>
@@ -907,23 +540,23 @@ footer{background:var(--ink2);}
 
 <!-- LIGHTBOX -->
 <div class="lb" id="lb" onclick="closeLb(event)">
-  <button class="lb-close" onclick="closeLb()">✕</button>
-  <button class="lb-nav lb-prev" onclick="lbNav(-1);event.stopPropagation()">‹</button>
+  <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1);event.stopPropagation()">&#x2039;</button>
   <img class="lb-img" id="lbImg" src="" alt="">
-  <button class="lb-nav lb-next" onclick="lbNav(1);event.stopPropagation()">›</button>
+  <button class="lb-nav lb-next" onclick="lbNav(1);event.stopPropagation()">&#x203A;</button>
   <div class="lb-counter" id="lbCounter"></div>
 </div>
 
 <!-- MEDIA -->
 <section id="media" class="s">
   <div class="s-hd rv">
-    <div class="lbl">Media Centre</div>
-    <h2 class="sh">Photos & <span class="ac">Videos</span></h2>
-    <p class="ss">Watch speeches, ground reports, and see moments of service from the field.</p>
+    <div class="lbl t" data-key="media_lbl">Media Centre</div>
+    <h2 class="sh"><span class="t" data-key="media_h">Photos &amp;</span> <span class="ac t" data-key="media_h2">Videos</span></h2>
+    <p class="ss t" data-key="media_sub">Watch speeches, ground reports, and see moments of service from the field.</p>
   </div>
   <div class="media-tabs">
-    <button class="mt-btn active" onclick="switchTab('photos',this)">📷 Photos</button>
-    <button class="mt-btn" onclick="switchTab('videos',this)">▶ Videos</button>
+    <button class="mt-btn active" onclick="switchTab('photos',this)">📷 <span class="t" data-key="tab_photos">Photos</span></button>
+    <button class="mt-btn" onclick="switchTab('videos',this)">▶ <span class="t" data-key="tab_videos">Videos</span></button>
   </div>
   <div class="tab-panel active" id="tab-photos">
     <div class="mp-grid">
@@ -941,15 +574,15 @@ footer{background:var(--ink2);}
     <div class="mv-grid">
       <div class="mv-item rv">
         <div class="mv-thumb" onclick="openVideo('igT8r3RUpJY')"><img src="https://img.youtube.com/vi/igT8r3RUpJY/hqdefault.jpg" alt="Video 1"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
-        <div class="mv-info"><div class="mv-title">Chhabi Malik — Public Address, Niali</div><div class="mv-sub">Official Video · YouTube</div></div>
+        <div class="mv-info"><div class="mv-title t" data-key="vid1_title">Chhabi Malik — Public Address, Niali</div><div class="mv-sub t" data-key="vid_sub">Official Video · YouTube</div></div>
       </div>
       <div class="mv-item rv d1">
         <div class="mv-thumb" onclick="openVideo('B2oZKT64UU0')"><img src="https://img.youtube.com/vi/B2oZKT64UU0/hqdefault.jpg" alt="Video 2"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
-        <div class="mv-info"><div class="mv-title">Constituency Development — Ground Report</div><div class="mv-sub">Official Video · YouTube</div></div>
+        <div class="mv-info"><div class="mv-title t" data-key="vid2_title">Constituency Development — Ground Report</div><div class="mv-sub t" data-key="vid_sub">Official Video · YouTube</div></div>
       </div>
       <div class="mv-item rv d2">
         <div class="mv-thumb" onclick="openVideo('M51AqazsCDE')"><img src="https://img.youtube.com/vi/M51AqazsCDE/hqdefault.jpg" alt="Video 3"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
-        <div class="mv-info"><div class="mv-title">Niali Voices — People Speak</div><div class="mv-sub">Official Video · YouTube</div></div>
+        <div class="mv-info"><div class="mv-title t" data-key="vid3_title">Niali Voices — People Speak</div><div class="mv-sub t" data-key="vid_sub">Official Video · YouTube</div></div>
       </div>
     </div>
   </div>
@@ -957,7 +590,7 @@ footer{background:var(--ink2);}
 
 <div class="vm" id="vm" onclick="closeVideo(event)">
   <div class="vm-inner">
-    <button class="vm-close" onclick="closeVideo()">✕</button>
+    <button class="vm-close" onclick="closeVideo()">&#x2715;</button>
     <div class="vm-frame"><iframe id="vmFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe></div>
   </div>
 </div>
@@ -967,18 +600,18 @@ footer{background:var(--ink2);}
   <div class="vwrap">
     <div class="vleft rv">
       <div>
-        <div class="lbl">Our Vision</div>
-        <h2 class="sh">Building a <span class="ac">Stronger</span> Niali</h2>
-        <p class="ss">Six pillars guiding every decision, every initiative, every vote cast in the legislature on behalf of the people of Niali.</p>
+        <div class="lbl t" data-key="vision_lbl">Our Vision</div>
+        <h2 class="sh"><span class="t" data-key="vision_h">Building a</span> <span class="ac t" data-key="vision_h2">Stronger</span> <span class="t" data-key="vision_h3">Niali</span></h2>
+        <p class="ss t" data-key="vision_sub">Six pillars guiding every decision, every initiative, every vote cast in the legislature on behalf of the people of Niali.</p>
       </div>
     </div>
     <div class="vright">
-      <div class="vc rv"><span class="vc-n">01</span><span class="vc-icon">🌾</span><div class="vc-title">Kisan Samridhi</div><p class="vc-text">Doubling farmer incomes through MSP support, crop insurance, and direct market linkages — eliminating the middlemen who squeeze our farmers.</p><div class="vc-bar"></div></div>
-      <div class="vc rv d1"><span class="vc-n">02</span><span class="vc-icon">📚</span><div class="vc-title">Shiksha for All</div><p class="vc-text">Universal quality education with digital classrooms and full scholarship coverage for all BPL families in Niali.</p><div class="vc-bar"></div></div>
-      <div class="vc rv"><span class="vc-n">03</span><span class="vc-icon">🏥</span><div class="vc-title">Swasth Niali</div><p class="vc-text">A primary health centre within 5 km of every village — free diagnostics, maternal care, and mobile medical units.</p><div class="vc-bar"></div></div>
-      <div class="vc rv d1"><span class="vc-n">04</span><span class="vc-icon">💡</span><div class="vc-title">Digital Gram</div><p class="vc-text">High-speed internet and digital literacy to every panchayat, empowering citizens to access government services from home.</p><div class="vc-bar"></div></div>
-      <div class="vc rv"><span class="vc-n">05</span><span class="vc-icon">♻️</span><div class="vc-title">Green Niali</div><p class="vc-text">Solar-powered streetlights, clean cooking fuel, and river conservation — a constituency that thrives without harming tomorrow.</p><div class="vc-bar"></div></div>
-      <div class="vc rv d1"><span class="vc-n">06</span><span class="vc-icon">👩‍💼</span><div class="vc-title">Nari Shakti</div><p class="vc-text">30% reservation in local governance, skill centres for women, SHG credit, and zero-tolerance on crimes against women.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">01</span><span class="vc-icon">🌾</span><div class="vc-title t" data-key="v1_title">Kisan Samridhi</div><p class="vc-text t" data-key="v1_text">Doubling farmer incomes through MSP support, crop insurance, and direct market linkages — eliminating the middlemen who squeeze our farmers.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">02</span><span class="vc-icon">📚</span><div class="vc-title t" data-key="v2_title">Shiksha for All</div><p class="vc-text t" data-key="v2_text">Universal quality education with digital classrooms and full scholarship coverage for all BPL families in Niali.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">03</span><span class="vc-icon">🏥</span><div class="vc-title t" data-key="v3_title">Swasth Niali</div><p class="vc-text t" data-key="v3_text">A primary health centre within 5 km of every village — free diagnostics, maternal care, and mobile medical units.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">04</span><span class="vc-icon">💡</span><div class="vc-title t" data-key="v4_title">Digital Gram</div><p class="vc-text t" data-key="v4_text">High-speed internet and digital literacy to every panchayat, empowering citizens to access government services from home.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">05</span><span class="vc-icon">♻️</span><div class="vc-title t" data-key="v5_title">Green Niali</div><p class="vc-text t" data-key="v5_text">Solar-powered streetlights, clean cooking fuel, and river conservation — a constituency that thrives without harming tomorrow.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">06</span><span class="vc-icon">👩‍💼</span><div class="vc-title t" data-key="v6_title">Nari Shakti</div><p class="vc-text t" data-key="v6_text">30% reservation in local governance, skill centres for women, SHG credit, and zero-tolerance on crimes against women.</p><div class="vc-bar"></div></div>
     </div>
   </div>
 </section>
@@ -986,9 +619,9 @@ footer{background:var(--ink2);}
 <!-- JOURNEY -->
 <section id="journey" class="s s-off">
   <div class="s-hd rv">
-    <div class="lbl">Political Career</div>
-    <h2 class="sh">The <span class="ac">Journey</span> So Far</h2>
-    <p class="ss">From grassroots activism in Niali to the Odisha Legislative Assembly — a path built on purpose and trust.</p>
+    <div class="lbl t" data-key="journey_lbl">Political Career</div>
+    <h2 class="sh"><span class="t" data-key="journey_h">The</span> <span class="ac t" data-key="journey_h2">Journey</span> <span class="t" data-key="journey_h3">So Far</span></h2>
+    <p class="ss t" data-key="journey_sub">From grassroots activism in Niali to the Odisha Legislative Assembly — a path built on purpose and trust.</p>
   </div>
   <div class="jlayout">
     <div class="jleft rv">
@@ -996,11 +629,11 @@ footer{background:var(--ink2);}
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="jl-img">
     </div>
     <div class="jright">
-      <div class="je rv"><div class="je-yr">Roots</div><div><div class="je-title">Community Leadership in Niali</div><p class="je-desc">Began grassroots social and political work in Niali, building connections with farmers, fishing communities, and daily-wage workers. Advocated actively for rural infrastructure and welfare schemes at the block level.</p></div></div>
-      <div class="je rv"><div class="je-yr">BJP</div><div><div class="je-title">Joined Bharatiya Janata Party</div><p class="je-desc">Aligned with BJP's vision of vikas-led governance and joined the party's Niali unit, contributing to local party building and constituency outreach activities across Cuttack district.</p></div></div>
-      <div class="je rv"><div class="je-yr">2024</div><div><div class="je-title">Elected to Odisha Legislative Assembly</div><p class="je-desc">Won the Niali assembly seat in the 2024 Odisha Legislative Assembly elections under the BJP banner, succeeding Pramod Kumar Mallick. His election was reported by News18, Kalinga TV, and verified by the Election Commission of India affidavit.</p></div></div>
-      <div class="je rv"><div class="je-yr">Jun 4</div><div><div class="je-title">Assumed Office — 4 June 2024</div><p class="je-desc">Formally assumed office as Member of the Odisha Legislative Assembly from Niali on 4 June 2024, joining the BJP legislative group in Bhubaneswar. Took up committee responsibilities and began engagement with constituency development programmes.</p></div></div>
-      <div class="je rv"><div class="je-yr">Now</div><div><div class="je-title">Serving Niali — Present Day</div><p class="je-desc">Focused on constituency development, rural electrification, agro-processing clusters, telemedicine expansion, and ensuring that every central and state government scheme reaches the last household in Niali block.</p></div></div>
+      <div class="je rv"><div class="je-yr t" data-key="je1_yr">Roots</div><div><div class="je-title t" data-key="je1_title">Community Leadership in Niali</div><p class="je-desc t" data-key="je1_desc">Began grassroots social and political work in Niali, building connections with farmers, fishing communities, and daily-wage workers. Advocated actively for rural infrastructure and welfare schemes at the block level.</p></div></div>
+      <div class="je rv"><div class="je-yr">BJP</div><div><div class="je-title t" data-key="je2_title">Joined Bharatiya Janata Party</div><p class="je-desc t" data-key="je2_desc">Aligned with BJP's vision of vikas-led governance and joined the party's Niali unit, contributing to local party building and constituency outreach activities across Cuttack district.</p></div></div>
+      <div class="je rv"><div class="je-yr">2024</div><div><div class="je-title t" data-key="je3_title">Elected to Odisha Legislative Assembly</div><p class="je-desc t" data-key="je3_desc">Won the Niali assembly seat in the 2024 Odisha Legislative Assembly elections under the BJP banner, succeeding Pramod Kumar Mallick. His election was reported by News18, Kalinga TV, and verified by the Election Commission of India affidavit.</p></div></div>
+      <div class="je rv"><div class="je-yr">Jun 4</div><div><div class="je-title t" data-key="je4_title">Assumed Office — 4 June 2024</div><p class="je-desc t" data-key="je4_desc">Formally assumed office as Member of the Odisha Legislative Assembly from Niali on 4 June 2024, joining the BJP legislative group in Bhubaneswar. Took up committee responsibilities and began engagement with constituency development programmes.</p></div></div>
+      <div class="je rv"><div class="je-yr t" data-key="je5_yr">Now</div><div><div class="je-title t" data-key="je5_title">Serving Niali — Present Day</div><p class="je-desc t" data-key="je5_desc">Focused on constituency development, rural electrification, agro-processing clusters, telemedicine expansion, and ensuring that every central and state government scheme reaches the last household in Niali block.</p></div></div>
     </div>
   </div>
 </section>
@@ -1009,65 +642,65 @@ footer{background:var(--ink2);}
 <section id="achievements" style="padding:6rem 8%;">
   <div class="iheader rv">
     <div>
-      <div class="lbl inv">Track Record</div>
-      <h2 class="sh inv">Measurable <span class="ac">Impact</span></h2>
+      <div class="lbl inv t" data-key="impact_lbl">Track Record</div>
+      <h2 class="sh inv"><span class="t" data-key="impact_h">Measurable</span> <span class="ac t" data-key="impact_h2">Impact</span></h2>
     </div>
-    <p class="ss inv">Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.</p>
+    <p class="ss inv t" data-key="impact_sub">Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.</p>
   </div>
   <div class="i-grid">
-    <div class="it rv"><span class="it-icon">🏠</span><div class="it-n">8,400<sup>+</sup></div><div class="it-l">Homes Under PMAY</div></div>
-    <div class="it rv d1"><span class="it-icon">💧</span><div class="it-n">95<sup>%</sup></div><div class="it-l">Piped Water Villages</div></div>
-    <div class="it rv d2"><span class="it-icon">⚡</span><div class="it-n">100<sup>%</sup></div><div class="it-l">Rural Electrification</div></div>
-    <div class="it rv d3"><span class="it-icon">🎓</span><div class="it-n">5,200<sup>+</sup></div><div class="it-l">Scholarships Awarded</div></div>
+    <div class="it rv"><span class="it-icon">🏠</span><div class="it-n">8,400<sup>+</sup></div><div class="it-l t" data-key="imp1">Homes Under PMAY</div></div>
+    <div class="it rv d1"><span class="it-icon">💧</span><div class="it-n">95<sup>%</sup></div><div class="it-l t" data-key="imp2">Piped Water Villages</div></div>
+    <div class="it rv d2"><span class="it-icon">⚡</span><div class="it-n">100<sup>%</sup></div><div class="it-l t" data-key="imp3">Rural Electrification</div></div>
+    <div class="it rv d3"><span class="it-icon">🎓</span><div class="it-n">5,200<sup>+</sup></div><div class="it-l t" data-key="imp4">Scholarships Awarded</div></div>
   </div>
   <div class="i-grid i-row2" style="margin-top:1px;">
-    <div class="it rv"><span class="it-icon">🛣️</span><div class="it-n">220<sup>km</sup></div><div class="it-l">Rural Roads Built</div></div>
-    <div class="it rv d1"><span class="it-icon">🏥</span><div class="it-n">45</div><div class="it-l">New Health Centres</div></div>
-    <div class="it rv d2"><span class="it-icon">👩‍💻</span><div class="it-n">28,000<sup>+</sup></div><div class="it-l">Digitally Trained</div></div>
-    <div class="it rv d3"><span class="it-icon">🌱</span><div class="it-n">1.5<sup>L</sup></div><div class="it-l">Trees Planted</div></div>
+    <div class="it rv"><span class="it-icon">🛣️</span><div class="it-n">220<sup>km</sup></div><div class="it-l t" data-key="imp5">Rural Roads Built</div></div>
+    <div class="it rv d1"><span class="it-icon">🏥</span><div class="it-n">45</div><div class="it-l t" data-key="imp6">New Health Centres</div></div>
+    <div class="it rv d2"><span class="it-icon">👩‍💻</span><div class="it-n">28,000<sup>+</sup></div><div class="it-l t" data-key="imp7">Digitally Trained</div></div>
+    <div class="it rv d3"><span class="it-icon">🌱</span><div class="it-n">1.5<sup>L</sup></div><div class="it-l t" data-key="imp8">Trees Planted</div></div>
   </div>
   <div class="awards">
-    <div class="aw rv"><span class="aw-icon">🏆</span><div><div class="aw-yr">2024</div><div class="aw-t">Elected MLA — Niali, Odisha</div><p class="aw-b">Elected to the Odisha Legislative Assembly from Niali in the 2024 state elections as a BJP candidate, as verified by the Election Commission of India and reported by leading Odia media.</p></div></div>
-    <div class="aw rv d1"><span class="aw-icon">🌾</span><div><div class="aw-yr">2024</div><div class="aw-t">Kisan Outreach — Niali Block</div><p class="aw-b">Led farmer welfare engagement camps across Niali, connecting constituents with PM-KISAN enrollment, Kisan Credit Cards, and crop insurance schemes from day one of assuming office.</p></div></div>
-    <div class="aw rv d2"><span class="aw-icon">🌟</span><div><div class="aw-yr">Ongoing</div><div class="aw-t">Jan Sunwai — Direct People's Access</div><p class="aw-b">Conducts open public grievance sessions every Saturday at the Niali constituency office, ensuring direct and unmediated access to elected representation for every citizen.</p></div></div>
+    <div class="aw rv"><span class="aw-icon">🏆</span><div><div class="aw-yr">2024</div><div class="aw-t t" data-key="aw1_t">Elected MLA — Niali, Odisha</div><p class="aw-b t" data-key="aw1_b">Elected to the Odisha Legislative Assembly from Niali in the 2024 state elections as a BJP candidate, as verified by the Election Commission of India and reported by leading Odia media.</p></div></div>
+    <div class="aw rv d1"><span class="aw-icon">🌾</span><div><div class="aw-yr">2024</div><div class="aw-t t" data-key="aw2_t">Kisan Outreach — Niali Block</div><p class="aw-b t" data-key="aw2_b">Led farmer welfare engagement camps across Niali, connecting constituents with PM-KISAN enrollment, Kisan Credit Cards, and crop insurance schemes from day one of assuming office.</p></div></div>
+    <div class="aw rv d2"><span class="aw-icon">🌟</span><div><div class="aw-yr t" data-key="aw3_yr">Ongoing</div><div class="aw-t t" data-key="aw3_t">Jan Sunwai — Direct People's Access</div><p class="aw-b t" data-key="aw3_b">Conducts open public grievance sessions every Saturday at the Niali constituency office, ensuring direct and unmediated access to elected representation for every citizen.</p></div></div>
   </div>
 </section>
 
 <!-- PRESS -->
 <section id="press" class="s">
   <div class="s-hd rv">
-    <div class="lbl">In The News</div>
-    <h2 class="sh">Media <span class="ac">Coverage</span></h2>
-    <p class="ss">What Odisha's leading publications say about Chhabi Malik and Niali constituency.</p>
+    <div class="lbl t" data-key="press_lbl">In The News</div>
+    <h2 class="sh"><span class="t" data-key="press_h">Media</span> <span class="ac t" data-key="press_h2">Coverage</span></h2>
+    <p class="ss t" data-key="press_sub">What Odisha's leading publications say about Chhabi Malik and Niali constituency.</p>
   </div>
   <div class="playout">
-    <div class="pc big rv"><div><div class="pc-src">News18</div><div class="pc-hl">"Niali Election Result 2024 LIVE: Chhabi Malik of BJP Wins — a decisive mandate for development and change in the constituency"</div></div><div class="pc-dt">June 2024</div></div>
-    <div class="pc rv"><div class="pc-src">Kalinga TV</div><div class="pc-hl">"Odisha assembly election results 2024: Chhabi Malik listed among BJP winners in the Niali assembly segment"</div><div class="pc-dt">June 2024</div></div>
-    <div class="pc rv d1"><div class="pc-src">Election Commission of India</div><div class="pc-hl">"Chhabi Malik — Election Affidavit verified and published for Niali constituency, 2024 Odisha Legislative Assembly elections"</div><div class="pc-dt">2024</div></div>
-    <div class="pc rv"><div class="pc-src">Sambad</div><div class="pc-hl">"New MLA Chhabi Malik holds first Jan Sunwai in Niali — hundreds of constituents attend inaugural public grievance session"</div><div class="pc-dt">July 2024</div></div>
-    <div class="pc rv d1"><div class="pc-src">Pragativadi</div><div class="pc-hl">"Niali's new representative hits the ground running — MLA Chhabi Malik visits villages, reviews pending development works"</div><div class="pc-dt">August 2024</div></div>
+    <div class="pc big rv"><div><div class="pc-src">News18</div><div class="pc-hl t" data-key="p1_hl">"Niali Election Result 2024 LIVE: Chhabi Malik of BJP Wins — a decisive mandate for development and change in the constituency"</div></div><div class="pc-dt">June 2024</div></div>
+    <div class="pc rv"><div class="pc-src">Kalinga TV</div><div class="pc-hl t" data-key="p2_hl">"Odisha assembly election results 2024: Chhabi Malik listed among BJP winners in the Niali assembly segment"</div><div class="pc-dt">June 2024</div></div>
+    <div class="pc rv d1"><div class="pc-src">Election Commission of India</div><div class="pc-hl t" data-key="p3_hl">"Chhabi Malik — Election Affidavit verified and published for Niali constituency, 2024 Odisha Legislative Assembly elections"</div><div class="pc-dt">2024</div></div>
+    <div class="pc rv"><div class="pc-src">Sambad</div><div class="pc-hl t" data-key="p4_hl">"New MLA Chhabi Malik holds first Jan Sunwai in Niali — hundreds of constituents attend inaugural public grievance session"</div><div class="pc-dt">July 2024</div></div>
+    <div class="pc rv d1"><div class="pc-src">Pragativadi</div><div class="pc-hl t" data-key="p5_hl">"Niali's new representative hits the ground running — MLA Chhabi Malik visits villages, reviews pending development works"</div><div class="pc-dt">August 2024</div></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="ct-l">
-    <div class="lbl rv" style="margin-bottom:1rem;">Get In Touch</div>
-    <div class="ct-name rv">Office <em>Contacts</em></div>
-    <p class="ct-desc rv">For constituency matters, media queries, or policy discussions. Our team responds within 48 hours. Every message is read.</p>
+    <div class="lbl rv t" data-key="contact_lbl" style="margin-bottom:1rem;">Get In Touch</div>
+    <div class="ct-name rv"><span class="t" data-key="contact_name">Office</span> <em class="t" data-key="contact_name2">Contacts</em></div>
+    <p class="ct-desc rv t" data-key="contact_desc">For constituency matters, media queries, or policy discussions. Our team responds within 48 hours. Every message is read.</p>
     <div class="rv">
-      <div class="ci"><div class="ci-ico">🏛️</div><div><div class="ci-k">Assembly Office</div><div class="ci-v">Odisha Legislative Assembly, Bhubaneswar, Odisha – 751001</div></div></div>
-      <div class="ci"><div class="ci-ico">🏠</div><div><div class="ci-k">Constituency Office</div><div class="ci-v">Niali, Cuttack District, Odisha – 754004</div></div></div>
-      <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-k">Phone</div><div class="ci-v">Contact through official constituency office</div></div></div>
-      <div class="ci"><div class="ci-ico">🕐</div><div><div class="ci-k">Jan Sunwai</div><div class="ci-v">Every Saturday, 10:00 AM — Niali Office</div></div></div>
-      <div class="ci"><div class="ci-ico">📅</div><div><div class="ci-k">Upcoming Event</div><div class="ci-v">Mishrana Parba — 8 May 2025 · Niali Maidan</div></div></div>
+      <div class="ci"><div class="ci-ico">🏛️</div><div><div class="ci-k t" data-key="ci1_k">Assembly Office</div><div class="ci-v t" data-key="ci1_v">Odisha Legislative Assembly, Bhubaneswar, Odisha – 751001</div></div></div>
+      <div class="ci"><div class="ci-ico">🏠</div><div><div class="ci-k t" data-key="ci2_k">Constituency Office</div><div class="ci-v t" data-key="ci2_v">Niali, Cuttack District, Odisha – 754004</div></div></div>
+      <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-k t" data-key="ci3_k">Phone</div><div class="ci-v t" data-key="ci3_v">Contact through official constituency office</div></div></div>
+      <div class="ci"><div class="ci-ico">🕐</div><div><div class="ci-k t" data-key="ci4_k">Jan Sunwai</div><div class="ci-v t" data-key="ci4_v">Every Saturday, 10:00 AM — Niali Office</div></div></div>
+      <div class="ci"><div class="ci-ico">📅</div><div><div class="ci-k t" data-key="ci5_k">Upcoming Event</div><div class="ci-v t" data-key="ci5_v">Mishrana Parba — 8 May 2025 · Niali Maidan</div></div></div>
     </div>
     <div class="ct-mail-cta rv">
-      <div class="ct-mail-label">Write a Mail</div>
+      <div class="ct-mail-label t" data-key="mail_label">Write a Mail</div>
       <div class="ct-mail-addr">office.chhabimalik@odishaassembly.in</div>
       <a class="ct-mail-btn" href="mailto:office.chhabimalik@odishaassembly.in">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        Send Email
+        <span class="t" data-key="mail_btn">Send Email</span>
       </a>
     </div>
     <div class="soc rv">
@@ -1075,30 +708,30 @@ footer{background:var(--ink2);}
     </div>
   </div>
   <div class="ct-r">
-    <div class="cf-title rv">Write to <span style="color:var(--fire)">Chhabi Malik</span></div>
-    <p class="cf-sub rv">Share your concern, suggestion, or grievance. All submissions are reviewed by our team.</p>
+    <div class="cf-title rv"><span class="t" data-key="form_title">Write to</span> <span style="color:var(--fire)">Chhabi Malik</span></div>
+    <p class="cf-sub rv t" data-key="form_sub">Share your concern, suggestion, or grievance. All submissions are reviewed by our team.</p>
     <div class="fr2">
-      <div class="fg"><label class="fl">Full Name *</label><input type="text" class="fi" placeholder="Your full name"></div>
-      <div class="fg"><label class="fl">Mobile *</label><input type="tel" class="fi" placeholder="+91 XXXXX XXXXX"></div>
+      <div class="fg"><label class="fl t" data-key="f_name">Full Name *</label><input type="text" class="fi" placeholder="Your full name"></div>
+      <div class="fg"><label class="fl t" data-key="f_mobile">Mobile *</label><input type="tel" class="fi" placeholder="+91 XXXXX XXXXX"></div>
     </div>
     <div class="fr2">
-      <div class="fg"><label class="fl">Village / Ward</label><input type="text" class="fi" placeholder="Your village or ward"></div>
-      <div class="fg"><label class="fl">Subject *</label>
+      <div class="fg"><label class="fl t" data-key="f_village">Village / Ward</label><input type="text" class="fi" placeholder="Your village or ward"></div>
+      <div class="fg"><label class="fl t" data-key="f_subject">Subject *</label>
         <select class="fse">
-          <option value="">Select a subject</option>
-          <option>Road / Infrastructure</option>
-          <option>Water / Electricity</option>
-          <option>Agriculture / Farmer Issue</option>
-          <option>Health / Hospital</option>
-          <option>Education / Scholarship</option>
-          <option>Women's Safety</option>
-          <option>Media / Press Query</option>
-          <option>Other</option>
+          <option value="" class="t" data-key="sel_default">Select a subject</option>
+          <option class="t" data-key="sel1">Road / Infrastructure</option>
+          <option class="t" data-key="sel2">Water / Electricity</option>
+          <option class="t" data-key="sel3">Agriculture / Farmer Issue</option>
+          <option class="t" data-key="sel4">Health / Hospital</option>
+          <option class="t" data-key="sel5">Education / Scholarship</option>
+          <option class="t" data-key="sel6">Women's Safety</option>
+          <option class="t" data-key="sel7">Media / Press Query</option>
+          <option class="t" data-key="sel8">Other</option>
         </select>
       </div>
     </div>
-    <div class="fg"><label class="fl">Your Message *</label><textarea class="ft" placeholder="Describe your concern or suggestion..."></textarea></div>
-    <button class="fb" onclick="handleSubmit(this)">Submit Grievance / Message</button>
+    <div class="fg"><label class="fl t" data-key="f_msg">Your Message *</label><textarea class="ft" placeholder="Describe your concern or suggestion..."></textarea></div>
+    <button class="fb t" data-key="f_submit" onclick="handleSubmit(this)">Submit Grievance / Message</button>
   </div>
 </section>
 
@@ -1107,103 +740,514 @@ footer{background:var(--ink2);}
   <div class="ft-main">
     <div>
       <div class="fb-brand">Chhabi <em>Malik</em></div>
-      <p class="fb-tag">MLA, Niali Constituency, Odisha. Bharatiya Janata Party. Elected June 2024. Committed to a progressive, inclusive Niali.</p>
+      <p class="fb-tag t" data-key="footer_tag">MLA, Niali Constituency, Odisha. Bharatiya Janata Party. Elected June 2024. Committed to a progressive, inclusive Niali.</p>
       <div class="fb-flag"><span></span><span></span><span></span></div>
       <div style="margin-top:1.2rem;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.2);">A Mynetawiki Initiative</div>
     </div>
     <div>
-      <div class="fc-t">Quick Links</div>
+      <div class="fc-t t" data-key="footer_links">Quick Links</div>
       <ul class="fl-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#photo-gallery">Gallery</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#vision">Vision &amp; Policy</a></li>
-        <li><a href="#journey">Political Journey</a></li>
-        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#about" class="t" data-key="nav_about">About</a></li>
+        <li><a href="#photo-gallery" class="t" data-key="nav_gallery">Gallery</a></li>
+        <li><a href="#media" class="t" data-key="nav_media">Media</a></li>
+        <li><a href="#vision" class="t" data-key="footer_vision">Vision &amp; Policy</a></li>
+        <li><a href="#journey" class="t" data-key="footer_journey">Political Journey</a></li>
+        <li><a href="#achievements" class="t" data-key="footer_achieve">Achievements</a></li>
       </ul>
     </div>
     <div>
-      <div class="fc-t">Resources</div>
+      <div class="fc-t t" data-key="footer_res">Resources</div>
       <ul class="fl-links">
-        <li><a href="#">Press Releases</a></li>
-        <li><a href="#">Assembly Questions</a></li>
-        <li><a href="#">Constituency Budget</a></li>
-        <li><a href="#">Grievance Portal</a></li>
-        <li><a href="#contact">Contact Office</a></li>
+        <li><a href="#" class="t" data-key="res1">Press Releases</a></li>
+        <li><a href="#" class="t" data-key="res2">Assembly Questions</a></li>
+        <li><a href="#" class="t" data-key="res3">Constituency Budget</a></li>
+        <li><a href="#" class="t" data-key="res4">Grievance Portal</a></li>
+        <li><a href="#contact" class="t" data-key="res5">Contact Office</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-bot">
-    <span>© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha. | Mynetawiki</span>
+    <span class="t" data-key="footer_copy">© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha. | Mynetawiki</span>
     <span>JAI ODISHA 🇮🇳</span>
   </div>
 </footer>
 
 <div class="mob-sticky">
-  <a href="tel:" class="ms-btn ms-call">📞 Call Office</a>
-  <a href="#contact" class="ms-btn ms-write" onclick="closeMenu()">✉️ Write to Us</a>
+  <a href="tel:" class="ms-btn ms-call t" data-key="mob_call">📞 Call Office</a>
+  <a href="#contact" class="ms-btn ms-write t" data-key="mob_write" onclick="closeMenu()">✉️ Write to Us</a>
 </div>
 
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-const translations = {
-  en: { About:'About', Gallery:'Gallery', Media:'Media', Vision:'Vision', Journey:'Journey', Contact:'Contact', 'Get in Touch':'Get in Touch' },
-  od: { About:'ପରିଚୟ', Gallery:'ଗ୍ୟାଲେରୀ', Media:'ମିଡ଼ିଆ', Vision:'ଦ୍ୱୃଷ୍ଟି', Journey:'ଯାତ୍ରା', Contact:'ଯୋଗାଯୋଗ', 'Get in Touch':'ଯୋଗାଯୋଗ' }
+// ─── TRANSLATION DICTIONARY ─────────────────────────────────────────────────
+// NOTE: All string values use only plain ASCII or well-formed Unicode.
+// The 'od' block below uses only standard Odia script (Unicode block 0B00–0B7F).
+// Any mixed Bengali/other script entries have been corrected to pure Odia.
+
+var T = {
+  en: {
+    nav_about: 'About',
+    nav_gallery: 'Gallery',
+    nav_media: 'Media',
+    nav_vision: 'Vision',
+    nav_journey: 'Journey',
+    nav_contact: 'Contact',
+    nav_touch: 'Get in Touch',
+    ticker_label: 'Upcoming',
+    et_badge1: 'Event',
+    et_event1: 'Mishrana Parba',
+    et_event1_sub: 'Grand Community Celebration',
+    et_event1_note: 'All citizens of Niali are warmly invited \u00b7 Venue: Niali Maidan',
+    et_badge2: 'Jan Sunwai',
+    et_event2: 'Weekly Public Grievance Session \u2014 Every Saturday, 10:00 AM \u00b7 Niali Constituency Office',
+    et_badge3: 'Scheme Camp',
+    et_event3: 'Kisan Credit Mela \u2014 Ongoing \u00b7 PM-KISAN, Soil Health Cards & KCC enrollment',
+    hero_wm: 'SEVA',
+    hero_chip: 'Member of Legislative Assembly \u00b7 Niali Constituency \u00b7 Odisha',
+    hero_role: 'Representing Niali, Odisha',
+    hero_bio: "A dedicated people's representative championing rural development, grassroots governance, and inclusive progress for every citizen of Niali. Elected to the Odisha Legislative Assembly from Niali on the BJP mandate in June 2024.",
+    hero_cta1: 'Explore Vision \u2192',
+    hero_cta2: 'Connect With Us',
+    tag_voice: "People's Voice",
+    stat_elected: 'Elected MLA',
+    stat_party: 'Party',
+    stat_dev: 'Dev. Funds',
+    stat_init: 'Initiatives',
+    strip_homes: 'Homes Built',
+    strip_elec: 'Electrification',
+    strip_roads: 'Roads Built',
+    strip_health: 'Health Centres',
+    strip_scholar: 'Scholarships',
+    strip_niali: 'Niali First',
+    strip_always: 'Always',
+    about_lbl: 'Who He Is',
+    about_h: 'A Life Dedicated to',
+    about_seva: 'Seva',
+    wiki_title: 'Official Record',
+    wiki_pos: 'Position',
+    wiki_pos_v: 'MLA, Niali',
+    wiki_off: 'Assumed Office',
+    wiki_pre: 'Preceded by',
+    wiki_party: 'Party',
+    wiki_leg: 'Legislature',
+    wiki_leg_v: 'Odisha Legislative Assembly',
+    about_quote: '\u201cService to the people of Niali is not just my duty \u2014 it is my dharma and my greatest honour.\u201d',
+    about_p1: "Chhabi Malik is an Indian politician who was elected to the Odisha Legislative Assembly from the Niali constituency in the 2024 state elections as a member of the Bharatiya Janata Party. He assumed office on 4 June 2024, succeeding Pramod Kumar Mallick as the representative of Niali.",
+    about_p2: "Rising through grassroots political engagement in the Niali region, Chhabi Malik has focused his legislative work on rural infrastructure, access to health services, agricultural support, and educational opportunity for the constituents of Niali block in Cuttack district.",
+    about_p3: "Known for his ground-level accessibility, he holds regular Jan Sunwais and personally monitors the progress of every scheme in the constituency. His approach to governance is rooted in listening first, then acting with purpose.",
+    fact_const: 'Constituency',
+    fact_const_v: 'Niali, Odisha',
+    fact_pos: 'Position',
+    fact_pos_v: 'Member of Legislative Assembly',
+    fact_party: 'Party',
+    fact_party_v: 'Bharatiya Janata Party',
+    fact_elected: 'Elected',
+    fact_elected_v: '2024 Odisha Assembly Elections',
+    fact_focus: 'Focus Areas',
+    fact_focus_v: 'Rural Dev, Agriculture, Education',
+    fact_sunwai: 'Jan Sunwai',
+    fact_sunwai_v: 'Every Saturday, 10 AM',
+    gallery_lbl: 'Event Gallery',
+    gallery_h: 'Moments from the',
+    gallery_field: 'Field',
+    gallery_sub: 'A glimpse into the work, the people, and the journey across Niali constituency.',
+    media_lbl: 'Media Centre',
+    media_h: 'Photos &',
+    media_h2: 'Videos',
+    media_sub: 'Watch speeches, ground reports, and see moments of service from the field.',
+    tab_photos: 'Photos',
+    tab_videos: 'Videos',
+    vid1_title: 'Chhabi Malik \u2014 Public Address, Niali',
+    vid2_title: 'Constituency Development \u2014 Ground Report',
+    vid3_title: 'Niali Voices \u2014 People Speak',
+    vid_sub: 'Official Video \u00b7 YouTube',
+    vision_lbl: 'Our Vision',
+    vision_h: 'Building a',
+    vision_h2: 'Stronger',
+    vision_h3: 'Niali',
+    vision_sub: 'Six pillars guiding every decision, every initiative, every vote cast in the legislature on behalf of the people of Niali.',
+    v1_title: 'Kisan Samridhi',
+    v1_text: 'Doubling farmer incomes through MSP support, crop insurance, and direct market linkages \u2014 eliminating the middlemen who squeeze our farmers.',
+    v2_title: 'Shiksha for All',
+    v2_text: 'Universal quality education with digital classrooms and full scholarship coverage for all BPL families in Niali.',
+    v3_title: 'Swasth Niali',
+    v3_text: 'A primary health centre within 5 km of every village \u2014 free diagnostics, maternal care, and mobile medical units.',
+    v4_title: 'Digital Gram',
+    v4_text: 'High-speed internet and digital literacy to every panchayat, empowering citizens to access government services from home.',
+    v5_title: 'Green Niali',
+    v5_text: 'Solar-powered streetlights, clean cooking fuel, and river conservation \u2014 a constituency that thrives without harming tomorrow.',
+    v6_title: 'Nari Shakti',
+    v6_text: '30% reservation in local governance, skill centres for women, SHG credit, and zero-tolerance on crimes against women.',
+    journey_lbl: 'Political Career',
+    journey_h: 'The',
+    journey_h2: 'Journey',
+    journey_h3: 'So Far',
+    journey_sub: 'From grassroots activism in Niali to the Odisha Legislative Assembly \u2014 a path built on purpose and trust.',
+    je1_yr: 'Roots',
+    je1_title: 'Community Leadership in Niali',
+    je1_desc: 'Began grassroots social and political work in Niali, building connections with farmers, fishing communities, and daily-wage workers. Advocated actively for rural infrastructure and welfare schemes at the block level.',
+    je2_title: 'Joined Bharatiya Janata Party',
+    je2_desc: "Aligned with BJP's vision of vikas-led governance and joined the party's Niali unit, contributing to local party building and constituency outreach activities across Cuttack district.",
+    je3_title: 'Elected to Odisha Legislative Assembly',
+    je3_desc: 'Won the Niali assembly seat in the 2024 Odisha Legislative Assembly elections under the BJP banner, succeeding Pramod Kumar Mallick. His election was reported by News18, Kalinga TV, and verified by the Election Commission of India affidavit.',
+    je4_title: 'Assumed Office \u2014 4 June 2024',
+    je4_desc: 'Formally assumed office as Member of the Odisha Legislative Assembly from Niali on 4 June 2024, joining the BJP legislative group in Bhubaneswar. Took up committee responsibilities and began engagement with constituency development programmes.',
+    je5_yr: 'Now',
+    je5_title: 'Serving Niali \u2014 Present Day',
+    je5_desc: 'Focused on constituency development, rural electrification, agro-processing clusters, telemedicine expansion, and ensuring that every central and state government scheme reaches the last household in Niali block.',
+    impact_lbl: 'Track Record',
+    impact_h: 'Measurable',
+    impact_h2: 'Impact',
+    impact_sub: 'Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.',
+    imp1: 'Homes Under PMAY',
+    imp2: 'Piped Water Villages',
+    imp3: 'Rural Electrification',
+    imp4: 'Scholarships Awarded',
+    imp5: 'Rural Roads Built',
+    imp6: 'New Health Centres',
+    imp7: 'Digitally Trained',
+    imp8: 'Trees Planted',
+    aw1_t: 'Elected MLA \u2014 Niali, Odisha',
+    aw1_b: 'Elected to the Odisha Legislative Assembly from Niali in the 2024 state elections as a BJP candidate, as verified by the Election Commission of India and reported by leading Odia media.',
+    aw2_t: 'Kisan Outreach \u2014 Niali Block',
+    aw2_b: 'Led farmer welfare engagement camps across Niali, connecting constituents with PM-KISAN enrollment, Kisan Credit Cards, and crop insurance schemes from day one of assuming office.',
+    aw3_yr: 'Ongoing',
+    aw3_t: "Jan Sunwai \u2014 Direct People's Access",
+    aw3_b: 'Conducts open public grievance sessions every Saturday at the Niali constituency office, ensuring direct and unmediated access to elected representation for every citizen.',
+    press_lbl: 'In The News',
+    press_h: 'Media',
+    press_h2: 'Coverage',
+    press_sub: "What Odisha's leading publications say about Chhabi Malik and Niali constituency.",
+    p1_hl: '\u201cNiali Election Result 2024 LIVE: Chhabi Malik of BJP Wins \u2014 a decisive mandate for development and change in the constituency\u201d',
+    p2_hl: '\u201cOdisha assembly election results 2024: Chhabi Malik listed among BJP winners in the Niali assembly segment\u201d',
+    p3_hl: '\u201cChhabi Malik \u2014 Election Affidavit verified and published for Niali constituency, 2024 Odisha Legislative Assembly elections\u201d',
+    p4_hl: '\u201cNew MLA Chhabi Malik holds first Jan Sunwai in Niali \u2014 hundreds of constituents attend inaugural public grievance session\u201d',
+    p5_hl: "\u201cNiali's new representative hits the ground running \u2014 MLA Chhabi Malik visits villages, reviews pending development works\u201d",
+    contact_lbl: 'Get In Touch',
+    contact_name: 'Office',
+    contact_name2: 'Contacts',
+    contact_desc: 'For constituency matters, media queries, or policy discussions. Our team responds within 48 hours. Every message is read.',
+    ci1_k: 'Assembly Office',
+    ci1_v: 'Odisha Legislative Assembly, Bhubaneswar, Odisha \u2013 751001',
+    ci2_k: 'Constituency Office',
+    ci2_v: 'Niali, Cuttack District, Odisha \u2013 754004',
+    ci3_k: 'Phone',
+    ci3_v: 'Contact through official constituency office',
+    ci4_k: 'Jan Sunwai',
+    ci4_v: 'Every Saturday, 10:00 AM \u2014 Niali Office',
+    ci5_k: 'Upcoming Event',
+    ci5_v: 'Mishrana Parba \u2014 8 May 2025 \u00b7 Niali Maidan',
+    mail_label: 'Write a Mail',
+    mail_btn: 'Send Email',
+    form_title: 'Write to',
+    form_sub: 'Share your concern, suggestion, or grievance. All submissions are reviewed by our team.',
+    f_name: 'Full Name *',
+    f_mobile: 'Mobile *',
+    f_village: 'Village / Ward',
+    f_subject: 'Subject *',
+    f_msg: 'Your Message *',
+    sel_default: 'Select a subject',
+    sel1: 'Road / Infrastructure',
+    sel2: 'Water / Electricity',
+    sel3: 'Agriculture / Farmer Issue',
+    sel4: 'Health / Hospital',
+    sel5: 'Education / Scholarship',
+    sel6: "Women's Safety",
+    sel7: 'Media / Press Query',
+    sel8: 'Other',
+    f_submit: 'Submit Grievance / Message',
+    footer_tag: 'MLA, Niali Constituency, Odisha. Bharatiya Janata Party. Elected June 2024. Committed to a progressive, inclusive Niali.',
+    footer_links: 'Quick Links',
+    footer_vision: 'Vision & Policy',
+    footer_journey: 'Political Journey',
+    footer_achieve: 'Achievements',
+    footer_res: 'Resources',
+    res1: 'Press Releases',
+    res2: 'Assembly Questions',
+    res3: 'Constituency Budget',
+    res4: 'Grievance Portal',
+    res5: 'Contact Office',
+    footer_copy: '\u00a9 2025 Chhabi Malik. Official Website. MLA \u2014 Niali, Odisha. | Mynetawiki',
+    mob_call: '\uD83D\uDCDE Call Office',
+    mob_write: '\u2709\uFE0F Write to Us'
+  },
+  od: {
+    nav_about: '\u0B2A\u0B30\u0B3F\u0B1A\u0B2F',
+    nav_gallery: '\u0B17\u0B4D\u0B2F\u0B3E\u0B32\u0B47\u0B30\u0B40',
+    nav_media: '\u0B2E\u0B3F\u0B21\u0B3C\u0B3F\u0B06',
+    nav_vision: '\u0B26\u0B43\u0B37\u0B4D\u0B1F\u0B3F',
+    nav_journey: '\u0B2F\u0B3E\u0B24\u0B4D\u0B30\u0B3E',
+    nav_contact: '\u0B2F\u0B4B\u0B17\u0B3E\u0B2F\u0B4B\u0B17',
+    nav_touch: '\u0B2F\u0B4B\u0B17\u0B3E\u0B2F\u0B4B\u0B17',
+    ticker_label: '\u0B06\u0B38\u0B28\u0B4D\u0B24\u0B3E',
+    et_badge1: '\u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B15\u0B4D\u0B30\u0B2E',
+    et_event1: '\u0B2E\u0B3F\u0B36\u0B4D\u0B30\u0B23 \u0B2A\u0B30\u0B4D\u0B2C',
+    et_event1_sub: '\u0B2C\u0B43\u0B39\u0B24 \u0B38\u0B3E\u0B2E\u0B41\u0B26\u0B3E\u0B2F\u0B3F\u0B15 \u0B09\u0B24\u0B4D\u0B38\u0B35',
+    et_event1_note: '\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30 \u0B38\u0B2E\u0B38\u0B4D\u0B24 \u0B28\u0B3E\u0B17\u0B30\u0B3F\u0B15\u0B19\u0B4D\u0B15\u0B41 \u0B38\u0B4D\u0B35\u0B3E\u0B17\u0B24 \u00b7 \u0B38\u0B4D\u0B25\u0B3E\u0B28: \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B2E\u0B48\u0B26\u0B3E\u0B28',
+    et_badge2: '\u0B1C\u0B28 \u0B36\u0B41\u0B23\u0B3E\u0B23\u0B3F',
+    et_event2: '\u0B38\u0B3E\u0B2A\u0B4D\u0B24\u0B3E\u0B39\u0B3F\u0B15 \u0B1C\u0B28 \u0B05\u0B2D\u0B3F\u0B2F\u0B4B\u0B17 \u0B05\u0B27\u0B3F\u0B2C\u0B47\u0B36\u0B28 \u2014 \u0B2A\u0B4D\u0B30\u0B24\u0B3F \u0B36\u0B28\u0B3F\u0B2C\u0B3E\u0B30, \u0B38\u0B15\u0B3E\u0B33 \u0B67\u0B66:\u0B66\u0B66 \u00b7 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F',
+    et_badge3: '\u0B2F\u0B4B\u0B1C\u0B28\u0B3E \u0B36\u0B3F\u0B2C\u0B3F\u0B30',
+    et_event3: '\u0B15\u0B43\u0B37\u0B3E\u0B23 \u0B15\u0B4D\u0B30\u0B47\u0B21\u0B3C\u0B3F\u0B1F \u0B2E\u0B47\u0B33\u0B3E \u2014 \u0B1A\u0B3E\u0B32\u0B41 \u00b7 PM-KISAN, \u0B2E\u0B43\u0B24\u0B4D\u0B24\u0B3F\u0B15\u0B3E \u0B38\u0B4D\u0B35\u0B3E\u0B38\u0B4D\u0B25\u0B4D\u0B2F \u0B15\u0B3E\u0B30\u0B4D\u0B21 \u0B13 KCC \u0B28\u0B3E\u0B2E\u0B32\u0B47\u0B16\u0B3E',
+    hero_wm: '\u0B38\u0B47\u0B35\u0B3E',
+    hero_chip: '\u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B38\u0B26\u0B38\u0B4D\u0B2F \u00b7 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u00b7 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E',
+    hero_role: '\u0B28\u0B3F\u0B06\u0B33\u0B3F, \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E\u0B30 \u0B2A\u0B4D\u0B30\u0B24\u0B3F\u0B28\u0B3F\u0B27\u0B3F\u0B24\u0B4D\u0B35',
+    hero_bio: '\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30 \u0B2A\u0B4D\u0B30\u0B24\u0B4D\u0B2F\u0B47\u0B15 \u0B28\u0B3E\u0B17\u0B30\u0B3F\u0B15\u0B19\u0B4D\u0B15 \u0B17\u0B4D\u0B30\u0B3E\u0B2E\u0B40\u0B23 \u0B2C\u0B3F\u0B15\u0B3E\u0B38, \u0B24\u0B43\u0B23\u0B2E\u0B42\u0B33 \u0B36\u0B3E\u0B38\u0B28 \u0B13 \u0B38\u0B2E\u0B4D\u0B2A\u0B4D\u0B30\u0B40\u0B24\u0B3F\u0B30 \u0B05\u0B17\u0B4D\u0B30\u0B17\u0B24\u0B3F \u0B2A\u0B3E\u0B07\u0B01 \u0B05\u0B19\u0B4D\u0B17\u0B40\u0B15\u0B3E\u0B30\u0B2C\u0B26\u0B4D\u0B27 \u0B1C\u0B28 \u0B2A\u0B4D\u0B30\u0B24\u0B3F\u0B28\u0B3F\u0B27\u0B3F\u0964 2024 \u0B1C\u0B41\u0B28 \u0B2E\u0B3E\u0B38\u0B30\u0B47 BJP \u0B2E\u0B4D\u0B2F\u0B3E\u0B23\u0B4D\u0B21\u0B47\u0B1F\u0B4D \u0B30\u0B47 \u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30\u0B41 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E\u0B15\u0B41 \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24\u0964',
+    hero_cta1: '\u0B26\u0B43\u0B37\u0B4D\u0B1F\u0B3F \u0B26\u0B47\u0B16\u0B28\u0B4D\u0B24\u0B41 \u2192',
+    hero_cta2: '\u0B06\u0B2E \u0B38\u0B39 \u0B2F\u0B4B\u0B17 \u0B26\u0B3F\u0B05\u0B28\u0B4D\u0B24\u0B41',
+    tag_voice: '\u0B1C\u0B28 \u0B38\u0B4D\u0B35\u0B30',
+    stat_elected: '\u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24 MLA',
+    stat_party: '\u0B26\u0B33',
+    stat_dev: '\u0B2C\u0B3F\u0B15\u0B3E\u0B38 \u0B2A\u0B3E\u0B23\u0B4D\u0B20\u0B3F',
+    stat_init: '\u0B09\u0B26\u0B4D\u0B2F\u0B4B\u0B17',
+    strip_homes: '\u0B18\u0B30 \u0B28\u0B3F\u0B30\u0B4D\u0B2E\u0B3F\u0B24',
+    strip_elec: '\u0B2C\u0B3F\u0B26\u0B4D\u0B2F\u0B41\u0B24\u0B4D \u0B2F\u0B4B\u0B17',
+    strip_roads: '\u0B30\u0B3E\u0B38\u0B4D\u0B24\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2E\u0B3F\u0B24',
+    strip_health: '\u0B38\u0B4D\u0B35\u0B3E\u0B38\u0B4D\u0B25\u0B4D\u0B2F \u0B15\u0B47\u0B28\u0B4D\u0B26\u0B4D\u0B30',
+    strip_scholar: '\u0B1B\u0B3E\u0B24\u0B4D\u0B30\u0B2C\u0B43\u0B24\u0B4D\u0B24\u0B3F',
+    strip_niali: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B2A\u0B4D\u0B30\u0B25\u0B2E',
+    strip_always: '\u0B38\u0B30\u0B4D\u0B2C\u0B26\u0B3E',
+    about_lbl: '\u0B24\u0B3E\u0B19\u0B4D\u0B15 \u0B2A\u0B30\u0B3F\u0B1A\u0B2F',
+    about_h: '\u0B38\u0B47\u0B2C\u0B3E\u0B30\u0B47 \u0B38\u0B2E\u0B30\u0B4D\u0B2A\u0B3F\u0B24',
+    about_seva: '\u0B1C\u0B40\u0B2C\u0B28',
+    wiki_title: '\u0B38\u0B30\u0B15\u0B3E\u0B30\u0B40 \u0B24\u0B25\u0B4D\u0B2F',
+    wiki_pos: '\u0B2A\u0B26',
+    wiki_pos_v: 'MLA, \u0B28\u0B3F\u0B06\u0B33\u0B3F',
+    wiki_off: '\u0B2A\u0B26 \u0B17\u0B4D\u0B30\u0B39\u0B23',
+    wiki_pre: '\u0B2A\u0B42\u0B30\u0B4D\u0B2C \u0B2A\u0B4D\u0B30\u0B24\u0B3F\u0B28\u0B3F\u0B27\u0B3F',
+    wiki_party: '\u0B26\u0B33',
+    wiki_leg: '\u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E',
+    wiki_leg_v: '\u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E',
+    about_quote: '\u201c\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30 \u0B1C\u0B28\u0B17\u0B23\u0B19\u0B4D\u0B15 \u0B38\u0B47\u0B2C\u0B3E \u0B15\u0B47\u0B2C\u0B33 \u0B2E\u0B4B \u0B15\u0B30\u0B4D\u0B24\u0B4D\u0B24\u0B2C\u0B4D\u0B2F \u0B28\u0B41\u0B39\u0B47\u0B01 \u2014 \u0B0F\u0B39\u0B3E \u0B2E\u0B4B \u0B27\u0B30\u0B4D\u0B2E \u0B13 \u0B38\u0B30\u0B4D\u0B2C\u0B4B\u0B1A\u0B4D\u0B1A \u0B38\u0B2E\u0B4D\u0B2E\u0B3E\u0B28\u0964\u201d',
+    about_p1: '\u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u0B1C\u0B23\u0B47 \u0B2D\u0B3E\u0B30\u0B24\u0B40\u0B2F \u0B30\u0B3E\u0B1C\u0B28\u0B40\u0B24\u0B3F\u0B1C\u0B4D\u0B1E \u0B2F\u0B3F\u0B0F 2024 \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28\u0B30\u0B47 \u0B2D\u0B3E\u0B30\u0B24\u0B40\u0B2F \u0B1C\u0B28\u0B24\u0B3E \u0B2A\u0B3E\u0B30\u0B4D\u0B1F\u0B3F\u0B30 \u0B38\u0B26\u0B38\u0B4D\u0B2F \u0B2D\u0B3E\u0B2C\u0B47 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33\u0B30\u0B41 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E\u0B15\u0B41 \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24 \u0B39\u0B4B\u0B07\u0B25\u0B3F\u0B32\u0B47\u0964',
+    about_p2: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B05\u0B1E\u0B4D\u0B1A\u0B33\u0B30\u0B47 \u0B24\u0B43\u0B23\u0B2E\u0B42\u0B33 \u0B30\u0B3E\u0B1C\u0B28\u0B48\u0B24\u0B3F\u0B15 \u0B38\u0B19\u0B4D\u0B2F\u0B4B\u0B17 \u0B2E\u0B3E\u0B27\u0B4D\u0B2F\u0B2E\u0B30\u0B47 \u0B06\u0B17\u0B15\u0B41 \u0B2C\u0B22\u0B3C\u0B3F, \u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u0B17\u0B4D\u0B30\u0B3E\u0B2E\u0B40\u0B23 \u0B2D\u0B3F\u0B24\u0B4D\u0B24\u0B3F\u0B2D\u0B42\u0B2E\u0B3F, \u0B38\u0B4D\u0B35\u0B3E\u0B38\u0B4D\u0B25\u0B4D\u0B2F \u0B38\u0B47\u0B2C\u0B3E, \u0B15\u0B43\u0B37\u0B3F \u0B38\u0B39\u0B3E\u0B2F \u0B13 \u0B36\u0B3F\u0B15\u0B4D\u0B37\u0B3E\u0B30 \u0B38\u0B41\u0B2F\u0B4B\u0B17 \u0B09\u0B2A\u0B30\u0B47 \u0B27\u0B4D\u0B2F\u0B3E\u0B28 \u0B26\u0B47\u0B07\u0B1B\u0B28\u0B4D\u0B24\u0B3F\u0964',
+    about_p3: '\u0B24\u0B43\u0B23\u0B2E\u0B42\u0B33 \u0B38\u0B4D\u0B24\u0B30\u0B30\u0B47 \u0B24\u0B3E\u0B19\u0B4D\u0B15 \u0B05\u0B2D\u0B3F\u0B17\u0B2E\u0B4D\u0B2F\u0B24\u0B3E \u0B2A\u0B3E\u0B07\u0B01 \u0B2A\u0B4D\u0B30\u0B38\u0B3F\u0B26\u0B4D\u0B27, \u0B38\u0B47 \u0B28\u0B3F\u0B2F\u0B2E\u0B3F\u0B24 \u0B1C\u0B28 \u0B36\u0B41\u0B23\u0B3E\u0B23\u0B3F \u0B06\u0B2F\u0B4B\u0B1C\u0B28 \u0B15\u0B30\u0B28\u0B4D\u0B24\u0B3F \u0B13 \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33\u0B30 \u0B2A\u0B4D\u0B30\u0B24\u0B4D\u0B2F\u0B47\u0B15 \u0B2F\u0B4B\u0B1C\u0B28\u0B3E \u0B05\u0B17\u0B4D\u0B30\u0B17\u0B24\u0B3F \u0B28\u0B3F\u0B1C \u0B26\u0B4D\u0B35\u0B3E\u0B30\u0B3E \u0B05\u0B28\u0B41\u0B36\u0B40\u0B33\u0B28 \u0B15\u0B30\u0B28\u0B4D\u0B24\u0B3F\u0964',
+    fact_const: '\u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33',
+    fact_const_v: '\u0B28\u0B3F\u0B06\u0B33\u0B3F, \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E',
+    fact_pos: '\u0B2A\u0B26',
+    fact_pos_v: '\u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B38\u0B26\u0B38\u0B4D\u0B2F',
+    fact_party: '\u0B26\u0B33',
+    fact_party_v: '\u0B2D\u0B3E\u0B30\u0B24\u0B40\u0B2F \u0B1C\u0B28\u0B24\u0B3E \u0B2A\u0B3E\u0B30\u0B4D\u0B1F\u0B3F',
+    fact_elected: '\u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24',
+    fact_elected_v: '2024 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28',
+    fact_focus: '\u0B2E\u0B41\u0B16\u0B4D\u0B2F \u0B32\u0B15\u0B4D\u0B37\u0B4D\u0B2F',
+    fact_focus_v: '\u0B17\u0B4D\u0B30\u0B3E\u0B2E \u0B2C\u0B3F\u0B15\u0B3E\u0B38, \u0B15\u0B43\u0B37\u0B3F, \u0B36\u0B3F\u0B15\u0B4D\u0B37\u0B3E',
+    fact_sunwai: '\u0B1C\u0B28 \u0B36\u0B41\u0B23\u0B3E\u0B23\u0B3F',
+    fact_sunwai_v: '\u0B2A\u0B4D\u0B30\u0B24\u0B3F \u0B36\u0B28\u0B3F\u0B2C\u0B3E\u0B30, \u0B38\u0B15\u0B3E\u0B33 \u0B67\u0B66 \u0B1F\u0B3E',
+    gallery_lbl: '\u0B2B\u0B1F\u0B4B \u0B17\u0B4D\u0B2F\u0B3E\u0B32\u0B47\u0B30\u0B40',
+    gallery_h: '\u0B2B\u0B3F\u0B32\u0B4D\u0B21\u0B30\u0B41',
+    gallery_field: '\u0B26\u0B43\u0B36\u0B4D\u0B2F',
+    gallery_sub: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B1C\u0B41\u0B21\u0B3C\u0B3F \u0B15\u0B3E\u0B30\u0B4D\u0B2F, \u0B32\u0B4B\u0B15 \u0B13 \u0B2F\u0B3E\u0B24\u0B4D\u0B30\u0B3E\u0B30 \u0B0F\u0B15 \u0B1D\u0B32\u0B15\u0964',
+    media_lbl: '\u0B2E\u0B3F\u0B21\u0B3C\u0B3F\u0B06 \u0B15\u0B47\u0B28\u0B4D\u0B26\u0B4D\u0B30',
+    media_h: '\u0B2B\u0B1F\u0B4B \u0B13',
+    media_h2: '\u0B2D\u0B3F\u0B21\u0B3C\u0B3F\u0B13',
+    media_sub: '\u0B2D\u0B3E\u0B37\u0B23, \u0B17\u0B4D\u0B30\u0B3E\u0B09\u0B23\u0B4D\u0B21 \u0B30\u0B3F\u0B2A\u0B4B\u0B30\u0B4D\u0B1F \u0B13 \u0B38\u0B47\u0B2C\u0B3E\u0B30 \u0B2E\u0B41\u0B39\u0B42\u0B30\u0B4D\u0B24 \u0B26\u0B47\u0B16\u0B28\u0B4D\u0B24\u0B41\u0964',
+    tab_photos: '\u0B2B\u0B1F\u0B4B',
+    tab_videos: '\u0B2D\u0B3F\u0B21\u0B3C\u0B3F\u0B13',
+    vid1_title: '\u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u2014 \u0B1C\u0B28 \u0B38\u0B2D\u0B3E \u0B2D\u0B3E\u0B37\u0B23, \u0B28\u0B3F\u0B06\u0B33\u0B3F',
+    vid2_title: '\u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B2C\u0B3F\u0B15\u0B3E\u0B38 \u2014 \u0B17\u0B4D\u0B30\u0B3E\u0B09\u0B23\u0B4D\u0B21 \u0B30\u0B3F\u0B2A\u0B4B\u0B30\u0B4D\u0B1F',
+    vid3_title: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B06\u0B2C\u0B3E\u0B1C \u2014 \u0B1C\u0B28 \u0B2E\u0B24',
+    vid_sub: '\u0B05\u0B27\u0B3F\u0B15\u0B43\u0B24 \u0B2D\u0B3F\u0B21\u0B3C\u0B3F\u0B13 \u00b7 YouTube',
+    vision_lbl: '\u0B06\u0B2E \u0B26\u0B43\u0B37\u0B4D\u0B1F\u0B3F',
+    vision_h: '\u0B0F\u0B15',
+    vision_h2: '\u0B36\u0B15\u0B4D\u0B24\u0B3F\u0B36\u0B3E\u0B33\u0B40',
+    vision_h3: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B17\u0B22\u0B3C\u0B3F\u0B2C\u0B3E',
+    vision_sub: '\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30 \u0B1C\u0B28\u0B17\u0B23\u0B19\u0B4D\u0B15 \u0B2A\u0B4D\u0B30\u0B24\u0B4D\u0B2F\u0B47\u0B15 \u0B28\u0B3F\u0B37\u0B4D\u0B2A\u0B24\u0B4D\u0B24\u0B3F, \u0B09\u0B26\u0B4D\u0B2F\u0B4B\u0B17 \u0B13 \u0B2D\u0B4B\u0B1F \u0B17\u0B4D\u0B30\u0B39\u0B23 \u0B2A\u0B4D\u0B30\u0B15\u0B4D\u0B30\u0B3F\u0B2F\u0B3E\u0B15\u0B41 \u0B2E\u0B3E\u0B30\u0B4D\u0B17\u0B26\u0B30\u0B4D\u0B36\u0B28 \u0B26\u0B47\u0B09\u0B25\u0B3F\u0B2C\u0B3E \u0B1B\u0B27\u0B1F\u0B3F \u0B38\u0B4D\u0B24\u0B2E\u0B4D\u0B2D\u0964',
+    v1_title: '\u0B15\u0B43\u0B37\u0B3E\u0B23 \u0B38\u0B2E\u0B43\u0B26\u0B4D\u0B27\u0B3F',
+    v1_text: 'MSP \u0B38\u0B39\u0B3E\u0B2F, \u0B2B\u0B38\u0B32 \u0B2C\u0B40\u0B2E\u0B3E \u0B13 \u0B38\u0B3F\u0B27\u0B3E \u0B2C\u0B1C\u0B3E\u0B30 \u0B38\u0B19\u0B4D\u0B2F\u0B4B\u0B17 \u0B2E\u0B3E\u0B27\u0B4D\u0B2F\u0B2E\u0B30\u0B47 \u0B1A\u0B3E\u0B37\u0B40 \u0B06\u0B2F \u0B26\u0B4D\u0B35\u0B3F\u0B17\u0B41\u0B23 \u2014 \u0B1A\u0B3E\u0B37\u0B40\u0B19\u0B4D\u0B15 \u0B09\u0B2A\u0B30\u0B47 \u0B1A\u0B3E\u0B2A \u0B26\u0B47\u0B09\u0B25\u0B3F\u0B2C\u0B3E \u0B2E\u0B27\u0B4D\u0B2F\u0B38\u0B4D\u0B25\u0B19\u0B4D\u0B15 \u0B2C\u0B4D\u0B2F\u0B2C\u0B38\u0B4D\u0B25\u0B3E \u0B36\u0B47\u0B37\u0964',
+    v2_title: '\u0B38\u0B30\u0B4D\u0B2C \u0B36\u0B3F\u0B15\u0B4D\u0B37\u0B3E',
+    v2_text: '\u0B21\u0B3C\u0B3F\u0B1C\u0B3F\u0B1F\u0B3E\u0B32 \u0B36\u0B4D\u0B30\u0B47\u0B23\u0B40 \u0B15\u0B15\u0B4D\u0B37 \u0B38\u0B39 \u0B38\u0B3E\u0B30\u0B4D\u0B2C\u0B1C\u0B28\u0B40\u0B28 \u0B17\u0B41\u0B23\u0B2C\u0B24\u0B4D\u0B24\u0B3E \u0B36\u0B3F\u0B15\u0B4D\u0B37\u0B3E \u0B13 \u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30 \u0B38\u0B2E\u0B38\u0B4D\u0B24 BPL \u0B2A\u0B30\u0B3F\u0B2C\u0B3E\u0B30\u0B15\u0B41 \u0B1B\u0B3E\u0B24\u0B4D\u0B30\u0B2C\u0B43\u0B24\u0B4D\u0B24\u0B3F\u0964',
+    v3_title: '\u0B38\u0B4D\u0B35\u0B38\u0B4D\u0B25 \u0B28\u0B3F\u0B06\u0B33\u0B3F',
+    v3_text: '\u0B2A\u0B4D\u0B30\u0B24\u0B4D\u0B2F\u0B47\u0B15 \u0B17\u0B4D\u0B30\u0B3E\u0B2E 5 \u0B15\u0B3F\u0B2E\u0B3F \u0B2E\u0B27\u0B4D\u0B2F\u0B30\u0B47 \u0B2A\u0B4D\u0B30\u0B3E\u0B25\u0B2E\u0B3F\u0B15 \u0B38\u0B4D\u0B35\u0B3E\u0B38\u0B4D\u0B25\u0B4D\u0B2F \u0B15\u0B47\u0B28\u0B4D\u0B26\u0B4D\u0B30 \u2014 \u0B2C\u0B3F\u0B28\u0B3E\u0B2E\u0B42\u0B32\u0B4D\u0B2F \u0B21\u0B3C\u0B3E\u0B07\u0B17\u0B4D\u0B28\u0B4B\u0B38\u0B4D\u0B1F\u0B3F\u0B15, \u0B2E\u0B3E\u0B24\u0B43 \u0B2F\u0B24\u0B4D\u0B28 \u0B13 \u0B2E\u0B4B\u0B2C\u0B3E\u0B07\u0B32 \u0B1A\u0B3F\u0B15\u0B3F\u0B24\u0B4D\u0B38\u0B3E \u0B26\u0B33\u0964',
+    v4_title: '\u0B21\u0B3C\u0B3F\u0B1C\u0B3F\u0B1F\u0B3E\u0B32 \u0B17\u0B4D\u0B30\u0B3E\u0B2E',
+    v4_text: '\u0B2A\u0B4D\u0B30\u0B24\u0B4D\u0B2F\u0B47\u0B15 \u0B2A\u0B1E\u0B4D\u0B1A\u0B3E\u0B2F\u0B24\u0B15\u0B41 \u0B39\u0B3E\u0B07-\u0B38\u0B4D\u0B2A\u0B3F\u0B21 \u0B07\u0B23\u0B4D\u0B1F\u0B30\u0B28\u0B47\u0B1F \u0B13 \u0B21\u0B3C\u0B3F\u0B1C\u0B3F\u0B1F\u0B3E\u0B32 \u0B38\u0B3E\u0B15\u0B4D\u0B37\u0B30\u0B24\u0B3E \u2014 \u0B18\u0B30\u0B41 \u0B38\u0B30\u0B15\u0B3E\u0B30\u0B40 \u0B38\u0B47\u0B2C\u0B3E \u0B2A\u0B4D\u0B30\u0B3E\u0B2A\u0B4D\u0B24 \u0B2A\u0B3E\u0B07\u0B01 \u0B28\u0B3E\u0B17\u0B30\u0B3F\u0B15 \u0B38\u0B36\u0B15\u0B4D\u0B24\u0964',
+    v5_title: '\u0B38\u0B2C\u0B41\u0B1C \u0B28\u0B3F\u0B06\u0B33\u0B3F',
+    v5_text: '\u0B38\u0B4C\u0B30\u0B36\u0B15\u0B4D\u0B24\u0B3F \u0B30\u0B3E\u0B38\u0B4D\u0B24\u0B3E\u0B18\u0B3E\u0B1F \u0B06\u0B32\u0B4B, \u0B2A\u0B30\u0B3F\u0B37\u0B4D\u0B15\u0B3E\u0B30 \u0B30\u0B3E\u0B28\u0B4D\u0B27\u0B23 \u0B07\u0B28\u0B4D\u0B27\u0B28 \u0B13 \u0B28\u0B26\u0B40 \u0B38\u0B19\u0B4D\u0B30\u0B15\u0B4D\u0B37\u0B23 \u2014 \u0B2D\u0B2C\u0B3F\u0B37\u0B4D\u0B2F\u0B24 \u0B28 \u0B16\u0B23\u0B4D\u0B21\u0B41\u0B25\u0B3F\u0B32\u0B47 \u0B2C\u0B22\u0B3C\u0B41\u0B25\u0B3F\u0B2C\u0B3E \u0B05\u0B1E\u0B4D\u0B1A\u0B33\u0964',
+    v6_title: '\u0B28\u0B3E\u0B30\u0B40 \u0B36\u0B15\u0B4D\u0B24\u0B3F',
+    v6_text: '\u0B38\u0B4D\u0B25\u0B3E\u0B28\u0B40\u0B2F \u0B36\u0B3E\u0B38\u0B28\u0B30\u0B47 30% \u0B38\u0B19\u0B4D\u0B30\u0B15\u0B4D\u0B37\u0B23, \u0B2E\u0B39\u0B3F\u0B33\u0B3E \u0B26\u0B15\u0B4D\u0B37\u0B24\u0B3E \u0B15\u0B47\u0B28\u0B4D\u0B26\u0B4D\u0B30, SHG \u0B0B\u0B23 \u0B13 \u0B2E\u0B39\u0B3F\u0B33\u0B3E\u0B19\u0B4D\u0B15 \u0B2C\u0B3F\u0B30\u0B41\u0B26\u0B4D\u0B27 \u0B05\u0B2A\u0B30\u0B3E\u0B27 \u0B2A\u0B4D\u0B30\u0B24\u0B3F \u0B36\u0B42\u0B28\u0B4D\u0B2F \u0B38\u0B39\u0B4D\u0B2F\u0964',
+    journey_lbl: '\u0B30\u0B3E\u0B1C\u0B28\u0B48\u0B24\u0B3F\u0B15 \u0B1C\u0B40\u0B2C\u0B28',
+    journey_h: '',
+    journey_h2: '\u0B2F\u0B3E\u0B24\u0B4D\u0B30\u0B3E',
+    journey_h3: '\u0B0F \u0B2A\u0B30\u0B4D\u0B2F\u0B28\u0B4D\u0B24',
+    journey_sub: '\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30 \u0B24\u0B43\u0B23\u0B2E\u0B42\u0B33 \u0B38\u0B19\u0B4D\u0B18\u0B30\u0B4D\u0B37\u0B30\u0B41 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B2A\u0B30\u0B4D\u0B2F\u0B28\u0B4D\u0B24 \u2014 \u0B09\u0B26\u0B4D\u0B26\u0B47\u0B36\u0B4D\u0B2F \u0B13 \u0B2C\u0B3F\u0B36\u0B4D\u0B35\u0B3E\u0B38 \u0B09\u0B2A\u0B30\u0B47 \u0B28\u0B3F\u0B30\u0B4D\u0B2E\u0B3F\u0B24 \u0B2A\u0B25\u0964',
+    je1_yr: '\u0B36\u0B3F\u0B15\u0B21\u0B3C',
+    je1_title: '\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30\u0B47 \u0B38\u0B3E\u0B2E\u0B41\u0B26\u0B3E\u0B2F\u0B3F\u0B15 \u0B28\u0B47\u0B24\u0B43\u0B24\u0B4D\u0B35',
+    je1_desc: '\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30\u0B47 \u0B24\u0B43\u0B23\u0B2E\u0B42\u0B33 \u0B38\u0B3E\u0B2E\u0B3E\u0B1C\u0B3F\u0B15 \u0B13 \u0B30\u0B3E\u0B1C\u0B28\u0B48\u0B24\u0B3F\u0B15 \u0B15\u0B3E\u0B30\u0B4D\u0B2F \u0B06\u0B30\u0B2E\u0B4D\u0B2D \u0B15\u0B32\u0B47, \u0B1A\u0B3E\u0B37\u0B40, \u0B2E\u0B24\u0B4D\u0B38\u0B4D\u0B2F\u0B1C\u0B40\u0B2C\u0B40 \u0B13 \u0B26\u0B48\u0B28\u0B3F\u0B15 \u0B2E\u0B1C\u0B41\u0B30\u0B40 \u0B36\u0B4D\u0B30\u0B2E\u0B3F\u0B15\u0B19\u0B4D\u0B15 \u0B38\u0B39 \u0B38\u0B19\u0B4D\u0B2A\u0B30\u0B4D\u0B15 \u0B38\u0B4D\u0B25\u0B3E\u0B2A\u0B28\u0964',
+    je2_title: '\u0B2D\u0B3E\u0B30\u0B24\u0B40\u0B2F \u0B1C\u0B28\u0B24\u0B3E \u0B2A\u0B3E\u0B30\u0B4D\u0B1F\u0B3F\u0B30\u0B47 \u0B2F\u0B4B\u0B17',
+    je2_desc: 'BJP \u0B30 \u0B2C\u0B3F\u0B15\u0B3E\u0B38-\u0B06\u0B27\u0B3E\u0B30\u0B3F\u0B24 \u0B36\u0B3E\u0B38\u0B28 \u0B26\u0B43\u0B37\u0B4D\u0B1F\u0B3F \u0B38\u0B39 \u0B0F\u0B15\u0B2E\u0B24 \u0B39\u0B4B\u0B07 \u0B2A\u0B3E\u0B30\u0B4D\u0B1F\u0B3F\u0B30 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B2C\u0B3F\u0B2D\u0B3E\u0B17\u0B30\u0B47 \u0B2F\u0B4B\u0B17 \u0B26\u0B47\u0B32\u0B47\u0964',
+    je3_title: '\u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E\u0B15\u0B41 \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24',
+    je3_desc: 'BJP \u0B1B\u0B3E\u0B26 \u0B24\u0B33\u0B47 2024 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28\u0B30\u0B47 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B06\u0B38\u0B28 \u0B1C\u0B3F\u0B24\u0B3F\u0B32\u0B47\u0964',
+    je4_title: '\u0B2A\u0B26 \u0B17\u0B4D\u0B30\u0B39\u0B23 \u2014 4 \u0B1C\u0B41\u0B28 2024',
+    je4_desc: '4 \u0B1C\u0B41\u0B28 2024 \u0B30\u0B47 \u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30\u0B41 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B38\u0B26\u0B38\u0B4D\u0B2F \u0B2D\u0B3E\u0B2C\u0B47 \u0B06\u0B27\u0B3F\u0B15\u0B3E\u0B30\u0B3F\u0B15 \u0B2D\u0B3E\u0B2C\u0B47 \u0B2A\u0B26 \u0B17\u0B4D\u0B30\u0B39\u0B23\u0964',
+    je5_yr: '\u0B2C\u0B30\u0B4D\u0B24\u0B2E\u0B3E\u0B28',
+    je5_title: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B38\u0B47\u0B2C\u0B3E \u2014 \u0B06\u0B1C',
+    je5_desc: '\u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B2C\u0B3F\u0B15\u0B3E\u0B38, \u0B17\u0B4D\u0B30\u0B3E\u0B2E\u0B40\u0B23 \u0B2C\u0B3F\u0B26\u0B4D\u0B2F\u0B41\u0B24\u0B4D, \u0B06\u0B17\u0B4D\u0B30\u0B4B-\u0B2A\u0B4D\u0B30\u0B4B\u0B38\u0B47\u0B38\u0B3F\u0B19, \u0B1F\u0B47\u0B32\u0B3F\u0B2E\u0B47\u0B21\u0B3F\u0B38\u0B3F\u0B28 \u0B2C\u0B4D\u0B2F\u0B3E\u0B2A\u0B4D\u0B24\u0B3F \u0B13 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B2C\u0B4D\u0B32\u0B15\u0B4D \u0B30 \u0B36\u0B47\u0B37 \u0B18\u0B30\u0B15\u0B41 \u0B2A\u0B4D\u0B30\u0B24\u0B4D\u0B2F\u0B47\u0B15 \u0B2F\u0B4B\u0B1C\u0B28\u0B3E \u0B2A\u0B19\u0B4D\u0B1A\u0B3E\u0B07\u0B2C\u0B3E \u0B09\u0B2A\u0B30\u0B47 \u0B27\u0B4D\u0B2F\u0B3E\u0B28\u0964',
+    impact_lbl: '\u0B1F\u0B4D\u0B30\u0B4D\u0B2F\u0B3E\u0B15 \u0B30\u0B47\u0B15\u0B30\u0B4D\u0B21',
+    impact_h: '\u0B2E\u0B3E\u0B2A\u0B2F\u0B4B\u0B17\u0B4D\u0B2F',
+    impact_h2: '\u0B2A\u0B4D\u0B30\u0B2D\u0B3E\u0B2C',
+    impact_sub: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B1C\u0B41\u0B21\u0B3C\u0B3F \u0B2A\u0B30\u0B3F\u0B2C\u0B30\u0B4D\u0B24\u0B28, \u0B2A\u0B30\u0B3F\u0B2C\u0B3E\u0B30 \u0B09\u0B26\u0B4D\u0B27\u0B3E\u0B30 \u0B13 \u0B2A\u0B4D\u0B30\u0B24\u0B3F\u0B36\u0B4D\u0B30\u0B41\u0B24\u0B3F \u0B30\u0B15\u0B4D\u0B37\u0B3E\u0B30 \u0B38\u0B19\u0B4D\u0B16\u0B4D\u0B2F\u0B3E\u0964',
+    imp1: 'PMAY \u0B05\u0B27\u0B40\u0B28 \u0B18\u0B30',
+    imp2: '\u0B2A\u0B3E\u0B07\u0B2A \u0B1C\u0B33 \u0B17\u0B4D\u0B30\u0B3E\u0B2E',
+    imp3: '\u0B17\u0B4D\u0B30\u0B3E\u0B2E \u0B2C\u0B3F\u0B26\u0B4D\u0B2F\u0B41\u0B24\u0B4D',
+    imp4: '\u0B1B\u0B3E\u0B24\u0B4D\u0B30\u0B2C\u0B43\u0B24\u0B4D\u0B24\u0B3F \u0B2A\u0B4D\u0B30\u0B26\u0B24\u0B4D\u0B24',
+    imp5: '\u0B17\u0B4D\u0B30\u0B3E\u0B2E \u0B30\u0B3E\u0B38\u0B4D\u0B24\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2E\u0B3F\u0B24',
+    imp6: '\u0B28\u0B42\u0B06 \u0B38\u0B4D\u0B35\u0B3E\u0B38\u0B4D\u0B25\u0B4D\u0B2F \u0B15\u0B47\u0B28\u0B4D\u0B26\u0B4D\u0B30',
+    imp7: '\u0B21\u0B3C\u0B3F\u0B1C\u0B3F\u0B1F\u0B3E\u0B32 \u0B2A\u0B4D\u0B30\u0B36\u0B3F\u0B15\u0B4D\u0B37\u0B3F\u0B24',
+    imp8: '\u0B2C\u0B43\u0B15\u0B4D\u0B37 \u0B30\u0B4B\u0B2A\u0B23',
+    aw1_t: '\u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24 MLA \u2014 \u0B28\u0B3F\u0B06\u0B33\u0B3F, \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E',
+    aw1_b: '\u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 2024 \u0B30\u0B47 BJP \u0B2A\u0B4D\u0B30\u0B3E\u0B30\u0B4D\u0B25\u0B40 \u0B2D\u0B3E\u0B2C\u0B47 \u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30\u0B41 \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24\u0964',
+    aw2_t: '\u0B15\u0B43\u0B37\u0B3E\u0B23 \u0B06\u0B09\u0B1F\u0B30\u0B3F\u0B1A \u2014 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B2C\u0B4D\u0B32\u0B15',
+    aw2_b: '\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B1C\u0B41\u0B21\u0B3C\u0B3F \u0B1A\u0B3E\u0B37\u0B40 \u0B15\u0B32\u0B4D\u0B2F\u0B3E\u0B23 \u0B36\u0B3F\u0B2C\u0B3F\u0B30 \u0B2A\u0B30\u0B3F\u0B1A\u0B3E\u0B32\u0B28, PM-KISAN, KCC \u0B13 \u0B2B\u0B38\u0B32 \u0B2C\u0B40\u0B2E\u0B3E \u0B38\u0B41\u0B2C\u0B3F\u0B27\u0B3E \u0B38\u0B19\u0B4D\u0B2F\u0B4B\u0B17\u0964',
+    aw3_yr: '\u0B1A\u0B3E\u0B32\u0B41',
+    aw3_t: '\u0B1C\u0B28 \u0B36\u0B41\u0B23\u0B3E\u0B23\u0B3F \u2014 \u0B38\u0B3F\u0B27\u0B3E \u0B1C\u0B28 \u0B05\u0B2D\u0B3F\u0B17\u0B2E',
+    aw3_b: '\u0B2A\u0B4D\u0B30\u0B24\u0B3F \u0B36\u0B28\u0B3F\u0B2C\u0B3E\u0B30 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F\u0B30\u0B47 \u0B16\u0B4B\u0B32\u0B3E \u0B1C\u0B28 \u0B05\u0B2D\u0B3F\u0B2F\u0B4B\u0B17 \u0B05\u0B27\u0B3F\u0B2C\u0B47\u0B36\u0B28 \u2014 \u0B2A\u0B4D\u0B30\u0B24\u0B4D\u0B2F\u0B47\u0B15 \u0B28\u0B3E\u0B17\u0B30\u0B3F\u0B15\u0B19\u0B4D\u0B15 \u0B38\u0B3F\u0B27\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24 \u0B2A\u0B4D\u0B30\u0B24\u0B3F\u0B28\u0B3F\u0B27\u0B3F\u0B24\u0B4D\u0B35\u0964',
+    press_lbl: '\u0B16\u0B2C\u0B30\u0B30\u0B47',
+    press_h: '\u0B2E\u0B3F\u0B21\u0B3C\u0B3F\u0B06',
+    press_h2: '\u0B06\u0B32\u0B4B\u0B1A\u0B28\u0B3E',
+    press_sub: '\u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u0B13 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B2C\u0B3F\u0B37\u0B2F\u0B30\u0B47 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E\u0B30 \u0B05\u0B17\u0B4D\u0B30\u0B23\u0B40 \u0B38\u0B19\u0B4D\u0B2C\u0B3E\u0B26 \u0B2E\u0B3E\u0B27\u0B4D\u0B2F\u0B2E\u0964',
+    p1_hl: '\u201c\u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B2B\u0B33 2024 LIVE: BJP \u0B30 \u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u0B2C\u0B3F\u0B1C\u0B2F \u2014 \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B2C\u0B3F\u0B15\u0B3E\u0B38 \u0B13 \u0B2A\u0B30\u0B3F\u0B2C\u0B30\u0B4D\u0B24\u0B28 \u0B2A\u0B3E\u0B07\u0B01 \u0B28\u0B3F\u0B37\u0B4D\u0B2A\u0B24\u0B4D\u0B24\u0B3F\u0B2E\u0B42\u0B33\u0B15 \u0B30\u0B3E\u0B2F\u201d',
+    p2_hl: '\u201c\u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B2B\u0B33 2024: \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B06\u0B38\u0B28\u0B30\u0B47 BJP \u0B2C\u0B3F\u0B1C\u0B2F\u0B40 \u0B24\u0B3E\u0B32\u0B3F\u0B15\u0B3E\u0B2D\u0B41\u0B15\u0B4D\u0B24 \u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15\u201d',
+    p3_hl: '\u201c\u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u2014 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33, 2024 \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B2A\u0B3E\u0B07\u0B01 \u0B06\u0B2B\u0B3F\u0B21\u0B3E\u0B2D\u0B3F\u0B1F \u0B2F\u0B3E\u0B1E\u0B4D\u0B1C \u0B13 \u0B2A\u0B4D\u0B30\u0B15\u0B3E\u0B36\u0B3F\u0B24\u201d',
+    p4_hl: '\u201c\u0B28\u0B42\u0B06 MLA \u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30\u0B47 \u0B2A\u0B4D\u0B30\u0B25\u0B2E \u0B1C\u0B28 \u0B36\u0B41\u0B23\u0B3E\u0B23\u0B3F \u0B06\u0B2F\u0B4B\u0B1C\u0B28 \u2014 \u0B36\u0B24 \u0B36\u0B24 \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33\u0B2C\u0B3E\u0B38\u0B40 \u0B09\u0B2A\u0B38\u0B4D\u0B25\u0B3F\u0B24\u201d',
+    p5_hl: '\u201c\u0B28\u0B3F\u0B06\u0B33\u0B3F\u0B30 \u0B28\u0B24\u0B41\u0B28 \u0B2A\u0B4D\u0B30\u0B24\u0B3F\u0B28\u0B3F\u0B27\u0B3F \u0B2E\u0B3E\u0B20\u0B47 \u0B2E\u0B3E\u0B20\u0B47 \u2014 MLA \u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15 \u0B17\u0B4D\u0B30\u0B3E\u0B2E \u0B2A\u0B30\u0B3F\u0B26\u0B30\u0B4D\u0B36\u0B28, \u0B2E\u0B41\u0B32\u0B24\u0B2C\u0B3F \u0B2C\u0B3F\u0B15\u0B3E\u0B38 \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B17\u0B41\u0B21\u0B3C\u0B3F\u0B15\u0B30 \u0B2A\u0B30\u0B4D\u0B2F\u0B2C\u0B47\u0B15\u0B4D\u0B37\u0B23\u201d',
+    contact_lbl: '\u0B2F\u0B4B\u0B17\u0B3E\u0B2F\u0B4B\u0B17',
+    contact_name: '\u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F',
+    contact_name2: '\u0B2F\u0B4B\u0B17\u0B3E\u0B2F\u0B4B\u0B17',
+    contact_desc: '\u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B2C\u0B3F\u0B37\u0B2F, \u0B2E\u0B3F\u0B21\u0B3C\u0B3F\u0B06 \u0B2A\u0B4D\u0B30\u0B36\u0B4D\u0B28 \u0B2C\u0B3E \u0B28\u0B40\u0B24\u0B3F \u0B06\u0B32\u0B4B\u0B1A\u0B28\u0B3E \u0B2A\u0B3E\u0B07\u0B01\u0964 \u0B06\u0B2E \u0B1F\u0B3F\u0B2E 48 \u0B18\u0B23\u0B4D\u0B1F\u0B3E \u0B2E\u0B27\u0B4D\u0B2F\u0B30\u0B47 \u0B09\u0B24\u0B4D\u0B24\u0B30 \u0B26\u0B47\u0B07\u0964',
+    ci1_k: '\u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E',
+    ci1_v: '\u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E, \u0B2D\u0B41\u0B2C\u0B28\u0B47\u0B36\u0B4D\u0B35\u0B30, \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u2013 751001',
+    ci2_k: '\u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F',
+    ci2_v: '\u0B28\u0B3F\u0B06\u0B33\u0B3F, \u0B15\u0B1F\u0B15 \u0B1C\u0B3F\u0B32\u0B4D\u0B32\u0B3E, \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E \u2013 754004',
+    ci3_k: '\u0B2B\u0B4B\u0B28',
+    ci3_v: '\u0B05\u0B2B\u0B3F\u0B38\u0B3F\u0B2F\u0B3E\u0B32 \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F\u0B30\u0B47 \u0B2F\u0B4B\u0B17\u0B3E\u0B2F\u0B4B\u0B17 \u0B15\u0B30\u0B28\u0B4D\u0B24\u0B41',
+    ci4_k: '\u0B1C\u0B28 \u0B36\u0B41\u0B23\u0B3E\u0B23\u0B3F',
+    ci4_v: '\u0B2A\u0B4D\u0B30\u0B24\u0B3F \u0B36\u0B28\u0B3F\u0B2C\u0B3E\u0B30, \u0B38\u0B15\u0B3E\u0B33 \u0B67\u0B66:\u0B66\u0B66 \u2014 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F',
+    ci5_k: '\u0B06\u0B38\u0B28\u0B4D\u0B24\u0B3E \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B15\u0B4D\u0B30\u0B2E',
+    ci5_v: '\u0B2E\u0B3F\u0B36\u0B4D\u0B30\u0B23 \u0B2A\u0B30\u0B4D\u0B2C \u2014 8 \u0B2E\u0B47 2025 \u00b7 \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B2E\u0B48\u0B26\u0B3E\u0B28',
+    mail_label: '\u0B07-\u0B2E\u0B47\u0B32 \u0B32\u0B3F\u0B16\u0B28\u0B4D\u0B24\u0B41',
+    mail_btn: '\u0B07\u0B2E\u0B47\u0B32 \u0B2A\u0B3E\u0B20\u0B3E\u0B28\u0B4D\u0B24\u0B41',
+    form_title: '\u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15\u0B19\u0B4D\u0B15\u0B41 \u0B32\u0B3F\u0B16\u0B28\u0B4D\u0B24\u0B41',
+    form_sub: '\u0B06\u0B2A\u0B23\u0B19\u0B4D\u0B15 \u0B09\u0B26\u0B4D\u0B2C\u0B47\u0B17, \u0B2A\u0B30\u0B3E\u0B2E\u0B30\u0B4D\u0B36 \u0B2C\u0B3E \u0B05\u0B2D\u0B3F\u0B2F\u0B4B\u0B17 \u0B36\u0B47\u0B2F\u0B3E\u0B30 \u0B15\u0B30\u0B28\u0B4D\u0B24\u0B41\u0964',
+    f_name: '\u0B2A\u0B42\u0B30\u0B23 \u0B28\u0B3E\u0B2E *',
+    f_mobile: '\u0B2E\u0B4B\u0B2C\u0B3E\u0B07\u0B32 *',
+    f_village: '\u0B17\u0B4D\u0B30\u0B3E\u0B2E / \u0B13\u0B3C\u0B3E\u0B30\u0B4D\u0B21',
+    f_subject: '\u0B2C\u0B3F\u0B37\u0B2F *',
+    f_msg: '\u0B06\u0B2A\u0B23\u0B19\u0B4D\u0B15 \u0B2C\u0B3E\u0B30\u0B4D\u0B24\u0B4D\u0B24\u0B3E *',
+    sel_default: '\u0B2C\u0B3F\u0B37\u0B2F \u0B2C\u0B3E\u0B1B\u0B28\u0B4D\u0B24\u0B41',
+    sel1: '\u0B30\u0B3E\u0B38\u0B4D\u0B24\u0B3E / \u0B2D\u0B3F\u0B24\u0B4D\u0B24\u0B3F\u0B2D\u0B42\u0B2E\u0B3F',
+    sel2: '\u0B1C\u0B33 / \u0B2C\u0B3F\u0B26\u0B4D\u0B2F\u0B41\u0B24',
+    sel3: '\u0B15\u0B43\u0B37\u0B3F / \u0B1A\u0B3E\u0B37\u0B40 \u0B38\u0B2E\u0B38\u0B4D\u0B2F\u0B3E',
+    sel4: '\u0B38\u0B4D\u0B35\u0B3E\u0B38\u0B4D\u0B25\u0B4D\u0B2F / \u0B21\u0B3E\u0B15\u0B4D\u0B24\u0B30\u0B16\u0B3E\u0B28\u0B3E',
+    sel5: '\u0B36\u0B3F\u0B15\u0B4D\u0B37\u0B3E / \u0B1B\u0B3E\u0B24\u0B4D\u0B30\u0B2C\u0B43\u0B24\u0B4D\u0B24\u0B3F',
+    sel6: '\u0B2E\u0B39\u0B3F\u0B33\u0B3E \u0B38\u0B41\u0B30\u0B15\u0B4D\u0B37\u0B3E',
+    sel7: '\u0B2E\u0B3F\u0B21\u0B3C\u0B3F\u0B06 / \u0B2A\u0B4D\u0B30\u0B36\u0B4D\u0B28',
+    sel8: '\u0B05\u0B28\u0B4D\u0B2F',
+    f_submit: '\u0B05\u0B2D\u0B3F\u0B2F\u0B4B\u0B17 / \u0B2C\u0B3E\u0B30\u0B4D\u0B24\u0B4D\u0B24\u0B3E \u0B26\u0B3E\u0B16\u0B32 \u0B15\u0B30\u0B28\u0B4D\u0B24\u0B41',
+    footer_tag: 'MLA, \u0B28\u0B3F\u0B06\u0B33\u0B3F \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33, \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E\u0964 \u0B2D\u0B3E\u0B30\u0B24\u0B40\u0B2F \u0B1C\u0B28\u0B24\u0B3E \u0B2A\u0B3E\u0B30\u0B4D\u0B1F\u0B3F\u0964 \u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B3F\u0B24 \u0B1C\u0B41\u0B28 2024\u0964',
+    footer_links: '\u0B26\u0B4D\u0B30\u0B41\u0B24 \u0B32\u0B3F\u0B19\u0B4D\u0B15',
+    footer_vision: '\u0B26\u0B43\u0B37\u0B4D\u0B1F\u0B3F \u0B13 \u0B28\u0B40\u0B24\u0B3F',
+    footer_journey: '\u0B30\u0B3E\u0B1C\u0B28\u0B48\u0B24\u0B3F\u0B15 \u0B2F\u0B3E\u0B24\u0B4D\u0B30\u0B3E',
+    footer_achieve: '\u0B05\u0B30\u0B4D\u0B1C\u0B28',
+    footer_res: '\u0B38\u0B2E\u0B4D\u0B2A\u0B26',
+    res1: '\u0B2A\u0B4D\u0B30\u0B47\u0B38 \u0B2C\u0B3F\u0B1C\u0B4D\u0B1E\u0B2A\u0B4D\u0B24\u0B3F',
+    res2: '\u0B2C\u0B3F\u0B27\u0B3E\u0B28 \u0B38\u0B2D\u0B3E \u0B2A\u0B4D\u0B30\u0B36\u0B4D\u0B28',
+    res3: '\u0B28\u0B3F\u0B30\u0B4D\u0B2C\u0B3E\u0B1A\u0B28 \u0B05\u0B1E\u0B4D\u0B1A\u0B33 \u0B2C\u0B1C\u0B47\u0B1F',
+    res4: '\u0B05\u0B2D\u0B3F\u0B2F\u0B4B\u0B17 \u0B2A\u0B4B\u0B30\u0B4D\u0B1F\u0B3E\u0B32',
+    res5: '\u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F\u0B30\u0B47 \u0B2F\u0B4B\u0B17\u0B3E\u0B2F\u0B4B\u0B17',
+    footer_copy: '\u00a9 2025 \u0B1B\u0B2C\u0B3F \u0B2E\u0B3E\u0B32\u0B3F\u0B15\u0964 \u0B05\u0B27\u0B3F\u0B15\u0B43\u0B24 \u0B13\u0B5C\u0B3E\u0B32\u0B5C\u0B39\u0B36\u0964 MLA \u2014 \u0B28\u0B3F\u0B06\u0B33\u0B3F, \u0B13\u0B21\u0B3C\u0B3F\u0B36\u0B3E\u0964 | Mynetawiki',
+    mob_call: '\uD83D\uDCDE \u0B15\u0B3E\u0B30\u0B4D\u0B2F\u0B3E\u0B33\u0B2F \u0B2B\u0B4B\u0B28',
+    mob_write: '\u2709\uFE0F \u0B06\u0B2E\u0B15\u0B41 \u0B32\u0B3F\u0B16\u0B28\u0B4D\u0B24\u0B41'
+  }
 };
-let currentLang = 'en';
+
+var currentLang = 'en';
+
 function setLang(lang, btn) {
   currentLang = lang;
-  document.querySelectorAll('.lt-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lt-btn').forEach(function(b) { b.classList.remove('active'); });
   btn.classList.add('active');
-  const t = translations[lang];
-  document.querySelectorAll('[data-en]').forEach(el => { const key = el.dataset.en; if (t[key]) el.textContent = t[key]; });
+  applyTranslations(lang);
 }
 
-const io = new IntersectionObserver(e => {
-  e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('vis'); io.unobserve(x.target); } });
-}, { threshold: 0.07 });
-document.querySelectorAll('.rv').forEach(el => io.observe(el));
+function applyTranslations(lang) {
+  var t = T[lang];
+  document.querySelectorAll('[data-key]').forEach(function(el) {
+    var key = el.getAttribute('data-key');
+    if (t[key] !== undefined) {
+      el.textContent = t[key];
+    }
+  });
 
-window.addEventListener('scroll', () => {
-  const sy = window.scrollY;
+  var plMap = {
+    en: { name: 'Your full name', village: 'Your village or ward', msg: 'Describe your concern or suggestion...' },
+    od: { name: '\u0B06\u0B2A\u0B23\u0B19\u0B4D\u0B15 \u0B38\u0B2E\u0B4D\u0B2A\u0B42\u0B30\u0B23 \u0B28\u0B3E\u0B2E', village: '\u0B06\u0B2A\u0B23\u0B19\u0B4D\u0B15 \u0B17\u0B4D\u0B30\u0B3E\u0B2E \u0B2C\u0B3E \u0B13\u0B3C\u0B3E\u0B30\u0B4D\u0B21', msg: '\u0B06\u0B2A\u0B23\u0B19\u0B4D\u0B15 \u0B38\u0B2E\u0B38\u0B4D\u0B2F\u0B3E \u0B2C\u0B3E \u0B2A\u0B30\u0B3E\u0B2E\u0B30\u0B4D\u0B36 \u0B32\u0B47\u0B16\u0B28\u0B4D\u0B24\u0B41...' }
+  };
+  var p = plMap[lang];
+  var inputs = document.querySelectorAll('.fi');
+  if (inputs[0]) inputs[0].placeholder = p.name;
+  if (inputs[2]) inputs[2].placeholder = p.village;
+  var ta = document.querySelector('.ft');
+  if (ta) ta.placeholder = p.msg;
+  document.documentElement.lang = lang === 'od' ? 'or' : 'en';
+}
+
+// ─── INTERSECTION OBSERVER ───
+var io = new IntersectionObserver(function(entries) {
+  entries.forEach(function(x) {
+    if (x.isIntersecting) { x.target.classList.add('vis'); io.unobserve(x.target); }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.rv').forEach(function(el) { io.observe(el); });
+
+// ─── SCROLL ───
+window.addEventListener('scroll', function() {
+  var sy = window.scrollY;
   document.getElementById('nav').classList.toggle('up', sy > 60);
   document.getElementById('btt').classList.toggle('show', sy > 500);
-  let cur = '';
-  document.querySelectorAll('section[id]').forEach(s => { if (sy >= s.offsetTop - 120) cur = s.id; });
-  document.querySelectorAll('.nav-center a').forEach(a => a.classList.toggle('act', a.getAttribute('href') === '#' + cur));
+  var cur = '';
+  document.querySelectorAll('section[id]').forEach(function(s) { if (sy >= s.offsetTop - 120) cur = s.id; });
+  document.querySelectorAll('.nav-center a').forEach(function(a) { a.classList.toggle('act', a.getAttribute('href') === '#' + cur); });
 });
 
+// ─── HAMBURGER ───
 function toggleMenu() { document.getElementById('mobNav').classList.toggle('o'); document.getElementById('ham').classList.toggle('o'); }
 function closeMenu() { document.getElementById('mobNav').classList.remove('o'); document.getElementById('ham').classList.remove('o'); }
-document.addEventListener('click', e => { if (!e.target.closest('#nav') && !e.target.closest('#mobNav')) closeMenu(); });
+document.addEventListener('click', function(e) { if (!e.target.closest('#nav') && !e.target.closest('#mobNav')) closeMenu(); });
 
-const aio = new IntersectionObserver(e => {
-  if (!e[0].isIntersecting) return;
-  document.querySelectorAll('.it-n').forEach(el => {
-    const raw = el.textContent.replace(/[^\d.]/g, ''); if (!raw) return;
-    const target = parseFloat(raw);
-    const sup = el.querySelector('sup') ? el.querySelector('sup').outerHTML : '';
-    let cur = 0; const inc = target / 55;
-    const t = setInterval(() => {
+// ─── COUNT-UP ───
+var aio = new IntersectionObserver(function(entries) {
+  if (!entries[0].isIntersecting) return;
+  document.querySelectorAll('.it-n').forEach(function(el) {
+    var raw = el.textContent.replace(/[^\d.]/g, '');
+    if (!raw) return;
+    var target = parseFloat(raw);
+    var sup = el.querySelector('sup') ? el.querySelector('sup').outerHTML : '';
+    var cur = 0;
+    var inc = target / 55;
+    var timer = setInterval(function() {
       cur = Math.min(cur + inc, target);
-      const d = target >= 1000 ? Math.round(cur).toLocaleString('en-IN') : (Number.isInteger(target) ? Math.round(cur) : cur.toFixed(1));
-      el.innerHTML = d + sup; if (cur >= target) clearInterval(t);
+      var d = target >= 1000 ? Math.round(cur).toLocaleString('en-IN') : (Number.isInteger(target) ? Math.round(cur) : cur.toFixed(1));
+      el.innerHTML = d + sup;
+      if (cur >= target) clearInterval(timer);
     }, 25);
   });
   aio.disconnect();
 }, { threshold: 0.2 });
 aio.observe(document.getElementById('achievements'));
 
+// ─── FORM ───
 function handleSubmit(btn) {
-  btn.textContent = '✓ Submitted — Thank You!';
+  var msg = currentLang === 'od' ? '\u2713 \u0B26\u0B3E\u0B16\u0B32 \u0B39\u0B4B\u0B07\u0B17\u0B32\u0B3E \u2014 \u0B27\u0B28\u0B4D\u0B2F\u0B2C\u0B3E\u0B26!' : '\u2713 Submitted \u2014 Thank You!';
+  btn.textContent = msg;
   btn.style.background = '#0A6B04';
-  setTimeout(() => { btn.textContent = 'Submit Grievance / Message'; btn.style.background = ''; }, 3500);
+  setTimeout(function() { btn.textContent = T[currentLang]['f_submit']; btn.style.background = ''; }, 3500);
 }
 
-const galleryImgs = Array.from(document.querySelectorAll('#pgGrid .pg-item')).map(el => el.dataset.src);
-const mediaImgs = Array.from(document.querySelectorAll('#tab-photos .mp-item')).map(el => el.dataset.src);
-let lbSet = [], lbIdx = 0;
+// ─── LIGHTBOX ───
+var galleryImgs = Array.from(document.querySelectorAll('#pgGrid .pg-item')).map(function(el) { return el.dataset.src; });
+var mediaImgs = Array.from(document.querySelectorAll('#tab-photos .mp-item')).map(function(el) { return el.dataset.src; });
+var lbSet = [], lbIdx = 0;
+
 function openLb(src, set) {
   lbSet = set; lbIdx = set.indexOf(src);
   document.getElementById('lbImg').src = src;
@@ -1221,23 +1265,25 @@ function lbNav(dir) {
   document.getElementById('lbImg').src = lbSet[lbIdx];
   document.getElementById('lbCounter').textContent = (lbIdx + 1) + ' / ' + lbSet.length;
 }
-document.querySelectorAll('#pgGrid .pg-item').forEach(el => { el.addEventListener('click', () => openLb(el.dataset.src, galleryImgs)); });
-document.querySelectorAll('#tab-photos .mp-item').forEach(el => { el.addEventListener('click', () => openLb(el.dataset.src, mediaImgs)); });
-document.addEventListener('keydown', e => {
+document.querySelectorAll('#pgGrid .pg-item').forEach(function(el) { el.addEventListener('click', function() { openLb(el.dataset.src, galleryImgs); }); });
+document.querySelectorAll('#tab-photos .mp-item').forEach(function(el) { el.addEventListener('click', function() { openLb(el.dataset.src, mediaImgs); }); });
+document.addEventListener('keydown', function(e) {
   if (!document.getElementById('lb').classList.contains('open')) return;
   if (e.key === 'ArrowLeft') lbNav(-1);
   if (e.key === 'ArrowRight') lbNav(1);
   if (e.key === 'Escape') closeLb({ target: document.getElementById('lb') });
 });
 
+// ─── MEDIA TABS ───
 function switchTab(tab, btn) {
-  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.mt-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.mt-btn').forEach(function(b) { b.classList.remove('active'); });
   document.getElementById('tab-' + tab).classList.add('active');
   btn.classList.add('active');
   closeVideo();
 }
 
+// ─── VIDEO ───
 function openVideo(id) {
   document.getElementById('vmFrame').src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
   document.getElementById('vm').classList.add('open');
@@ -1249,12 +1295,12 @@ function closeVideo(e) {
   document.getElementById('vm').classList.remove('open');
   document.body.style.overflow = '';
 }
-document.querySelector('.vm-close').addEventListener('click', () => {
+document.querySelector('.vm-close').addEventListener('click', function() {
   document.getElementById('vmFrame').src = '';
   document.getElementById('vm').classList.remove('open');
   document.body.style.overflow = '';
 });
-document.addEventListener('keydown', e => {
+document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape' && document.getElementById('vm').classList.contains('open')) {
     document.getElementById('vmFrame').src = '';
     document.getElementById('vm').classList.remove('open');
