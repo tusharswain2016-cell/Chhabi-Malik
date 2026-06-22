@@ -446,17 +446,17 @@ footer{background:var(--ink2);}
   <a class="logo" href="#">
     <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777706234/bjp-kamal-logo_lkqzcp.png" class="logo-bjp" alt="BJP Logo">
     <div class="logo-text">
-      <span class="logo-site">Official Website</span>
+      <span class="logo-site" id="t-nav-site">Official Website</span>
       <span class="logo-name">Chhabi <em>Malik</em></span>
     </div>
   </a>
   <ul class="nav-center">
-    <li><a href="#about">About</a></li>
-    <li><a href="#photo-gallery">Gallery</a></li>
-    <li><a href="#media">Media</a></li>
-    <li><a href="#vision">Vision</a></li>
-    <li><a href="#journey">Journey</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" id="t-nav-about">About</a></li>
+    <li><a href="#photo-gallery" id="t-nav-gallery">Gallery</a></li>
+    <li><a href="#media" id="t-nav-media">Media</a></li>
+    <li><a href="#vision" id="t-nav-vision">Vision</a></li>
+    <li><a href="#journey" id="t-nav-journey">Journey</a></li>
+    <li><a href="#contact" id="t-nav-contact">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="nav-leaders">
@@ -473,21 +473,21 @@ footer{background:var(--ink2);}
       <button class="lt-btn" onclick="setLang('od',this)">ଓଡ଼ିଆ</button>
     </div>
     <div class="nav-sep"></div>
-    <a href="#contact" class="nav-contact">Get in Touch</a>
+    <a href="#contact" class="nav-contact" id="t-nav-touch">Get in Touch</a>
   </div>
   <div class="ham" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
 <!-- EVENT TICKER -->
 <div id="event-ticker">
-  <div class="et-label"><span class="et-label-icon">📅</span> Upcoming Events</div>
+  <div class="et-label"><span class="et-label-icon">📅</span> <span id="t-event-label">Upcoming Events</span></div>
   <div class="et-track-wrap">
     <div class="et-track">
-      <div class="et-item"><span class="et-badge">Event</span>🌾 <strong>Mishrana Parba</strong> — Grand Community Celebration<span class="et-date">8 May 2025</span>· All citizens of Niali are warmly invited · Venue: Niali Maidan</div>
+      <div class="et-item"><span class="et-badge" id="t-et-badge-1">Event</span>🌾 <strong id="t-et-title-1">Mishrana Parba</strong> — <span id="t-et-desc-1">Grand Community Celebration</span><span class="et-date">8 May 2025</span>· <span id="t-et-note-1">All citizens of Niali are warmly invited · Venue: Niali Maidan</span></div>
       <span class="et-sep">◆</span>
-      <div class="et-item"><span class="et-badge">Jan Sunwai</span>🏛️ Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office</div>
+      <div class="et-item"><span class="et-badge" id="t-et-badge-2">Jan Sunwai</span>🏛️ <span id="t-et-desc-2">Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office</span></div>
       <span class="et-sep">◆</span>
-      <div class="et-item"><span class="et-badge">Scheme Camp</span>🌾 Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards & KCC enrollment</div>
+      <div class="et-item"><span class="et-badge" id="t-et-badge-3">Scheme Camp</span>🌾 <span id="t-et-desc-3">Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards &amp; KCC enrollment</span></div>
       <span class="et-sep">◆</span>
     </div>
   </div>
@@ -495,12 +495,12 @@ footer{background:var(--ink2);}
 
 <!-- MOBILE NAV -->
 <div class="mob-nav" id="mobNav">
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#photo-gallery" onclick="closeMenu()">Gallery</a>
-  <a href="#media" onclick="closeMenu()">Media</a>
-  <a href="#vision" onclick="closeMenu()">Vision</a>
-  <a href="#journey" onclick="closeMenu()">Journey</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#about" onclick="closeMenu()" id="t-mob-about">About</a>
+  <a href="#photo-gallery" onclick="closeMenu()" id="t-mob-gallery">Gallery</a>
+  <a href="#media" onclick="closeMenu()" id="t-mob-media">Media</a>
+  <a href="#vision" onclick="closeMenu()" id="t-mob-vision">Vision</a>
+  <a href="#journey" onclick="closeMenu()" id="t-mob-journey">Journey</a>
+  <a href="#contact" onclick="closeMenu()" id="t-mob-contact">Contact</a>
 </div>
 
 <!-- HERO SLIDER -->
@@ -518,12 +518,12 @@ footer{background:var(--ink2);}
       <div class="hs-bg" style="background-image:url('https://res.cloudinary.com/dara80vtx/image/upload/v1782066232/727159076_17886881523589408_1965202142381962752_n_f80oxx.jpg');background-position:center 20%;"></div>
       <div class="hs-overlay"></div>
       <div class="hs-content">
-        <div class="hs-chip">Member of Legislative Assembly · Niali · Odisha</div>
-        <h1 class="hs-heading">Voice of<br><span class="accent">Niali,</span><br>Always.</h1>
-        <p class="hs-sub">A dedicated people's representative championing rural development, grassroots governance, and inclusive progress. Elected to the Odisha Legislative Assembly, June 2024.</p>
+        <div class="hs-chip" id="t-chip-1">Member of Legislative Assembly · Niali · Odisha</div>
+        <h1 class="hs-heading" id="t-heading-1">Voice of<br><span class="accent">Niali,</span><br>Always.</h1>
+        <p class="hs-sub" id="t-sub-1">A dedicated people's representative championing rural development, grassroots governance, and inclusive progress. Elected to the Odisha Legislative Assembly, June 2024.</p>
         <div class="hs-actions">
-          <a href="#vision" class="hs-btn-primary">Explore Vision →</a>
-          <a href="#contact" class="hs-btn-ghost">Connect With Us</a>
+          <a href="#vision" class="hs-btn-primary" id="t-btn-p1">Explore Vision →</a>
+          <a href="#contact" class="hs-btn-ghost" id="t-btn-g1">Connect With Us</a>
         </div>
       </div>
     </div>
@@ -533,12 +533,12 @@ footer{background:var(--ink2);}
       <div class="hs-bg" style="background-image:url('https://res.cloudinary.com/dara80vtx/image/upload/v1782066231/721105063_1568671811666104_8148291523401461157_n_wpogfr.jpg');"></div>
       <div class="hs-overlay"></div>
       <div class="hs-content">
-        <div class="hs-chip">Grassroots Leadership</div>
-        <h1 class="hs-heading">People<br><span class="accent">First,</span><br>Always.</h1>
-        <p class="hs-sub">From village to vidhansabha — every decision rooted in the needs of Niali's farmers, families, and communities.</p>
+        <div class="hs-chip" id="t-chip-2">Grassroots Leadership</div>
+        <h1 class="hs-heading" id="t-heading-2">People<br><span class="accent">First,</span><br>Always.</h1>
+        <p class="hs-sub" id="t-sub-2">From village to vidhansabha — every decision rooted in the needs of Niali's farmers, families, and communities.</p>
         <div class="hs-actions">
-          <a href="#about" class="hs-btn-primary">Know More →</a>
-          <a href="#journey" class="hs-btn-ghost">Political Journey</a>
+          <a href="#about" class="hs-btn-primary" id="t-btn-p2">Know More →</a>
+          <a href="#journey" class="hs-btn-ghost" id="t-btn-g2">Political Journey</a>
         </div>
       </div>
     </div>
@@ -548,12 +548,12 @@ footer{background:var(--ink2);}
       <div class="hs-bg" style="background-image:url('https://res.cloudinary.com/dara80vtx/image/upload/v1782066232/728305795_1362576612436199_5085883744316035412_n_1_lz26hd.jpg');"></div>
       <div class="hs-overlay"></div>
       <div class="hs-content">
-        <div class="hs-chip">Rural Development · 2024 – Present</div>
-        <h1 class="hs-heading">Building<br>a <span class="accent">Stronger</span><br>Niali.</h1>
-        <p class="hs-sub">8,400+ homes, 220 km of roads, 100% electrification — concrete promises, delivered on the ground.</p>
+        <div class="hs-chip" id="t-chip-3">Rural Development · 2024 – Present</div>
+        <h1 class="hs-heading" id="t-heading-3">Building<br>a <span class="accent">Stronger</span><br>Niali.</h1>
+        <p class="hs-sub" id="t-sub-3">8,400+ homes, 220 km of roads, 100% electrification — concrete promises, delivered on the ground.</p>
         <div class="hs-actions">
-          <a href="#achievements" class="hs-btn-primary">Track Record →</a>
-          <a href="#vision" class="hs-btn-ghost">Our Vision</a>
+          <a href="#achievements" class="hs-btn-primary" id="t-btn-p3">Track Record →</a>
+          <a href="#vision" class="hs-btn-ghost" id="t-btn-g3">Our Vision</a>
         </div>
       </div>
     </div>
@@ -563,12 +563,12 @@ footer{background:var(--ink2);}
       <div class="hs-bg" style="background-image:url('https://res.cloudinary.com/dara80vtx/image/upload/v1782066231/721105063_1568671811666104_8148291523401461157_n_wpogfr.jpg');"></div>
       <div class="hs-overlay"></div>
       <div class="hs-content">
-        <div class="hs-chip">Seva · Dharma · Vikas</div>
-        <h1 class="hs-heading">Rooted in<br><span class="accent">Seva,</span><br>Driven by Trust.</h1>
-        <p class="hs-sub">Regular Jan Sunwais, direct farmer outreach, and unwavering commitment to every household in Niali block.</p>
+        <div class="hs-chip" id="t-chip-4">Seva · Dharma · Vikas</div>
+        <h1 class="hs-heading" id="t-heading-4">Rooted in<br><span class="accent">Seva,</span><br>Driven by Trust.</h1>
+        <p class="hs-sub" id="t-sub-4">Regular Jan Sunwais, direct farmer outreach, and unwavering commitment to every household in Niali block.</p>
         <div class="hs-actions">
-          <a href="#contact" class="hs-btn-primary">Write to Us →</a>
-          <a href="#press" class="hs-btn-ghost">In the News</a>
+          <a href="#contact" class="hs-btn-primary" id="t-btn-p4">Write to Us →</a>
+          <a href="#contact" class="hs-btn-ghost" id="t-btn-g4">In the News</a>
         </div>
       </div>
     </div>
@@ -586,17 +586,30 @@ footer{background:var(--ink2);}
 
   <div class="hero-strip">
     <div class="hs-track">
-      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l">Homes Built</span></div>
+      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l" id="t-strip-1">Homes Built</span></div>
       <span class="hs-dot-m">·</span>
-      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l">Electrification</span></div>
+      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l" id="t-strip-2">Electrification</span></div>
       <span class="hs-dot-m">·</span>
-      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l">Roads Built</span></div>
+      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l" id="t-strip-3">Roads Built</span></div>
       <span class="hs-dot-m">·</span>
-      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l">Health Centres</span></div>
+      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l" id="t-strip-4">Health Centres</span></div>
       <span class="hs-dot-m">·</span>
-      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l">Scholarships</span></div>
+      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l" id="t-strip-5">Scholarships</span></div>
       <span class="hs-dot-m">·</span>
-      <div class="hs-item"><span class="hs-n">Always</span><span class="hs-l">First</span></div>
+      <div class="hs-item"><span class="hs-n" id="t-strip-6a">Always</span><span class="hs-l" id="t-strip-6b">First</span></div>
+      <span class="hs-dot-m">·</span>
+      <!-- duplicate for seamless loop -->
+      <div class="hs-item"><span class="hs-n">8,400+</span><span class="hs-l" id="t-strip-1b">Homes Built</span></div>
+      <span class="hs-dot-m">·</span>
+      <div class="hs-item"><span class="hs-n">100%</span><span class="hs-l" id="t-strip-2b">Electrification</span></div>
+      <span class="hs-dot-m">·</span>
+      <div class="hs-item"><span class="hs-n">220km</span><span class="hs-l" id="t-strip-3b">Roads Built</span></div>
+      <span class="hs-dot-m">·</span>
+      <div class="hs-item"><span class="hs-n">45</span><span class="hs-l" id="t-strip-4b">Health Centres</span></div>
+      <span class="hs-dot-m">·</span>
+      <div class="hs-item"><span class="hs-n">5,200+</span><span class="hs-l" id="t-strip-5b">Scholarships</span></div>
+      <span class="hs-dot-m">·</span>
+      <div class="hs-item"><span class="hs-n" id="t-strip-6ab">Always</span><span class="hs-l" id="t-strip-6bb">First</span></div>
       <span class="hs-dot-m">·</span>
     </div>
   </div>
@@ -605,33 +618,33 @@ footer{background:var(--ink2);}
 <!-- ABOUT -->
 <section id="about" class="s s-off">
   <div class="s-hd rv">
-    <div class="lbl">Who He Is</div>
-    <h2 class="sh">A Life Dedicated to <span class="ac">Seva</span></h2>
+    <div class="lbl" id="t-lbl-about">Who He Is</div>
+    <h2 class="sh" id="t-sh-about">A Life Dedicated to <span class="ac">Seva</span></h2>
   </div>
   <div class="wrap">
     <div class="ab-imgs rv">
       <img src="https://res.cloudinary.com/dara80vtx/image/upload/v1782067436/721415447_4350436398510919_6491750445165396078_n_2_hwxkdt.jpg" alt="Chhabi Malik" class="ab-img-main">
       <div class="ab-flag"><span></span><span></span><span></span></div>
       <div class="wiki-card">
-        <div class="wiki-card-title">🏛️ Official Record</div>
-        <div class="wiki-row"><span class="wiki-k">Position</span><span class="wiki-v">MLA, Niali</span></div>
-        <div class="wiki-row"><span class="wiki-k">Assumed Office</span><span class="wiki-v">4 June 2024</span></div>
-        <div class="wiki-row"><span class="wiki-k">Party</span><span class="wiki-v">BJP</span></div>
-        <div class="wiki-row"><span class="wiki-k">Legislature</span><span class="wiki-v">Odisha Legislative Assembly</span></div>
+        <div class="wiki-card-title" id="t-wiki-title">🏛️ Official Record</div>
+        <div class="wiki-row"><span class="wiki-k" id="t-wiki-k1">Position</span><span class="wiki-v" id="t-wiki-v1">MLA, Niali</span></div>
+        <div class="wiki-row"><span class="wiki-k" id="t-wiki-k2">Assumed Office</span><span class="wiki-v" id="t-wiki-v2">4 June 2024</span></div>
+        <div class="wiki-row"><span class="wiki-k" id="t-wiki-k3">Party</span><span class="wiki-v" id="t-wiki-v3">BJP</span></div>
+        <div class="wiki-row"><span class="wiki-k" id="t-wiki-k4">Legislature</span><span class="wiki-v" id="t-wiki-v4">Odisha Legislative Assembly</span></div>
       </div>
     </div>
     <div class="ab-right rv">
-      <p class="ab-quote">"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."</p>
-      <p class="ab-body">Chhabi Malik is an Indian politician who was elected to the Odisha Legislative Assembly from the Niali constituency in the 2024 state elections as a member of the Bharatiya Janata Party. He assumed office on 4 June 2024, succeeding Pramod Kumar Mallick as the representative of Niali.</p>
-      <p class="ab-body">Rising through grassroots political engagement in the Niali region, Chhabi Malik has focused his legislative work on rural infrastructure, access to health services, agricultural support, and educational opportunity for the constituents of Niali block in Cuttack district.</p>
-      <p class="ab-body">Known for his ground-level accessibility, he holds regular Jan Sunwais and personally monitors the progress of every scheme in the constituency.</p>
+      <p class="ab-quote" id="t-ab-quote">"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."</p>
+      <p class="ab-body" id="t-ab-body1">Chhabi Malik is an Indian politician who was elected to the Odisha Legislative Assembly from the Niali constituency in the 2024 state elections as a member of the Bharatiya Janata Party. He assumed office on 4 June 2024, succeeding Pramod Kumar Mallick as the representative of Niali.</p>
+      <p class="ab-body" id="t-ab-body2">Rising through grassroots political engagement in the Niali region, Chhabi Malik has focused his legislative work on rural infrastructure, access to health services, agricultural support, and educational opportunity for the constituents of Niali block in Cuttack district.</p>
+      <p class="ab-body" id="t-ab-body3">Known for his ground-level accessibility, he holds regular Jan Sunwais and personally monitors the progress of every scheme in the constituency.</p>
       <div class="ab-grid">
-        <div class="ab-fact"><div class="ab-k">Constituency</div><div class="ab-v">Niali, Odisha</div></div>
-        <div class="ab-fact"><div class="ab-k">Position</div><div class="ab-v">Member of Legislative Assembly</div></div>
-        <div class="ab-fact"><div class="ab-k">Party</div><div class="ab-v">Bharatiya Janata Party</div></div>
-        <div class="ab-fact"><div class="ab-k">Elected</div><div class="ab-v">2024 Odisha Assembly Elections</div></div>
-        <div class="ab-fact"><div class="ab-k">Focus Areas</div><div class="ab-v">Rural Dev, Agriculture, Education</div></div>
-        <div class="ab-fact"><div class="ab-k">Jan Sunwai</div><div class="ab-v">Every Saturday, 10 AM</div></div>
+        <div class="ab-fact"><div class="ab-k" id="t-abk1">Constituency</div><div class="ab-v" id="t-abv1">Niali, Odisha</div></div>
+        <div class="ab-fact"><div class="ab-k" id="t-abk2">Position</div><div class="ab-v" id="t-abv2">Member of Legislative Assembly</div></div>
+        <div class="ab-fact"><div class="ab-k" id="t-abk3">Party</div><div class="ab-v" id="t-abv3">Bharatiya Janata Party</div></div>
+        <div class="ab-fact"><div class="ab-k" id="t-abk4">Elected</div><div class="ab-v" id="t-abv4">2024 Odisha Assembly Elections</div></div>
+        <div class="ab-fact"><div class="ab-k" id="t-abk5">Focus Areas</div><div class="ab-v" id="t-abv5">Rural Dev, Agriculture, Education</div></div>
+        <div class="ab-fact"><div class="ab-k" id="t-abk6">Jan Sunwai</div><div class="ab-v" id="t-abv6">Every Saturday, 10 AM</div></div>
       </div>
     </div>
   </div>
@@ -640,9 +653,9 @@ footer{background:var(--ink2);}
 <!-- PHOTO GALLERY with Pagination -->
 <section id="photo-gallery">
   <div class="s-hd rv" style="padding:0 8% 0;">
-    <div class="lbl">Event Gallery</div>
-    <h2 class="sh">Moments from the <span class="ac">Field</span></h2>
-    <p class="ss">A glimpse into the work, the people, and the journey across Niali constituency.</p>
+    <div class="lbl" id="t-lbl-gallery">Event Gallery</div>
+    <h2 class="sh" id="t-sh-gallery">Moments from the <span class="ac">Field</span></h2>
+    <p class="ss" id="t-ss-gallery">A glimpse into the work, the people, and the journey across Niali constituency.</p>
   </div>
   <div style="padding:2.5rem 8% 5rem;">
     <div class="pg-grid" id="pgGrid"></div>
@@ -662,13 +675,13 @@ footer{background:var(--ink2);}
 <!-- MEDIA -->
 <section id="media" class="s">
   <div class="s-hd rv">
-    <div class="lbl">Media Centre</div>
-    <h2 class="sh">Photos & <span class="ac">Videos</span></h2>
-    <p class="ss">Watch speeches, ground reports, and see moments of service from the field.</p>
+    <div class="lbl" id="t-lbl-media">Media Centre</div>
+    <h2 class="sh" id="t-sh-media">Photos &amp; <span class="ac">Videos</span></h2>
+    <p class="ss" id="t-ss-media">Watch speeches, ground reports, and see moments of service from the field.</p>
   </div>
   <div class="media-tabs">
-    <button class="mt-btn active" onclick="switchTab('photos',this)">📷 Photos</button>
-    <button class="mt-btn" onclick="switchTab('videos',this)">▶ Videos</button>
+    <button class="mt-btn active" onclick="switchTab('photos',this)" id="t-tab-photos">📷 Photos</button>
+    <button class="mt-btn" onclick="switchTab('videos',this)" id="t-tab-videos">▶ Videos</button>
   </div>
   <div class="tab-panel active" id="tab-photos">
     <div class="mp-grid">
@@ -689,15 +702,15 @@ footer{background:var(--ink2);}
           <video src="https://res.cloudinary.com/dxmdcoca3/video/upload/v1778564184/IMG_8588_qjutyl.mov" muted preload="metadata" style="pointer-events:none;"></video>
           <div class="mv-play"><div class="mv-play-btn">▶</div></div>
         </div>
-        <div class="mv-info"><div class="mv-title">Chhabi Malik — Public Address, Niali</div><div class="mv-sub">Official Video</div></div>
+        <div class="mv-info"><div class="mv-title" id="t-mv-title1">Chhabi Malik — Public Address, Niali</div><div class="mv-sub" id="t-mv-sub1">Official Video</div></div>
       </div>
       <div class="mv-item rv d1">
         <div class="mv-thumb" onclick="openVideo('yt','B2oZKT64UU0')"><img src="https://img.youtube.com/vi/B2oZKT64UU0/hqdefault.jpg" alt="Constituency Development — Ground Report"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
-        <div class="mv-info"><div class="mv-title">Constituency Development — Ground Report</div><div class="mv-sub">Official Video · YouTube</div></div>
+        <div class="mv-info"><div class="mv-title" id="t-mv-title2">Constituency Development — Ground Report</div><div class="mv-sub" id="t-mv-sub2">Official Video · YouTube</div></div>
       </div>
       <div class="mv-item rv d2">
         <div class="mv-thumb" onclick="openVideo('yt','M51AqazsCDE')"><img src="https://img.youtube.com/vi/M51AqazsCDE/hqdefault.jpg" alt="Niali Voices — People Speak"><div class="mv-play"><div class="mv-play-btn">▶</div></div></div>
-        <div class="mv-info"><div class="mv-title">Niali Voices — People Speak</div><div class="mv-sub">Official Video · YouTube</div></div>
+        <div class="mv-info"><div class="mv-title" id="t-mv-title3">Niali Voices — People Speak</div><div class="mv-sub" id="t-mv-sub3">Official Video · YouTube</div></div>
       </div>
     </div>
   </div>
@@ -716,18 +729,18 @@ footer{background:var(--ink2);}
   <div class="vwrap">
     <div class="vleft rv">
       <div>
-        <div class="lbl">Our Vision</div>
-        <h2 class="sh">Building a <span class="ac">Stronger</span> Niali</h2>
-        <p class="ss">Six pillars guiding every decision, every initiative, every vote cast in the legislature on behalf of the people of Niali.</p>
+        <div class="lbl" id="t-lbl-vision">Our Vision</div>
+        <h2 class="sh" id="t-sh-vision">Building a <span class="ac">Stronger</span> Niali</h2>
+        <p class="ss" id="t-ss-vision">Six pillars guiding every decision, every initiative, every vote cast in the legislature on behalf of the people of Niali.</p>
       </div>
     </div>
     <div class="vright">
-      <div class="vc rv"><span class="vc-n">01</span><span class="vc-icon">🌾</span><div class="vc-title">Kisan Samridhi</div><p class="vc-text">Doubling farmer incomes through MSP support, crop insurance, and direct market linkages — eliminating the middlemen who squeeze our farmers.</p><div class="vc-bar"></div></div>
-      <div class="vc rv d1"><span class="vc-n">02</span><span class="vc-icon">📚</span><div class="vc-title">Shiksha for All</div><p class="vc-text">Universal quality education with digital classrooms and full scholarship coverage for all BPL families in Niali.</p><div class="vc-bar"></div></div>
-      <div class="vc rv"><span class="vc-n">03</span><span class="vc-icon">🏥</span><div class="vc-title">Swasth Niali</div><p class="vc-text">A primary health centre within 5 km of every village — free diagnostics, maternal care, and mobile medical units.</p><div class="vc-bar"></div></div>
-      <div class="vc rv d1"><span class="vc-n">04</span><span class="vc-icon">💡</span><div class="vc-title">Digital Gram</div><p class="vc-text">High-speed internet and digital literacy to every panchayat, empowering citizens to access government services from home.</p><div class="vc-bar"></div></div>
-      <div class="vc rv"><span class="vc-n">05</span><span class="vc-icon">♻️</span><div class="vc-title">Green Niali</div><p class="vc-text">Solar-powered streetlights, clean cooking fuel, and river conservation — a constituency that thrives without harming tomorrow.</p><div class="vc-bar"></div></div>
-      <div class="vc rv d1"><span class="vc-n">06</span><span class="vc-icon">👩‍💼</span><div class="vc-title">Nari Shakti</div><p class="vc-text">30% reservation in local governance, skill centres for women, SHG credit, and zero-tolerance on crimes against women.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">01</span><span class="vc-icon">🌾</span><div class="vc-title" id="t-vc-title1">Kisan Samridhi</div><p class="vc-text" id="t-vc-text1">Doubling farmer incomes through MSP support, crop insurance, and direct market linkages — eliminating the middlemen who squeeze our farmers.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">02</span><span class="vc-icon">📚</span><div class="vc-title" id="t-vc-title2">Shiksha for All</div><p class="vc-text" id="t-vc-text2">Universal quality education with digital classrooms and full scholarship coverage for all BPL families in Niali.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">03</span><span class="vc-icon">🏥</span><div class="vc-title" id="t-vc-title3">Swasth Niali</div><p class="vc-text" id="t-vc-text3">A primary health centre within 5 km of every village — free diagnostics, maternal care, and mobile medical units.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">04</span><span class="vc-icon">💡</span><div class="vc-title" id="t-vc-title4">Digital Gram</div><p class="vc-text" id="t-vc-text4">High-speed internet and digital literacy to every panchayat, empowering citizens to access government services from home.</p><div class="vc-bar"></div></div>
+      <div class="vc rv"><span class="vc-n">05</span><span class="vc-icon">♻️</span><div class="vc-title" id="t-vc-title5">Green Niali</div><p class="vc-text" id="t-vc-text5">Solar-powered streetlights, clean cooking fuel, and river conservation — a constituency that thrives without harming tomorrow.</p><div class="vc-bar"></div></div>
+      <div class="vc rv d1"><span class="vc-n">06</span><span class="vc-icon">👩‍💼</span><div class="vc-title" id="t-vc-title6">Nari Shakti</div><p class="vc-text" id="t-vc-text6">30% reservation in local governance, skill centres for women, SHG credit, and zero-tolerance on crimes against women.</p><div class="vc-bar"></div></div>
     </div>
   </div>
 </section>
@@ -735,9 +748,9 @@ footer{background:var(--ink2);}
 <!-- JOURNEY -->
 <section id="journey" class="s s-off">
   <div class="s-hd rv">
-    <div class="lbl">Political Career</div>
-    <h2 class="sh">The <span class="ac">Journey</span> So Far</h2>
-    <p class="ss">From grassroots activism in Niali to the Odisha Legislative Assembly — a path built on purpose and trust.</p>
+    <div class="lbl" id="t-lbl-journey">Political Career</div>
+    <h2 class="sh" id="t-sh-journey">The <span class="ac">Journey</span> So Far</h2>
+    <p class="ss" id="t-ss-journey">From grassroots activism in Niali to the Odisha Legislative Assembly — a path built on purpose and trust.</p>
   </div>
   <div class="jlayout">
     <div class="jleft rv">
@@ -745,11 +758,11 @@ footer{background:var(--ink2);}
       <img src="https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637134/2_ltmhys.png" alt="Chhabi Malik" class="jl-img">
     </div>
     <div class="jright">
-      <div class="je rv"><div class="je-yr">Roots</div><div><div class="je-title">Community Leadership in Niali</div><p class="je-desc">Began grassroots social and political work in Niali, building connections with farmers, fishing communities, and daily-wage workers.</p></div></div>
-      <div class="je rv"><div class="je-yr">BJP</div><div><div class="je-title">Joined Bharatiya Janata Party</div><p class="je-desc">Aligned with BJP's vision of vikas-led governance and joined the party's Niali unit, contributing to local party building across Cuttack district.</p></div></div>
-      <div class="je rv"><div class="je-yr">2024</div><div><div class="je-title">Elected to Odisha Legislative Assembly</div><p class="je-desc">Won the Niali assembly seat in the 2024 Odisha Legislative Assembly elections under the BJP banner, succeeding Pramod Kumar Mallick.</p></div></div>
-      <div class="je rv"><div class="je-yr">Jun 4</div><div><div class="je-title">Assumed Office — 4 June 2024</div><p class="je-desc">Formally assumed office as Member of the Odisha Legislative Assembly from Niali, joining the BJP legislative group in Bhubaneswar.</p></div></div>
-      <div class="je rv"><div class="je-yr">Now</div><div><div class="je-title">Serving Niali — Present Day</div><p class="je-desc">Focused on constituency development, rural electrification, agro-processing clusters, telemedicine expansion, and ensuring every scheme reaches the last household.</p></div></div>
+      <div class="je rv"><div class="je-yr" id="t-jyr1">Roots</div><div><div class="je-title" id="t-jtitle1">Community Leadership in Niali</div><p class="je-desc" id="t-jdesc1">Began grassroots social and political work in Niali, building connections with farmers, fishing communities, and daily-wage workers.</p></div></div>
+      <div class="je rv"><div class="je-yr" id="t-jyr2">BJP</div><div><div class="je-title" id="t-jtitle2">Joined Bharatiya Janata Party</div><p class="je-desc" id="t-jdesc2">Aligned with BJP's vision of vikas-led governance and joined the party's Niali unit, contributing to local party building across Cuttack district.</p></div></div>
+      <div class="je rv"><div class="je-yr" id="t-jyr3">2024</div><div><div class="je-title" id="t-jtitle3">Elected to Odisha Legislative Assembly</div><p class="je-desc" id="t-jdesc3">Won the Niali assembly seat in the 2024 Odisha Legislative Assembly elections under the BJP banner, succeeding Pramod Kumar Mallick.</p></div></div>
+      <div class="je rv"><div class="je-yr" id="t-jyr4">Jun 4</div><div><div class="je-title" id="t-jtitle4">Assumed Office — 4 June 2024</div><p class="je-desc" id="t-jdesc4">Formally assumed office as Member of the Odisha Legislative Assembly from Niali, joining the BJP legislative group in Bhubaneswar.</p></div></div>
+      <div class="je rv"><div class="je-yr" id="t-jyr5">Now</div><div><div class="je-title" id="t-jtitle5">Serving Niali — Present Day</div><p class="je-desc" id="t-jdesc5">Focused on constituency development, rural electrification, agro-processing clusters, telemedicine expansion, and ensuring every scheme reaches the last household.</p></div></div>
     </div>
   </div>
 </section>
@@ -758,49 +771,49 @@ footer{background:var(--ink2);}
 <section id="achievements" style="padding:6rem 8%;background:var(--fire);">
   <div class="iheader rv">
     <div>
-      <div class="lbl inv">Track Record</div>
-      <h2 class="sh inv">Measurable <span class="ac" style="color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)">Impact</span></h2>
+      <div class="lbl inv" id="t-lbl-ach">Track Record</div>
+      <h2 class="sh inv" id="t-sh-ach">Measurable <span class="ac" style="color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)">Impact</span></h2>
     </div>
-    <p class="ss inv">Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.</p>
+    <p class="ss inv" id="t-ss-ach">Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.</p>
   </div>
   <div class="i-grid">
-    <div class="it rv"><span class="it-icon">🏠</span><div class="it-n">8,400<sup>+</sup></div><div class="it-l">Homes Under PMAY</div></div>
-    <div class="it rv d1"><span class="it-icon">💧</span><div class="it-n">95<sup>%</sup></div><div class="it-l">Piped Water Villages</div></div>
-    <div class="it rv d2"><span class="it-icon">⚡</span><div class="it-n">100<sup>%</sup></div><div class="it-l">Rural Electrification</div></div>
-    <div class="it rv d3"><span class="it-icon">🎓</span><div class="it-n">5,200<sup>+</sup></div><div class="it-l">Scholarships Awarded</div></div>
+    <div class="it rv"><span class="it-icon">🏠</span><div class="it-n">8,400<sup>+</sup></div><div class="it-l" id="t-itl1">Homes Under PMAY</div></div>
+    <div class="it rv d1"><span class="it-icon">💧</span><div class="it-n">95<sup>%</sup></div><div class="it-l" id="t-itl2">Piped Water Villages</div></div>
+    <div class="it rv d2"><span class="it-icon">⚡</span><div class="it-n">100<sup>%</sup></div><div class="it-l" id="t-itl3">Rural Electrification</div></div>
+    <div class="it rv d3"><span class="it-icon">🎓</span><div class="it-n">5,200<sup>+</sup></div><div class="it-l" id="t-itl4">Scholarships Awarded</div></div>
   </div>
   <div class="i-grid i-row2" style="margin-top:1px;">
-    <div class="it rv"><span class="it-icon">🛣️</span><div class="it-n">220<sup>km</sup></div><div class="it-l">Rural Roads Built</div></div>
-    <div class="it rv d1"><span class="it-icon">🏥</span><div class="it-n">45</div><div class="it-l">New Health Centres</div></div>
-    <div class="it rv d2"><span class="it-icon">👩‍💻</span><div class="it-n">28,000<sup>+</sup></div><div class="it-l">Digitally Trained</div></div>
-    <div class="it rv d3"><span class="it-icon">🌱</span><div class="it-n">1.5<sup>L</sup></div><div class="it-l">Trees Planted</div></div>
+    <div class="it rv"><span class="it-icon">🛣️</span><div class="it-n">220<sup>km</sup></div><div class="it-l" id="t-itl5">Rural Roads Built</div></div>
+    <div class="it rv d1"><span class="it-icon">🏥</span><div class="it-n">45</div><div class="it-l" id="t-itl6">New Health Centres</div></div>
+    <div class="it rv d2"><span class="it-icon">👩‍💻</span><div class="it-n">28,000<sup>+</sup></div><div class="it-l" id="t-itl7">Digitally Trained</div></div>
+    <div class="it rv d3"><span class="it-icon">🌱</span><div class="it-n">1.5<sup>L</sup></div><div class="it-l" id="t-itl8">Trees Planted</div></div>
   </div>
   <div class="awards">
-    <div class="aw rv"><span class="aw-icon">🏆</span><div><div class="aw-yr">2024</div><div class="aw-t">Elected MLA — Niali, Odisha</div><p class="aw-b">Elected to the Odisha Legislative Assembly from Niali in the 2024 state elections as a BJP candidate, as verified by the Election Commission of India.</p></div></div>
-    <div class="aw rv d1"><span class="aw-icon">🌾</span><div><div class="aw-yr">2024</div><div class="aw-t">Kisan Outreach — Niali Block</div><p class="aw-b">Led farmer welfare engagement camps across Niali, connecting constituents with PM-KISAN enrollment, Kisan Credit Cards, and crop insurance schemes.</p></div></div>
-    <div class="aw rv d2"><span class="aw-icon">🌟</span><div><div class="aw-yr">Ongoing</div><div class="aw-t">Jan Sunwai — Direct People's Access</div><p class="aw-b">Conducts open public grievance sessions every Saturday at the Niali constituency office, ensuring direct access to elected representation.</p></div></div>
+    <div class="aw rv"><span class="aw-icon">🏆</span><div><div class="aw-yr" id="t-awyr1">2024</div><div class="aw-t" id="t-awt1">Elected MLA — Niali, Odisha</div><p class="aw-b" id="t-awb1">Elected to the Odisha Legislative Assembly from Niali in the 2024 state elections as a BJP candidate, as verified by the Election Commission of India.</p></div></div>
+    <div class="aw rv d1"><span class="aw-icon">🌾</span><div><div class="aw-yr" id="t-awyr2">2024</div><div class="aw-t" id="t-awt2">Kisan Outreach — Niali Block</div><p class="aw-b" id="t-awb2">Led farmer welfare engagement camps across Niali, connecting constituents with PM-KISAN enrollment, Kisan Credit Cards, and crop insurance schemes.</p></div></div>
+    <div class="aw rv d2"><span class="aw-icon">🌟</span><div><div class="aw-yr" id="t-awyr3">Ongoing</div><div class="aw-t" id="t-awt3">Jan Sunwai — Direct People's Access</div><p class="aw-b" id="t-awb3">Conducts open public grievance sessions every Saturday at the Niali constituency office, ensuring direct access to elected representation.</p></div></div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="ct-l">
-    <div class="lbl rv" style="margin-bottom:1rem;">Get In Touch</div>
-    <div class="ct-name rv">Office <em>Contacts</em></div>
-    <p class="ct-desc rv">For constituency matters, media queries, or policy discussions. Our team responds within 48 hours. Every message is read.</p>
+    <div class="lbl rv" style="margin-bottom:1rem;" id="t-lbl-contact">Get In Touch</div>
+    <div class="ct-name rv" id="t-ct-name">Office <em>Contacts</em></div>
+    <p class="ct-desc rv" id="t-ct-desc">For constituency matters, media queries, or policy discussions. Our team responds within 48 hours. Every message is read.</p>
     <div class="rv">
-      <div class="ci"><div class="ci-ico">🏛️</div><div><div class="ci-k">Assembly Office</div><div class="ci-v">Odisha Legislative Assembly, Bhubaneswar, Odisha – 751001</div></div></div>
-      <div class="ci"><div class="ci-ico">🏠</div><div><div class="ci-k">Constituency Office</div><div class="ci-v">Niali, Cuttack District, Odisha – 754004</div></div></div>
-      <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-k">Phone</div><div class="ci-v">Contact through official constituency office</div></div></div>
-      <div class="ci"><div class="ci-ico">🕐</div><div><div class="ci-k">Jan Sunwai</div><div class="ci-v">Every Saturday, 10:00 AM — Niali Office</div></div></div>
-      <div class="ci"><div class="ci-ico">📅</div><div><div class="ci-k">Upcoming Event</div><div class="ci-v">Mishrana Parba — 8 May 2025 · Niali Maidan</div></div></div>
+      <div class="ci"><div class="ci-ico">🏛️</div><div><div class="ci-k" id="t-ci-k1">Assembly Office</div><div class="ci-v" id="t-ci-v1">Odisha Legislative Assembly, Bhubaneswar, Odisha – 751001</div></div></div>
+      <div class="ci"><div class="ci-ico">🏠</div><div><div class="ci-k" id="t-ci-k2">Constituency Office</div><div class="ci-v" id="t-ci-v2">Niali, Cuttack District, Odisha – 754004</div></div></div>
+      <div class="ci"><div class="ci-ico">📞</div><div><div class="ci-k" id="t-ci-k3">Phone</div><div class="ci-v" id="t-ci-v3">Contact through official constituency office</div></div></div>
+      <div class="ci"><div class="ci-ico">🕐</div><div><div class="ci-k" id="t-ci-k4">Jan Sunwai</div><div class="ci-v" id="t-ci-v4">Every Saturday, 10:00 AM — Niali Office</div></div></div>
+      <div class="ci"><div class="ci-ico">📅</div><div><div class="ci-k" id="t-ci-k5">Upcoming Event</div><div class="ci-v" id="t-ci-v5">Mishrana Parba — 8 May 2025 · Niali Maidan</div></div></div>
     </div>
     <div class="ct-mail-cta rv">
-      <div class="ct-mail-label">Write a Mail</div>
+      <div class="ct-mail-label" id="t-mail-label">Write a Mail</div>
       <div class="ct-mail-addr">office.chhabimalik@odishaassembly.in</div>
-      <a class="ct-mail-btn" href="mailto:office.chhabimalik@odishaassembly.in">
+      <a class="ct-mail-btn" href="mailto:office.chhabimalik@odishaassembly.in" id="t-mail-btn">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        Send Email
+        <span id="t-mail-btn-text">Send Email</span>
       </a>
     </div>
     <div class="soc rv">
@@ -808,30 +821,30 @@ footer{background:var(--ink2);}
     </div>
   </div>
   <div class="ct-r">
-    <div class="cf-title rv">Write to <span style="color:var(--fire)">Chhabi Malik</span></div>
-    <p class="cf-sub rv">Share your concern, suggestion, or grievance. All submissions are reviewed by our team.</p>
+    <div class="cf-title rv" id="t-cf-title">Write to <span style="color:var(--fire)">Chhabi Malik</span></div>
+    <p class="cf-sub rv" id="t-cf-sub">Share your concern, suggestion, or grievance. All submissions are reviewed by our team.</p>
     <div class="fr2">
-      <div class="fg"><label class="fl">Full Name *</label><input type="text" class="fi" placeholder="Your full name"></div>
-      <div class="fg"><label class="fl">Mobile *</label><input type="tel" class="fi" placeholder="+91 XXXXX XXXXX"></div>
+      <div class="fg"><label class="fl" id="t-fl-name">Full Name *</label><input type="text" class="fi" id="t-fi-name" placeholder="Your full name"></div>
+      <div class="fg"><label class="fl" id="t-fl-mobile">Mobile *</label><input type="tel" class="fi" id="t-fi-mobile" placeholder="+91 XXXXX XXXXX"></div>
     </div>
     <div class="fr2">
-      <div class="fg"><label class="fl">Village / Ward</label><input type="text" class="fi" placeholder="Your village or ward"></div>
-      <div class="fg"><label class="fl">Subject *</label>
-        <select class="fse">
-          <option value="">Select a subject</option>
-          <option>Road / Infrastructure</option>
-          <option>Water / Electricity</option>
-          <option>Agriculture / Farmer Issue</option>
-          <option>Health / Hospital</option>
-          <option>Education / Scholarship</option>
-          <option>Women's Safety</option>
-          <option>Media / Press Query</option>
-          <option>Other</option>
+      <div class="fg"><label class="fl" id="t-fl-village">Village / Ward</label><input type="text" class="fi" id="t-fi-village" placeholder="Your village or ward"></div>
+      <div class="fg"><label class="fl" id="t-fl-subject">Subject *</label>
+        <select class="fse" id="t-fse">
+          <option value="" id="t-fse-0">Select a subject</option>
+          <option id="t-fse-1">Road / Infrastructure</option>
+          <option id="t-fse-2">Water / Electricity</option>
+          <option id="t-fse-3">Agriculture / Farmer Issue</option>
+          <option id="t-fse-4">Health / Hospital</option>
+          <option id="t-fse-5">Education / Scholarship</option>
+          <option id="t-fse-6">Women's Safety</option>
+          <option id="t-fse-7">Media / Press Query</option>
+          <option id="t-fse-8">Other</option>
         </select>
       </div>
     </div>
-    <div class="fg"><label class="fl">Your Message *</label><textarea class="ft" placeholder="Describe your concern or suggestion..."></textarea></div>
-    <button class="fb" onclick="handleSubmit(this)">Submit Grievance / Message</button>
+    <div class="fg"><label class="fl" id="t-fl-msg">Your Message *</label><textarea class="ft" id="t-ft-msg" placeholder="Describe your concern or suggestion..."></textarea></div>
+    <button class="fb" id="t-fb" onclick="handleSubmit(this)">Submit Grievance / Message</button>
   </div>
 </section>
 
@@ -840,47 +853,47 @@ footer{background:var(--ink2);}
   <div class="ft-main">
     <div>
       <div class="fb-brand">Chhabi <em>Malik</em></div>
-      <p class="fb-tag">MLA, Niali Constituency, Odisha. Bharatiya Janata Party. Elected June 2024. Committed to a progressive, inclusive Niali.</p>
+      <p class="fb-tag" id="t-fb-tag">MLA, Niali Constituency, Odisha. Bharatiya Janata Party. Elected June 2024. Committed to a progressive, inclusive Niali.</p>
       <div class="fb-flag"><span></span><span></span><span></span></div>
       <div style="margin-top:1.2rem;font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.2);">A Mynetawiki Initiative</div>
     </div>
     <div>
-      <div class="fc-t">Quick Links</div>
+      <div class="fc-t" id="t-fc-quick">Quick Links</div>
       <ul class="fl-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#photo-gallery">Gallery</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#vision">Vision & Policy</a></li>
-        <li><a href="#journey">Political Journey</a></li>
-        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#about" id="t-fl-about">About</a></li>
+        <li><a href="#photo-gallery" id="t-fl-gallery">Gallery</a></li>
+        <li><a href="#media" id="t-fl-media">Media</a></li>
+        <li><a href="#vision" id="t-fl-vision">Vision &amp; Policy</a></li>
+        <li><a href="#journey" id="t-fl-journey">Political Journey</a></li>
+        <li><a href="#achievements" id="t-fl-ach">Achievements</a></li>
       </ul>
     </div>
     <div>
-      <div class="fc-t">Resources</div>
+      <div class="fc-t" id="t-fc-res">Resources</div>
       <ul class="fl-links">
-        <li><a href="#">Press Releases</a></li>
-        <li><a href="#">Assembly Questions</a></li>
-        <li><a href="#">Constituency Budget</a></li>
-        <li><a href="#">Grievance Portal</a></li>
-        <li><a href="#contact">Contact Office</a></li>
+        <li><a href="#" id="t-fl-press">Press Releases</a></li>
+        <li><a href="#" id="t-fl-assembly">Assembly Questions</a></li>
+        <li><a href="#" id="t-fl-budget">Constituency Budget</a></li>
+        <li><a href="#" id="t-fl-grievance">Grievance Portal</a></li>
+        <li><a href="#contact" id="t-fl-contact-office">Contact Office</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-bot">
-    <span>© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha.</span>
-    <span>JAI ODISHA 🇮🇳</span>
+    <span id="t-ft-copy">© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha.</span>
+    <span id="t-ft-jai">JAI ODISHA 🇮🇳</span>
   </div>
 </footer>
 
 <div class="mob-sticky">
-  <a href="tel:" class="ms-btn ms-call">📞 Call Office</a>
-  <a href="#contact" class="ms-btn ms-write" onclick="closeMenu()">✉️ Write to Us</a>
+  <a href="tel:" class="ms-btn ms-call" id="t-ms-call">📞 Call Office</a>
+  <a href="#contact" class="ms-btn ms-write" onclick="closeMenu()" id="t-ms-write">✉️ Write to Us</a>
 </div>
 
 <button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-// ═══ ALL HERO, GALLERY, VIDEO, NAV FUNCTIONS ═══
+// ═══ HERO SLIDER ═══
 var SLIDE_COUNT = 4;
 var SLIDE_DURATION = 5500;
 var currentSlide = 0;
@@ -943,18 +956,18 @@ resetSliderTimer();
 
 // ═══ GALLERY PAGINATION ═══
 var allGalleryImgs = [
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1781783304/IMG_20260618_135348_oyub0v.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1781783304/IMG_20260618_115126_t3pquw.jpg',
-    'https://res.cloudinary.com/dara80vtx/image/upload/v1782067911/696764190_1743782106987898_8470664718153337389_n_zxrwqa.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779797671/2_m6nenf.png',
-    'https://res.cloudinary.com/dara80vtx/image/upload/v1782066232/726767483_17886185619589408_1171929982791590093_n_xiotal.jpg',
-    'https://res.cloudinary.com/dara80vtx/image/upload/v1782066232/727457669_17886466998589408_1121170566756236835_n_t9hpj6.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1778564152/DSC_6167.JPG_gkgsv9.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/684254242_1731857618180347_7199760563158680184_n_swfi03.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980568/618797938_1657278825638227_3349333911231462698_n_zbjx5q.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980568/637059645_1681368839895892_1884339320879899362_n_bs6ico.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980568/668509669_1717922289573880_1591270392525065342_n_mcefwo.jpg',
-    'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980567/680302059_1729652138400895_5291057107495280422_n_mzit3t.jpg'
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1781783304/IMG_20260618_135348_oyub0v.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1781783304/IMG_20260618_115126_t3pquw.jpg',
+  'https://res.cloudinary.com/dara80vtx/image/upload/v1782067911/696764190_1743782106987898_8470664718153337389_n_zxrwqa.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1779797671/2_m6nenf.png',
+  'https://res.cloudinary.com/dara80vtx/image/upload/v1782066232/726767483_17886185619589408_1171929982791590093_n_xiotal.jpg',
+  'https://res.cloudinary.com/dara80vtx/image/upload/v1782066232/727457669_17886466998589408_1121170566756236835_n_t9hpj6.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1778564152/DSC_6167.JPG_gkgsv9.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777637176/684254242_1731857618180347_7199760563158680184_n_swfi03.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980568/618797938_1657278825638227_3349333911231462698_n_zbjx5q.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980568/637059645_1681368839895892_1884339320879899362_n_bs6ico.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980568/668509669_1717922289573880_1591270392525065342_n_mcefwo.jpg',
+  'https://res.cloudinary.com/dxmdcoca3/image/upload/v1777980567/680302059_1729652138400895_5291057107495280422_n_mzit3t.jpg'
 ];
 var PG_PER_PAGE = 8;
 var pgCurrentPage = 1;
@@ -966,7 +979,6 @@ function renderGalleryPage(page) {
   var start = (page - 1) * PG_PER_PAGE;
   var end = Math.min(start + PG_PER_PAGE, allGalleryImgs.length);
   var pageImgs = allGalleryImgs.slice(start, end);
-
   grid.innerHTML = '';
   pageImgs.forEach(function(src, i) {
     var item = document.createElement('div');
@@ -977,17 +989,19 @@ function renderGalleryPage(page) {
     grid.appendChild(item);
     setTimeout(function() { item.classList.add('vis'); }, i * 60);
   });
-
   renderPagination();
 }
 
 function renderPagination() {
   var pg = document.getElementById('pgPagination');
   pg.innerHTML = '';
+  var lang = window._currentLang || 'en';
+  var prevLabel = lang === 'od' ? '← ପୂର୍ବ' : '← Prev';
+  var nextLabel = lang === 'od' ? 'ପରବର୍ତ୍ତୀ →' : 'Next →';
 
   var prevBtn = document.createElement('button');
   prevBtn.className = 'pg-page-btn pg-nav';
-  prevBtn.textContent = '← Prev';
+  prevBtn.textContent = prevLabel;
   prevBtn.disabled = pgCurrentPage === 1;
   prevBtn.onclick = function() { if (pgCurrentPage > 1) renderGalleryPage(pgCurrentPage - 1); };
   pg.appendChild(prevBtn);
@@ -1004,7 +1018,7 @@ function renderPagination() {
 
   var nextBtn = document.createElement('button');
   nextBtn.className = 'pg-page-btn pg-nav';
-  nextBtn.textContent = 'Next →';
+  nextBtn.textContent = nextLabel;
   nextBtn.disabled = pgCurrentPage === pgTotalPages;
   nextBtn.onclick = function() { if (pgCurrentPage < pgTotalPages) renderGalleryPage(pgCurrentPage + 1); };
   pg.appendChild(nextBtn);
@@ -1066,16 +1080,13 @@ function openVideo(type, id) {
   frame.innerHTML = '';
   if (type === 'native') {
     var vid = document.createElement('video');
-    vid.src = id;
-    vid.controls = true;
-    vid.autoplay = true;
+    vid.src = id; vid.controls = true; vid.autoplay = true;
     vid.style.cssText = 'width:100%;height:100%;display:block;background:#000;';
     frame.appendChild(vid);
   } else {
     var ifr = document.createElement('iframe');
     ifr.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0';
-    ifr.allowFullscreen = true;
-    ifr.allow = 'autoplay; encrypted-media';
+    ifr.allowFullscreen = true; ifr.allow = 'autoplay; encrypted-media';
     ifr.style.cssText = 'width:100%;height:100%;border:none;display:block;';
     frame.appendChild(ifr);
   }
@@ -1138,285 +1149,418 @@ aio.observe(document.getElementById('achievements'));
 
 // ═══ FORM SUBMIT ═══
 function handleSubmit(btn) {
-  btn.textContent = '✓ Submitted — Thank You!';
+  var lang = window._currentLang || 'en';
+  btn.textContent = lang === 'od' ? '✓ ଦାଖଲ ହୋଇଛି — ଧନ୍ୟବାଦ!' : '✓ Submitted — Thank You!';
   btn.style.background = '#0A6B04';
-  setTimeout(function() { btn.textContent = 'Submit Grievance / Message'; btn.style.background = ''; }, 3500);
+  setTimeout(function() {
+    btn.textContent = lang === 'od' ? 'ଅଭିଯୋଗ / ସନ୍ଦେଶ ଦାଖଲ କରନ୍ତୁ' : 'Submit Grievance / Message';
+    btn.style.background = '';
+  }, 3500);
 }
 
-// ═══════════════════════════════════════════════════════════════
-// ═══ COMPREHENSIVE BILINGUAL LANGUAGE TOGGLE - FULL TRANSLATION ═══
-// ═══════════════════════════════════════════════════════════════
-var currentLang = 'en';
+// ════════════════════════════════════════════════════════════
+// ═══ BILINGUAL TRANSLATION SYSTEM — ID-BASED, COMPLETE ═══
+// ════════════════════════════════════════════════════════════
+window._currentLang = 'en';
 
-var fullTexts = {
+var T = {
   en: {
-    // Navigation
-    'nav-about': 'About',
-    'nav-gallery': 'Gallery',
-    'nav-media': 'Media',
-    'nav-vision': 'Vision',
-    'nav-journey': 'Journey',
-    'nav-contact': 'Contact',
-    'nav-touch': 'Get in Touch',
+    // NAV
     'nav-site': 'Official Website',
-
-    // Event Ticker
+    'nav-about': 'About', 'nav-gallery': 'Gallery', 'nav-media': 'Media',
+    'nav-vision': 'Vision', 'nav-journey': 'Journey', 'nav-contact': 'Contact',
+    'nav-touch': 'Get in Touch',
+    'mob-about': 'About', 'mob-gallery': 'Gallery', 'mob-media': 'Media',
+    'mob-vision': 'Vision', 'mob-journey': 'Journey', 'mob-contact': 'Contact',
+    // EVENT TICKER
     'event-label': 'Upcoming Events',
-
-    // Hero Slides
+    'et-badge-1': 'Event', 'et-title-1': 'Mishrana Parba', 'et-desc-1': 'Grand Community Celebration',
+    'et-note-1': 'All citizens of Niali are warmly invited · Venue: Niali Maidan',
+    'et-badge-2': 'Jan Sunwai',
+    'et-desc-2': 'Weekly Public Grievance Session — Every Saturday, 10:00 AM · Niali Constituency Office',
+    'et-badge-3': 'Scheme Camp',
+    'et-desc-3': 'Kisan Credit Mela — Ongoing · PM-KISAN, Soil Health Cards & KCC enrollment',
+    // HERO SLIDES
     'chip-1': 'Member of Legislative Assembly · Niali · Odisha',
     'chip-2': 'Grassroots Leadership',
     'chip-3': 'Rural Development · 2024 – Present',
     'chip-4': 'Seva · Dharma · Vikas',
-
     'heading-1': 'Voice of<br><span class="accent">Niali,</span><br>Always.',
     'heading-2': 'People<br><span class="accent">First,</span><br>Always.',
     'heading-3': 'Building<br>a <span class="accent">Stronger</span><br>Niali.',
     'heading-4': 'Rooted in<br><span class="accent">Seva,</span><br>Driven by Trust.',
-
     'sub-1': "A dedicated people's representative championing rural development, grassroots governance, and inclusive progress. Elected to the Odisha Legislative Assembly, June 2024.",
     'sub-2': "From village to vidhansabha — every decision rooted in the needs of Niali's farmers, families, and communities.",
     'sub-3': '8,400+ homes, 220 km of roads, 100% electrification — concrete promises, delivered on the ground.',
     'sub-4': 'Regular Jan Sunwais, direct farmer outreach, and unwavering commitment to every household in Niali block.',
-
-    'btn-primary-1': 'Explore Vision →',
-    'btn-primary-2': 'Know More →',
-    'btn-primary-3': 'Track Record →',
-    'btn-primary-4': 'Write to Us →',
-
-    'btn-ghost-1': 'Connect With Us',
-    'btn-ghost-2': 'Political Journey',
-    'btn-ghost-3': 'Our Vision',
-    'btn-ghost-4': 'In the News',
-
-    // About Section
+    'btn-p1': 'Explore Vision →', 'btn-p2': 'Know More →', 'btn-p3': 'Track Record →', 'btn-p4': 'Write to Us →',
+    'btn-g1': 'Connect With Us', 'btn-g2': 'Political Journey', 'btn-g3': 'Our Vision', 'btn-g4': 'In the News',
+    // STRIP
+    'strip-1': 'Homes Built', 'strip-2': 'Electrification', 'strip-3': 'Roads Built',
+    'strip-4': 'Health Centres', 'strip-5': 'Scholarships', 'strip-6a': 'Always', 'strip-6b': 'First',
+    // ABOUT
     'lbl-about': 'Who He Is',
     'sh-about': 'A Life Dedicated to <span class="ac">Seva</span>',
-    'ss-about': 'A glimpse into the work, the people, and the journey across Niali constituency.',
-
-    // Gallery Section
+    'wiki-title': '🏛️ Official Record',
+    'wiki-k1': 'Position', 'wiki-v1': 'MLA, Niali',
+    'wiki-k2': 'Assumed Office', 'wiki-v2': '4 June 2024',
+    'wiki-k3': 'Party', 'wiki-v3': 'BJP',
+    'wiki-k4': 'Legislature', 'wiki-v4': 'Odisha Legislative Assembly',
+    'ab-quote': '"Service to the people of Niali is not just my duty — it is my dharma and my greatest honour."',
+    'ab-body1': 'Chhabi Malik is an Indian politician who was elected to the Odisha Legislative Assembly from the Niali constituency in the 2024 state elections as a member of the Bharatiya Janata Party. He assumed office on 4 June 2024, succeeding Pramod Kumar Mallick as the representative of Niali.',
+    'ab-body2': 'Rising through grassroots political engagement in the Niali region, Chhabi Malik has focused his legislative work on rural infrastructure, access to health services, agricultural support, and educational opportunity for the constituents of Niali block in Cuttack district.',
+    'ab-body3': 'Known for his ground-level accessibility, he holds regular Jan Sunwais and personally monitors the progress of every scheme in the constituency.',
+    'abk1': 'Constituency', 'abv1': 'Niali, Odisha',
+    'abk2': 'Position', 'abv2': 'Member of Legislative Assembly',
+    'abk3': 'Party', 'abv3': 'Bharatiya Janata Party',
+    'abk4': 'Elected', 'abv4': '2024 Odisha Assembly Elections',
+    'abk5': 'Focus Areas', 'abv5': 'Rural Dev, Agriculture, Education',
+    'abk6': 'Jan Sunwai', 'abv6': 'Every Saturday, 10 AM',
+    // GALLERY
     'lbl-gallery': 'Event Gallery',
     'sh-gallery': 'Moments from the <span class="ac">Field</span>',
     'ss-gallery': 'A glimpse into the work, the people, and the journey across Niali constituency.',
-
-    // Media Section
+    // MEDIA
     'lbl-media': 'Media Centre',
-    'sh-media': 'Photos & <span class="ac">Videos</span>',
+    'sh-media': 'Photos &amp; <span class="ac">Videos</span>',
     'ss-media': 'Watch speeches, ground reports, and see moments of service from the field.',
-
-    // Vision Section
+    'tab-photos': '📷 Photos', 'tab-videos': '▶ Videos',
+    'mv-title1': 'Chhabi Malik — Public Address, Niali', 'mv-sub1': 'Official Video',
+    'mv-title2': 'Constituency Development — Ground Report', 'mv-sub2': 'Official Video · YouTube',
+    'mv-title3': 'Niali Voices — People Speak', 'mv-sub3': 'Official Video · YouTube',
+    // VISION
     'lbl-vision': 'Our Vision',
     'sh-vision': 'Building a <span class="ac">Stronger</span> Niali',
     'ss-vision': 'Six pillars guiding every decision, every initiative, every vote cast in the legislature on behalf of the people of Niali.',
-
-    // Journey Section
+    'vc-title1': 'Kisan Samridhi', 'vc-text1': 'Doubling farmer incomes through MSP support, crop insurance, and direct market linkages — eliminating the middlemen who squeeze our farmers.',
+    'vc-title2': 'Shiksha for All', 'vc-text2': 'Universal quality education with digital classrooms and full scholarship coverage for all BPL families in Niali.',
+    'vc-title3': 'Swasth Niali', 'vc-text3': 'A primary health centre within 5 km of every village — free diagnostics, maternal care, and mobile medical units.',
+    'vc-title4': 'Digital Gram', 'vc-text4': 'High-speed internet and digital literacy to every panchayat, empowering citizens to access government services from home.',
+    'vc-title5': 'Green Niali', 'vc-text5': 'Solar-powered streetlights, clean cooking fuel, and river conservation — a constituency that thrives without harming tomorrow.',
+    'vc-title6': 'Nari Shakti', 'vc-text6': '30% reservation in local governance, skill centres for women, SHG credit, and zero-tolerance on crimes against women.',
+    // JOURNEY
     'lbl-journey': 'Political Career',
     'sh-journey': 'The <span class="ac">Journey</span> So Far',
     'ss-journey': 'From grassroots activism in Niali to the Odisha Legislative Assembly — a path built on purpose and trust.',
-
-    // Achievements Section
-    'lbl-achievements': 'Track Record',
-    'sh-achievements': 'Measurable <span class="ac" style="color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)">Impact</span>',
-    'ss-achievements': 'Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.',
-
-    // Contact Section
+    'jyr1': 'Roots', 'jtitle1': 'Community Leadership in Niali',
+    'jdesc1': 'Began grassroots social and political work in Niali, building connections with farmers, fishing communities, and daily-wage workers.',
+    'jyr2': 'BJP', 'jtitle2': 'Joined Bharatiya Janata Party',
+    'jdesc2': "Aligned with BJP's vision of vikas-led governance and joined the party's Niali unit, contributing to local party building across Cuttack district.",
+    'jyr3': '2024', 'jtitle3': 'Elected to Odisha Legislative Assembly',
+    'jdesc3': 'Won the Niali assembly seat in the 2024 Odisha Legislative Assembly elections under the BJP banner, succeeding Pramod Kumar Mallick.',
+    'jyr4': 'Jun 4', 'jtitle4': 'Assumed Office — 4 June 2024',
+    'jdesc4': 'Formally assumed office as Member of the Odisha Legislative Assembly from Niali, joining the BJP legislative group in Bhubaneswar.',
+    'jyr5': 'Now', 'jtitle5': 'Serving Niali — Present Day',
+    'jdesc5': 'Focused on constituency development, rural electrification, agro-processing clusters, telemedicine expansion, and ensuring every scheme reaches the last household.',
+    // ACHIEVEMENTS
+    'lbl-ach': 'Track Record',
+    'sh-ach': 'Measurable <span class="ac" style="color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)">Impact</span>',
+    'ss-ach': 'Numbers that represent lives changed, families uplifted, and promises kept across Niali constituency.',
+    'itl1': 'Homes Under PMAY', 'itl2': 'Piped Water Villages', 'itl3': 'Rural Electrification', 'itl4': 'Scholarships Awarded',
+    'itl5': 'Rural Roads Built', 'itl6': 'New Health Centres', 'itl7': 'Digitally Trained', 'itl8': 'Trees Planted',
+    'awyr1': '2024', 'awt1': 'Elected MLA — Niali, Odisha',
+    'awb1': 'Elected to the Odisha Legislative Assembly from Niali in the 2024 state elections as a BJP candidate, as verified by the Election Commission of India.',
+    'awyr2': '2024', 'awt2': 'Kisan Outreach — Niali Block',
+    'awb2': 'Led farmer welfare engagement camps across Niali, connecting constituents with PM-KISAN enrollment, Kisan Credit Cards, and crop insurance schemes.',
+    'awyr3': 'Ongoing', 'awt3': "Jan Sunwai — Direct People's Access",
+    'awb3': 'Conducts open public grievance sessions every Saturday at the Niali constituency office, ensuring direct access to elected representation.',
+    // CONTACT
     'lbl-contact': 'Get In Touch',
     'ct-name': 'Office <em>Contacts</em>',
     'ct-desc': 'For constituency matters, media queries, or policy discussions. Our team responds within 48 hours. Every message is read.',
+    'ci-k1': 'Assembly Office', 'ci-v1': 'Odisha Legislative Assembly, Bhubaneswar, Odisha – 751001',
+    'ci-k2': 'Constituency Office', 'ci-v2': 'Niali, Cuttack District, Odisha – 754004',
+    'ci-k3': 'Phone', 'ci-v3': 'Contact through official constituency office',
+    'ci-k4': 'Jan Sunwai', 'ci-v4': 'Every Saturday, 10:00 AM — Niali Office',
+    'ci-k5': 'Upcoming Event', 'ci-v5': 'Mishrana Parba — 8 May 2025 · Niali Maidan',
+    'mail-label': 'Write a Mail', 'mail-btn-text': 'Send Email',
     'cf-title': 'Write to <span style="color:var(--fire)">Chhabi Malik</span>',
     'cf-sub': 'Share your concern, suggestion, or grievance. All submissions are reviewed by our team.',
-    
-    // Footer
-    'footer-quick': 'Quick Links',
-    'footer-resources': 'Resources',
-    'footer-copyright': '© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha.',
-    'footer-jai': 'JAI ODISHA 🇮🇳',
+    'fl-name': 'Full Name *', 'fi-name': 'Your full name',
+    'fl-mobile': 'Mobile *', 'fi-mobile': '+91 XXXXX XXXXX',
+    'fl-village': 'Village / Ward', 'fi-village': 'Your village or ward',
+    'fl-subject': 'Subject *',
+    'fse-0': 'Select a subject', 'fse-1': 'Road / Infrastructure', 'fse-2': 'Water / Electricity',
+    'fse-3': 'Agriculture / Farmer Issue', 'fse-4': 'Health / Hospital',
+    'fse-5': 'Education / Scholarship', 'fse-6': "Women's Safety",
+    'fse-7': 'Media / Press Query', 'fse-8': 'Other',
+    'fl-msg': 'Your Message *', 'ft-msg': 'Describe your concern or suggestion...',
+    'fb': 'Submit Grievance / Message',
+    // MOBILE STICKY
+    'ms-call': '📞 Call Office', 'ms-write': '✉️ Write to Us',
+    // FOOTER
+    'fb-tag': 'MLA, Niali Constituency, Odisha. Bharatiya Janata Party. Elected June 2024. Committed to a progressive, inclusive Niali.',
+    'fc-quick': 'Quick Links', 'fc-res': 'Resources',
+    'fl-about': 'About', 'fl-gallery': 'Gallery', 'fl-media': 'Media',
+    'fl-vision': 'Vision & Policy', 'fl-journey': 'Political Journey', 'fl-ach': 'Achievements',
+    'fl-press': 'Press Releases', 'fl-assembly': 'Assembly Questions',
+    'fl-budget': 'Constituency Budget', 'fl-grievance': 'Grievance Portal', 'fl-contact-office': 'Contact Office',
+    'ft-copy': '© 2025 Chhabi Malik. Official Website. MLA — Niali, Odisha.',
+    'ft-jai': 'JAI ODISHA 🇮🇳'
   },
   od: {
-    // Navigation
-    'nav-about': 'ପରିଚୟ',
-    'nav-gallery': 'ଗ୍ୟାଲେରୀ',
-    'nav-media': 'ମିଡିଆ',
-    'nav-vision': 'ଦୃଷ୍ଟିଭଙ୍ଗୀ',
-    'nav-journey': 'ଯାତ୍ରା',
-    'nav-contact': 'ଯୋଗାଯୋଗ',
-    'nav-touch': 'ଯୋଗାଯୋଗ କରନ୍ତୁ',
+    // NAV
     'nav-site': 'ଆଧିକାରିକ ୱେବସାଇଟ୍',
-
-    // Event Ticker
+    'nav-about': 'ପରିଚୟ', 'nav-gallery': 'ଗ୍ୟାଲେରୀ', 'nav-media': 'ମିଡ଼ିଆ',
+    'nav-vision': 'ଦୃଷ୍ଟିଭଙ୍ଗୀ', 'nav-journey': 'ଯାତ୍ରା', 'nav-contact': 'ଯୋଗାଯୋଗ',
+    'nav-touch': 'ଯୋଗାଯୋଗ କରନ୍ତୁ',
+    'mob-about': 'ପରିଚୟ', 'mob-gallery': 'ଗ୍ୟାଲେରୀ', 'mob-media': 'ମିଡ଼ିଆ',
+    'mob-vision': 'ଦୃଷ୍ଟିଭଙ୍ଗୀ', 'mob-journey': 'ଯାତ୍ରା', 'mob-contact': 'ଯୋଗାଯୋଗ',
+    // EVENT TICKER
     'event-label': 'ଆସନ୍ତା କାର୍ଯ୍ୟକ୍ରମ',
-
-    // Hero Slides
-    'chip-1': 'ବିଧାନସଭ୍ୟ · ନିଆଳୀ · ଓଡ଼ିଶା',
+    'et-badge-1': 'କାର୍ଯ୍ୟକ୍ରମ', 'et-title-1': 'ମିଶ୍ରଣ ପର୍ବ', 'et-desc-1': 'ବୃହତ ସାମୁଦାୟିକ ଉତ୍ସବ',
+    'et-note-1': 'ନିଆଳୀର ସମସ୍ତ ନାଗରିକଙ୍କୁ ଆମନ୍ତ୍ରଣ · ସ୍ଥାନ: ନିଆଳୀ ମୈଦାନ',
+    'et-badge-2': 'ଜନ ସୁନାଣି',
+    'et-desc-2': 'ସାପ୍ତାହିକ ଜନ ଅଭିଯୋଗ ଅଧିବେଶନ — ପ୍ରତ୍ୟେକ ଶନିବାର, ସକାଳ 10:00 · ନିଆଳୀ ନିର୍ବାଚନ କାର୍ଯ୍ୟାଳୟ',
+    'et-badge-3': 'ଯୋଜନା ଶିବିର',
+    'et-desc-3': 'କିଶାନ କ୍ରେଡ଼ିଟ ମେଳା — ଜାରି · PM-KISAN, ମୃତ୍ତିକା ସ୍ୱାସ୍ଥ୍ୟ କାର୍ଡ ଓ KCC ପଞ୍ଜୀକରଣ',
+    // HERO SLIDES
+    'chip-1': 'ବିଧାନ ସଭ୍ୟ · ନିଆଳୀ · ଓଡ଼ିଶା',
     'chip-2': 'ଭିତ୍ତିସ୍ତରୀୟ ନେତୃତ୍ୱ',
     'chip-3': 'ଗ୍ରାମୀଣ ଉନ୍ନତି · 2024 – ବର୍ତ୍ତମାନ',
     'chip-4': 'ସେବା · ଧର୍ମ · ବିକାଶ',
-
     'heading-1': 'ନିଆଳୀର<br><span class="accent">ସ୍ୱର,</span><br>ସଦାସର୍ବଦା।',
     'heading-2': 'ଲୋକମାନେ<br><span class="accent">ପ୍ରଥମେ,</span><br>ସଦା।',
     'heading-3': 'ଏକ<br><span class="accent">ଶକ୍ତିଶାଳୀ</span><br>ନିଆଳୀ ଗଢ଼ୁଛୁ।',
     'heading-4': 'ସେବାରେ<br><span class="accent">ମୂଳଗାଢ଼,</span><br>ଭରସାରେ ଅଗ୍ରସର।',
-
-    'sub-1': 'ଗ୍ରାମୀଣ ଉନ୍ନତି, ଭିତ୍ତିସ୍ତରୀୟ ଶାସନ ଏବଂ ସମାବେଶୀ ପ୍ରଗତି ପାଇଁ ନିର୍ବିକଳ୍ପ ଭାବେ କାମ କରୁଥିବା ଜନପ୍ରତିନିଧି। ଜୁନ 2024ରେ ଓଡ଼ିଶା ବିଧାନସଭାକୁ ନିର୍ବାଚିତ।',
-    'sub-2': 'ଗାଁରୁ ବିଧାନସଭା ପର୍ଯ୍ୟନ୍ତ — ପ୍ରତ୍ୟେକ ନିଷ୍ପତ୍ତି ନିଆଳୀର କୃଷକ, ପରିବାର ଓ ସମୁଦାୟର ଆବଶ୍ୟକତାକୁ କେନ୍ଦ୍ର କରି।',
-    'sub-3': '8,400+ ଘର, 220 କିମି ରାସ୍ତା, 100% ବିଦ୍ୟୁତୀକରଣ — ମାଟିରେ ପୁରଣ ହୋଇଥିବା ସ୍ପଷ୍ଟ ପ୍ରତିଶ୍ରୁତି।',
-    'sub-4': 'ନିୟମିତ ଜନ ସୁନାଣି, କୃଷକମାନଙ୍କ ସହ ସରାସରି ସମ୍ପର୍କ, ଏବଂ ନିଆଳୀ ବ୍ଲକର ପ୍ରତ୍ୟେକ ପରିବାର ପ୍ରତି ଅଟୁଟ ପ୍ରତିବଦ୍ଧତା।',
-
-    'btn-primary-1': 'ଦୃଷ୍ଟିଭଙ୍ଗୀ ଦେଖନ୍ତୁ →',
-    'btn-primary-2': 'ଅଧିକ ଜାଣନ୍ତୁ →',
-    'btn-primary-3': 'କାର୍ଯ୍ୟର ଫଳାଫଳ →',
-    'btn-primary-4': 'ଆମକୁ ଲେଖନ୍ତୁ →',
-
-    'btn-ghost-1': 'ଆମ ସହ ଯୋଡ଼ନ୍ତୁ',
-    'btn-ghost-2': 'ରାଜନୈତିକ ଯାତ୍ରା',
-    'btn-ghost-3': 'ଆମ ଦୃଷ୍ଟିଭଙ୍ଗୀ',
-    'btn-ghost-4': 'ସମ୍ବାଦରେ',
-
-    // About Section
-    'lbl-about': 'କିଏ ସେ',
+    'sub-1': 'ଗ୍ରାମୀଣ ଉନ୍ନତି, ଭିତ୍ତିସ୍ତରୀୟ ଶାସନ ଏବଂ ସମାବେଶୀ ପ୍ରଗତି ପାଇଁ ଅଚ୍ଛଳ ଭାବେ ଲଢ଼ୁଥିବା ଜନପ୍ରତିନିଧି। ଜୁନ 2024ରେ ଓଡ଼ିଶା ବିଧାନ ସଭାକୁ ନିର୍ବାଚିତ।',
+    'sub-2': 'ଗାଁରୁ ବିଧାନ ସଭା ପର୍ଯ୍ୟନ୍ତ — ପ୍ରତ୍ୟେକ ନିଷ୍ପତ୍ତି ନିଆଳୀର କୃଷକ, ପରିବାର ଓ ସମୁଦାୟର ଆବଶ୍ୟକତାକୁ ଆଧାର କରି।',
+    'sub-3': '8,400+ ଘର, 220 କି.ମି. ରାସ୍ତା, 100% ବିଦ୍ୟୁତୀକରଣ — ଭୂମିରେ ପୂରଣ ହୋଇଥିବା ଠୋସ ପ୍ରତିଶ୍ରୁତି।',
+    'sub-4': 'ନିୟମିତ ଜନ ସୁନାଣି, କୃଷକମାନଙ୍କ ସହ ସିଧା ଯୋଗାଯୋଗ, ଏବଂ ନିଆଳୀ ବ୍ଲକର ପ୍ରତ୍ୟେକ ପରିବାର ପ୍ରତି ଅଟୁଟ ପ୍ରତିଶ୍ରୁତି।',
+    'btn-p1': 'ଦୃଷ୍ଟିଭଙ୍ଗୀ ଦେଖନ୍ତୁ →', 'btn-p2': 'ଅଧିକ ଜାଣନ୍ତୁ →',
+    'btn-p3': 'ଫଳାଫଳ ଦେଖନ୍ତୁ →', 'btn-p4': 'ଆମକୁ ଲେଖନ୍ତୁ →',
+    'btn-g1': 'ଆମ ସହ ଯୋଡ଼ନ୍ତୁ', 'btn-g2': 'ରାଜନୈତିକ ଯାତ୍ରା',
+    'btn-g3': 'ଆମ ଦୃଷ୍ଟିଭଙ୍ଗୀ', 'btn-g4': 'ସମ୍ବାଦରେ',
+    // STRIP
+    'strip-1': 'ଘର ନିର୍ମାଣ', 'strip-2': 'ବିଦ୍ୟୁତୀକରଣ', 'strip-3': 'ରାସ୍ତା ନିର୍ମାଣ',
+    'strip-4': 'ସ୍ୱାସ୍ଥ୍ୟ କେନ୍ଦ୍ର', 'strip-5': 'ବୃତ୍ତି', 'strip-6a': 'ସଦା', 'strip-6b': 'ପ୍ରଥମ',
+    // ABOUT
+    'lbl-about': 'ସେ କିଏ',
     'sh-about': 'ସେବାରେ ଉତ୍ସର୍ଗୀକୃତ <span class="ac">ଜୀବନ</span>',
-    'ss-about': 'ନିଆଳୀ ନିର୍ବାଚନମଣ୍ଡଳୀର କାମ, ଲୋକ ଓ ଯାତ୍ରାର କିଛି ଝଲକ।',
-
-    // Gallery Section
+    'wiki-title': '🏛️ ସରକାରୀ ତଥ୍ୟ',
+    'wiki-k1': 'ପଦ', 'wiki-v1': 'ବିଧାୟକ, ନିଆଳୀ',
+    'wiki-k2': 'କାର୍ଯ୍ୟଭାର ଗ୍ରହଣ', 'wiki-v2': '4 ଜୁନ 2024',
+    'wiki-k3': 'ଦଳ', 'wiki-v3': 'ବିଜେପି',
+    'wiki-k4': 'ବିଧାନ ସଭା', 'wiki-v4': 'ଓଡ଼ିଶା ବିଧାନ ସଭା',
+    'ab-quote': '"ନିଆଳୀର ଲୋକଙ୍କ ସେବା ମୋ ପାଇଁ କେବଳ କର୍ତ୍ତବ୍ୟ ନୁହଁ — ଏହା ମୋ ଧର୍ମ ଏବଂ ମୋ ସର୍ବଶ୍ରେଷ୍ଠ ସମ୍ମାନ।"',
+    'ab-body1': 'ଛବି ମଲ୍ଲିକ ଜଣେ ଭାରତୀୟ ରାଜନୀତିଜ୍ଞ ଯିଏ 2024 ରାଜ୍ୟ ନିର୍ବାଚନରେ ଭାରତୀୟ ଜନତା ପାର୍ଟିର ସଦସ୍ୟ ଭାବରେ ନିଆଳୀ ନିର୍ବାଚନ ମଣ୍ଡଳୀରୁ ଓଡ଼ିଶା ବିଧାନ ସଭାକୁ ନିର୍ବାଚିତ ହୋଇଥିଲେ। ସେ 4 ଜୁନ 2024ରେ ନିଆଳୀ ପ୍ରତିନିଧି ଭାବରେ ପ୍ରମୋଦ କୁମାର ମଲ୍ଲିକଙ୍କ ପରବର୍ତ୍ତୀ ହୋଇ କାର୍ଯ୍ୟଭାର ଗ୍ରହଣ କଲେ।',
+    'ab-body2': 'ନିଆଳୀ ଅଞ୍ଚଳରେ ଭିତ୍ତିସ୍ତରୀୟ ରାଜନୈତିକ ଅଂଶଗ୍ରହଣ ଦ୍ୱାରା ଉଠି ଆସି ଛବି ମଲ୍ଲିକ ତାଙ୍କ ବିଧାୟିକ କାର୍ଯ୍ୟ ଗ୍ରାମୀଣ ଭିତ୍ତିସଂରଚନା, ସ୍ୱାସ୍ଥ୍ୟ ସେବା, କୃଷି ସହାୟତା ଏବଂ ଶିକ୍ଷା ସୁଯୋଗ ଉପରେ ଧ୍ୟାନ ଦେଇଛନ୍ତି।',
+    'ab-body3': 'ଭୂମି ସ୍ତରରେ ସହଜ ଯୋଗ୍ୟଯୋଗ ପାଇଁ ପ୍ରସିଦ୍ଧ, ସେ ନିୟମିତ ଜନ ସୁନାଣି ଆୟୋଜନ କରନ୍ତି ଏବଂ ନିର୍ବାଚନ ମଣ୍ଡଳୀରେ ପ୍ରତ୍ୟେକ ଯୋଜନାର ଅଗ୍ରଗତି ବ୍ୟକ୍ତିଗତ ଭାବରେ ଦେଖଭାଳ କରନ୍ତି।',
+    'abk1': 'ନିର୍ବାଚନ ମଣ୍ଡଳୀ', 'abv1': 'ନିଆଳୀ, ଓଡ଼ିଶା',
+    'abk2': 'ପଦ', 'abv2': 'ବିଧାନ ସଭ୍ୟ',
+    'abk3': 'ଦଳ', 'abv3': 'ଭାରତୀୟ ଜନତା ପାର୍ଟି',
+    'abk4': 'ନିର୍ବାଚିତ', 'abv4': '2024 ଓଡ଼ିଶା ବିଧାନ ସଭା ନିର୍ବାଚନ',
+    'abk5': 'ଗୁରୁତ୍ୱ କ୍ଷେତ୍ର', 'abv5': 'ଗ୍ରାମୀଣ ଉନ୍ନୟନ, କୃଷି, ଶିକ୍ଷା',
+    'abk6': 'ଜନ ସୁନାଣି', 'abv6': 'ପ୍ରତ୍ୟେକ ଶନିବାର, ସକାଳ 10ଟା',
+    // GALLERY
     'lbl-gallery': 'ଘଟଣା ଗ୍ୟାଲେରୀ',
     'sh-gallery': 'କ୍ଷେତ୍ରରୁ <span class="ac">ମୁହୂର୍ତ୍ତ</span>',
-    'ss-gallery': 'ନିଆଳୀ ନିର୍ବାଚନମଣ୍ଡଳୀର କାମ, ଲୋକ ଓ ଯାତ୍ରାର କିଛି ଝଲକ।',
-
-    // Media Section
+    'ss-gallery': 'ନିଆଳୀ ନିର୍ବାଚନ ମଣ୍ଡଳୀ ଜୁଡ଼ି କାମ, ଲୋକ ଓ ଯାତ୍ରାର ଏକ ଝଲକ।',
+    // MEDIA
     'lbl-media': 'ମିଡ଼ିଆ ସେଣ୍ଟର',
     'sh-media': 'ଫଟୋ ଓ <span class="ac">ଭିଡ଼ିଓ</span>',
-    'ss-media': 'ଭାଷଣ, କ୍ଷେତ୍ର ରିପୋର୍ଟ ଦେଖନ୍ତୁ ଏବଂ ସେବାର ମୁହୂର୍ତ୍ତଗୁଡ଼ିକୁ ଅନୁଭବ କରନ୍ତୁ।',
-
-    // Vision Section
+    'ss-media': 'ଭାଷଣ, ଭୂମି ରିପୋର୍ଟ ଦେଖନ୍ତୁ ଏବଂ ସେବାର ମୁହୂର୍ତ୍ତ ଅନୁଭବ କରନ୍ତୁ।',
+    'tab-photos': '📷 ଫଟୋ', 'tab-videos': '▶ ଭିଡ଼ିଓ',
+    'mv-title1': 'ଛବି ମଲ୍ଲିକ — ସର୍ବସାଧାରଣ ଭାଷଣ, ନିଆଳୀ', 'mv-sub1': 'ଆଧିକାରିକ ଭିଡ଼ିଓ',
+    'mv-title2': 'ନିର୍ବାଚନ ମଣ୍ଡଳୀ ଉନ୍ନୟନ — ଭୂମି ରିପୋର୍ଟ', 'mv-sub2': 'ଆଧିକାରିକ ଭିଡ଼ିଓ · YouTube',
+    'mv-title3': 'ନିଆଳୀ ସ୍ୱର — ଲୋକ କହନ୍ତି', 'mv-sub3': 'ଆଧିକାରିକ ଭିଡ଼ିଓ · YouTube',
+    // VISION
     'lbl-vision': 'ଆମ ଦୃଷ୍ଟିଭଙ୍ଗୀ',
-    'sh-vision': 'ଏକ <span class="ac">ଶକ୍ତିଶାଳୀ</span> ନିଆଳୀ ଗଢ଼ିବା',
-    'ss-vision': 'ନିଆଳୀର ଲୋକଙ୍କ ପକ୍ଷରେ ବିଧାନସଭାର ପ୍ରତ୍ୟେକ ନିଷ୍ପତ୍ତି ଓ ପ୍ରତ୍ୟେକ ପଦକ୍ଷେପକୁ ନେତୃତ୍ୱ ଦେଉଥିବା ଛଅଟି ମୂଳ ସ୍ତମ୍ଭ।',
-
-    // Journey Section
+    'sh-vision': 'ଏକ <span class="ac">ଶକ୍ତିଶାଳୀ</span> ନିଆଳୀ ଗଢ଼ୁଛୁ',
+    'ss-vision': 'ନିଆଳୀ ଲୋକଙ୍କ ହୟରେ ବିଧାନ ସଭାରେ ପ୍ରତ୍ୟେକ ନିଷ୍ପତ୍ତି ଓ ପ୍ରତ୍ୟେକ ପଦକ୍ଷେପ ନେତୃତ୍ୱ ଦେଉଥିବା ଛଅଟି ମୂଳ ସ୍ତମ୍ଭ।',
+    'vc-title1': 'କିଶାନ ସମୃଦ୍ଧି', 'vc-text1': 'MSP ସହାୟତା, ଫସଲ ବୀମା ଓ ସିଧା ବଜାର ସଂଯୋଗ ଦ୍ୱାରା କୃଷକ ଆୟ ଦ୍ୱିଗୁଣ — ବିଚୌଳିଆ ବ୍ୟବସ୍ଥା ଦୂର।',
+    'vc-title2': 'ସଭିଙ୍କ ଶିକ୍ଷା', 'vc-text2': 'ଡ଼ିଜିଟାଲ ଶ୍ରେଣୀ ଓ BPL ପରିବାରର ପ୍ରତ୍ୟେକ ଶିଶୁ ପାଇଁ ସଂପୂର୍ଣ ବୃତ୍ତି ସহ ସାର୍ବଜନୀନ ଗୁଣ ମାନ ଶିକ୍ଷା।',
+    'vc-title3': 'ସ୍ୱସ୍ଥ ନିଆଳୀ', 'vc-text3': 'ପ୍ରତ୍ୟେକ ଗ୍ରାମ ଠାରୁ 5 କି.ମି. ମଧ୍ୟରେ ପ୍ରାଥମିକ ସ୍ୱାସ୍ଥ୍ୟ କେନ୍ଦ୍ର — ବିନାମୂଲ୍ୟ ଡ଼ାଇଗ୍ନୋଷ୍ଟିକ, ମାତୃ ଯତ୍ନ ଓ ମୋବାଇଲ ଚିକିତ୍ସା ଇକାଇ।',
+    'vc-title4': 'ଡ଼ିଜିଟାଲ ଗ୍ରାମ', 'vc-text4': 'ପ୍ରତ୍ୟେକ ପଞ୍ଚାୟତକୁ ହାଇ-ସ୍ପିଡ ଇଣ୍ଟ୍ରନେଟ ଓ ଡ଼ିଜିଟାଲ ସାକ୍ଷରତା — ନାଗରିକ ଘରୁ ସରକାରୀ ସୁବିଧା ପ୍ରାପ୍ତ।',
+    'vc-title5': 'ସବୁଜ ନିଆଳୀ', 'vc-text5': 'ସୌରଶକ୍ତି ଆଲୋ, ପ୍ରଦୂଷଣ-ମୁକ୍ତ ରାନ୍ଧଣ ଇନ୍ଧନ ଓ ନଦୀ ସଂରକ୍ଷଣ — ଆଗାମୀ ପ୍ରଜନ୍ମ ପ୍ରତି ଦାୟିତ୍ୱ।',
+    'vc-title6': 'ନାରୀ ଶକ୍ତି', 'vc-text6': 'ସ୍ଥାନୀୟ ଶାସନରେ 30% ସଂରକ୍ଷଣ, ମହିଳା ଦକ୍ଷତା କେନ୍ଦ୍ର, SHG ଋଣ ଓ ମହିଳାଙ୍କ ବିରୁଦ୍ଧ ଅପରାଧ ପ୍ରତି ଜିରୋ ଟଲ୍ଲରେଶନ।',
+    // JOURNEY
     'lbl-journey': 'ରାଜନୈତିକ ଜୀବନ',
     'sh-journey': 'ଏ ଯାବତ <span class="ac">ଯାତ୍ରା</span>',
-    'ss-journey': 'ନିଆଳୀର ଭିତ୍ତିସ୍ତରୀୟ ସକ୍ରିୟତାରୁ ଓଡ଼ିଶା ବିଧାନସଭା ପର୍ଯ୍ୟନ୍ତ — ଉଦ୍ଦେଶ୍ୟ ଓ ଭରସାରେ ଗଢ଼ିଉଠିଥିବା ଏକ ପଥ।',
-
-    // Achievements Section
-    'lbl-achievements': 'ଟ୍ରାକ ରେକର୍ଡ',
-    'sh-achievements': 'ମାପଯୋଗ୍ୟ <span class="ac" style="color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)">ପ୍ରଭାବ</span>',
-    'ss-achievements': 'ନିଆଳୀ ନିର୍ବାଚନମଣ୍ଡଳୀରେ ବଦଳିଥିବା ଜୀବନ, ଉନ୍ନତି ପାଇଥିବା ପରିବାର ଏବଂ ପୁରଣ ହୋଇଥିବା ପ୍ରତିଶ୍ରୁତିର ଚିତ୍ର।',
-
-    // Contact Section
+    'ss-journey': 'ନିଆଳୀର ଭିତ୍ତିସ୍ତରୀୟ ସକ୍ରିୟତାରୁ ଓଡ଼ିଶା ବିଧାନ ସଭା ପର୍ଯ୍ୟନ୍ତ — ଉଦ୍ଦେଶ୍ୟ ଓ ଭରସାରେ ଗଢ଼ା ଏକ ପଥ।',
+    'jyr1': 'ଆରମ୍ଭ', 'jtitle1': 'ନିଆଳୀରେ ସାମୁଦାୟିକ ନେତୃତ୍ୱ',
+    'jdesc1': 'ନିଆଳୀରେ ଭିତ୍ତିସ୍ତରୀୟ ସାମାଜିକ ଓ ରାଜନୈତିକ କାର୍ଯ୍ୟ ଆରମ୍ଭ, କୃଷକ, ମତ୍ସ୍ୟଜୀବୀ ଓ ଶ୍ରମିକ ସଙ୍ଗ ଯୋଗ।',
+    'jyr2': 'ବିଜେପି', 'jtitle2': 'ଭାରତୀୟ ଜନତା ପାର୍ଟିରେ ଯୋଗ',
+    'jdesc2': 'ବିଜେପିର ବିକାଶ-ଭିତ୍ତିକ ଶାସନ ଦୃଷ୍ଟିଭଙ୍ଗୀ ସହ ଏକ ହୋଇ ନିଆଳୀ ଏককରେ ଯୋଗ, କଟକ ଜିଲ୍ଲାରେ ଦଳ ଗଠନ।',
+    'jyr3': '2024', 'jtitle3': 'ଓଡ଼ିଶା ବିଧାନ ସଭାକୁ ନିର୍ବାଚିତ',
+    'jdesc3': '2024 ଓଡ଼ିଶା ବିଧାନ ସଭା ନିର୍ବାଚନରେ ବିଜେପି ଚିହ୍ନରେ ନିଆଳୀ ଆସନ ଜିତି ପ୍ରମୋଦ କୁମାର ମଲ୍ଲିକଙ୍କ ପ୍ରତ୍ୟୋଗ।',
+    'jyr4': 'ଜୁନ 4', 'jtitle4': 'କାର୍ଯ୍ୟଭାର ଗ୍ରହଣ — 4 ଜୁନ 2024',
+    'jdesc4': 'ନିଆଳୀରୁ ଓଡ଼ିଶା ବିଧାନ ସଭ୍ୟ ଭାବରେ ସ୍ୱତଃ କାର୍ଯ୍ୟଭାର ଗ୍ରହଣ, ଭୁବନେଶ୍ୱରରେ ବିଜେପି ବିଧାୟକ ଦଳରେ ଯୋଗ।',
+    'jyr5': 'ଏବେ', 'jtitle5': 'ନିଆଳୀ ସେବା — ବର୍ତ୍ତମାନ',
+    'jdesc5': 'ନିର୍ବାଚନ ମଣ୍ଡଳୀ ଉନ୍ନୟନ, ଗ୍ରାମୀଣ ବିଦ୍ୟୁତୀକରଣ, କୃଷି ପ୍ରକ୍ରିୟାକରଣ, ଟ୍ଲିମ୍ ଡ଼ିସିନ ବିସ୍ତାର ଓ ଶେଷ ପରିବାର ପ୍ରତି ଯୋଜନା ସୁଲଭ।',
+    // ACHIEVEMENTS
+    'lbl-ach': 'ଟ୍ରାକ ରେକର୍ଡ',
+    'sh-ach': 'ମାପଯୋଗ୍ୟ <span class="ac" style="color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)">ପ୍ରଭାବ</span>',
+    'ss-ach': 'ନିଆଳୀ ନିର୍ବାଚନ ମଣ୍ଡଳୀରେ ବଦଳିଥିବା ଜୀବନ, ଉନ୍ନତ ପରିବାର ଓ ପୂରଣ ହୋଇଥିବା ପ୍ରତିଶ୍ରୁତିର ଚିତ୍ର।',
+    'itl1': 'PMAY ଅଧୀନ ଘର', 'itl2': 'ପାଇପ ଜଳ ଗ୍ରାମ', 'itl3': 'ଗ୍ରାମୀଣ ବିଦ୍ୟୁତୀକରଣ', 'itl4': 'ବୃତ୍ତି ପ୍ରଦାନ',
+    'itl5': 'ଗ୍ରାମୀଣ ରାସ୍ତା ନିର୍ମାଣ', 'itl6': 'ନୂଆ ସ୍ୱାସ୍ଥ୍ୟ କେନ୍ଦ୍ର', 'itl7': 'ଡ଼ିଜିଟାଲ ପ୍ରଶିକ୍ଷଣ', 'itl8': 'ଗଛ ରୋପଣ',
+    'awyr1': '2024', 'awt1': 'ନିର୍ବାଚିତ ବିଧାୟକ — ନିଆଳୀ, ଓଡ଼ିଶା',
+    'awb1': '2024 ରାଜ୍ୟ ନିର୍ବାଚନରେ ବିଜେପି ପ୍ରାର୍ଥୀ ଭାବରେ ନିଆଳୀ ଆସନ ଜିତି ଓଡ଼ିଶା ବିଧାନ ସଭାକୁ ନିର୍ବାଚିତ, ନିର୍ବାଚନ ଆୟୋଗ ଦ୍ୱାରା ଯାଞ୍ଚ।',
+    'awyr2': '2024', 'awt2': 'କିଶାନ ଆଉଟ୍ ଅଚ — ନିଆଳୀ ବ୍ଲକ',
+    'awb2': 'ନିଆଳୀ ଜୁଡ଼ି କୃଷକ ଲ୍ୟାଭ ଶିବିର ନେତୃ, PM-KISAN, ଖୁଚୁରା ବ୍ୟାଙ୍କ କାର୍ଡ ଓ ଫସଲ ବୀମା ପ୍ରଦାନ।',
+    'awyr3': 'ଚଲିତ', 'awt3': 'ଜନ ସୁନାଣି — ସ୍ୱତଃ ଲୋକ ଯୋଗ',
+    'awb3': 'ନିଆଳୀ ନିର୍ବାଚନ କାର୍ଯ୍ୟାଳୟରେ ପ୍ରତ୍ୟେକ ଶନିବାର ଖୋଲା ଜନ ଅଭିଯୋଗ ଅଧିବେଶନ — ନିର୍ବାଚିତ ପ୍ରତିନିଧିଙ୍କ ସ୍ୱତଃ ଯୋଗ।',
+    // CONTACT
     'lbl-contact': 'ଯୋଗାଯୋଗ କରନ୍ତୁ',
     'ct-name': 'କାର୍ଯ୍ୟାଳୟ <em>ଯୋଗାଯୋଗ</em>',
-    'ct-desc': 'ନିର୍ବାଚନମଣ୍ଡଳୀ ସମ୍ବନ୍ଧୀୟ ବିଷୟ, ମିଡ଼ିଆ ପ୍ରଶ୍ନ କିମ୍ବା ନୀତି ଆଲୋଚନା ପାଇଁ। ଆମ ଦଳ 48 ଘଣ୍ଟା ମଧ୍ୟରେ ପ୍ରତିକ୍ରିୟା ଦେଇଥାଏ। ପ୍ରତ୍ୟେକ ସନ୍ଦେଶ ପଢ଼ାଯାଏ।',
+    'ct-desc': 'ନିର୍ବାଚନ ମଣ୍ଡଳୀ ସମ୍ବନ୍ଧୀୟ ବିଷୟ, ମିଡ଼ିଆ ପ୍ରଶ୍ନ କିମ୍ବା ନୀତି ଆଲୋଚନା ପାଇଁ। ଆମ ଦଳ 48 ଘଣ୍ଟା ମଧ୍ୟରେ ଉତ୍ତର ଦେଇଥାଏ। ପ୍ରତ୍ୟେକ ସନ୍ଦେଶ ପଢ଼ା ଯାଏ।',
+    'ci-k1': 'ବିଧାନ ସଭା କାର୍ଯ୍ୟାଳୟ', 'ci-v1': 'ଓଡ଼ିଶା ବିଧାନ ସଭା, ଭୁବନେଶ୍ୱର, ଓଡ଼ିଶା – 751001',
+    'ci-k2': 'ନିର୍ବାଚନ ମଣ୍ଡଳୀ କାର୍ଯ୍ୟାଳୟ', 'ci-v2': 'ନିଆଳୀ, କଟକ ଜିଲ୍ଲା, ଓଡ଼ିଶା – 754004',
+    'ci-k3': 'ଫୋନ', 'ci-v3': 'ସ୍ୱତଃ ନିର୍ବାଚନ ମଣ୍ଡଳୀ କାର୍ଯ୍ୟାଳୟ ଦ୍ୱାରା ଯୋଗାଯୋଗ',
+    'ci-k4': 'ଜନ ସୁନାଣି', 'ci-v4': 'ପ୍ରତ୍ୟେକ ଶନିବାର, ସକାଳ 10:00 — ନିଆଳୀ କାର୍ଯ୍ୟାଳୟ',
+    'ci-k5': 'ଆସନ୍ତା କାର୍ଯ୍ୟକ୍ରମ', 'ci-v5': 'ମିଶ୍ରଣ ପର୍ବ — 8 ମଇ 2025 · ନିଆଳୀ ମୈଦାନ',
+    'mail-label': 'ଚିଠି ଲେଖନ୍ତୁ', 'mail-btn-text': 'ଇ-ମେଲ ପଠାନ୍ତୁ',
     'cf-title': '<span style="color:var(--fire)">ଛବି ମଲ୍ଲିକ</span>ଙ୍କୁ ଲେଖନ୍ତୁ',
-    'cf-sub': 'ଆପଣଙ୍କ ଚିନ୍ତା, ପ୍ରସ୍ତାବ କିମ୍ବା ଅଭିଯୋଗ ସେୟାର କରନ୍ତୁ। ସମସ୍ତ ଅନୁରୋଧ ଆମ ଦଳ ଯାଞ୍ଚ କରେ।',
-    
-    // Footer
-    'footer-quick': 'ତ୍ୱରିତ ଲିଙ୍କ',
-    'footer-resources': 'ସାଧନ',
-    'footer-copyright': '© 2025 ଛବି ମଲ୍ଲିକ। ଆଧିକାରିକ ୱେବସାଇଟ୍। ବିଧାୟକ — ନିଆଳୀ, ଓଡ଼ିଶା।',
-    'footer-jai': 'ଜୟ ଓଡ଼ିଶା 🇮🇳',
+    'cf-sub': 'ଆପଣଙ୍କ ଚିନ୍ତା, ପ୍ରସ୍ତାବ କିମ୍ବା ଅଭିଯୋଗ ସେୟାର କରନ୍ତୁ। ସବୁ ଅନୁରୋଧ ଆମ ଦଳ ଯାଞ୍ଚ କରେ।',
+    'fl-name': 'ପୂରା ନାମ *', 'fi-name': 'ଆପଣଙ୍କ ନାମ',
+    'fl-mobile': 'ମୋବାଇଲ *', 'fi-mobile': '+91 XXXXX XXXXX',
+    'fl-village': 'ଗ୍ରାମ / ୱାର୍ଡ', 'fi-village': 'ଆପଣଙ୍କ ଗ୍ରାମ ବା ୱାର୍ଡ',
+    'fl-subject': 'ବିଷୟ *',
+    'fse-0': 'ବିଷୟ ବାଛନ୍ତୁ', 'fse-1': 'ରାସ୍ତା / ଭିତ୍ତିସଂରଚନା', 'fse-2': 'ଜଳ / ବିଦ୍ୟୁତ',
+    'fse-3': 'କୃଷି / କୃଷକ ସମସ୍ୟା', 'fse-4': 'ସ୍ୱାସ୍ଥ୍ୟ / ଡ଼ାକ୍ତରଖାନା',
+    'fse-5': 'ଶିକ୍ଷା / ବୃତ୍ତି', 'fse-6': 'ମହିଳା ସୁରକ୍ଷା',
+    'fse-7': 'ମିଡ଼ିଆ / ସଂବାଦ ପ୍ରଶ୍ନ', 'fse-8': 'ଅନ୍ୟ',
+    'fl-msg': 'ଆପଣଙ୍କ ସନ୍ଦେଶ *', 'ft-msg': 'ଆପଣଙ୍କ ଅଭିଯୋଗ ବା ପ୍ରସ୍ତାବ ବର୍ଣ୍ଣନା କରନ୍ତୁ...',
+    'fb': 'ଅଭିଯୋଗ / ସନ୍ଦେଶ ଦାଖଲ କରନ୍ତୁ',
+    // MOBILE STICKY
+    'ms-call': '📞 କାର୍ଯ୍ୟାଳୟ ଫୋନ', 'ms-write': '✉️ ଆମକୁ ଲେଖନ୍ତୁ',
+    // FOOTER
+    'fb-tag': 'ବିଧାୟକ, ନିଆଳୀ ନିର୍ବାଚନ ମଣ୍ଡଳୀ, ଓଡ଼ିଶା। ଭାରତୀୟ ଜନତା ପାର୍ଟି। ଜୁନ 2024ରେ ନିର୍ବାଚିତ। ଏକ ଉନ୍ନତ ଓ ସମାବେଶୀ ନିଆଳୀ ପ୍ରତି ସଂକ୍ଳ।',
+    'fc-quick': 'ତ୍ୱରିତ ଲିଙ୍କ', 'fc-res': 'ସାଧନ',
+    'fl-about': 'ପରିଚୟ', 'fl-gallery': 'ଗ୍ୟାଲେରୀ', 'fl-media': 'ମିଡ଼ିଆ',
+    'fl-vision': 'ଦୃଷ୍ଟିଭଙ୍ଗୀ ଓ ନୀତି', 'fl-journey': 'ରାଜନୈତିକ ଯାତ୍ରା', 'fl-ach': 'ସଫଳତା',
+    'fl-press': 'ସଂବାଦ ଘୋଷଣାpatra', 'fl-assembly': 'ବିଧାନ ସଭା ପ୍ରଶ୍ନ',
+    'fl-budget': 'ନିର୍ବାଚନ ମଣ୍ଡଳୀ ବଜେଟ', 'fl-grievance': 'ଅଭିଯୋଗ ପୋର୍ଟାଲ', 'fl-contact-office': 'କାର୍ଯ୍ୟାଳୟ ଯୋଗାଯୋଗ',
+    'ft-copy': '© 2025 ଛବି ମଲ୍ଲିକ। ଆଧିକାରିକ ୱେବସାଇଟ୍। ବିଧାୟକ — ନିଆଳୀ, ଓଡ଼ିଶା।',
+    'ft-jai': 'ଜୟ ଓଡ଼ିଶା 🇮🇳'
   }
 };
 
+// Simple ID-based setter — each element has a unique t- prefixed id
+var idMap = [
+  // NAV
+  ['nav-site', 'text'], ['nav-about', 'text'], ['nav-gallery', 'text'], ['nav-media', 'text'],
+  ['nav-vision', 'text'], ['nav-journey', 'text'], ['nav-contact', 'text'], ['nav-touch', 'text'],
+  ['mob-about', 'text'], ['mob-gallery', 'text'], ['mob-media', 'text'],
+  ['mob-vision', 'text'], ['mob-journey', 'text'], ['mob-contact', 'text'],
+  // EVENT TICKER
+  ['event-label', 'text'], ['et-badge-1', 'text'], ['et-title-1', 'text'],
+  ['et-desc-1', 'text'], ['et-note-1', 'text'], ['et-badge-2', 'text'],
+  ['et-desc-2', 'text'], ['et-badge-3', 'text'], ['et-desc-3', 'text'],
+  // HERO
+  ['chip-1', 'text'], ['chip-2', 'text'], ['chip-3', 'text'], ['chip-4', 'text'],
+  ['heading-1', 'html'], ['heading-2', 'html'], ['heading-3', 'html'], ['heading-4', 'html'],
+  ['sub-1', 'text'], ['sub-2', 'text'], ['sub-3', 'text'], ['sub-4', 'text'],
+  ['btn-p1', 'text'], ['btn-p2', 'text'], ['btn-p3', 'text'], ['btn-p4', 'text'],
+  ['btn-g1', 'text'], ['btn-g2', 'text'], ['btn-g3', 'text'], ['btn-g4', 'text'],
+  ['strip-1', 'text'], ['strip-2', 'text'], ['strip-3', 'text'],
+  ['strip-4', 'text'], ['strip-5', 'text'], ['strip-6a', 'text'], ['strip-6b', 'text'],
+  ['strip-1b', 'text'], ['strip-2b', 'text'], ['strip-3b', 'text'],
+  ['strip-4b', 'text'], ['strip-5b', 'text'], ['strip-6ab', 'text'], ['strip-6bb', 'text'],
+  // ABOUT
+  ['lbl-about', 'text'], ['sh-about', 'html'],
+  ['wiki-title', 'text'], ['wiki-k1', 'text'], ['wiki-v1', 'text'],
+  ['wiki-k2', 'text'], ['wiki-v2', 'text'], ['wiki-k3', 'text'], ['wiki-v3', 'text'],
+  ['wiki-k4', 'text'], ['wiki-v4', 'text'],
+  ['ab-quote', 'text'], ['ab-body1', 'text'], ['ab-body2', 'text'], ['ab-body3', 'text'],
+  ['abk1', 'text'], ['abv1', 'text'], ['abk2', 'text'], ['abv2', 'text'],
+  ['abk3', 'text'], ['abv3', 'text'], ['abk4', 'text'], ['abv4', 'text'],
+  ['abk5', 'text'], ['abv5', 'text'], ['abk6', 'text'], ['abv6', 'text'],
+  // GALLERY
+  ['lbl-gallery', 'text'], ['sh-gallery', 'html'], ['ss-gallery', 'text'],
+  // MEDIA
+  ['lbl-media', 'text'], ['sh-media', 'html'], ['ss-media', 'text'],
+  ['tab-photos', 'text'], ['tab-videos', 'text'],
+  ['mv-title1', 'text'], ['mv-sub1', 'text'],
+  ['mv-title2', 'text'], ['mv-sub2', 'text'],
+  ['mv-title3', 'text'], ['mv-sub3', 'text'],
+  // VISION
+  ['lbl-vision', 'text'], ['sh-vision', 'html'], ['ss-vision', 'text'],
+  ['vc-title1', 'text'], ['vc-text1', 'text'],
+  ['vc-title2', 'text'], ['vc-text2', 'text'],
+  ['vc-title3', 'text'], ['vc-text3', 'text'],
+  ['vc-title4', 'text'], ['vc-text4', 'text'],
+  ['vc-title5', 'text'], ['vc-text5', 'text'],
+  ['vc-title6', 'text'], ['vc-text6', 'text'],
+  // JOURNEY
+  ['lbl-journey', 'text'], ['sh-journey', 'html'], ['ss-journey', 'text'],
+  ['jyr1', 'text'], ['jtitle1', 'text'], ['jdesc1', 'text'],
+  ['jyr2', 'text'], ['jtitle2', 'text'], ['jdesc2', 'text'],
+  ['jyr3', 'text'], ['jtitle3', 'text'], ['jdesc3', 'text'],
+  ['jyr4', 'text'], ['jtitle4', 'text'], ['jdesc4', 'text'],
+  ['jyr5', 'text'], ['jtitle5', 'text'], ['jdesc5', 'text'],
+  // ACHIEVEMENTS
+  ['lbl-ach', 'text'], ['sh-ach', 'html'], ['ss-ach', 'text'],
+  ['itl1', 'text'], ['itl2', 'text'], ['itl3', 'text'], ['itl4', 'text'],
+  ['itl5', 'text'], ['itl6', 'text'], ['itl7', 'text'], ['itl8', 'text'],
+  ['awyr1', 'text'], ['awt1', 'text'], ['awb1', 'text'],
+  ['awyr2', 'text'], ['awt2', 'text'], ['awb2', 'text'],
+  ['awyr3', 'text'], ['awt3', 'text'], ['awb3', 'text'],
+  // CONTACT
+  ['lbl-contact', 'text'], ['ct-name', 'html'], ['ct-desc', 'text'],
+  ['ci-k1', 'text'], ['ci-v1', 'text'], ['ci-k2', 'text'], ['ci-v2', 'text'],
+  ['ci-k3', 'text'], ['ci-v3', 'text'], ['ci-k4', 'text'], ['ci-v4', 'text'],
+  ['ci-k5', 'text'], ['ci-v5', 'text'],
+  ['mail-label', 'text'], ['mail-btn-text', 'text'],
+  ['cf-title', 'html'], ['cf-sub', 'text'],
+  ['fl-name', 'text'], ['fl-mobile', 'text'],
+  ['fl-village', 'text'], ['fl-subject', 'text'],
+  ['fl-msg', 'text'], ['fb', 'text'],
+  // FORM PLACEHOLDERS
+  ['fi-name', 'placeholder'], ['fi-mobile', 'placeholder'],
+  ['fi-village', 'placeholder'], ['ft-msg', 'placeholder'],
+  // SELECT OPTIONS
+  ['fse-0', 'text'], ['fse-1', 'text'], ['fse-2', 'text'], ['fse-3', 'text'],
+  ['fse-4', 'text'], ['fse-5', 'text'], ['fse-6', 'text'], ['fse-7', 'text'], ['fse-8', 'text'],
+  // MOBILE STICKY
+  ['ms-call', 'text'], ['ms-write', 'text'],
+  // FOOTER
+  ['fb-tag', 'text'], ['fc-quick', 'text'], ['fc-res', 'text'],
+  ['fl-about', 'text'], ['fl-gallery', 'text'], ['fl-media', 'text'],
+  ['fl-vision', 'text'], ['fl-journey', 'text'], ['fl-ach', 'text'],
+  ['fl-press', 'text'], ['fl-assembly', 'text'],
+  ['fl-budget', 'text'], ['fl-grievance', 'text'], ['fl-contact-office', 'text'],
+  ['ft-copy', 'text'], ['ft-jai', 'text']
+];
+
+// Strip-b copies share same translation key (duplicate strip for marquee)
+var stripAliases = {
+  'strip-1b': 'strip-1', 'strip-2b': 'strip-2', 'strip-3b': 'strip-3',
+  'strip-4b': 'strip-4', 'strip-5b': 'strip-5', 'strip-6ab': 'strip-6a', 'strip-6bb': 'strip-6b'
+};
+
 function setLang(lang, btn) {
-  currentLang = lang;
+  window._currentLang = lang;
   document.documentElement.lang = lang;
   document.querySelectorAll('.lt-btn').forEach(function(b) { b.classList.remove('active'); });
   btn.classList.add('active');
-  
-  var t = fullTexts[lang];
-  
-  // Update Navigation
-  document.querySelector('.logo-site').textContent = t['nav-site'];
-  document.querySelector('.nav-contact').textContent = t['nav-touch'];
-  
-  var navLinks = document.querySelectorAll('.nav-center a');
-  navLinks.forEach(function(el, i) {
-    var keys = ['nav-about', 'nav-gallery', 'nav-media', 'nav-vision', 'nav-journey', 'nav-contact'];
-    if (keys[i]) el.textContent = t[keys[i]];
-  });
-  
-  var mobNavLinks = document.querySelectorAll('.mob-nav a');
-  mobNavLinks.forEach(function(el, i) {
-    var keys = ['nav-about', 'nav-gallery', 'nav-media', 'nav-vision', 'nav-journey', 'nav-contact'];
-    if (keys[i]) el.textContent = t[keys[i]];
-  });
-  
-  // Event Ticker
-  document.querySelector('#event-ticker .et-label').innerHTML = '<span class="et-label-icon">📅</span> ' + t['event-label'];
-  
-  // Hero Slides - Chips
-  var chips = document.querySelectorAll('.hs-chip');
-  chips.forEach(function(el, i) {
-    var key = 'chip-' + (i + 1);
-    if (t[key]) el.textContent = t[key];
-  });
-  
-  // Hero Slides - Headings
-  var headings = document.querySelectorAll('.hs-heading');
-  headings.forEach(function(el, i) {
-    var key = 'heading-' + (i + 1);
-    if (t[key]) el.innerHTML = t[key];
-  });
-  
-  // Hero Slides - Subs
-  var subs = document.querySelectorAll('.hs-sub');
-  subs.forEach(function(el, i) {
-    var key = 'sub-' + (i + 1);
-    if (t[key]) el.textContent = t[key];
-  });
-  
-  // Hero Slides - Primary Buttons
-  var primaryBtns = document.querySelectorAll('.hs-btn-primary');
-  primaryBtns.forEach(function(el, i) {
-    var key = 'btn-primary-' + (i + 1);
-    if (t[key]) el.textContent = t[key];
-  });
-  
-  // Hero Slides - Ghost Buttons
-  var ghostBtns = document.querySelectorAll('.hs-btn-ghost');
-  ghostBtns.forEach(function(el, i) {
-    var key = 'btn-ghost-' + (i + 1);
-    if (t[key]) {
-      el.innerHTML = t[key];
-      el.innerHTML += '<span style="display:inline-block;">→</span>';
+
+  var t = T[lang];
+
+  idMap.forEach(function(pair) {
+    var key = pair[0];
+    var mode = pair[1];
+    var tKey = stripAliases[key] || key;
+    var val = t[tKey];
+    if (val === undefined) return;
+
+    var el = document.getElementById('t-' + key);
+    if (!el) return;
+
+    if (mode === 'html') {
+      el.innerHTML = val;
+    } else if (mode === 'placeholder') {
+      el.placeholder = val;
+    } else {
+      el.textContent = val;
     }
   });
-  
-  // Section Labels & Headings
-  document.querySelectorAll('.lbl').forEach(function(el) {
-    var key = 'lbl-' + el.closest('section').id;
-    if (t[key]) el.textContent = t[key];
-  });
-  
-  document.querySelectorAll('.sh').forEach(function(el) {
-    var key = 'sh-' + el.closest('section').id;
-    if (t[key]) el.innerHTML = t[key];
-  });
-  
-  document.querySelectorAll('.ss').forEach(function(el) {
-    var key = 'ss-' + el.closest('section').id;
-    if (t[key]) el.textContent = t[key];
-  });
-  
-  // Contact Section
-  document.querySelector('.ct-name').innerHTML = t['ct-name'];
-  document.querySelector('.ct-desc').textContent = t['ct-desc'];
-  document.querySelector('.cf-title').innerHTML = t['cf-title'];
-  document.querySelector('.cf-sub').textContent = t['cf-sub'];
-  
-  // Footer
-  document.querySelectorAll('.fc-t').forEach(function(el, i) {
-    if (i === 0) el.textContent = t['footer-quick'];
-    if (i === 1) el.textContent = t['footer-resources'];
-  });
-  
-  document.querySelectorAll('.ft-bot span').forEach(function(el, i) {
-    if (i === 0) el.textContent = t['footer-copyright'];
-    if (i === 1) el.textContent = t['footer-jai'];
-  });
+
+  // Re-render pagination with translated labels
+  renderPagination();
 }
 
-// Initialize with English
+// Initialise
 setLang('en', document.querySelector('.lt-btn.active'));
 </script>
 </body>
